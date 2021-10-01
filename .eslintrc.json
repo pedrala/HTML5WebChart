@@ -1,0 +1,24 @@
+{
+  "root": true,
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "env": {
+      "browser": true,
+      "es6": true,
+      "jquery": true
+  },
+  "extends": "eslint:recommended",
+  "globals": {
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly"
+  },
+  "rules": {
+    "no-var": "error",
+    "no-plusplus": ["error", {
+      "allowForLoopAfterthoughts": true
+    }],
+    "linebreak-style": 0
+  }
+}

@@ -1,0 +1,32 @@
+<div class="sub_tab_area">
+  <ul class="sub_tab_lst">
+    <li><a href="#sub_tab_cont1" data-i18n="chart.settings.tab.variable">변수 설정</a></li>
+    <li><a href="#sub_tab_cont2" data-i18n="chart.settings.tab.description">설명</a></li>
+  </ul>
+
+  <div class="sub_tab_cont" id="sub_tab_cont1">
+    <ul class="rdo_tab_lst">
+      <!--<li class="form_lst">-->
+      <!--<strong class="rdo_tit">라인 기준</strong>-->
+      <!--<div class="select_rgt_bx">-->
+      <!--<div class="select_ui" id="lineBase">-->
+      <!--</div>-->
+      <!--</div>&lt;!&ndash; select_rgt_bx &ndash;&gt;-->
+      <!--</li>-->
+      <li class="form_lst">
+        <strong class="rdo_tit" data-i18n="chart.lineshape">
+          <!--라인모양--></strong>
+        <div class="select_rgt_bx">
+          <fieldset class="select_ui">
+            <input type="text" class="color_picker" name="m_clrLine">
+            <select class="lineTypeSelect" name="m_nLineType"></select>
+            <select class="lineThicknessSelect" name="m_nThickness"></select>
+          </fieldset>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="sub_tab_cont" id="sub_tab_cont2">
+    <ul class="info_src_lst" id="desc_lst"></ul>
+  </div>
+</div>

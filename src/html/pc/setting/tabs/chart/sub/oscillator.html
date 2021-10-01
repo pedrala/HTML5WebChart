@@ -1,0 +1,143 @@
+<div class="sub_tab_area">
+  <ul class="sub_tab_lst">
+    <li><a href="#sub_tab_cont1" data-i18n="chart.settings.tab.variable">변수 설정</a></li>
+    <li><a href="#sub_tab_cont2" data-i18n="chart.settings.tab.style">스타일 설정</a></li>
+    <li><a href="#sub_tab_cont3" data-i18n="chart.settings.tab.baseLine">기준선 설정</a></li>
+    <li><a href="#sub_tab_cont4" data-i18n="chart.settings.tab.description">설명</a></li>
+  </ul>
+
+  <!-- 변수설정 -->
+  <div class="sub_tab_cont" id="sub_tab_cont1">
+    <div class="lst_data_type">
+      <div class="data_scr_lst">
+        <table class="data_tb_cont">
+          <colgroup>
+            <col style="width:268px" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col" data-i18n="chart.settings.variable.name">변수명</th>
+              <th scope="col" data-i18n="chart.settings.variable.val">변수값</th>
+            </tr>
+          </thead>
+          <tbody id="variable_lst">
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <!-- //변수설정 -->
+
+  <!-- 스타일 설정 -->
+  <div class="sub_tab_cont" id="sub_tab_cont2">
+    <div class="acount_tab_bx">
+      <ul class="setting_lst_type01" id="style_lst">
+        <li>
+          <strong class="type_tit">색상적용</strong>
+          <div class="type01_form">
+            <div class="check_lst_type">
+              <div class="form_input_bx">
+                <strong class="tit">상승</strong>
+                <ul class="form_bx">
+                  <li>
+                    <input type="text" class="color_picker" name="m_clrUp">
+                  </li>
+                </ul><!-- form_bx -->
+              </div><!-- form_input_bx -->
+              <div class="form_input_bx">
+                <strong class="tit">하락</strong>
+                <ul class="form_bx">
+                  <li>
+                    <input type="text" class="color_picker" name="m_clrDown">
+                  </li>
+                </ul><!-- form_bx -->
+              </div><!-- form_input_bx -->
+            </div><!-- check_lst_type -->
+            <div class="input_rgt_type">
+              <div class="form_input_bx type01">
+                <strong class="tit">비교대상</strong>
+                <div class="form_bx">
+                  <fieldset class="select_ui">
+                    <select name="m_nCompareType" id="compare_lst"></select>
+                  </fieldset>
+                </div><!-- form_bx -->
+              </div><!-- form_input_bx -->
+              <div class="btm_select_bx" id="fill_bx">
+                <label class="form_label">
+                  <input class="i_check" name="fill" value="true" type="checkbox">
+                  <i class="check"></i>
+                  <span class="txt">막대바 채우기</span>
+                </label>
+              </div><!-- btm_select_bx -->
+            </div><!-- input_rgt_type -->
+          </div>
+        </li>
+      </ul><!-- setting_lst_type01 -->
+      <ul class="btm_form_lst">
+        <li>
+          <label class="form_label">
+            <input class="i_check" type="checkbox" name="fill" id="m_nShowLatestDataType">
+            <i class="check"></i>
+            <span class="txt">마지막값 표시</span>
+          </label>
+        </li>
+        <li>
+          <label class="form_label">
+            <input class="i_check" type="checkbox" name="lastMark" disabled id="m_bShowLatestDataOfAllSubGraph">
+            <i class="check"></i>
+            <span class="txt">모든 라인 표시</span>
+          </label>
+        </li>
+      </ul>
+    </div>    
+  </div>
+  <!-- //스타일 설정 -->
+
+  <!-- 기준선 설정 -->
+  <div class="sub_tab_cont" id="sub_tab_cont3">
+    <div class="line_form_cont" id="baseline_lst">
+      <div class="line_form_lft">
+        <div class="form_bx">
+
+          <div class="form_src_lst">
+            <ul class="form_lst"></ul>
+          </div><!-- form_src_lst -->
+        </div><!-- form_bx -->
+        <div class="form_btn_bx">
+          <a href="#" class="btn_white" id="btn_add" data-i18n="common.add">추가</a>
+          <a href="#" class="btn_white" id="btn_delete" data-i18n="common.delete">제거</a>
+          <a href="#" class="btn_white" id="btn_delete_all" data-i18n="common.allDelete">전체삭제</a>
+        </div><!-- form_btn_bx -->
+      </div><!-- line_form_lft -->
+      <div class="line-form_rgt">
+        <strong class="rgt_tit" data-i18n="chart.settings.baseLine.style">기준선 스타일</strong>
+        <div class="style_select_bx">
+          <ul class="style_select">
+            <li>
+              <strong class="seelct_tit" data-i18n="common.color">색상</strong>
+              <div class="rgt_bx">
+                <input type="text" class="color_picker" name="m_clrLine">
+              </div><!-- rgt_bx -->
+            </li>
+            <li>
+              <strong class="seelct_tit" data-i18n="chart.settings.baseLine.line">라인</strong>
+              <div class="rgt_bx">
+                <fieldset class="select_ui">
+                  <select name="m_nLineType" class="lineTypeSelect"></select>
+                  <select name="m_nThickness" class="lineThicknessSelect"></select>
+                </fieldset>
+              </div><!-- rgt_bx -->
+            </li>
+          </ul><!-- style_select -->
+        </div><!-- style_select_bx -->
+      </div><!-- line-form_rgt -->
+    </div><!-- line_form_cont -->
+  </div>
+  <!-- //기준선 설정 -->
+
+  <!-- 설명 -->
+  <div class="sub_tab_cont" id="sub_tab_cont4">
+    <ul class="info_src_lst" id="desc_lst"></ul>
+  </div>
+  <!-- //설명 -->
+</div>

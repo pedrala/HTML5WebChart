@@ -1,0 +1,2524 @@
+﻿<?
+if(!$symbol)$symbol="000660";
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+	<link rel="stylesheet" href="/css/kfits.css?ver=201807030900">
+    <script type="text/javascript" src="./static/jquery-2.1.3.js"></script>
+    <script type="text/javascript" src="Html5Chart.js"></script>
+    <script type="text/javascript" src="js/RealDate.js"></script>
+</head>
+
+<body onload="Load();">
+
+    <div id="indAddDiv" class="indAddDiv" style="overflow: scroll">
+        <div class="indAddList">
+            <input type="checkbox" name="chkIndi" id="ind1" value="_MA_" onclick="indChick('ind1')" style="vertical-align:middle;cursor:pointer;"> 가격 이동평균
+        </div>
+        <div class="indAddList">
+            <input type="checkbox" name="chkIndi" id="ind4" value="_VOLUME_" onclick="indChick('ind4')" style="vertical-align:middle;cursor:pointer;"> 거래량
+        </div>
+        <div class="indAddList">
+            <input type="checkbox" name="chkIndi" id="ind5" value="_VMA_" onclick="indChick('ind5')" style="vertical-align:middle;cursor:pointer;"> 거래량 이동평균
+        </div>
+        <div class="indAddList">
+            <input type="checkbox" name="chkIndi" id="ind2" value="_Env_" onclick="indChick('ind2')" style="vertical-align:middle;cursor:pointer;"> Envelope
+        </div>
+        <div class="indAddList">
+            <input type="checkbox" name="chkIndi" id="ind3" value="_BB_" onclick="indChick('ind3')" style="vertical-align:middle;cursor:pointer;"> Bollinger Bands
+        </div>
+        <div class="indAddList">
+            <input type="checkbox" name="chkIndi" id="ind20" value="_PIVOT_" onclick="indChick('ind20')" style="vertical-align:middle;cursor:pointer;"> PIVOT
+        </div>
+        <div class="indAddList">
+            <input type="checkbox" name="chkIndi" id="ind35" value="_MAC_" onclick="indChick('ind35')" style="vertical-align:middle;cursor:pointer;"> MAC
+        </div>
+        <div class="indAddList">
+            <input type="checkbox" name="chkIndi" id="ind36" value="_RAINBOW_" onclick="indChick('ind36')" style="vertical-align:middle;cursor:pointer;"> 그물차트
+        </div>
+        <div class="indAddList">
+            <input type="checkbox" name="chkIndi" id="ind6" value="_MACD_" onclick="indChick('ind6')" style="vertical-align:middle;cursor:pointer;"> MACD
+        </div>
+        <div class="indAddList">
+            <input type="checkbox" name="chkIndi" id="ind7" value="_MACDOS_" onclick="indChick('ind7')" style="vertical-align:middle;cursor:pointer;"> MACD Oscillator
+        </div>
+        <div class="indAddList">
+            <input type="checkbox" name="chkIndi" id="ind8" value="_ADX_" onclick="indChick('ind8')" style="vertical-align:middle;cursor:pointer;"> ADX
+        </div>
+        <div class="indAddList">
+            <input type="checkbox" name="chkIndi" id="ind24" value="_PSYCO_" onclick="indChick('ind24')" style="vertical-align:middle;cursor:pointer;"> 심리도(Psyco)
+        </div>
+        <div class="indAddList">
+            <input type="checkbox" name="chkIndi" id="ind10" value="_CCI_" onclick="indChick('ind10')" style="vertical-align:middle;cursor:pointer;"> CCI
+        </div>
+        <div class="indAddList">
+            <input type="checkbox" name="chkIndi" id="ind17" value="_Disparity_" onclick="indChick('ind17')" style="vertical-align:middle;cursor:pointer;"> 이격도
+        </div>
+        <div class="indAddList">
+            <input type="checkbox" name="chkIndi" id="ind12" value="_MOM_" onclick="indChick('ind12')" style="vertical-align:middle;cursor:pointer;"> Monentum
+        </div>
+        <div class="indAddList">
+            <input type="checkbox" name="chkIndi" id="ind18" value="_OBV_" onclick="indChick('ind18')" style="vertical-align:middle;cursor:pointer;"> OBV
+        </div>
+        <div class="indAddList">
+            <input type="checkbox" name="chkIndi" id="ind22" value="_ROC_" onclick="indChick('ind22')" style="vertical-align:middle;cursor:pointer;"> ROC
+        </div>
+        <div class="indAddList">
+            <input type="checkbox" name="chkIndi" id="ind13" value="_RSI_" onclick="indChick('ind13')" style="vertical-align:middle;cursor:pointer;"> RSI
+        </div>
+        <div class="indAddList">
+            <input type="checkbox" name="chkIndi" id="ind14" value="_StoF_" onclick="indChick('ind14')" style="vertical-align:middle;cursor:pointer;"> Stochastics Fast
+        </div>
+        <div class="indAddList">
+            <input type="checkbox" name="chkIndi" id="ind15" value="_StoS_" onclick="indChick('ind15')" style="vertical-align:middle;cursor:pointer;"> Stochastics Slow
+        </div>
+        <div class="indAddList">
+            <input type="checkbox" name="chkIndi" id="ind16" value="_WILL_" onclick="indChick('ind16')" style="vertical-align:middle;cursor:pointer;"> William R
+        </div>
+        <div class="indAddList">
+            <input type="checkbox" name="chkIndi" id="ind25" value="_AB_" onclick="indChick('ind25')" style="vertical-align:middle;cursor:pointer;"> AB Ratio
+        </div>
+        <div class="indAddList">
+            <input type="checkbox" name="chkIndi" id="ind26" value="_AD_" onclick="indChick('ind26')" style="vertical-align:middle;cursor:pointer;"> AD Line
+        </div>
+        <div class="indAddList">
+            <input type="checkbox" name="chkIndi" id="ind27" value="_ATR_" onclick="indChick('ind27')" style="vertical-align:middle;cursor:pointer;"> ATR
+        </div>
+        <div class="indAddList">
+            <input type="checkbox" name="chkIndi" id="ind28" value="_CO_" onclick="indChick('ind28')" style="vertical-align:middle;cursor:pointer;"> Chaikins OSC
+        </div>
+        <div class="indAddList">
+            <input type="checkbox" name="chkIndi" id="ind29" value="_CV_" onclick="indChick('ind29')" style="vertical-align:middle;cursor:pointer;"> Chaikins Volatility
+        </div>
+        <div class="indAddList">
+            <input type="checkbox" name="chkIndi" id="ind30" value="_DMI_" onclick="indChick('ind30')" style="vertical-align:middle;cursor:pointer;"> DMI
+        </div>
+        <div class="indAddList">
+            <input type="checkbox" name="chkIndi" id="ind31" value="_EOM_" onclick="indChick('ind31')" style="vertical-align:middle;cursor:pointer;"> EOM
+        </div>
+        <div class="indAddList">
+            <input type="checkbox" name="chkIndi" id="ind32" value="_LRL_" onclick="indChick('ind32')" style="vertical-align:middle;cursor:pointer;"> LRL
+        </div>
+        <div class="indAddList">
+            <input type="checkbox" name="chkIndi" id="ind33" value="_RCI_" onclick="indChick('ind33')" style="vertical-align:middle;cursor:pointer;"> RCI
+        </div>
+        <div class="indAddList">
+            <input type="checkbox" name="chkIndi" id="ind34" value="_OSCV_" onclick="indChick('ind34')" style="vertical-align:middle;cursor:pointer;"> Volume Oscillator
+        </div>
+        <!-- LJH 2018.12.7 닫기버튼 대체 -->
+        <!-- <div class="indAddBtn" onclick="IndicatorAdd('C');"><img src="/images/chart/bt_close_s_over.png"></div> -->
+    </div>
+
+	<div style="width:100%;height:1000px;margin:auto;background:#FFFFFF;" id="ChartDIV">
+		<div style="padding:20px;background:#FFFFFF;">
+			<div style="float:left;width:100%;height:30px;padding-bottom:10px;border-bottom:1px solid #B7B7B7;background:#FFFFFF;">
+				<div style="position:relative;float:left;left:370px;line-height:30px;font-size:16px;z-index:999" id="sList">
+					<span style="margin-left:20px;border-bottom:1px solid #4e5768;cursor:pointer;" onclick="TopSymbol_bit('KR001BTC__KRW__')">비트코인 BTC/KRW</span>
+					<span style="margin-left:20px;border-bottom:1px solid #4e5768;cursor:pointer;" onclick="TopSymbol_bit('KR001ETH__KRW__')">이더리움 ETH/KRW</span>
+					<span style="margin-left:20px;border-bottom:1px solid #4e5768;cursor:pointer;" onclick="TopSymbol_bit('KR001QTUM_KRW__')">퀀텀 QTUM/KRW</span>
+				</div>
+			</div>
+			<div style="float:left;width:100%;min-width:1060px;height:80px;padding-top:10px;padding-bottom:10px;border-bottom:1px solid #B7B7B7;background:#FFFFFF;">
+				<div style="float:left;width:417px;height:36px;padding:14px 0 10px 10px;">
+					<div style="float:left;width:260px;height:42px;line-height:42px;font-size:34px;">
+						<span style="font-weight:bold;color:#FF0000" id="TopPrc"> </span>
+						<span style="font-size:20px;font-weight:bold;color:#8D8D8D" id="FX"> KRW</span>
+					</div>
+					<div style="float:left;width:157px;height:38px;line-height:38px;font-size:18px;" >
+						<div style="float:left;width:100%;color:#F52D49;text-align:right;" id="TopCh"> </div>
+						<div style="float:left;width:100%;color:#F52D49;text-align:right;" id="TopCg"> </div>
+					</div>
+				</div>
+				<div style="float:right;height:36px;padding:14px 0 10px 10px;" id="HLVV">
+					<div style="float:left;width:100%;">
+						<div style="float:left;width:160px;height:36px;">
+							<div style="float:left;width:100%;height:10px;line-height:10px;text-align:center;color:#000;font-size:12px;">고가</div>
+							<div style="float:left;width:100%;height:26px;line-height:26px;font-size:20px;font-weight:bold;text-align:right;padding-top:11px">
+								<span style="color:#FF0000;text-align:center;"  id="TopH"> </span>
+							</div>
+						</div>
+						<div style="float:left;width:160px;height:36px;">
+							<div style="float:left;width:100%;height:10px;line-height:10px;text-align:center;color:#000;font-size:12px;">저가</div>
+							<div style="float:left;width:100%;height:38px;line-height:38px;font-size:20px;font-weight:bold;text-align:right;padding-top:11px">
+								<span style="color:#0070FF;text-align:center;"  id="TopL"> </span>
+							</div>
+						</div>
+						<div style="float:left;width:200px;height:36px;">
+							<div style="float:left;width:100%;height:10px;line-height:10px;text-align:center;color:#000;font-size:12px;">거래수량</div>
+							<div style="float:left;width:100%;height:38px;line-height:38px;font-size:20px;text-align:right;padding-top:11px">
+									<span style="color:#000000;font-weight:bold;" id="TopVo"> </span>
+									<span style="font-size:14px;color:#8D8D8D" id="voTopUnit"> BTC</span>
+							</div>
+						</div>
+						<div style="float:left;width:200px;height:36px;margin-right:10px;">
+							<div style="float:left;width:100%;height:10px;line-height:10px;text-align:center;color:#000;font-size:12px;">거래금액</div>
+							<div style="float:left;width:100%;height:38px;line-height:38px;font-size:20px;text-align:right;padding-top:11px">
+								<span style="color:#000000;font-weight:bold;" id="TopVa"> </span>
+								<span style="font-size:14px;color:#8D8D8D" id="vaTopUnit">KRW</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+            <div style="float:left;width:100%;height:28px;padding-top:10px;background:#FFFFFF;z-index:33">
+                <div style="float:left;width:150;background:#FFFFFF;" id="IndiArr">
+                    <div style="float:right;width: 150px;height:28px;line-height:30px;background:#0C5196;border:1px solid #0C5196;text-align:center;color:#fff;cursor:pointer;font-family:'Dotum';font-size:14px;font-weight:bold;" onclick="IndicatorAdd('O');">지표 설정&nbsp;&nbsp;<img src="/images/chart/arr_dn.png" style="vertical-align:middle;height:6px"></div>
+                    <button onclick="Chart.ShowModalSetting();">설정</button>
+                </div>
+                
+                <input type="hidden" id="symbol" name="symbol" value="KR001BTC__KRW__">                
+                <input type="text" id="input_symbol" name="input_symbol" value="000660" style="width:50px">
+                <button onclick="ChangeSymbol();">변경</button>
+                <button onclick="AddSymbol();">추가</button>
+                <div style="float:left;padding-left:30px;background:#FFFFFF;">                
+                    <input type="hidden" id="icnt" name="icnt" value="3000" style="width:30px;height:28px;">
+                    <div style="float:left;line-height:30px;padding-left:10px;"><!-- 일,주,월,분 주기 -->
+                        <img src="/images/chart/bt_01_over.png" id="day" onmouseout="highlight('ijwb','day','out')" onmouseover="highlight('ijwb','day','over')" onclick="IJWBChang('1')" style="cursor:pointer;">
+                        <img src="/images/chart/bt_02.png" id="week" onmouseout="highlight('ijwb','week','out')" onmouseover="highlight('ijwb','week','over')" onclick="IJWBChang('2')" style="cursor:pointer;">
+                        <!-- 월주기 주석처리 <img src="/images/chart/bt_03.png" id="mon" onmouseout="highlight('ijwb','mon','out')" onmouseover="highlight('ijwb','mon','over')" onclick="IJWBChang('3')" style="cursor:pointer;"> -->
+                        <img src="/images/chart/bt_05.png" id="min" onmouseout="highlight('ijwb','min','out')" onmouseover="highlight('ijwb','min','over')" onclick="IJWBChang('5')" style="cursor:pointer;">
+                        <!-- img src="/images/chart/bt_05.png"      id="sec"  onmouseout="highlight('ijwb','sec','out')"  onmouseover="highlight('ijwb','sec','over')"  onclick="IJWBChang('6')" -->
+                    </div>
+                    <div style="float:left;line-height:30px;display:none;" id="dataGroupDiv"> <!-- 분주기 interval -->
+                        <input type="hidden" id="ijwb" name="ijwb" value="1">
+                        <input type="hidden" id="ijwbG" name="ijwbG" value="1">
+                        <input type="radio" id="ijwbGr1" name="ijwbGr" value="1" onclick="IJWBGroupChang('1')" checked> 1
+                        <input type="radio" id="ijwbGr2" name="ijwbGr" value="5" onclick="IJWBGroupChang('5')"> 7
+                        <!--<input type="radio" id="ijwbGr3" name="ijwbGr" value="10" onclick="IJWBGroupChang('15')"> 14
+                        <input type="radio" id="ijwbGr4" name="ijwbGr" value="30" onclick="IJWBGroupChang('30')"> 30
+                        <input type="radio" id="ijwbGr5" name="ijwbGr" value="60" onclick="IJWBGroupChang('60')"> 60
+                        <input type="radio" id="ijwbGr5" name="ijwbGr" value="60" onclick="IJWBGroupChang('120')"> 120
+                        <input type="radio" id="ijwbGr5" name="ijwbGr" value="60" onclick="IJWBGroupChang('240')"> 240 -->
+                    </div>
+                </div>
+                <div style="float:right;padding-right:10px;background:#FFFFFF;"> <!-- 분석도구 / 초기화  -->
+                    <img src="/images/chart/btc_01.png" id="Tool01" onclick="AddLineTool('LINE_TOOL');" onmouseout="highlight('Tool','01','out')" onmouseover="highlight('Tool','01','over')" style="cursor:pointer;">
+                    <!-- <img src="/images/chart/btc_02.png" id="Tool02" onclick="AddLineTool('HOZR_LINE_TOOL');" onmouseout="highlight('Tool','02','out')" onmouseover="highlight('Tool','02','over')" style="cursor:pointer;">
+                    <img src="/images/chart/btc_03.png" id="Tool03" onclick="AddLineTool('VERT_LINE_TOOL');" onmouseout="highlight('Tool','03','out')" onmouseover="highlight('Tool','03','over')" style="cursor:pointer;">
+                    <img src="/images/chart/btc_01.png" id="Tool01" onclick="AddLineTool('CROSS_LINE_TOOL');" style="cursor:pointer;">
+                    <img src="/images/chart/btc_02.png" id="Tool02" onclick="AddLineTool('RECT_TOOL');" style="cursor:pointer;">
+                    <img src="/images/chart/btc_03.png" id="Tool03" onclick="AddLineTool('CIRCLE_TOOL');" style="cursor:pointer;">
+                    <img src="/images/chart/btc_03.png" id="Tool03" onclick="AddLineTool('TRIANGLE_TOOL');" style="cursor:pointer;"> -->                   
+                    <img src="/images/chart/bt_reset.png" id="reset" onclick="ResetChart();" onmouseout="highlight('Reset','reset','out')" onmouseover="highlight('Reset','reset','over')" style="cursor:pointer;">
+                </div>
+                <button onclick="ShowCrossLine();">십</button>
+                <input type="text" id="RealData" name="RealData" value="">
+                <button onclick="SetRealData();">실</button>
+                <button onclick="AppendData();">추</button>
+                <!-- \
+                <button onclick="Request();">재조회</button>
+                <button onclick="AppendRequest();">추가조회</button>
+                <button onclick="IndicatorAdd(\'O\');">지표추가</button>
+                <button onclick="IndicatorSetup();">지표설정</button>
+                <button onclick="AddLineTool();">추세선</button>
+                <button onclick="StartReal();">실시간시작</button>
+                <button onclick="StopReal();">실시간중지</button>
+                -->
+            </div>
+			<div class="canvas_container">
+			<div id="canvasDP2" style="float:left;border-left:0px solid #B2B2B2;border-right:0px solid #B2B2B2;padding-left:0px;padding-right:0px">
+					<div id="ChartDIV_canvasDiv" class="canvasDiv" ></div>
+					<div id="canvasDiv2" class="canvasDiv" ></div>
+					<!--<div style="float:right;">
+						<img src="/images/chart/img_scl.png" class="logo" onmouseout="highlight('Logo','logDiv','out')" onmouseover="highlight('Logo','logDiv','over')" id="logoDiv"></div>-->
+			</div>
+			<div id="IndicatorSetupDiv" class="IndicatorSetupDiv"></div>
+		</div>
+	</div>
+	<input type="hidden" id="indId">
+	<input type="hidden" id="indKey">
+    <div id="chart-popup-wrapper" class="popup_wrapper_pc"></div>
+</body>
+
+<script>
+
+    const OPCODE_LOAD = 0;
+    const OPCODE_CHANGE_SYMBOL = 1;
+    const OPCODE_CHANGE_CYCLE = 2;
+    const OPCODE_CHANGE_INTERVAL = 3;
+    const OPCODE_ADD_SYMBOL = 4;
+
+    let gStrStorageKey = "html5chart_exam";
+
+    let gDefaultReqeustDataCnt = 50;
+
+    //화면에서 사용되는 변수들
+    var QueryInfo = {
+        "request":false,//조회요청 중이며 응답을 아직 받지 못한 상태:true, 조회요청 중이 아닌 경우:false
+        "opCode":OPCODE_LOAD,
+        "symbol":"",
+        "cycle":1,
+        "interval":1,
+        "nRqDataCnt":gDefaultReqeustDataCnt,
+        "strRqArray":null,
+        "chartFullProperty":null,
+        "nextQueryInfo":{
+            "opCode":null,
+            "symbol":null,
+            "cycle":null,
+            "interval":null,
+            "nRqDataCnt":null
+        }
+    }
+    let preSymbol = '';
+    let mainConvas, mainContext, imageChart, colorHTML, BcolorHTML, sLineType, R_start, R_stop, TopViewType = 'N';
+    let ChartDIV = null, TopPreData = null, ChartMainThis;
+    let gChartBlockType = VERT_BLOCK_TYPE;
+    let gStrThemeName = "default";//black색상은 "full"
+    let gDateTimePacketIndex = null;
+    let vUnit, FXc;
+    let strKey_MA,
+        strKey_Env,
+        strKey_BB,
+        strKey_VOLUME,
+        strKey_VMA,
+        strKey_MACD,
+        strKey_MACDS,
+        strKey_ADX,
+        strKey_ADXR,
+        strKey_CCI,
+        strKey_TRIX,
+        strKey_MOM,
+        strKey_RSI,
+        strKey_StoF,
+        strKey_StoS,
+        strKey_WILL,
+        strKey_Disparity,
+        strKey_OBV,
+        strKey_VR,
+        strKey_PIVOT,
+        strKey_LRS,
+        strKey_ROC,
+        strKey_SONAR,
+        strKey_PSYCO;
+
+    let gGraphKeyObj = {};
+    let fRealProcess, getMainContainer;
+    let osType = "mobile";
+
+    //////////////////////////////////////////////
+    let gRQInfoArray = null;//rq 키만 저장
+    let gChartFullProperty = null;
+    let gStrFirstRQ = null;
+    let gStrFirstGraphKey = null;
+    //////////////////////////////////////////////
+
+    function ShowCrossLine() {
+
+        //var bShowCrossLine = Chart.IsVisibleCrossLine();
+        //if (bShowCrossLine === true)
+        //    Chart.ShowCrossLine(false);
+        //else
+        //    Chart.ShowCrossLine(true);
+
+        //특정지표 초기화 테스트
+        //Chart.SetDefaultIndicatorPropertyToChart(gPriceKey);
+
+
+        //지표 기본값 사용자 저장 불러오기 테스트
+        //var strProerties = localStorage.getItem("DefaultProperty");
+        //Chart.SetJSONStringToDefaultIndicatorProp(strProerties);
+
+        //저장하기 기능
+        var ChartFullProperty = Chart.GetChartFullProperty();
+        var strChartFullProperty = JSON.stringify(ChartFullProperty);
+        localStorage.setItem("ChartFullProperty", strChartFullProperty);
+    }
+
+    function RequestDepthChart(strRequest, strCode, nCycle, nInterval, bRealBong, nDataCnt, bResetChart) {
+
+        var Cdate = [],
+            Ctime = [],
+            Copenprc = [],
+            Chighprc = [],
+            Clowprc = [],
+            Ccloseprc = [],
+            Cealqty = [],
+            Ccumdealqty = [];
+        var B1symbol = [],
+            B1diff = [],
+            B1yesterdayprice = [],
+            B1updnrate = [],
+            B1precumdealqty = [],
+            B1out_cnt = [];
+
+
+        //$.getJSON("http://211.240.103.90/kovex/chartdata.inc?symbol=" + strCode + "&num=" + nDataCnt + "&ijwb=" + nCycle, function (dataArr) {
+
+        {
+            var i, j;
+
+            var dataLength = null;
+            var dOpenprc,
+                dHighprc,
+                dLowprc,
+                dCloseprc,
+                dCumdealqty,
+                dDate;
+            var sData, chartData = "";
+            var miniOrder;
+            var strKey;
+            var sRQ = "RQ100";
+
+            /////////////////////////////////////////////
+            //데이터 가공
+            /////////////////////////////////////////////
+            var strData =
+            "0000000000\t0000000000\t0000000000\t0\r\n" +
+            "0000000000\t0000000000\t0000000000\t0\r\n" +
+            "0000000000\t0000000000\t0000000000\t0\r\n" +
+            "0000000000\t0000000000\t0000000000\t0\r\n" +
+            "0000000000\t0000000000\t0000000000\t0\r\n" +
+            "0000010000\t0002000000\t0002000000\t0\r\n" +
+            "0000010100\t0001950000\t0001950000\t0\r\n" +
+            "0000010200\t0001900000\t0001900000\t0\r\n" +
+            "0000010300\t0001850000\t0001850000\t0\r\n" +
+            "0000010400\t0001800000\t0001800000\t0\r\n" +
+            "0000010500\t0001750000\t0001750000\t0\r\n" +
+            "0000010600\t0001700000\t0001700000\t0\r\n" +
+            "0000010700\t0001650000\t0001650000\t0\r\n" +
+            "0000010800\t0001600000\t0001600000\t0\r\n" +
+            "0000010900\t0001550000\t0001550000\t0\r\n" +
+            "0000011000\t0001550000\t0001550000\t1\r\n" +
+            "0000011100\t0001600000\t0001600000\t1\r\n" +
+            "0000011200\t0001650000\t0001650000\t1\r\n" +
+            "0000011300\t0001700000\t0001700000\t1\r\n" +
+            "0000011400\t0001750000\t0001750000\t1\r\n" +
+            "0000011500\t0001800000\t0001800000\t1\r\n" +
+            "0000011600\t0001850000\t0001850000\t1\r\n" +
+            "0000011700\t0001900000\t0001900000\t1\r\n" +
+            "0000011800\t0001950000\t0001950000\t1\r\n" +
+            "0000011900\t0002000000\t0002000000\t1\r\n" +
+            "0000000000\t0000000000\t0000000000\t1\r\n" +
+            "0000000000\t0000000000\t0000000000\t1\r\n" +
+            "0000000000\t0000000000\t0000000000\t1\r\n" +
+            "0000000000\t0000000000\t0000000000\t1\r\n" +
+            "0000000000\t0000000000\t0000000000\t1\r\n";
+
+            dataLength = 20;
+        var nCnt = 0;
+        var strPacketData, sData;
+        var nStartPos = 0, nFindPos = -1;
+        var strLineDevider = "\r\n";
+        var strChartData = "";
+        var nRealDataCnt = 0;
+        var strTotalData = null;
+
+        while ((nFindPos = strData.indexOf(strLineDevider, nStartPos)) >= 0) {
+
+            var strLine = strData.substring(nStartPos, nFindPos);
+            nStartPos = nFindPos + strLineDevider.length;
+
+            var nSPos = 0, nFPos = -1;
+            var strDevider = "\t";
+            var nFieldIndex = 0;
+            while ((nFPos = strLine.indexOf(strDevider, nSPos)) >= 0) {
+
+                sData = strLine.substring(nSPos, nFPos);
+                strChartData += sData;
+
+                nSPos = nFPos + strDevider.length;
+                nFieldIndex++;
+            }
+
+            if (nSPos > 0) {
+
+                sData = strLine.substring(nSPos);
+
+                strChartData += sData;
+
+                nCnt++;
+            }
+        }
+
+        strTotalData = nCnt + "!" + strChartData;
+        ///////////////////////////////////////////////////////
+
+            //var RQInfo = new RQInfo();
+            var RQ = new RQInfos();
+            RQ.Info.m_strContents = strTotalData;
+            RQ.Info.m_strItemCode = "000660";
+            RQ.Info.m_strItemName = "000660";
+            RQ.Info.m_nRequestDataCnt = nCnt;
+            RQ.Info.m_strOrderUnitQty = '1';
+
+            miniOrder = "1";
+
+            ///////////////////////////////////////////////////////
+            //현재가, 전일종가, 대비, 등락율, 누적등락율 셋팅 예제
+
+            //현재가
+            RQ.Info.m_CurPrice = 10900;
+            ///////////////////////////////////////////////////////
+
+            RQ.Info.m_strPriceDigit = miniOrder;
+            //최소주문수량단위( ex: "0.0001" 입력 ) => 거래량 자리수 표현에 사용
+            RQ.Info.m_strOrderUnitQty = "1";
+
+            //차트컨트롤에 rq등록
+            Chart.ResetChart(ChartDIV, ChartDIV + "_Canvas");
+            Chart.AddRQ(sRQ);
+            Chart.SetRQInfo(sRQ, RQ.Info);
+
+            //차트컨트롤에 데이터 패킷정보 셋팅
+            Chart.AddInputNumPacketInfo(sRQ, "_HOGA_", 10, 10, 100, miniOrder);
+            Chart.AddInputNumPacketInfo(sRQ, "_HOGAREST_", 10, 10, 100, miniOrder);
+            Chart.AddInputNumPacketInfo(sRQ, "_HOGAAMOUNT_", 10, 10, 100, miniOrder);
+            Chart.AddInputNumPacketInfo(sRQ, "_SELLFLAG_", 1, 10, 1, miniOrder);
+
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////
+            //가격차트만 먼저 등록 데이터처리를 위해
+            var rGraph = Chart.IsExistGraphNameInRQ(sRQ, "_HOGADEPTH_");
+            if (rGraph === null) {//차트를 새로 생성한 경우
+
+                //var rGraphProp = Chart.GetGraphPropertyFromChartFullProperty(sRQ, "_PRICE_", gChartFullProperty);
+                //strKey = Chart.AddIndicator(sRQ, rGraphProp.m_strGraphName, rGraphProp.m_nColIndex, rGraphProp.m_nRowIndex, rGraphProp.m_nVertScaleIndex, rGraphProp.m_nBlockRatio, rGraphProp.m_PropertyInfo);
+                //gPriceKey = strKey;
+                strKey = Chart.AddIndicator(sRQ, "_HOGADEPTH_", -1, -1, -1, 1);
+            }
+            else {//기존 차트 상태에서 종목만 변경하거나 주기를 변경하거나 연속데이터 조회하는 경우
+                strKey = rGraph.m_strKey;
+            }
+
+            Chart.RegXScaleMng(sRQ, false);
+
+            Chart.SetPacketData(sRQ, RQ.Info.m_strContents, RQ.Info.m_strContents.length, false, true, true);
+
+            {//조회 종목들 데이터를 모두 받은 후 처리
+
+                //XScaleMng 정렬
+                Chart.SelectGraphByKey(sRQ, strKey);
+
+                Chart.ArrangeXScaleMng();
+
+                Chart.InitialViewInfo(300);
+
+                Chart.ExtractYScaleMinMax(true);
+
+                Chart.SetGlobalPropertyToChart(false);
+
+                Chart.Draw(DRAW_CASE_TR | DRAW_CASE_RESIZE | DRAW_CASE_ADD_CHARTBLOCK);
+            }
+        }
+        //});
+
+    }
+
+    function ResetChart(){
+
+        RequestDepthChart();
+
+        /*
+        ////////////////////////////////////////////////////////////////
+        //1. 저장된 차트전체설정 불러오기
+        var strChartFullProperty = localStorage.getItem("ChartFullProperty");
+        gChartFullProperty = JSON.parse(strChartFullProperty);
+
+        ////////////////////////////////////////////////////////////////
+        //2. 저장되었던 rq 내용으로 차트 데이터 조회진행
+        gRQInfoArray = Object.getOwnPropertyNames(gChartFullProperty.m_mapRQProperty);
+        if (gRQInfoArray.length > 0) {
+            var strRQ = gRQInfoArray[0];
+            var rRQProperty = gChartFullProperty.m_mapRQProperty[strRQ];
+
+            gStrFirstRQ = null;
+            gStrFirstGraphKey = null;
+            var bResetChart = true;
+            RequestChart(strRQ, rRQProperty.m_strCode, rRQProperty.m_nCycle, rRQProperty.m_nInterval, rRQProperty.m_bRealBong, rRQProperty.m_nRequestDataCnt, bResetChart);
+        }
+        */
+
+        //var nViewCnt = Chart.GetViewCnt("_DATETIME_");
+        //alert("뷰카운트:" + nViewCnt);
+
+
+        //추가된 지표 설정 모두 가져오기
+        //var mapProp = Chart.GetTotalIndicatorProp();
+        //var strProp = JSON.stringify(mapProp);
+        //console.log(strProp);
+
+
+        //가격차트 속성변경
+        /*var rProperty = Chart.GetPropertyInfo(gPriceKey);
+        rProperty.m_SubGraphPropertyInfoArray[0].m_PriceCandleTypeInfo.m_bFillUpturnPlus = true;
+        rProperty.m_SubGraphPropertyInfoArray[0].m_PriceCandleTypeInfo.m_bFillUpturnMinus = true;
+        rProperty.m_SubGraphPropertyInfoArray[0].m_PriceCandleTypeInfo.m_bFillDropPlus = true;
+        rProperty.m_SubGraphPropertyInfoArray[0].m_PriceCandleTypeInfo.m_bFillDropMinus = true;
+        //rProperty.m_SubGraphPropertyInfoArray[0].m_PriceCandleTypeInfo.m_bFillGapMinus = true;
+        Chart.SetPropertyInfo(gPriceKey, rProperty);
+        Chart.Draw(0x0008);
+
+        Chart.ChangeDefaultIndicatorProperty(rProperty.m_strName, rProperty);
+
+
+        rProperty = Chart.GetPropertyInfo(gGraphKeyObj['ind1'], true);
+        Chart.ChangeDefaultIndicatorProperty(rProperty.m_strName, rProperty);
+
+        rProperty = Chart.GetPropertyInfo(gGraphKeyObj['ind4'], true);
+        rProperty.m_SubGraphPropertyInfoArray[0].m_VolumeBarTypeInfo.m_bFill = false;
+        Chart.ChangeDefaultIndicatorProperty(rProperty.m_strName, rProperty);
+
+        var strJson = Chart.GetJSONStringFromDefaultIndicatorProp();
+        localStorage.setItem("DefaultProperty", strJson);
+        */
+
+        /* 서브타입 변경 테스트
+        var strKey = gGraphKeyObj['ind10'];
+        var strSubGraphName = "CCI_Signal";
+        var nSubGraphSubType = 1;//INDICATOR_SUBGRAPH_BAR
+        Chart.ChangeSubGraphSubType(strKey, strSubGraphName, nSubGraphSubType, true);
+        */
+
+        /*
+        var rProperty = Chart.GetPropertyInfo(gIndiKey, true);
+        rProperty.m_SubGraphPropertyInfoArray[0].m_VolumeBarTypeInfo.m_bFill = false;
+        Chart.ChangeDefaultIndicatorProperty(rProperty.m_strName, rProperty)
+        var strJson = JSON.stringify(rProperty);
+        console.log("거래량차트 설정내용: " + strJson);
+        */
+
+        /*
+        var GlobalProperty = Chart.GetGlobalProperty();
+        var nType = GlobalProperty.GetShowLatestPriceType();
+        GlobalProperty.SetShowLatestPriceType(1);//보이는 영역에서 최근데이터
+        GlobalProperty.SetPriceChangeRatioType(1);//이전봉 대비 등락률
+        Chart.SetGlobalProperty(GlobalProperty);
+        Chart.Draw(DRAW_CASE_SET_GLOBAL_PROPERTY);
+        */
+
+        //alert("nType:" + nType);
+
+       /*
+       localStorage.removeItem('_MA_');
+       console.log("local Reset:"+localStorage.getItem('_MA_'))
+       //for(var r=2; r<=24; r++){
+       for(var r=2; r<=11; r++){
+
+		    if(r!=4){
+			    if(document.getElementById('ind'+r).checked == true){
+				    Chart.DeleteIndicator(gGraphKeyObj['ind'+r]);
+				    Chart.Draw(DRAW_CASE_DEL_CHARTBLOCK);
+				    document.getElementById('ind'+r).checked=false;
+			    }
+		    }
+	    }
+	    TopPreData=null;
+	    SymbolChange();
+        */
+    }
+
+
+function LStorage(){
+//	console.log("DB start");
+//	localStorage.setItem('one', 'jang');
+//	localStorage.setItem('two', 'dong');
+//	console.log("DB :"+dmf .getItem('one'));
+//	console.log("DB :"+localStorage.getItem('two'));
+
+	//localStorage.removeItem('test'); // localStorage 객체에서 원하는 값을 지우는 방법
+    //localStorage.clear();            // 한번에 저장된 모든 값을 삭제하는 방법
+
+}
+
+let Chart = null;
+let gSelectRQ = "";
+let gChartEventScrollFunction = null;
+let gbRequest = false;
+let gChartSizeMode = "";
+let gMarginX = 0;
+let gMarginY = 0;
+let Real_ID = null;
+
+let gPriceKey = null;
+
+let gChartLoadFunction = null;
+let gChartResizeFunction = null;
+
+function RQInfos() {
+    this.Info = new CRQInfo();
+    this.m_strContents = "";
+};
+
+function RequestChart(bResetChart){
+
+    let dataArr;   
+    
+    //symbol = "000660";
+    //symbol = "066570";
+    
+    QueryInfo.reqeust = true;
+    $.getJSON("http://211.240.103.90/kovex/chartdata.inc?symbol=" + QueryInfo.symbol + "&num=" + QueryInfo.nRqDataCnt +"&ijwb=" + QueryInfo.cycle +"&ijwbGroup=" + QueryInfo.interval, function (dataArr) {  /**** 메모리조회 (최대 2800개) */
+    //$.getJSON("http://211.240.103.90/kovex/chartdata_db.inc?symbol=000660&num=4000", function (dataArr) { /**** DB 조회 (5000 개이상) */
+    //$.getJSON("http://211.240.103.90/kovex/data.inc", '', function (dataArr) { /**** 만들어진 파일 데이터 조회 (5000개 조회 - 추가 조회시 다시 파일 갱신요청) */
+    //$.getJSON("http://211.240.103.90/kovex/chartdata.inc?symbol=" + symbol + "&num=5&ijwb=" + ijwb + "&ijwbGroup=" + ijwbGroup, function (dataArr){
+
+        //////////////////////////////////////////////////////////////////
+        let i;
+        let dataLength = dataArr.data.length;
+        let dOpenprc,
+            dHighprc,
+            dLowprc,
+            dCloseprc,
+            dCumdealqty,
+            dDate;
+        let sData, chartData = "";
+        let strMinOrder, strMinPriceUnit;
+        
+        //조회요청에 대한 응답을 받으므로 요청상태 해제시킴
+        QueryInfo.reqeust = false;
+
+        for ( i = 0; i < dataLength; i++) {
+
+            if (QueryInfo.cycle != 5 && QueryInfo.cycle != 6)
+                dDate = dataArr.data[i].date;
+            else
+                dDate = dataArr.data[i].date + dataArr.data[i].time;
+
+            dOpenprc = sprintf(10, dataArr.data[i].openprc);
+            dHighprc = sprintf(10, dataArr.data[i].highprc);
+            dLowprc = sprintf(10, dataArr.data[i].lowprc);
+            dCloseprc = sprintf(10, dataArr.data[i].closeprc);
+            dCumdealqty = sprintf(19, dataArr.data[i].cumdealqty);
+
+            sData = (dDate + "" + dOpenprc + "" + dHighprc + "" + dLowprc + "" + dCloseprc + "" + dCumdealqty);
+            chartData += sData;
+        }
+        chartData = dataLength + "!" + chartData;
+
+        ///////////////////////
+
+        if(QueryInfo.opCode === OPCODE_LOAD && bResetChart)
+        {
+            Chart.ResetChart(ChartDIV, ChartDIV + "_Canvas", gChartBlockType, gStrThemeName, QueryInfo.chartFullProperty);
+        }
+
+        //////////////////////////////////////////////////////////////////
+        //20180115 이문수 test 주석처리 >>        
+        var ChartRQInfos = new RQInfos();
+
+        ChartRQInfos.Info.m_strContents = chartData;
+        ChartRQInfos.Info.m_strItemCode = QueryInfo.symbol;
+        ChartRQInfos.Info.m_strItemName = QueryInfo.symbol;
+        ChartRQInfos.Info.m_nCycle = QueryInfo.cycle;
+        ChartRQInfos.Info.m_nInterval = QueryInfo.interval;
+        ChartRQInfos.Info.m_nRequestDataCnt = QueryInfo.nRqDataCnt;
+        ChartRQInfos.Info.m_bRealBong = true;
+
+        ChartRQInfos.Info.m_strMarketStartTime = "090000";
+        ChartRQInfos.Info.m_strMarketEndTime = "230000";
+        
+        strMinPriceUnit = "1";//최소가격단위(가격자리수 표현에 사용)
+        strMinOrder = "1";//최소주문수량단위 (거래량자리수표현에 사용)        
+
+        //가격 표현 단위("0", "0.01", "0.00000001" 등 셋팅)
+        ChartRQInfos.Info.m_strPriceDigit = strMinPriceUnit;
+
+        //최소주문수량단위( ex: "0.0001" 입력 ) => 거래량 자리수 표현에 사용
+        ChartRQInfos.Info.m_strOrderUnitQty = strMinOrder;
+
+        ///////////////////////////////////////////////////////
+        //현재가, 전일종가, 대비, 등락율, 누적등락율 셋팅 예제
+        //현재가
+        ChartRQInfos.Info.m_CurPrice = null;
+
+        //전일종가
+        ChartRQInfos.Info.m_PrevPrice = null;
+
+        //대비
+        ChartRQInfos.Info.m_PriceChange = null;
+
+        //등락율
+        ChartRQInfos.Info.m_ChangeRatio = null;
+
+        //누적등락율
+        ChartRQInfos.Info.m_CumulativeVolume = null;
+        ///////////////////////////////////////////////////////
+        
+        {
+            let i;
+            let rRQInfos = ChartRQInfos;
+            let strKey = null;
+            let sRQ = null, strRQ = null;
+            let rRQProperty = null;
+            let GraphPropertyArray = null;
+            let nGraphPropLen = null;
+            //차트컨트롤에 rq등록
+            if(QueryInfo.opCode === OPCODE_LOAD)
+            {
+                sRQ = QueryInfo.strRqArray[0];
+                Chart.AddRQ(sRQ);
+                Chart.SetRQInfo(sRQ, rRQInfos.Info);
+            }
+            else if(QueryInfo.opCode === OPCODE_ADD_SYMBOL)
+            {
+                sRQ = Chart.AddRQInfo(rRQInfos.Info);                
+            }
+            else if(QueryInfo.opCode === OPCODE_CHANGE_SYMBOL)
+            {
+                sRQ = Chart.GetSelectedRQ();
+                Chart.SetRQInfo(sRQ, rRQInfos.Info);
+            }
+            else if(QueryInfo.opCode === OPCODE_CHANGE_CYCLE)
+            {
+                sRQ = Chart.GetSelectedRQ();
+                Chart.SetRQInfo(sRQ, rRQInfos.Info);
+            }
+            else
+            {
+                sRQ = Chart.GetSelectedRQ();
+                Chart.SetRQInfo(sRQ, rRQInfos.Info);
+            }
+
+            //////////////////////////////////////////////////////////////////////////////////////////
+            //차트컨트롤에 데이터 패킷정보 셋팅
+            if (rRQInfos.Info.m_nCycle == 5 || rRQInfos.Info.m_nCycle == 6) {//분,초주기
+
+                let rPacketData = Chart.AddDateTimePacketInfo(sRQ, "_DATETIME_", "YYYYMMDDHHMMSS", 14);
+                if(rPacketData)
+                    gDateTimePacketIndex = rPacketData.m_nPacketIndex;
+
+            } else {//일,주,월,년주기
+
+                let rPacketData = Chart.AddDateTimePacketInfo(sRQ, "_DATETIME_", "YYYYMMDD", 8);
+                if(rPacketData)
+                    gDateTimePacketIndex = rPacketData.m_nPacketIndex;
+            }
+
+            Chart.AddInputNumPacketInfo(sRQ, "_OPEN_", 10, 10, null, strMinPriceUnit);
+            Chart.AddInputNumPacketInfo(sRQ, "_HIGH_", 10, 10, null, strMinPriceUnit);
+            Chart.AddInputNumPacketInfo(sRQ, "_LOW_", 10, 10, null, strMinPriceUnit);
+            Chart.AddInputNumPacketInfo(sRQ, "_CLOSE_", 10, 10, null, strMinPriceUnit);
+            Chart.AddInputNumPacketInfo(sRQ, "_VOLUME_", 19, 10, null, strMinOrder);
+            
+            ///////////////////////////////////////////////////////////////////////
+            //계산용 패킷을 추가
+            var strInputPacketNameArray = ["_HIGH_", "_LOW_"];
+            Chart.AddPacketCalculator(sRQ, "_HL2_", strInputPacketNameArray, 10, null, strMinPriceUnit);
+
+            strInputPacketNameArray[2] = "_CLOSE_";
+            Chart.AddPacketCalculator(sRQ, "_HLC3_", strInputPacketNameArray, 10, null, strMinPriceUnit);
+            
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////
+            //데이터처리를 위해 가격차트만 먼저 등록
+            if(QueryInfo.opCode === OPCODE_LOAD)
+            {                        
+                strKey = Chart.LoadFirstIndicator(sRQ, QueryInfo.chartFullProperty);
+            }
+            //종목 추가하는 경우 가격차트와 이평만 추가
+            else if(QueryInfo.opCode === OPCODE_ADD_SYMBOL)
+            {
+                strKey = Chart.AddIndicator(sRQ, "_PRICE_", -1, -1, -1, 1);
+                var rBlockPosInfo = Chart.FindBlockColRowByGraphKey(sRQ, strKey);
+                if (rBlockPosInfo !== null) {
+                    //가격 이동평균 추가
+                    Chart.AddIndicator(sRQ, "_MA_", rBlockPosInfo.m_X, rBlockPosInfo.m_Y, rBlockPosInfo.m_nVertScaleIndex, 1);
+                }
+            }
+            else{
+
+                Chart.UpdatePacketInfo(sRQ);
+            }
+
+            var bAppendRQ = Chart.GetRQCount() > 1 ? true : false;
+            Chart.RegXScaleMng(sRQ, bAppendRQ);            
+
+            ////////////////////////////////////////////////////////////////////////////////
+            //차트컨트롤에 차트데이터 전달
+            Chart.SetPacketData(sRQ, rRQInfos.Info.m_strContents, rRQInfos.Info.m_strContents.length, false, false, true);
+            
+            if(QueryInfo.opCode === OPCODE_LOAD)
+            {
+                if(QueryInfo.strRqArray.length > 0){
+                    QueryInfo.strRqArray.shift();
+                }
+
+                if(QueryInfo.strRqArray.length > 0){
+
+                    strRQ = QueryInfo.strRqArray[0];
+                    rRQProperty = QueryInfo.chartFullProperty.m_mapRQProperty[strRQ];
+                    if(rRQProperty)
+                    {
+                        QueryInfo.opCode = OPCODE_LOAD;
+                        QueryInfo.symbol = rRQProperty.m_strCode;
+                        QueryInfo.cycle = rRQProperty.m_nCycle;
+                        QueryInfo.interval = rRQProperty.m_nInterval;
+                        QueryInfo.nRqDataCnt = rRQProperty.m_nRequestDataCnt;
+
+                        RequestChart(false);
+
+                        return;
+                    }
+                }
+
+                /////////////////////////////////////////////////////////////////////
+                //저장되었던 지표적용(저장되어 있던 모든 종목 조회가 완료된 후)
+                GraphPropertyArray = Chart.GetGraphPropertyArrayFromChartFullProperty(QueryInfo.chartFullProperty);
+                nGraphPropLen = GraphPropertyArray.length;
+                for (i = 0; i < nGraphPropLen; i++) {
+
+                    let rGraphProp = GraphPropertyArray[i];
+
+                    strKey = Chart.AddIndicator(rGraphProp.m_strRQ, rGraphProp.m_strGraphName, rGraphProp.m_nColIndex, rGraphProp.m_nRowIndex,
+                        rGraphProp.m_nVertScaleIndex, rGraphProp.m_nBlockRatio, rGraphProp.m_PropertyInfo, rGraphProp.m_strGraphKey, true);
+
+                    //추가된 지표 계산
+                    Chart.IndicatorCalc(rGraphProp.m_strRQ, strKey);
+                }
+
+                Chart.ArrangeXScaleMng();
+
+                Chart.InitialViewInfo(50);
+
+                Chart.ExtractYScaleMinMax(true);
+
+                Chart.ResizeUsingProperty(QueryInfo.chartFullProperty.m_MainBlockProperty, false);
+
+                Chart.SetGlobalProperty(QueryInfo.chartFullProperty.m_GlobalProperty);
+
+                Chart.SetGlobalPropertyToChart(false);
+
+                // localStorage에 저장한 분석툴을 메모리로 로드
+                let bToolAdd = Chart.LoadAllToolInfo( QueryInfo.chartToolProperty );
+                if( bToolAdd === true )
+                {
+                    // 현 조회된 종목,주기의 분석툴 로드
+                    Chart.LoadToolInfoByRQ(sRQ, QueryInfo.symbol, QueryInfo.cycle );
+                }
+
+                Chart.Draw(DRAW_CASE_TR | DRAW_CASE_RESIZE | DRAW_CASE_ADD_CHARTBLOCK);
+
+                //저장/불러오기 처리 모두 완료되었음을 의미
+                QueryInfo.chartFullProperty = null;
+                QueryInfo.chartToolProperty = null;
+                QueryInfo.strRqArray = null;
+
+                //불러오기 모두 완료된 후 조회과정 중 종목변경 요청 온 것은 Default rq 종목변경
+                if(QueryInfo.nextQueryInfo.symbol){
+                    
+                    QueryInfo.opCode = QueryInfo.nextQueryInfo.opCode;
+                    QueryInfo.symbol = QueryInfo.nextQueryInfo.symbol;
+                    QueryInfo.cycle = QueryInfo.nextQueryInfo.cycle;
+                    QueryInfo.interval = QueryInfo.nextQueryInfo.interval;
+                    QueryInfo.nRqDataCnt = QueryInfo.nextQueryInfo.nRqDataCnt;
+                    
+                    RequestChart(false);
+
+                    QueryInfo.nextQueryInfo.symbol = null;
+
+                    return;
+                }
+                else
+                {
+                    // 모든 조회요청 후 저장
+                    SaveChart( Chart, TOTAL_SETUP_SAVE_TYPE );
+                }
+            }
+            else//일반 종목변경, 주기변경
+            {
+                Chart.ArrangeXScaleMng();
+
+                Chart.InitialViewInfo(50);
+
+                Chart.ExtractYScaleMinMax(true);
+
+                // 현 조회된 종목,주기의 분석툴 로드
+                Chart.LoadToolInfoByRQ(sRQ, rRQInfos.Info.m_strItemCode, QueryInfo.cycle );
+
+                //조회시마다 설정 내용 저장
+                SaveChart(Chart);
+
+                let nDrawCase = DRAW_CASE_TR | DRAW_CASE_RESIZE;
+                if(QueryInfo.opCode === OPCODE_ADD_SYMBOL){
+                    nDrawCase = nDrawCase | DRAW_CASE_ADD_CHARTBLOCK;
+                }
+                Chart.Draw(nDrawCase);
+
+                //저장/불러오기 처리 모두 완료되었음을 의미
+                QueryInfo.chartFullProperty = null;
+                QueryInfo.strRqArray = null;
+            }
+
+        }
+
+        /*
+        var ri = 0;
+        fRealProcess = function RealTick() {
+
+            return;//테스트
+
+            var RDate = Real(ri);
+            var RealDataArray = [];
+
+            var t = new Date();
+            var second = t.getSeconds();
+
+            //RealDataArray[0] = "" + RDate.rd.exectime + (second < 10 ? ("0" + second) : second);
+            RealDataArray[0] = RDate.rd.exectime;
+            RealDataArray[1] = null;
+            RealDataArray[2] = null;
+            RealDataArray[3] = null;
+            RealDataArray[4] = RDate.rd.execprice;
+            RealDataArray[5] = RDate.rd.execvalue;
+
+            //console.log("R__"+RealDataArray[0]+"_____________"+ RealDataArray[4]+"_____________"+RealDataArray[5]);
+
+            Chart.SetRealData(strSelectRQ, PRICE_REAL_TYPE, 0, RealDataArray);
+            if (TopViewType == "Y") {
+                topPrc(RDate.rd.execprice, RDate.rd.highprc, RDate.rd.lowprc, RDate.rd.diff, RDate.rd.updnrate, RDate.rd.cumdealqty, RDate.rd.cumdealcost);
+                TopPreData = true;
+            }
+            ri++;
+            //if (ri >= 10) {
+            //    clearInterval(Real_ID);
+            //}
+        };
+
+        if (Real_ID) {
+            clearInterval(Real_ID);
+            ri = 0;
+        }
+        Real_ID = setInterval(fRealProcess, 100);//20180116 이문수 test        
+        */
+    });
+
+    //가로스크롤 위치가 좌측 끝 부분 위치한 상태에서 좌측 하단 스크롤 버튼을 클릭하면 발생하는 이벤트에 이벤트 함수 연결
+    if (!gChartEventScrollFunction) {
+
+        gChartEventScrollFunction = function (e) {
+
+            return;
+
+            var rqInfoForScroll = e.m_mapRqInfo;
+            for (var strRq in rqInfoForScroll) {
+
+                var rqInfo = rqInfoForScroll[strRq];
+
+                addData(strRq, rqInfo.m_strItemCode, "" + rqInfo.m_nCycle, rqInfo.m_strNextKey);
+            }
+        };
+
+        document.addEventListener('Event_Scroll', gChartEventScrollFunction);
+    }
+
+    if(!gChartResizeFunction){
+    
+        gChartResizeFunction = function (e) {
+
+            var nCanvasWidth = $(window).width() - gMarginX;
+            var nCanvasHeight = $(window).height() - gMarginY;
+            if (nCanvasWidth < 1200) {
+                document.getElementById('HLVV').style.display = 'none';
+            } else {
+                document.getElementById('HLVV').style.display = '';
+            }
+            var rTestCanvas = document.getElementById(ChartDIV + "_Canvas");
+            rTestCanvas.width = nCanvasWidth;
+            rTestCanvas.height = nCanvasHeight;
+
+            Chart.Resize(nCanvasWidth, nCanvasHeight);
+            // console.log("window resize : nCanvasWidth=" + nCanvasWidth + ", nCanvasHeight=" + nCanvasHeight+",ChartDIV:"+ChartDIV);
+        }
+
+        window.addEventListener('resize', gChartResizeFunction);
+    }
+
+}
+
+function RealPrice(RDate) {
+    fRealProcess(RDate);
+}
+
+function Request() {
+
+}
+
+function AppendRequest() {
+
+}
+
+function AddLineTool(ToolType) {
+    // var LINE_TOOL = 0, RECT_TOOL = 1, CIRCLE_TOOL = 2, VERT_LINE_TOOL = 3, HOZR_LINE_TOOL = 4, CROSS_LINE_TOOL = 5;
+    console.log("Tool________________:" + ToolType);
+    if (Chart) {
+        if (ToolType == "LINE_TOOL")
+            Chart.AddTool(LINE_TOOL);
+        if (ToolType == "HOZR_LINE_TOOL")
+            Chart.AddTool(HOZR_LINE_TOOL);
+        if (ToolType == "VERT_LINE_TOOL")
+            Chart.AddTool(VERT_LINE_TOOL);
+        if (ToolType == "RECT_TOOL")
+            Chart.AddTool(RECT_TOOL);
+        if (ToolType == "CIRCLE_TOOL")
+            Chart.AddTool(CIRCLE_TOOL);
+        if (ToolType == "CROSS_LINE_TOOL")
+            Chart.AddTool(CROSS_LINE_TOOL);
+        if (ToolType == "TRIANGLE_TOOL")
+            Chart.AddTool(TRIANGLE_TOOL);
+    }
+}
+
+function ChartZoom(zoKey) {
+    if (Chart) {
+        if (zoKey == "Z")
+            Chart.ZoomIn(10);
+        else
+            Chart.ZoomOut(10);
+    }
+}
+
+function sprintf(d, num) {// sprintf 함수
+    var str = "";
+    for (var i = 0; i < d; i++) {
+        str += "0";
+    }
+    str += num;
+
+    return str.slice("-" + d);
+}
+
+// 숫자 타입에서 쓸 수 있도록 format() 함수 추가
+Number.prototype.format = function () {
+    if (this == 0)
+        return 0;
+
+    var reg = /(^[+-]?\d+)(\d{3})/;
+    var n = (this + '');
+
+    while (reg.test(n))
+        n = n.replace(reg, '$1' + ',' + '$2');
+
+    return n;
+};
+
+function FRP(val, precision) {
+    var p = Math.pow(10, precision);
+    return Math.round(val * p) / p;
+
+}
+
+// 문자열 타입에서 쓸 수 있도록 format() 함수 추가
+String.prototype.format = function () {
+    var num = parseFloat(this);
+    if (isNaN(num))
+        return "0";
+
+    return num.format();
+};
+
+function SaveChart(obj, nType = TOTAL_SETUP_SAVE_TYPE ) {
+    
+    var ChartFullProperty, strChartFullProperty;
+    ChartFullProperty = obj.GetChartFullProperty();
+
+    if( nType === TOTAL_SETUP_SAVE_TYPE )
+    {
+        strChartFullProperty = JSON.stringify(ChartFullProperty);
+        localStorage.setItem(gStrStorageKey, strChartFullProperty);
+    }
+
+    var strChartToolProperty = "";
+    if( ChartFullProperty.m_GlobalProperty.m_bUseToolSave === true )
+    {
+        if( nType === TOTAL_SETUP_SAVE_TYPE || nType === TOOL_SETUP_SAVE_TYPE )
+        {
+            var ChartToolProperty = obj.GetChartToolProperty();
+            if( ChartToolProperty !== null )
+            {
+                strChartToolProperty = JSON.stringify(ChartToolProperty);                    
+            }
+            
+            localStorage.setItem(gStrStorageKey + 'toolinfo', strChartToolProperty);
+        }
+    }
+}
+function LoadChart(){
+
+    let strChartFullProperty = localStorage.getItem(gStrStorageKey);
+    if(strChartFullProperty)
+    {
+        QueryInfo.chartFullProperty = JSON.parse(strChartFullProperty);
+
+        let bError = false;
+        if(Object.keys(QueryInfo.chartFullProperty.m_mapRQProperty).length <= 0  ||
+                !QueryInfo.chartFullProperty.m_MainBlockProperty ||
+                QueryInfo.chartFullProperty.m_MainBlockProperty.m_ChartBlockPropertyArray.length <= 0)
+        {
+            bError = true;
+        }
+        else
+        {
+            var nIndex, len = QueryInfo.chartFullProperty.m_MainBlockProperty.m_ChartBlockPropertyArray.length;
+            for(nIndex = 0 ; nIndex < len; nIndex++ )
+            {
+                var rChartBlockPropertyInfo = QueryInfo.chartFullProperty.m_MainBlockProperty.m_ChartBlockPropertyArray[nIndex];
+                if(rChartBlockPropertyInfo.m_GraphPropertyArray.length <= 0)
+                {
+                    bError = true;
+                    break;
+                }
+            }
+        }
+
+        if(bError)
+        {
+            QueryInfo.chartFullProperty = Chart.GetDefaultChartFullProperty();
+            QueryInfo.chartFullProperty.m_GlobalProperty.SetShowLatestPriceTypeForSetupHtml(0);
+        }
+    }
+    else
+    {
+        QueryInfo.chartFullProperty = Chart.GetDefaultChartFullProperty();
+        QueryInfo.chartFullProperty.m_GlobalProperty.SetShowLatestPriceTypeForSetupHtml(0);
+    }
+
+    let strRQ = null, RQProperty = null;
+    QueryInfo.strRqArray = [];
+
+    //첫번째 rq 정보얻기
+    for(strRQ in QueryInfo.chartFullProperty.m_mapRQProperty)
+    {
+        QueryInfo.strRqArray[QueryInfo.strRqArray.length] = strRQ;
+
+        if(RQProperty === null){
+            RQProperty = QueryInfo.chartFullProperty.m_mapRQProperty[strRQ];
+        }
+    }
+
+    // 현재 상태의 분석툴을 메모리에 저장
+    // 종목이 변경되거나, 주기가 변경될수 있기때문에 현재 툴을 모두 지움(인자 true)
+    Chart.SaveToolInfo( true );
+
+    QueryInfo.opCode = OPCODE_LOAD;
+    QueryInfo.symbol = document.getElementById("input_symbol").value;
+    QueryInfo.cycle = RQProperty.m_nCycle;
+    QueryInfo.interval = RQProperty.m_nInterval;
+    QueryInfo.nRqDataCnt = RQProperty.m_nRequestDataCnt;
+
+    RequestChart(true);
+}
+
+function ChangeSymbol(){
+
+    if(QueryInfo.request === true)
+    {
+        QueryInfo.nextQueryInfo.opCode = OPCODE_CHANGE_SYMBOL;
+        QueryInfo.nextQueryInfo.symbol = document.getElementById("input_symbol").value;
+        QueryInfo.nextQueryInfo.cycle = Number(document.getElementById('ijwb').value);
+        QueryInfo.nextQueryInfo.interval = 1;
+        QueryInfo.nextQueryInfo.nRqDataCnt = gDefaultReqeustDataCnt;        
+    }
+    else
+    {
+        QueryInfo.opCode = OPCODE_CHANGE_SYMBOL;
+        QueryInfo.symbol = document.getElementById("input_symbol").value;
+        QueryInfo.cycle = Number(document.getElementById('ijwb').value);
+        QueryInfo.interval = 1;
+        QueryInfo.nRqDataCnt = gDefaultReqeustDataCnt;
+        QueryInfo.strRqArray = null;
+        QueryInfo.chartFullProperty = null;
+        QueryInfo.nextQueryInfo.symbol = null;
+        RequestChart(false);
+    }
+}
+
+function AddSymbol(){
+
+    if(QueryInfo.request === true)
+    {
+        QueryInfo.nextQueryInfo.opCode = OPCODE_ADD_SYMBOL;
+        QueryInfo.nextQueryInfo.symbol = document.getElementById("input_symbol").value;
+        QueryInfo.nextQueryInfo.cycle = Number(document.getElementById('ijwb').value);
+        QueryInfo.nextQueryInfo.interval = 1;
+        QueryInfo.nextQueryInfo.nRqDataCnt = gDefaultReqeustDataCnt;        
+    }
+    else
+    {
+        QueryInfo.opCode = OPCODE_ADD_SYMBOL;
+        QueryInfo.symbol = document.getElementById("input_symbol").value;
+        QueryInfo.cycle = Number(document.getElementById('ijwb').value);
+        QueryInfo.interval = 1;
+        QueryInfo.nRqDataCnt = gDefaultReqeustDataCnt;
+        QueryInfo.strRqArray = null;
+        QueryInfo.chartFullProperty = null;
+        QueryInfo.nextQueryInfo.symbol = null;
+        RequestChart(false);
+    }
+}
+
+function ChangeCycle(){
+
+    let rRQSet = Chart.GetSelectedRQSet();
+    if(!rRQSet)
+        return;
+    
+    let nCycle = Number(document.getElementById('ijwb').value);
+    if(QueryInfo.request === true)
+    {
+        QueryInfo.nextQueryInfo.opCode = OPCODE_CHANGE_CYCLE;
+        QueryInfo.nextQueryInfo.symbol = rRQSet.m_RQInfo.m_strItemCode;
+        QueryInfo.nextQueryInfo.cycle = nCycle;
+        QueryInfo.nextQueryInfo.interval = 1;
+        QueryInfo.nextQueryInfo.nRqDataCnt = gDefaultReqeustDataCnt;
+    }
+    else
+    {
+        QueryInfo.opCode = OPCODE_CHANGE_CYCLE;
+        QueryInfo.symbol = rRQSet.m_RQInfo.m_strItemCode;
+        QueryInfo.cycle = nCycle;
+        QueryInfo.interval = 1;
+        QueryInfo.nRqDataCnt = gDefaultReqeustDataCnt;
+        QueryInfo.strRqArray = null;
+        QueryInfo.chartFullProperty = null;
+        QueryInfo.nextQueryInfo.symbol = null;
+        RequestChart(false);
+    }    
+}
+function SymbolChange(nOpCode) {
+    //KfitsChart(document.getElementById("symbol").value);
+    console.log("______________________________" + document.getElementById("symbol").value + "___________________________");
+    if (preSymbol) {
+        console.log(preSymbol);
+        RealClose(preSymbol);
+    }
+    var id = null;
+    /*
+        for (var i = 0; i < document.getElementsByName("ijwb").length; i++) {
+        id = 'ijwb' + (i + 1);
+        if (document.getElementById(id).checked) {
+        var ijwbType = document.getElementById(id).value;
+        console.log(ijwbType);
+        break;
+        }
+        }
+        */
+    var ijwbType = document.getElementById('ijwb').value;
+    var ijwbGroup = document.getElementById('ijwbG').value;
+    id = 'ijwb' + ijwbType;
+
+    //KfitsChart(document.getElementById("symbol").value, nOpCode, ijwbType, document.getElementById("icnt").value, ijwbGroup);
+    preSymbol = document.getElementById("symbol").value;
+}
+
+function SetRealData() {
+    var strRealData = document.getElementById("RealData").value;
+    var strRealDataArray = strRealData.split(";");
+    //000660;20180116201008;222;55 (종목코드;날짜시간;종가;체결량)
+
+    var strCode = strRealDataArray[0];
+    var RealDataArray = [];
+    RealDataArray[0] = strRealDataArray[1];
+    RealDataArray[1] = null;
+    RealDataArray[2] = null;
+    RealDataArray[3] = null;
+    RealDataArray[4] = parseFloat(strRealDataArray[2]);
+    RealDataArray[5] = parseFloat(strRealDataArray[3]);
+
+    Chart.SetRealData(PRICE_REAL_TYPE, strCode, RealDataArray, 0);
+}
+
+function AppendData() {
+
+    var strAppendInfo = document.getElementById("RealData").value;
+    var strAppendInfoArray = strAppendInfo.split(";");
+    //strRQ;5; (rq;시작데이터번호;끝번호;)
+
+    var strRQ = strAppendInfoArray[0];
+    var nAppendDataStartIndex = Number(strAppendInfoArray[1]);
+    var nAppendDataEndIndex = Number(strAppendInfoArray[2]);
+
+    var mapAppendData = {};;
+    var strRQ1 =
+        "20171001174900\t0000135.07\t0000135.07\t0000135.06\t0000135.06\t0001000000\r\n" +
+        "20171001174800\t0000135.05\t0000135.07\t0000135.04\t0000135.06\t0001100000\r\n" +
+        "20171001174700\t0000135.04\t0000135.04\t0000135.04\t0000135.04\t0001200000\r\n" +
+        "20171001174600\t0000135.03\t0000135.04\t0000135.03\t0000135.04\t0001100000\r\n" +
+        "20171001174500\t0000135.03\t0000135.04\t0000135.03\t0000135.03\t0001340000\r\n" +
+        "20171001174300\t0000135.04\t0000135.04\t0000135.03\t0000135.03\t0001500000\r\n" +
+        "20171001174100\t0000135.03\t0000135.04\t0000135.02\t0000135.04\t0001800000\r\n" +
+        "20171001173900\t0000135.02\t0000135.04\t0000135.02\t0000135.03\t0001900000\r\n" +
+        "20171001173700\t0000135.02\t0000135.02\t0000135.01\t0000135.01\t0001200000\r\n" +
+        "20171001173600\t0000135.05\t0000135.05\t0000135.03\t0000135.03\t0001600000\r\n" +
+        //"20171011173500\t0000135.05\t0000135.05\t0000135.04\t0000135.05\r\n" +
+        //"20171011173400\t0000135.06\t0000135.06\t0000135.05\t0000135.06\r\n" +
+        //"20171011173300\t0000135.07\t0000135.07\t0000135.05\t0000135.06\r\n" +
+        "20171001173200\t0000135.11\t0000135.12\t0000135.06\t0000135.07\t0001400000\r\n" +
+        "20171001172900\t0000135.10\t0000135.11\t0000135.10\t0000135.10\t0001600000\r\n" +
+        "20171001172800\t0000135.12\t0000135.13\t0000135.09\t0000135.09\t0001200000\r\n" +
+        "20171001172700\t0000135.14\t0000135.14\t0000135.12\t0000135.12\t0001100000\r\n" +
+        "20171001172600\t0000135.12\t0000135.14\t0000135.11\t0000135.14\t0001300000\r\n" +
+        "20171001172500\t0000135.11\t0000135.12\t0000135.11\t0000135.11\t0001300000\r\n" +
+        "20171001172400\t0000135.11\t0000135.12\t0000135.10\t0000135.11\t0001900000\r\n" +
+        "20171001172200\t0000135.12\t0000135.12\t0000135.08\t0000135.10\t0001200000\r\n";
+    mapAppendData['100'] = strRQ1;
+
+    var strRQ2 =
+        "20171011175740\t0000135.03\t0000135.04\t0000135.03\t0000135.03\t0001200000\r\n" +
+        "20171011175730\t0000135.03\t0000135.04\t0000135.03\t0000135.03\t0001200000\r\n" +
+        "20171011175720\t0000135.03\t0000135.04\t0000135.03\t0000135.03\t0001200000\r\n" +
+        "20171011175710\t0000135.03\t0000135.04\t0000135.03\t0000135.03\t0001200000\r\n" +
+        "20171011175700\t0000135.03\t0000135.04\t0000135.03\t0000135.03\t0001200000\r\n" +
+        "20171011175650\t0000135.03\t0000135.04\t0000135.03\t0000135.03\t0001200000\r\n" +
+        "20171011175640\t0000135.03\t0000135.04\t0000135.03\t0000135.03\t0001200000\r\n" +
+        "20171011175620\t0000135.03\t0000135.03\t0000135.03\t0000135.03\t0001400000\r\n" +
+        "20171011175600\t0000135.03\t0000135.04\t0000135.03\t0000135.04\t0001600000\r\n" +
+        "20171011175540\t0000135.03\t0000135.03\t0000135.02\t0000135.03\t0001200000\r\n" +
+        "20171011175520\t0000135.03\t0000135.03\t0000135.03\t0000135.03\t0001100000\r\n" +
+        "20171011175510\t0000135.04\t0000135.04\t0000135.04\t0000135.04\t0001300000\r\n" +
+        "20171011175350\t0000135.03\t0000135.03\t0000135.03\t0000135.03\t0001300000\r\n" +
+        "20171011175340\t0000135.02\t0000135.03\t0000135.02\t0000135.02\t0001900000\r\n" +
+        "20171011175330\t0000135.01\t0000135.01\t0000135.01\t0000135.01\t0001200000\r\n" +
+        "20171011175310\t0000135.02\t0000135.02\t0000135.02\t0000135.02\t0001400000\r\n" +
+        "20171011175300\t0000135.02\t0000135.02\t0000135.02\t0000135.02\t0001600000\r\n" +
+        "20171011175250\t0000135.01\t0000135.02\t0000135.01\t0000135.02\t0001200000\r\n" +
+        "20171011175240\t0000135.01\t0000135.01\t0000135.01\t0000135.01\t0001100000\r\n" +
+        "20171011175220\t0000135.02\t0000135.02\t0000135.02\t0000135.02\t0001300000\r\n" +
+        "20171011175200\t0000135.03\t0000135.03\t0000135.03\t0000135.03\t0001300000\r\n" +
+        "20171011175150\t0000135.03\t0000135.03\t0000135.03\t0000135.03\t0001900000\r\n" +
+        "20171011175130\t0000135.05\t0000135.05\t0000135.03\t0000135.03\t0001200000\r\n" +
+        "20171011175110\t0000135.05\t0000135.05\t0000135.05\t0000135.05\t0001400000\r\n" +
+        "20171011175050\t0000135.05\t0000135.05\t0000135.05\t0000135.05\t0001600000\r\n" +
+        "20171011175040\t0000135.04\t0000135.04\t0000135.04\t0000135.04\t0001200000\r\n" +
+        "20171011175020\t0000135.05\t0000135.05\t0000135.05\t0000135.05\t0001100000\r\n" +
+        "20171011175000\t0000135.05\t0000135.05\t0000135.05\t0000135.05\t0001300000\r\n" +
+        "20171011174950\t0000135.06\t0000135.06\t0000135.06\t0000135.06\t0001300000\r\n" +
+        "20171011174940\t0000135.06\t0000135.06\t0000135.06\t0000135.06\t0001900000\r\n" +
+        "20171011174930\t0000135.05\t0000135.06\t0000135.05\t0000135.06\t0001200000\r\n" +
+        "20171011174910\t0000135.06\t0000135.06\t0000135.06\t0000135.06\t0001300000\r\n" +
+        "20171011174900\t0000135.06\t0000135.06\t0000135.06\t0000135.06\t0001300000\r\n" +
+        "20171011174840\t0000135.06\t0000135.06\t0000135.05\t0000135.06\t0001900000\r\n" +
+        "20171011174720\t0000135.06\t0000135.06\t0000135.05\t0000135.06\t0001200000\r\n";
+    mapAppendData['101'] = strRQ2;
+
+    var i;
+    var nRQ = 100;
+
+    strAppendData = mapAppendData[strRQ];
+    if (strAppendData !== undefined)
+    {
+
+        //////////////////////////////////////////////////////
+        //20181218 이문수 >>
+        var nCnt = 0;
+        var strPacketData, strData;
+        var nStartPos = 0, nFindPos = -1;
+        var strLineDevider = "\r\n";
+        var strChartData = "";
+        var nRealDataCnt = 0;
+
+        while ((nFindPos = strAppendData.indexOf(strLineDevider, nStartPos)) >= 0) {
+            var strLine = strAppendData.substring(nStartPos, nFindPos);
+            nStartPos = nFindPos + strLineDevider.length;
+
+            var nSPos = 0, nFPos = -1;
+            var strDevider = "\t";
+            var nFieldIndex = 0;
+            while ((nFPos = strLine.indexOf(strDevider, nSPos)) >= 0) {
+                strData = strLine.substring(nSPos, nFPos);
+
+                if (nAppendDataStartIndex <= nCnt && nCnt <= nAppendDataEndIndex) {
+                    strChartData += strData;
+                }
+
+                nSPos = nFPos + strDevider.length;
+
+                nFieldIndex++;
+            }
+
+            if (nSPos > 0) {
+
+                strData = strLine.substring(nSPos);
+
+                if (nAppendDataStartIndex <= nCnt && nCnt <= nAppendDataEndIndex) {
+                    strChartData += strData;
+                    nRealDataCnt++;
+                }
+
+                nCnt++;
+
+                if (nAppendDataEndIndex < nCnt)
+                    break;
+            }
+        }
+
+        strTotalData = nRealDataCnt + "!" + strChartData;
+        ///////////////////////////////////////////////////////
+
+        var bAppend = true;
+        var bAscendingOrder = false;
+        var bMergeXScale = true;
+        Chart.SetPacketData(strRQ, strTotalData, strTotalData.length, bAppend, bAscendingOrder, bMergeXScale);
+
+        Chart.Draw(DRAW_CASE_TR | DRAW_CASE_SCROLL);
+    }
+}
+
+function StartReal() {
+    if (preSymbol) {
+        RealClose(preSymbol, getMainContainer);
+        Real(document.getElementById("symbol").value);
+    } else {
+        //Real_ID = setInterval(fRealProcess, 50);//20180116 이문수 test
+        Real(document.getElementById("symbol").value, getMainContainer);
+    }
+}
+
+function StopReal() {
+    //clearInterval(Real_ID);
+    RealClose(preSymbol, getMainContainer);
+}
+
+function Load() {
+
+    ChartDIV = 'ChartDIV';
+    getMainContainer = 'kfits';
+
+    /*****전체 사이즈 ***/
+    var FullWidth = $(window).width();
+    var FullHeight = $(window).height();
+    gMarginX = 40;
+    gMarginY = 220;
+    TopViewType = "Y";
+    document.getElementById(ChartDIV + "_canvasDiv").style.width = FullWidth - gMarginX;
+    document.getElementById("canvasDP2").style.height = (FullHeight - gMarginY) + "px";
+    this.canvasWidth = FullWidth - gMarginX;
+    CC = "<canvas id='" + ChartDIV + "_Canvas' width=" + (FullWidth - gMarginX) + " height=" + (FullHeight - gMarginY) + "  class='canvasCss'></canvas>";
+    
+    console.log("차트_____________________________________________________" + CC);
+    $('#' + ChartDIV + '_canvasDiv').empty();
+    $('#' + ChartDIV + '_canvasDiv').append(CC);
+
+    
+    Chart = new CWebChart(ChartDIV, ChartDIV + "_Canvas");
+    //1번 매개변수:canvas 부모 div id, 2번 매개변수:canvas id
+    Chart.InitCtrl();
+    Chart.SetBlockType(gChartBlockType);
+    Chart.LoadLang();
+
+    //가로스크롤 위치가 좌측 끝 부분 위치한 상태에서 좌측 하단 스크롤 버튼을 클릭하면 발생하는 이벤트에 이벤트 함수 연결
+    if (!gChartLoadFunction) {
+
+        gChartLoadFunction = function (e) {
+            
+            LoadChart();
+        };
+        document.addEventListener('Event_LoadLangEnd', gChartLoadFunction);
+    }
+}
+
+function indChickDiv(key) {
+
+    if (document.getElementById(key).checked == true) {
+        document.getElementById(key).checked = false;
+    } else {
+        document.getElementById(key).checked = true;
+    }
+    indChick(key);
+
+}
+
+function indChick(key) {
+
+    var SetIco = key + "SetIco";
+
+    if (document.getElementById(key).checked == true) {
+
+        //document.getElementById(SetIco).style.display = "";
+
+        var indName = document.getElementById(key).value;
+        var strIndicatorKey = null;
+
+        var rProp = Chart.GetDefaultIndicatorProperty(indName, true);
+        console.log(rProp);
+
+        strIndicatorKey = Chart.SimpleAddIndicator(indName);
+
+        //if (indName == "_MA_" || indName == "_Env_" || indName == "_BB_" || indName == "_RAINBOW_" || indName == "_MAC_" || indName == "_PIVOT_") {
+        //    strIndicatorKey = Chart.AddIndicator("100", indName, 0, 0, 0, 2);
+        //} else if (indName == "_VMA_") {
+        //    strIndicatorKey = Chart.AddIndicator("100", indName, 0, 1, 0, 1);
+        //} else {
+        //    strIndicatorKey = Chart.AddIndicator("100", indName, -1, -1, -1, 1);
+        //}
+        //Chart.IndicatorCalc("100", strIndicatorKey);
+        //Chart.Draw(DRAW_CASE_ADD_CHARTBLOCK);
+
+        gGraphKeyObj[key] = strIndicatorKey;
+
+    } else {
+
+        var indName = document.getElementById(key).value;
+
+        Chart.DeleteIndicator(gGraphKeyObj[key]);
+        Chart.Draw(DRAW_CASE_DEL_CHARTBLOCK);
+        gGraphKeyObj[key] = undefined;
+    }
+}
+
+function indSetup(indName, key) {
+    console.log("indSetup A[" + indName + "]__[" + key + "]");
+    /*
+
+    var rChart = e.m_rChart;
+    var rSelectedIndicator = e.m_InfoData;
+
+    var rRQSet = rChart.GetSelectedRQSet();
+    var strRQ = rRQSet.GetRQ();
+    var strGraphName = rSelectedIndicator.GetGraphName();
+    console.log("Event_SelectGraph : [" + strRQ + "] " + strGraphName );
+    console.log(rSelectedIndicator);
+    */
+    //var IndicatorPropertyInfo = Chart.m_InfoData(key);
+    //	IndicatorSetup(strGraphName);
+    //var IndicatorPropertyInfo = rSelectedIndicator;
+
+    var IndicatorPropertyInfo = Chart.GetPropertyInfo(key);
+
+    //console.log(IndicatorPropertyInfo);
+
+    if (!IndicatorPropertyInfo)
+        return;
+
+    localStorage.setItem(indName, 'S');
+
+    if (indName == "_MA_" || indName == "_VMA_") {
+        //console.log("local:"+indName);
+        for (var a = 0; a < IndicatorPropertyInfo.length; a++) {
+
+            IndicatorPropertyInfo[a].m_nMA = document.getElementById('MA' + (a + 1)).value;
+            localStorage.setItem(indName + 'm_nMA[' + a + ']', document.getElementById('MA' + (a + 1)).value);
+            //console.log("indSetup MA:"+indName+"m_nMA["+a+"]:");
+
+            IndicatorPropertyInfo[a].m_nMAType = document.getElementById('MAType').value;
+            localStorage.setItem(indName + 'm_nMAType[' + a + ']', document.getElementById('MAType').value);
+
+            if (document.getElementById("m_bShow" + (a + 1)).checked == true)
+                var SubG_m_bShow = true;
+            else
+                var SubG_m_bShow = false;
+
+            IndicatorPropertyInfo[a].m_PriceChartLineInfo.m_bShow = SubG_m_bShow;
+            localStorage.setItem(indName + 'm_bShow[' + a + ']', SubG_m_bShow);
+
+            IndicatorPropertyInfo[a].m_PriceChartLineInfo.m_clrSubGraph = document.getElementById("clr" + (a + 1)).value;
+            localStorage.setItem(indName + 'm_clrSubGraph[' + a + ']', document.getElementById("clr" + (a + 1)).value);
+
+            IndicatorPropertyInfo[a].m_PriceChartLineInfo.m_nLineType = document.getElementById("lineType" + (a + 1)).value;
+            localStorage.setItem(indName + 'm_nLineType[' + a + ']', document.getElementById("lineType" + (a + 1)).value);
+
+            IndicatorPropertyInfo[a].m_PriceChartLineInfo.m_nThickness = eval(document.getElementById("LinePt" + (a + 1)).value) / 0.9;
+            localStorage.setItem(indName + 'm_nThickness[' + a + ']', eval(document.getElementById("LinePt" + (a + 1)).value));
+
+            //console.log("local:"+a+":"+indName+":"+localStorage.getItem(indName+'_m_nMA['+a+']'))
+            //console.log("local:"+a+":"+indName+":"+localStorage.getItem(indName+'m_nMAType['+a+']'))
+            //console.log("local:"+a+":"+indName+":"+localStorage.getItem(indName+'m_bShow['+a+']'))
+        }
+
+    } else {
+
+        for (var a = 0; a < IndicatorPropertyInfo.m_VariableArray.length; a++) {
+            var IndVariableStrName = IndicatorPropertyInfo.m_VariableArray[a].m_strName;
+
+            if (IndVariableStrName.substring(0, 4) == "View")
+                break;
+
+            IndicatorPropertyInfo.m_VariableArray[a].m_strData = eval(document.getElementById(IndVariableStrName).value);
+            localStorage.setItem(indName + 'm_VariableArray_m_strData[' + a + ']', eval(document.getElementById(IndVariableStrName).value));
+
+            //console.log("local:"+indName+'m_VariableArray_m_strData['+a+']'+"===="+document.getElementById(IndVariableStrName).value);
+        }
+
+        var keyNum = 0;
+
+        for (var b = 0; b < IndicatorPropertyInfo.m_SubGraphPropertyInfoArray.length; b++) {
+            keyNum = b + 1;
+            //console.log(keyNum);
+
+            if (document.getElementById("m_bShow" + keyNum).checked == true)
+                var SubG_m_bShow = true;
+            else
+                var SubG_m_bShow = false;
+
+            IndicatorPropertyInfo.m_SubGraphPropertyInfoArray[b].m_bShow = SubG_m_bShow;
+            localStorage.setItem(indName + 'm_SubGraphPropertyInfoArray_m_bShow[' + b + ']', SubG_m_bShow);
+            //console.log("local:"+indName+'m_SubGraphPropertyInfoArray_m_bShow['+b+']'+"===="+IndicatorPropertyInfo.m_SubGraphPropertyInfoArray[b].m_strSubGraphName+":"
+            //	         +IndicatorPropertyInfo.m_SubGraphPropertyInfoArray[b].m_bShow);
+
+            IndicatorPropertyInfo.m_SubGraphPropertyInfoArray[b].m_clrSubGraph = document.getElementById("clr" + keyNum).value;
+            localStorage.setItem(indName + 'm_SubGraphPropertyInfoArray_m_clrSubGraph[' + b + ']', document.getElementById("clr" + keyNum).value);
+            //console.log("local:"+indName+'m_SubGraphPropertyInfoArray_m_clrSubGraph['+b+']'+"===="+document.getElementById("clr"+keyNum).value);
+
+            IndicatorPropertyInfo.m_SubGraphPropertyInfoArray[b].m_nLineType = document.getElementById("ChartType" + keyNum).value;
+            localStorage.setItem(indName + 'm_SubGraphPropertyInfoArray_m_nLineType[' + b + ']', document.getElementById("ChartType" + keyNum).value);
+            //console.log("local:"+indName+'m_SubGraphPropertyInfoArray_m_nLineType['+b+']'+"===="+document.getElementById("ChartType"+keyNum).value);
+
+            IndicatorPropertyInfo.m_SubGraphPropertyInfoArray[b].m_nLineType = document.getElementById("lineType" + keyNum).value;
+            localStorage.setItem(indName + 'm_SubGraphPropertyInfoArray_m_nLineType[' + b + ']', document.getElementById("lineType" + keyNum).value);
+            //console.log("local:"+indName+'m_SubGraphPropertyInfoArray_m_nLineType['+b+']'+"===="+document.getElementById("lineType"+keyNum).value);
+
+            IndicatorPropertyInfo.m_SubGraphPropertyInfoArray[b].m_nThickness = eval(document.getElementById("LinePt" + keyNum).value) / 0.9;
+            localStorage.setItem(indName + 'm_SubGraphPropertyInfoArray_m_nThickness[' + b + ']', document.getElementById("LinePt" + keyNum).value);
+            //console.log("local:"+indName+'m_SubGraphPropertyInfoArray_m_nThickness['+b+']'+"===="+document.getElementById("LinePt"+keyNum).value);
+        }
+    }
+
+    Chart.SetPropertyInfo(key, IndicatorPropertyInfo);
+    Chart.IndicatorCalc("100", key);
+    Chart.Draw(DRAW_CASE_TR);
+
+    document.getElementById('indId').value = indName;
+    // 임시 테스트 용
+    document.getElementById('indKey').value = key;
+
+}
+
+function IndSaveLoad(indNameSqn, indName) {
+    console.log("IndSaveLoad:" + localStorage.getItem(indName));
+
+    if (localStorage.getItem(indName) == null)
+        return;
+
+    var IndicatorPropertyInfo = Chart.GetPropertyInfo(indNameSqn);
+
+    if (!IndicatorPropertyInfo)
+        return;
+
+    console.log(IndicatorPropertyInfo);
+
+    if (indName == "_MA_" || indName == "_VMA_") {
+        //return;
+
+        for (var a = 0; a < IndicatorPropertyInfo.length; a++) {
+            //console.log("IndSaveLoad:"+localStorage.getItem(indName+'m_nMA['+a+']'));
+            //IndicatorPropertyInfo[a].m_nMA= document.getElementById('MA'+a).value =	localStorage.getItem(indName+'m_nMA['+a+']');
+            //IndicatorPropertyInfo[a].m_nMAType= document.getElementById('MAType').value = localStorage.getItem(indName+'m_nMAType['+a+']');
+
+            if (localStorage.getItem(indName + 'm_bShow[' + a + ']') == "true")
+                var SubG_m_bShow = true;
+            else
+                var SubG_m_bShow = false;
+
+            IndicatorPropertyInfo[a].m_PriceChartLineInfo.m_bShow = SubG_m_bShow;
+
+            IndicatorPropertyInfo[a].m_PriceChartLineInfo.m_clrSubGraph = localStorage.getItem(indName + 'm_clrSubGraph[' + a + ']');
+            IndicatorPropertyInfo[a].m_PriceChartLineInfo.m_nLineType = localStorage.getItem(indName + 'm_nLineType[' + a + ']');
+            IndicatorPropertyInfo[a].m_PriceChartLineInfo.m_nThickness = eval(localStorage.getItem(indName + 'm_nThickness[' + a + ']'));
+        }
+
+    } else {
+
+        for (var a = 0; a < IndicatorPropertyInfo.m_VariableArray.length; a++) {
+            var IndVariableStrName = IndicatorPropertyInfo.m_VariableArray[a].m_strName;
+
+            //if(IndVariableStrName.substring(0,4)=="View")break;
+
+            IndicatorPropertyInfo.m_VariableArray[a].m_strData = eval(localStorage.getItem(indName + 'm_VariableArray_m_strData[' + a + ']'));
+        }
+
+        var keyNum = 0;
+
+        for (var b = 0; b < IndicatorPropertyInfo.m_SubGraphPropertyInfoArray.length; b++) {
+            keyNum = b + 1;
+
+            if (localStorage.getItem(indName + 'm_SubGraphPropertyInfoArray_m_bShow[' + b + ']') == "true")
+                var SubG_m_bShow = true;
+            else
+                var SubG_m_bShow = false;
+
+            IndicatorPropertyInfo.m_SubGraphPropertyInfoArray[b].m_bShow = SubG_m_bShow;
+
+            console.log("local main SL:m_bShow:" + IndicatorPropertyInfo.m_SubGraphPropertyInfoArray[b].m_bShow);
+
+            IndicatorPropertyInfo.m_SubGraphPropertyInfoArray[b].m_clrSubGraph = localStorage.getItem(indName + 'm_SubGraphPropertyInfoArray_m_clrSubGraph[' + b + ']');
+            IndicatorPropertyInfo.m_SubGraphPropertyInfoArray[b].m_nLineType = localStorage.getItem(indName + 'm_SubGraphPropertyInfoArray_m_nLineType[' + b + ']');
+            IndicatorPropertyInfo.m_SubGraphPropertyInfoArray[b].m_nLineType = localStorage.getItem(indName + 'm_SubGraphPropertyInfoArray_m_nLineType[' + b + ']');
+            IndicatorPropertyInfo.m_SubGraphPropertyInfoArray[b].m_nThickness = eval(localStorage.getItem(indName + 'm_SubGraphPropertyInfoArray_m_nThickness[' + b + ']')) / 0.9;
+        }
+    }
+
+    Chart.SetPropertyInfo(indNameSqn, IndicatorPropertyInfo);
+    Chart.IndicatorCalc("100", indNameSqn);
+    Chart.Draw(DRAW_CASE_TR);
+}
+
+/*** 분석 도구 호출 ******/
+function wDrawLine(tg) {
+    console.log(tg);
+}
+
+function DoModalIndicatorSetup(rSelectChart, strRQ, strSelGraphKey, strGraphName) {
+    /*
+        설정창 이쪽으로 이동
+        rSelectChart,  ==>Chart
+        strRQ,  ===>100
+        strSelGraphKey==> gGraphKeyObj[IndKey]
+
+        strGraphName
+
+        */
+    /*
+        var rChart = e.m_rChart;
+        var rSelectedIndicator = chart;
+
+        var rRQSet = rChart.GetSelectedRQSet();
+        var strRQ = rRQSet.GetRQ();
+        var strGraphName = rSelectedIndicator.GetGraphName();
+        var strGraphKey = rSelectedIndicator.GetGraphKey();
+        console.log("Event_SelectGraph : [" + strRQ + "] " + strGraphName );
+        var IndicatorPropertyInfo = rSelectedIndicator;
+        */
+    var IndicatorPropertyInfo = rSelectChart.GetPropertyInfo(strSelGraphKey);
+
+    //var IndicatorPropertyInfo = rSelectChart.GetPropertyInfo(strSelGraphKey);
+    if (!IndicatorPropertyInfo)
+        return;
+
+    console.log(IndicatorPropertyInfo);
+    if (0) {
+        //console.log("______["+IndKey+"]____________"+IndicatorPropertyInfo.m_VariableArray.length);
+        //	IndicatorPropertyInfo.m_
+
+        switch (strGraphName) {
+            case "_MA_":
+                var IndKey = "ind1";
+                break;
+            case "_Env_":
+                var IndKey = "ind2";
+                break;
+            case "_BB_":
+                var IndKey = "ind3";
+                break;
+            case "_VOLUME_":
+                var IndKey = "ind4";
+                break;
+            case "_VMA_":
+                var IndKey = "ind5";
+                break;
+            case "_MACD_":
+                var IndKey = "ind6";
+                break;
+            case "_MACDOS_":
+                var IndKey = "ind7";
+                break;
+            case "_ADX_":
+                var IndKey = "ind8";
+                break;
+            case "_ADXR_":
+                var IndKey = "ind9";
+                break;
+            case "_CCI_":
+                var IndKey = "ind10";
+                break;
+            case "_TRIX_":
+                var IndKey = "ind11";
+                break;
+            case "_MOM_":
+                var IndKey = "ind12";
+                break;
+            case "_RSI_":
+                var IndKey = "ind13";
+                break;
+            case "_StoF_":
+                var IndKey = "ind14";
+                break;
+            case "_StoS_":
+                var IndKey = "ind15";
+                break;
+            case "_WILL_":
+                var IndKey = "ind16";
+                break;
+            case "_Disparity_":
+                var IndKey = "ind17";
+                break;
+            case "_OBV_":
+                var IndKey = "ind18";
+                break;
+            case "_VR_":
+                var IndKey = "ind19";
+                break;
+            case "_PIVOT_":
+                var IndKey = "ind20";
+                break;
+            case "_LRS_":
+                var IndKey = "ind21";
+                break;
+            case "_ROC_":
+                var IndKey = "ind22";
+                break;
+            case "_SONAR_":
+                var IndKey = "ind23";
+                break;
+            case "_PSYCO_":
+                var IndKey = "ind24";
+                break;
+			case "_AB_":
+                var IndKey = "ind25";
+                break;
+            case "_AD_":
+                var IndKey = "ind26";
+                break;
+            case "_ATR_":
+                var IndKey = "ind27";
+                break;
+            case "_CO_":
+                var IndKey = "ind28";
+                break;
+            case "_CV_":
+                var IndKey = "ind29";
+                break;
+            case "_DMI_":
+                var IndKey = "ind30";
+                break;
+            case "_EOM_":
+                var IndKey = "ind31";
+                break;
+            case "_LRL_":
+                var IndKey = "ind32";
+                break;
+            case "_RCI_":
+                var IndKey = "ind33";
+                break;
+            case "_OSCV_":
+                var IndKey = "ind34";
+                break;
+            case "_MAC_":
+                var IndKey = "ind35";
+                break;
+            case "_RAINBOW_":
+                var IndKey = "ind36";
+                break;
+        }
+
+        if (strGraphName == "_PRICE_") {
+            var msg = "" + "  <div class=\"pop_ind\">" + "  	<div class=\"pop_ind_div1\">" + "		<div class=\"pop_title\">가격차트</div>" + "		<div class=\"tabDiv\">" + "			<ul class=\"tab_type2\">" + "				<li class=\"on\" onclick=\"IndTabP('1')\" id=\"IndTab1\">스타일</li>" + "				<li onclick=\"IndTabP('2')\" id=\"IndTab2\">설명</li>" + "			</ul>" + "		</div>" + "		<div class=\"mainDiv\" id=\"mainT1\" style=\"display:\">" + "        	<div class=\"main_list\">" + "				<div class=\"lTitle\">차트타입</div>" + "				<div class=\"lInp\">" + "					<select type=\"text\" id=\"DType\" class=\"selectBox\">" + "						<option value=\"0\">캔들차트</option>" + "						<option value=\"1\">선차트</option>" + "					</select>" + "				</div>" + "			</div>" + "		</div>" + "		<div class=\"mainDiv\" id=\"mainT2\" style=\"display:none\">" + "			<div class=\"textarea_div\">" + "				<iframe src=\"/images/chart/exp/" + strGraphName + ".html\" width=\"340\" height=\"360\" frameborder=0></iframe>" + "			</div>" + "		</div>" + "  </div>" + "	<div style=\"padding-top:20px;\">" + "		<div style=\"width:400px;height:50px;text-align:center;\">" + "			<img src=\"/images/chart/bt_ok.png\" onclick=\"indSetup('" + strGraphName + "','" + strGraphKey + "')\" style=\"cursor:pointer;\">&nbsp;&nbsp;&nbsp;" + "			<img src=\"/images/chart/bt_close.png\" onclick=\"IndicatorSetupClose('" + IndKey + "')\"  style=\"cursor:pointer;\">" + "		</div>" + "	</div>";
+
+        } else if (strGraphName == "_VOLUME_") {
+
+        } else {
+
+            var msg = "" + "  <div class=\"pop_ind\">" + "  	<div class=\"pop_ind_div1\">" + "		<div class=\"pop_title\">" + IndicatorPropertyInfo.m_strTitle + "</div>" + "		<div class=\"tabDiv\">" + "			<ul class=\"tab_type\">" + "				<li class=\"on\" onclick=\"IndTab('1')\" id=\"IndTab1\">변수</li>" + "				<li onclick=\"IndTab('2')\" id=\"IndTab2\">스타일</li>" + "				<li onclick=\"IndTab('3')\" id=\"IndTab3\">기준선</li>" + "				<li onclick=\"IndTab('4')\" id=\"IndTab4\">설명</li>" + "			</ul>" + "		</div>" + "		<div class=\"mainDiv\" id=\"mainT1\">" + "			<div class=\"main_top\">" + "				<div class=\"tLTitle\">변수명</div>" + "				<div class=\"tRTitle\">변수값</div>" + "			</div>";
+
+            var IndVariableStrNameH,
+                BaseNumData,
+                OverheatingData,
+                StagnancyData,
+                DTypeData,
+                MATypeData;
+
+            if (strGraphName == "_MA_" || strGraphName == "_VMA_") {
+                if (IndicatorPropertyInfo.length > 0) {
+                    msg += "		<div class=\"main_listMA\">";
+                    for (var d = 0; d < IndicatorPropertyInfo.length; d++) {
+
+                        msg += "" + "				<div class=\"main_list\">"
+                            // + "					<div class=\"lTitleScoll\">MA "+IndicatorPropertyInfo.m_nMAArray[d]+"</div>"
+                            + "					<div class=\"lTitleScoll\">MA</div>" + "					<div class=\"lInpScoll\">" + "						<input type=\"text\" id=\"MA" + d + "\" class=\"textBox\" value=\"" + IndicatorPropertyInfo[d].m_nMA + "\" onkeyup=\"OnyNumChar(event,'','')\" onkeydown=\"OnyNumChar(event,'','')\"></div>" + "				</div>";
+
+                    }
+                    msg += "		</div>";
+                }
+            } else {
+
+                for (var a = 0; a < IndicatorPropertyInfo.m_VariableArray.length; a++) {
+
+                    if (ChartDIV == "mChartDIV")
+                        continue;
+
+                    var IndVariableStrName = IndicatorPropertyInfo.m_VariableArray[a].m_strName;
+
+                    if (IndVariableStrName == "BaseNum") {
+                        BaseNumData = IndicatorPropertyInfo.m_VariableArray[a].m_strData;
+
+                        //console.log("______"+BaseNumData+"___"+IndicatorPropertyInfo.m_VariableArray[a].m_strData);
+
+                    } else if (IndVariableStrName == "Overheating") {
+                        OverheatingData = IndicatorPropertyInfo.m_VariableArray[a].m_strData;
+                    } else if (IndVariableStrName == "Stagnancy") {
+                        StagnancyData = IndicatorPropertyInfo.m_VariableArray[a].m_strData;
+                    } else if (IndVariableStrName == "DType") {
+                        DTypeData = IndicatorPropertyInfo.m_VariableArray[a].m_strData;
+                    } else if (IndVariableStrName == "MAType") {
+                        MATypeData = IndicatorPropertyInfo.m_VariableArray[a].m_strData;
+                    } else if (IndVariableStrName.substring(0, 4) == "View") {
+
+                    } else {
+
+                        console.log(IndVariableStrName);
+
+                        switch (IndVariableStrName) {
+                            case "Period":
+                                IndVariableStrNameH = "기간";
+                                break;
+                            case "MAPeriod":
+                                IndVariableStrNameH = "이평기간";
+                                break;
+                            case "ShortMAPeriod":
+                                IndVariableStrNameH = "단기이평";
+                                break;
+                            case "LongMAPeriod":
+                                IndVariableStrNameH = "장기이평";
+                                break;
+                            case "SignalPeriod":
+                                IndVariableStrNameH = "Signal";
+                                break;
+                            case "UpLimitRate":
+                                IndVariableStrNameH = "상한율";
+                                break;
+                            case "DownLimitRate":
+                                IndVariableStrNameH = "하한율";
+                                break;
+                            case "SDMNum":
+                                IndVariableStrNameH = "표준편차승수";
+                                break;
+                            case "FKPeriod":
+                                IndVariableStrNameH = "Fase%K기간";
+                                break;
+                            case "FDPeriod":
+                                IndVariableStrNameH = "Fase%D기간";
+                                break;
+                            case "SKPeriod":
+                                IndVariableStrNameH = "Slow%K 기간";
+                                break;
+                            case "SDPeriod":
+                                IndVariableStrNameH = "Slow%D 기간";
+                                break;
+                            case "WRPeriod":
+                                IndVariableStrNameH = "William's %R";
+                                break;
+                            case "WDPeriod":
+                                IndVariableStrNameH = "William's %D";
+                                break;
+                            case "Sec1period":
+                                IndVariableStrNameH = "구간수1";
+                                break;
+                            case "Sec2period":
+                                IndVariableStrNameH = "구간수2";
+                                break;
+                            case "Sec3period":
+                                IndVariableStrNameH = "구간수3";
+                                break;
+                            case "Sec4period":
+                                IndVariableStrNameH = "구간수4";
+                                break; defaule:
+                                IndVariableStrNameH = IndVariableStrName;
+                                break;
+                            // BaseNum   		기준선
+                            // Overheating		과열
+                            // Stagnancy		침체
+
+                        }
+
+                        msg += "" + "			<div class=\"main_list\">" + "				<div class=\"lTitle\">" + IndVariableStrNameH + "</div>" + "				<div class=\"lInp\"><input type=\"text\" id=\"" + IndVariableStrName + "\" class=\"textBox\" value=\"" + IndicatorPropertyInfo.m_VariableArray[a].m_strData + "\" onkeyup=\"OnyNumChar(event,'','')\" onkeydown=\"OnyNumChar(event,'','')\"></div>" + "			</div>";
+                    }
+                }
+            }
+
+            msg += "" + "			<div class=\"main_list\">" + "				<div class=\"lTitle\">데이터타입</div>" + "				<div class=\"lInp\">" + "					<select type=\"text\" id=\"DType\" class=\"selectBox\">" + "						<option value=\"0\">시가</option>" + "						<option value=\"1\">고가</option>" + "						<option value=\"2\">저가</option>" + "						<option value=\"3\"  selected>종가</option>" + "						<option value=\"4\">(고+저)/2</option>" + "						<option value=\"5\">(고+저+종)/3</option>" + "					</select>" + "				</div>" + "			</div>" + "			<div class=\"main_list\">" + "				<div class=\"lTitle\">MA타입</div>" + "				<div class=\"lInp\">" + "					<select type=\"text\" id=\"MAType\"  class=\"selectBox\">" + "						<option value=\"0\" selected>단순</option>" + "						<option value=\"1\">지수</option>" + "						<option value=\"2\">가중</option>" + "						<option value=\"3\">기하</option>" + "						<option value=\"4\">조화</option>" + "						<option value=\"5\">심각</option>" + "						<option value=\"6\">적합</option>" + "					</select>	" + "				</div>" + "			</div>" + "		</div>" + "		<div class=\"mainDiv\" id=\"mainT2\" style=\"display:none\">" + "			<div class=\"main_top\">" + "				<div class=\"TitleA\">선택</div>" + "				<div class=\"TitleL\">목록</div>" + "				<div class=\"TitleC\">색상</div>" + "				<div class=\"TitleT\">타입</div>" + "				<div class=\"TitleB\">두께</div>" + "				<div class=\"TitleS\">형태</div>" + "			</div>";
+
+            for (var b = 0; b < IndicatorPropertyInfo.m_SubGraphArray.length; b++) {
+                var IndSubGraphInfo_bShow = IndicatorPropertyInfo.m_SubGraphArray[b].m_bShow;
+                if (IndSubGraphInfo_bShow == true)
+                    var chBox = "checked";
+                else
+                    var chBox = "";
+
+                var IndSubGraphInfo_clr = IndicatorPropertyInfo.m_SubGraphArray[b].m_clrSubGraph;
+
+                if (strGraphName == "_MA_" || strGraphName == "_VMA_") {
+                    var IndSubGraphInfo_Title = IndicatorPropertyInfo.m_MAPropertyInfoArray[b].m_nMA;
+                } else {
+                    var IndSubGraphInfo_Title = IndicatorPropertyInfo.m_SubGraphArray[b].m_strSubGraphTitle;
+                }
+
+                sLineType = "S";
+
+                if (IndicatorPropertyInfo.m_SubGraphArray[b].m_strSubGraphName == "BaseLine") {
+                    var IndSubGraphInfo_clr_tab3 = IndSubGraphInfo_clr;
+                    var IndSubGraphInfo_clr_num = b + 1;
+                    //"clr"+(b+1);
+                    sLineType = "B";
+                    console.log("--->" + IndSubGraphInfo_clr_num);
+                }
+
+                //	if(IndicatorPropertyInfo.m_SubGraphPropertyInfoArray[b].m_strSubGraphName=="BaseLine")continue;
+                //<div style=\"background:"+IndSubGraphInfo_clr+"\">&nbsp;</div>
+                //					<select type=\"text\" id=\"clr"+(b+1)+"\"  class=\"selectBoxT\" style=\"background:"+IndSubGraphInfo_clr+";\">"
+                //						<option value=\""+IndSubGraphInfo_clr+"\" style=\"background:"+IndSubGraphInfo_clr+";\" selected>"+IndSubGraphInfo_clr+"</option>"
+                //						<option value=\"#000000\" style=\"background:#000000;\">#000000</option>"
+                //					</select>"
+                /****************크롬에서만 사용가능**************************************************
+                    +"				<div class=\"lInpC\" id=\"colorBox\" >"
+                    +"					<input type=\"color\" id=\"clr"+(b+1)+"\" value=\""+IndSubGraphInfo_clr+"\" class=\"inputBoxC\">"
+                    +"				</div>"
+                    **************************************************************************************/
+                var COLOR_ARRAY = new Array("#FFC0CB", "#FF0000", "#FFA500", "#FFFF00", "#008000", "#0000FF"/*, "#000040"*/, "#800080", "#000000");
+                colorHTML = "";
+                colorHTML += "<div style=\"float:left;border:1px;width:180px;\"><span style=\"float:left;width:20px;height:37px;background:" + IndSubGraphInfo_clr + "\" onclick=\"selectColor('" + (b + 1) + "','" + IndSubGraphInfo_clr + "','" + sLineType + "')\">&nbsp;</span>";
+
+                for (var c = 0; c < COLOR_ARRAY.length; c++) {
+                    colorHTML += "<span style=\"float:left;width:20px;height:37px;background:" + COLOR_ARRAY[c] + "\" onclick=\"selectColor('" + (b + 1) + "','" + COLOR_ARRAY[c] + "\','" + sLineType + "')\">&nbsp;</span>";
+                }
+
+                colorHTML += "</div>";
+                msg += "" + "			<div id=\"colorDiv" + (b + 1) + "\" class=\"colorDiv\" style=\"display:none;position:absolute;left:202px;top:" + (142 + b * 37) + "px;z-index:99;\">" + colorHTML + "</div>" + "			<div class=\"main_list\">" + "				<div class=\"lInpA\"><input type=\"checkbox\" id=\"m_bShow" + (b + 1) + "\" value=\"y\" class=\"textBoxA\" " + chBox + "></div>" + "				<div class=\"lInpL\"><input type=\"text\" id=\"IndSubGraphInfo" + (b + 1) + "\" value=\"" + IndSubGraphInfo_Title + "\" class=\"textBoxL\" disabled></div>" + "				<div class=\"lInpC\" id=\"colorBox\" >" + "					<div id=\"clrBox" + (b + 1) + "\"style=\"border:1px;background:" + IndSubGraphInfo_clr + ";\" onclick=\"showColor(" + (b + 1) + ")\">&nbsp;</div>" + "						<input type=\"hidden\" id=\"clr" + (b + 1) + "\" value=\"" + IndSubGraphInfo_clr + "\" >" + "				</div>"
+                    // + "				<div class=\"lInpC\" id=\"colorBox\" >"
+                    //+"					<input type=\"color\" id=\"clr"+(b+1)+"\" value=\""+IndSubGraphInfo_clr+"\" class=\"inputBoxC\">"
+                    //+"				</div>"
+                    + "				<div class=\"lInpT\">" + "					<select type=\"text\" id=\"ChartType" + (b + 1) + "\"  class=\"selectBoxT\">" + "						<option value=\"0\">선</option>" + "						<option value=\"1\">막대</option>" + "					</select>" + "				</div>" + "				<div class=\"lInpB\">" + "					<select type=\"text\" id=\"LinePt" + (b + 1) + "\"  class=\"selectBoxB\">" + "						<option value=\"1\">1pt</option>" + "						<option value=\"2\">2pt</option>" + "						<option value=\"3\">3pt</option>" + "						<option value=\"4\">4pt</option>" + "						<option value=\"5\">5pt</option>" + "					</select>" + "				</div>" + "				<div class=\"lInpS\">" + "					<select type=\"text\" id=\"lineType" + (b + 1) + "\"  class=\"selectBoxS\">" + "						<option value=\"0\">-</option>" + "						<option value=\"1\">---</option>" + "						<option value=\"2\">-&nbsp;-&nbsp;-</option>" + "						<option value=\"3\">-&nbsp;&nbsp;-&nbsp;&nbsp;-</option>" + "						<option value=\"4\">-&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;1-</option>" + "					</select>	" + "				</div>" + "			</div>";
+            }
+
+            if (OverheatingData != undefined) {
+                msg += "" + "			<div class=\"bojo\">" + "				<div class=\"bojoTitle\">부가기능 </div>" + "				<div class=\"bojoDiv\">" + "					<div class=\"bojoList\">" + "						<div class=\"bojoLV1\">과열</div>" + "						<div class=\"bojoLV2\"><!-- div style=\"background:#FF0000;width:70%;height:20px;margin-top:10px\">&nbsp;</div -->&nbsp;</div>" + "						<div class=\"bojoLV3\">기준값</div>" + "						<div class=\"bojoLV4\"><input type=\"text\" id=\"Overheating\" value=\"" + OverheatingData + "\" class=\"textBoxB\" onkeyup=\"OnyNumChar(event,'','')\" onkeydown=\"OnyNumChar(event,'','')\"></div>" + "					</div>" + "					<div class=\"bojoList\">" + "						<div class=\"bojoLV1\">침체</div>" + "						<div class=\"bojoLV2\"><!-- div style=\"background:#0000FF;width:70%;height:20px;margin-top:10px;\">&nbsp;</div -->&nbsp;</div>" + "						<div class=\"bojoLV3\">기준값</div>" + "						<div class=\"bojoLV4\"><input type=\"text\" id=\"Stagnancy\" value=\"" + StagnancyData + "\" class=\"textBoxB\" onkeyup=\"OnyNumChar(event,'','')\" onkeydown=\"OnyNumChar(event,'','')\"></div>" + "					</div>" + "				</div>" + "			</div>";
+            }
+
+            if (BaseNumData == undefined)
+                BaseNumData = "";
+
+            console.log("______" + BaseNumData + "___");
+
+            BcolorHTML = "";
+            BcolorHTML += "<div style=\"float:left;border:1px;width:180px;\"><span style=\"float:left;width:20px;height:37px;background:" + IndSubGraphInfo_clr_tab3 + "\" onclick=\"selectColor('" + IndSubGraphInfo_clr_num + "','" + IndSubGraphInfo_clr_tab3 + "','B')\">&nbsp;</span>";
+            for (var c = 0; c < COLOR_ARRAY.length; c++) {
+                BcolorHTML += "<span style=\"float:left;width:20px;height:37px;background:" + COLOR_ARRAY[c] + "\" onclick=\"selectColor('" + IndSubGraphInfo_clr_num + "','" + COLOR_ARRAY[c] + "\','B')\">&nbsp;</span>";
+            }
+
+            BcolorHTML += "</div>";
+            msg += "" + "		</div>" + "		<div id=\"colorDivB\" class=\"colorDiv\" style=\"display:none;position:absolute;left:202px;top:" + 200 + "px;z-index:99;\">" + BcolorHTML + "</div>" + "		<div class=\"mainDiv\" id=\"mainT3\" style=\"display:none\">" + "			<div style=\"width:100%;padding-top:10px\">" + "				<div style=\"float:left;width:50%;border:0px solid #2B3D57;background:#fff;\">" + "					<div style=\"float:left;width:100%;height:340px;padding-top:10px;\">" + "						<div style=\"float:left;width:50%;\">" + "							<div style=\"float:left;width:100%;padding-bottom:10px;height:20px;\">" + "								<input type=\"text\" id=\"baselineKey\" value=\"\" class=\"textBox3\" onkeyup=\"OnyNumChar(event,'','')\" onkeydown=\"OnyNumChar(event,'','')\">" + "							</div>" + "							<div style=\"float:left;width:80%;padding-bottom:10px;height:250px;border:0px solid #2B3D57;\">" + "								<select name=\"BaseNum\" id=\"BaseNum\" style=\"width:100%;height:250px;background:#fff;border:1px solid #4e5768;color:#000;float:left;vertical-align:top;\" size=2>" + "										<option value=\"" + BaseNumData + "\" selected>" + BaseNumData + "</option>" + "								</select>" + "							</div>" + "						</div>" + "						<div style=\"float:left;width:45%;\">" + "							<div style=\"padding-bottom:10px;height:20px;\">" + "								<div onclick=\"baseAdd();\"><img src=\"/images/chart/bt_p.png\"></div>" + "							</div>" + "							<div style=\"padding-bottom:10px;height:20px;\">" + "								<div onclick=\"basedel('O');\"><img src=\"/images/chart/bt_del.png\"></div>" + "							</div>" + "							<div style=\"padding-bottom:10px;height:20px;\">" + "								<div onclick=\"basedel('A');\"><img src=\"/images/chart/bt_del_all.png\"></div>" + "							</div>" + "						</div>" + "					</div>" + "				</div>" + "				<div style=\"float:left;width:46%;border:2px solid #D0D6DE;background:#fff;margin-left:10px\">" + "					<div style=\"float:left;width:100%;\">" + "						<div style=\"float:left;width:100%;height:40px;line-height:40px;border-bottom:2px solid #D0D6DE;font-weight:bold;\">기준선 스타일</div>" + "						<div style=\"float:left;width:100%;height:50px;border-bottom:1px solid #D0D6DE;\">" + "							<div style=\"float:left;width:30%;line-height:50px\">색상</div> " + "							<div id=\"colorBox\" style=\"float:left;width:68%;padding-right:2px;padding-top:10px;\">" + "								<div id=\"clrBoxB\"style=\"width:80%;height:30px;background:" + IndSubGraphInfo_clr_tab3 + ";\" onclick=\"showColor('B')\">&nbsp;</div>" + "								<input type=\"hidden\" id=\"clr_tab3\" value=\"" + IndSubGraphInfo_clr_tab3 + "\" >" + "							</div>"
+                // + "							<div style=\"float:left;width:68%;padding-right:2px;padding-top:10px;\" id=\"colorBox3\" >"
+                //+"								<input type=\"color\" id=\"clr_tab3\" value=\""+IndSubGraphInfo_clr_tab3+"\" class=\"inputBoxC\" onchange=\"clrChange('"+IndSubGraphInfo_clr_num+"')\">"
+                //+"							</div>"
+                + "						</div>" + "						<div style=\"float:left;width:100%;height:50px;border-bottom:1px solid #D0D6DE;\">" + "							<div style=\"float:left;width:30%;line-height:50px\">두께</div>" + "							<div style=\"float:left;width:68%;line-height:50px;padding-right:2px;\">" + "								<select type=\"text\" id=\"BLinePt\"  class=\"selectBoxB3\">" + "									<option value=\"1\">1pt</option>" + "									<option value=\"2\">2pt</option>" + "									<option value=\"3\">3pt</option>" + "									<option value=\"4\">4pt</option>" + "									<option value=\"5\">5pt</option>" + "								</select>" + "							</div>" + "						</div>" + "						<div style=\"float:left;width:100%;height:50px;\">" + "							<div style=\"float:left;width:30%;line-height:50px\">형태</div>" + "							<div style=\"float:left;width:68%;line-height:50px;padding-right:2px;\">" + "								<select type=\"text\" id=\"BlineType\"  class=\"selectBoxS3\">" + "									<option value=\"0\">-</option>" + "									<option value=\"1\">--</option>" + "								</select>" + "							</div>" + "						</div>" + "					</div>" + "				</div>" + "			</div>" + "		</div>" + "		<div class=\"mainDiv\" id=\"mainT4\" style=\"display:none\">" + "			<div class=\"textarea_div\">" + "				<iframe src=\"/images/chart/exp/" + strGraphName + ".html\" width=\"340\" height=\"360\" frameborder=0></iframe>" + "			</div>" + "		</div>" + "  </div>" + "	<div style=\"padding-top:20px;\">" + "		<div style=\"width:400px;height:50px;text-align:center;\">" + "			<img src=\"/images/chart/bt_ok.png\" onclick=\"indSetup('" + strGraphName + "','" + strGraphKey + "')\" style=\"cursor:pointer;\">&nbsp;&nbsp;&nbsp;" + "			<img src=\"/images/chart/bt_close.png\" onclick=\"IndicatorSetupClose('" + IndKey + "')\"  style=\"cursor:pointer;\">" + "		</div>" + "	</div>";
+            /*
+                +"		<div style=\"width:400px;height:40px;text-align:center;\">"
+                +"			<div onclick=\"indSetup('"+strGraphName+"','"+strGraphKey+"')\"> <img src=\"/Assets/Images/chart/bt_ok.png\"></div>"
+                +"			<div onclick=\"IndicatorSetupClose('"+IndKey+"')\" > <img src=\"/Assets/Images/chart/bt_close.png\"></div>"
+                */
+        }
+
+        if (ChartDIV != "mChartDIV") {
+
+            $('#IndicatorSetupDiv').empty();
+            $('#IndicatorSetupDiv').append(msg);
+            document.getElementById('IndicatorSetupDiv').style.display = "inline-block";
+        }
+    }
+
+}
+
+function IndicatorSetupClose(key) {
+    $('#IndicatorSetupDiv').empty();
+    $('#IndicatorSetupDiv').append('');
+    document.getElementById('IndicatorSetupDiv').style.display = "none";
+}
+
+//수정 LJH 2018.12.7
+function IndicatorAdd(key) {
+    if (document.getElementById('indAddDiv').style.display == 'inline-block') {
+        document.getElementById('indAddDiv').style.display = "none";
+    } else {
+        document.getElementById('indAddDiv').style.display = "inline-block";
+    }
+}
+
+/*
+function IndicatorAdd(key) {
+    if (key == "O") {
+         document.getElementById('indAddDiv').style.display = "inline-block";
+        //document.getElementById('IndiArr').innerHTML ="<div style=\"float:right;width:150px;height:28px;line-height:30px;background:#0C5196;border:1px solid #0C5196;text-align:center;color:#fff;cursor:pointer;font-family:'Dotum';font-size:14px;font-weight:bold;\" onclick=\"IndicatorAdd('P');\" >지표 설정&nbsp;&nbsp;<img src=\"/images/chart/arr_up.png\" style=\"vertical-align:middle;;height:6px\" >";
+    } else {
+        document.getElementById('indAddDiv').style.display = "none";
+        //document.getElementById('IndiArr').innerHTML ="<div style=\"float:right;width:150px;height:28px;line-height:30px;background:#0C5196;border:1px solid #0C5196;text-align:center;color:#fff;cursor:pointer;font-family:'Dotum';font-size:14px;font-weight:bold;\" onclick=\"IndicatorAdd('O');\" >지표 설정&nbsp;&nbsp;<img src=\"/images/chart/arr_dn.png\" style=\"vertical-align:middle;;height:6px\" >";
+    }
+}
+*/
+
+function clrChange(key) {
+    console.log(key);
+
+    document.getElementById(key).value = document.getElementById('clr_tab3').value;
+}
+
+function IndTab(tabKey) {
+    for (var t = 1; t <= 4; t++) {
+        if (t == eval(tabKey)) {
+            $("#IndTab" + t).addClass("on");
+            document.getElementById('mainT' + t).style.display = "";
+        } else {
+            $("#IndTab" + t).removeClass("on");
+            document.getElementById('mainT' + t).style.display = "none";
+        }
+    }
+}
+
+function IndTabP(tabKey) {
+    for (var t = 1; t <= 2; t++) {
+        if (t == eval(tabKey)) {
+            $("#IndTab" + t).addClass("on");
+            console.log(tabKey);
+            document.getElementById('mainT' + t).style.display = "";
+        } else {
+            $("#IndTab" + t).removeClass("on");
+            document.getElementById('mainT' + t).style.display = "none";
+        }
+    }
+}
+
+function baseAdd() {
+
+    var baseLineData = document.getElementById('baselineKey').value;
+
+    console.log(baseLineData);
+    $('#BaseNum').append("<option value=\"" + baseLineData + "\"> " + baseLineData + "</option>");
+
+    document.getElementById('baselineKey').value = "";
+
+}
+
+function basedel(key) {
+
+    var optionLength = document.getElementById('BaseNum').options.length;
+
+    for (var i = optionLength - 1; i >= 0; i--) {
+        if (key == "O") {
+            if (document.getElementById('BaseNum').options[i].selected) {
+                document.getElementById('BaseNum').options[i] = null;
+                //해당 option 을 null 시킨다(지운다)
+            }
+        } else {
+            document.getElementById('BaseNum').options[i] = null;
+        }
+    }
+}
+
+function OnyNumChar(event, key, num) {
+
+    if (key == 'MA') {
+        var code = (event.which) ? event.which : event.keyCode;
+        console.log(code);
+        if (!(code == 8 || code == 9 || code == 13 || code == 46 || code == 144 || (code > 48 && code <= 57) || code == 110 || code == 190 || code >= 96 && code <= 105)) {
+            event.target.value = event.target.value.replace(/[^0-9]/g, "");
+            return false;
+        } else {
+            document.getElementById('IndSubGraphInfo' + (num + 1)).value = document.getElementById('MA' + num).value;
+            return;
+        }
+
+    } else {
+        var code = (event.which) ? event.which : event.keyCode;
+        console.log(code);
+        if (!(code == 8 || code == 9 || code == 13 || code == 46 || code == 144 || (code > 48 && code <= 57) || code == 110 || code == 190 || code >= 96 && code <= 105)) {
+            event.target.value = event.target.value.replace(/[^0-9]/g, "");
+            return false;
+        } else {
+            //event.target.value = event.target.value.replace(/[^0-9]/g,"");
+            return;
+        }
+    }
+}
+
+function rWidget(key) {
+    if (key == "O") {
+        console.log("열기:" + key);
+        document.getElementById('cRightWidgetClose').style.display = "none";
+        document.getElementById('cRightWidgetOpen').style.display = "";
+        document.getElementById('canvasDP2').style.width = "1035px";
+    } else {
+        console.log("닫기:" + key);
+        document.getElementById('cRightWidgetClose').style.display = "";
+        document.getElementById('cRightWidgetOpen').style.display = "none";
+        document.getElementById('canvasDP2').style.width = "1020px";
+    }
+}
+
+function showColor(key) {
+    if (document.getElementById("colorDiv" + key).style.display == "none") {
+        console.log("block____" + key);
+        document.getElementById("colorDiv" + key).style.display = "block";
+    } else {
+        console.log("none____" + key);
+        document.getElementById("colorDiv" + key).style.display = "none";
+    }
+}
+
+function selectColor(key, color, gubun) {
+
+    if (gubun == "S") {
+        console.log("selectColorS____" + key + "__________" + color + "__________" + gubun);
+        document.getElementById("clr" + key).value = color;
+        document.getElementById("clrBox" + key).style.background = color;
+        document.getElementById("colorDiv" + key).style.display = "none";
+    } else if (gubun == "B") {
+        console.log("selectColorB____" + key + "__________" + color + "__________" + gubun);
+        document.getElementById("clr" + key).value = color;
+        document.getElementById("clrBox" + key).style.background = color;
+        document.getElementById("colorDiv" + gubun).style.display = "none";
+        document.getElementById("clr_tab3").value = color;
+        document.getElementById("clrBox" + gubun).style.background = color;
+    }
+}
+
+function highlight(obj, num, isover) {
+    if (obj == "Logo") {
+        if (isover == "over") {
+            //document.getElementById('logoDiv').style.zIndex="-99999";
+        } else {
+            //document.getElementById('logoDiv').style.display="9999";
+        }
+    } else if (obj == "Reset") {
+        if (isover == "over") {
+            document.getElementById(num).src = "/images/chart/bt_" + num + "_over.png";
+        } else {
+            document.getElementById(num).src = "/images/chart/bt_" + num + ".png";
+        }
+    } else if (obj == "Tool") {
+        if (isover == "over") {
+            document.getElementById("Tool" + num).src = "/images/chart/btc_" + num + "_over.png";
+        } else {
+            document.getElementById("Tool" + num).src = "/images/chart/btc_" + num + ".png";
+        }
+    } else if (obj == "mTab") {
+        var pIJWB = IJWBconv(document.getElementById('ijwb').value);
+        var icon = IJWBconNum(num);
+
+        if (isover == "over") {
+            document.getElementById("m_" + num).src = "/images/chart/bt_" + icon + "_over.png";
+        } else {
+            document.getElementById("m_" + num).src = "/images/chart/bt_" + icon + ".png";
+        }
+
+        var sicon = IJWBconNum(pIJWB);
+        document.getElementById("m_" + pIJWB).src = "/images/chart/bt_" + sicon + "_over.png";
+
+    } else {
+        var pIJWB = IJWBconv(document.getElementById('ijwb').value);
+        var icon = IJWBconNum(num);
+
+        if (isover == "over") {
+            document.getElementById(num).src = "/images/chart/bt_" + icon + "_over.png";
+        } else {
+            document.getElementById(num).src = "/images/chart/bt_" + icon + ".png";
+        }
+
+        var sicon = IJWBconNum(pIJWB);
+        document.getElementById(pIJWB).src = "/images/chart/bt_" + sicon + "_over.png";
+
+    }
+}
+
+function IJWBChang(key) {
+
+    var pIJWB = IJWBconv(document.getElementById('ijwb').value);
+    var pIJWBnum = IJWBconNum(pIJWB);
+    document.getElementById(pIJWB).src = "/images/chart/bt_" + pIJWBnum + ".png";
+
+    var tIJWB = IJWBconv(key);
+    //var tIJWB = IJWBconNum(key)
+    document.getElementById(tIJWB).src = "/images/chart/bt_0" + key + "_over.png";
+    document.getElementById('ijwb').value = key;
+
+    if (key >= 5) {
+        document.getElementById('dataGroupDiv').style.display = "";
+    } else {
+        if (key <= 4) {
+            document.getElementById('dataGroupDiv').style.display = "none";
+        }
+    }
+
+    //SymbolChange(OPCODE_CHANGE_CYCLE);
+    ChangeCycle();
+}
+
+function IJWBGroupChang(key) {
+    document.getElementById('ijwbG').value = key;
+    SymbolChange(OPCODE_CHANGE_INTERVAL);
+}
+
+function IJWBconv(key) {
+    switch (key) {
+        case "1":
+            var num = "day";
+            break;
+        case "2":
+            var num = "week";
+            break;
+        case "3":
+            var num = "mon";
+            break;
+        case "4":
+            var num = "year";
+            break;
+        case "5":
+            var num = "min";
+            break;
+        case "6":
+            var num = "sec";
+            break;
+    }
+
+    return num;
+}
+
+function IJWBconNum(key) {
+    switch (key) {
+        case "day":
+            var icon = "01";
+            break;
+        case "week":
+            var icon = "02";
+            break;
+        case "mon":
+            var icon = "03";
+            break;
+        case "year":
+            var icon = "04";
+            break;
+        case "min":
+            var icon = "05";
+            break;
+        case "sec":
+            var icon = "06";
+            break;
+    }
+
+    return icon;
+}
+
+function topPrc(p, h, l, ch, cg, vo, va) {
+    if (ch > 0) {
+        TopPrc.innerHTML = p.format();
+        document.getElementById('TopPrc').style.color = "#FF0000";
+        document.getElementById('TopCh').style.color = "#FF0000";
+        document.getElementById('TopCg').style.color = "#FF0000";
+        //TopCh.innerHTML="▲ "+ch.format();
+        //TopCg.innerHTML=FRP(cg,4)+"%";
+        TopCh.innerHTML = "▲ " + ch.format();
+        TopCg.innerHTML = cg + "%";
+    } else if (ch == 0) {
+        TopPrc.innerHTML = p.format();
+        document.getElementById('TopPrc').style.color = "#000000";
+        document.getElementById('TopCh').style.color = "#000000";
+        document.getElementById('TopCg').style.color = "#000000";
+        //TopCh.innerHTML="▲ "+ch.format();
+        //TopCg.innerHTML=FRP(cg,4)+"%";
+        TopCh.innerHTML = " " + ch.format();
+        TopCg.innerHTML = cg + "%";
+    } else {
+        TopPrc.innerHTML = p.format();
+        document.getElementById('TopPrc').style.color = "#0070FF";
+        document.getElementById('TopCh').style.color = "#0070FF";
+        document.getElementById('TopCg').style.color = "#0070FF";
+
+        if (parseFloat(ch) < 0) {
+            TopCh.innerHTML = "▼ " + (ch * -1).format();
+            //.replace("-","");
+        } else {
+            TopCh.innerHTML = "▼ " + (ch * -1).format();
+        }
+        //var cgRep = FRP(cg,4)+" %";
+        var cgRep = cg + " %";
+
+        TopCg.innerHTML = cgRep.replace("-", "");
+    }
+
+    //TopH.innerHTML=h.format();
+    //TopL.innerHTML=l.format();
+    TopVo.innerHTML = vo.format();
+    //TopVa.innerHTML=va.format();
+
+}
+
+/***wheel*********************************************************/
+
+function wheel(event) {
+    var delta = 0;
+    if (!event) {//Mozilla (Firefox) 계열
+        event = window.event;
+    }
+
+    if (event.wheelDelta) {//Internet Explorer 계열
+        delta = event.wheelDelta / 120;
+        if (window.opera) {//Opera 계열
+            delta = -delta;
+        }
+    } else if (event.detail) {//Mozilla (Firefox) 계열
+        delta = -event.detail / 3;
+    }
+    if (delta) {
+        //delta < 0 up
+        //delta > 0 down
+        console.log(delta);
+    }
+}
+
+/***wheel*********************************************************/
+
+function ZoomOut(zoType) {
+    console.log(zoType);
+    Chart.InitialViewInfo(300);
+}
+
+
+function addData(strRQ, symbol, ijwb, sDay) {
+
+
+    if (!gbRequest) {
+
+        gbRequest = true;
+
+        $.getJSON("http://211.240.103.90/kovex/chartdata.inc?symbol=" + symbol + "&num=5&ijwb=" + ijwb + "&sDay=" + sDay, function (addDataArr) {
+
+            ////console.log(dataArr.ref.D1에러여부);
+            //////////////////////////////////////////////////////////////////
+            var addDataLength = addDataArr.data.length;
+            var addOpenprc,
+                addHighprc,
+                addLowprc,
+                addCloseprc,
+                addCumdealqty,
+                addDate;
+            var addData;
+            var addChartData = "";
+
+            var highest = null;
+            var lowest = null;
+
+            for (var i = 0; i < addDataLength; i++) {
+
+                if (ijwb != 5 && ijwb != 6)
+                    addDate = addDataArr.data[i].date;
+                else
+                    addDate = addDataArr.data[i].date + addDataArr.data[i].time;
+
+                addOpenprc = sprintf(10, addDataArr.data[i].openprc);
+                addHighprc = sprintf(10, addDataArr.data[i].highprc);
+                addLowprc = sprintf(10, addDataArr.data[i].lowprc);
+                addCloseprc = sprintf(10, addDataArr.data[i].closeprc);
+                addCumdealqty = sprintf(19, addDataArr.data[i].cumdealqty);
+
+                addData = (addDate + "" + addOpenprc + "" + addHighprc + "" + addLowprc + "" + addCloseprc + "" + addCumdealqty);
+                addChartData += addData;
+
+                if (highest == null || highest < addHighprc)
+                    highest = addHighprc;
+                if (lowest == null || lowest > addLowprc)
+                    lowest = addLowprc;
+            }
+
+            console.log("highest:" + highest + ", lowest:" + lowest);
+
+            addChartData = addDataLength + "!" + addChartData;
+
+            var bAppend = true;
+            var bAscendingOrder = false;
+            var bMergeXScale = true;
+            Chart.SetPacketData(strRQ, addChartData, addChartData.length, bAppend, bAscendingOrder, bMergeXScale);
+
+            Chart.Draw(DRAW_CASE_TR | DRAW_CASE_SCROLL);
+
+            gbRequest = false;
+        });
+    }
+}
+</script>

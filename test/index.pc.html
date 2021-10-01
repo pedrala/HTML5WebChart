@@ -1,0 +1,1662 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css">
+
+    <title>CWebChart</title>
+
+    <style>
+    /** base **/
+    .chart_cont *{box-sizing:border-box;letter-spacing:-1px;}
+    .chart_cont div, .chart_cont p, .chart_cont span, .chart_cont ul, .chart_cont li, .chart_cont img{margin:0;padding:0;word-break:break-all;border:0;}
+    .chart_cont li{list-style:none}
+    .chart_cont a, .chart_cont label, .chart_cont input, .chart_cont textarea, .chart_cont button, .chart_cont select{text-decoration:none;-webkit-tap-highlight-color:transparent;}
+    .chart_cont ol, .chart_cont ul, .chart_cont dl{list-style:none}
+    .chart_cont table{border-collapse:collapse;border-spacing:0;table-layout:fixed;}
+    .chart_cont input[type="text"], .chart_cont select{padding:0;margin:0;border:none;border:none;vertical-align:middle;}
+    .chart_cont .blind {overflow:hidden;visibility:hidden;position:absolute;width:0;height:0;font-size:0;line-height:0;}
+
+    /** chart top **/
+    .chart_cont{position:relative;width:100%;height:993px;}
+    .chart_cont .chart_top_bx{padding:9px 10px;width:100%;height:38px;background:#fff;border-bottom:1px solid #ece9ec;}
+    .chart_cont .chart_top_bx:before{display:inline-block;height:38px;clear:both;content:"";}
+    .chart_cont .chart_top_bx .cicle_lft{display:inline-block;float:left;height:20px;background:#fff;}
+    .chart_cont .chart_top_bx .cicle_lft:before{display:inline-block;height:50px;clear:both;content:"";}
+    .chart_cont .chart_top_bx .cicle_lft_lst{float:left;height:20px;}
+    .chart_cont .chart_top_bx .cicle_lft_lst:before{display:inline-block;height:20px;clear:both;content:"";}
+    .chart_cont .chart_top_bx .cicle_lft .cicle_lft_lst > li{float:left;height:20px;width:40px;}
+    .chart_cont .chart_top_bx .cicle_lft .cicle_lft_lst > li > a{display:block;width:100%;height:20px;line-height:19px;text-align:center;color:#707070;font-size:12px;border-radius:2px;}
+    .chart_cont .chart_top_bx .cicle_lft .cicle_lft_lst > li > a:hover,
+    .chart_cont .chart_top_bx .cicle_lft .cicle_lft_lst > li > a:active{background:#e4e7f0;color:#707070;}
+    .chart_cont .chart_top_bx .cicle_lft .cicle_lft_lst > li > a.active{background:#215ab6;color:#fff;}
+    .chart_cont .chart_top_bx .chart_type01_lft{display:none;position:relative;padding:0 8px 0 22px;float:left;height:20px;line-height:19px;font-size:12px;color:#707070;}
+    .chart_cont .chart_top_bx .chart_type01_lft:before{position:absolute;left:6px;top:50%;margin:-5px 0 0;content:"";width:6px;height:10px;background:url("static/images/chart_arrow_lft.png") no-repeat left top;}
+    .chart_cont .chart_top_bx .chart_type01_lft:hover,
+    .chart_cont .chart_top_bx .chart_type01_lft:active{background:#e4e7f0;}
+    .chart_cont .chart_top_bx .minute_lst_bx{float:left;width:40px;height:20px;position:relative;}
+    .chart_cont .chart_top_bx .minute_lst_bx .btn_minute{display:block;width:40px;height:20px;line-height:18px;color:#fff;text-align:center;border-radius:2px;font-size:12px;color:#707070;background:#fff;}
+    .chart_cont .chart_top_bx .minute_lst_bx .btn_minute:hover,
+    .chart_cont .chart_top_bx .minute_lst_bx .btn_minute:active{color:#707070;background:#e4e7f0;}
+    .chart_cont .chart_top_bx .minute_lst_bx .btn_minute.active{background:#215ab6;color:#fff;}
+    .chart_cont .chart_top_bx .minute_lst_bx .minute_slide{display:none;position:absolute;left:0;top:28px;z-index:30;width:142px;background:#fff;border:1px solid #e1dfe1;}
+    .chart_cont .chart_top_bx .minute_lst_bx .minute_slide .minute_slide_lst{padding:10px 0 0;}
+    .chart_cont .chart_top_bx .minute_lst_bx .minute_slide .minute_slide_lst li.last{border-bottom:1px solid #ece9ec;padding:0 0 10px;}
+    .chart_cont .chart_top_bx .minute_lst_bx .minute_slide .minute_slide_lst li.fst{padding:10px 0 0;}
+    .chart_cont .chart_top_bx .minute_lst_bx .minute_slide .minute_slide_lst li:last-child{padding:0 0 10px;border-bottom:1px solid #ece9ec;}
+    .chart_cont .chart_top_bx .minute_lst_bx .minute_slide .minute_slide_lst a{display:block;text-indent:14px;width:100%;height:30px;line-height:30px;text-align:left;color:#707070;font-size:12px;}
+    .chart_cont .chart_top_bx .minute_lst_bx .minute_slide .minute_slide_lst a:hover,
+    .chart_cont .chart_top_bx .minute_lst_bx .minute_slide .minute_slide_lst a:active{background:#f1f2f7;color:#707070;}
+    .chart_cont .chart_top_bx .minute_lst_bx .minute_slide .input_minute_bx{width:100%;;height:29px;}
+    .chart_cont .chart_top_bx .minute_lst_bx .minute_slide .input_minute_bx:before{content:"";height:29px;display:inline-block;}
+    .chart_cont .chart_top_bx .minute_lst_bx .minute_slide .input_minute_bx input{display:block;float:left;width:38px;height:29px;text-align:center;font-size:12px;color:#707070;}
+    .chart_cont .chart_top_bx .minute_lst_bx .minute_slide .input_minute_bx .sub_slide_bx{float:left;position:relative;width:61px;height:29px;}
+    .chart_cont .chart_top_bx .minute_lst_bx .minute_slide .input_minute_bx .sub_slide_bx .btn_select{position:relative;display:block;width:61px;height:29px;line-height:29px;text-indent:10px;text-align:left;font-size:12px;color:#707070;border-left:1px solid #edeaed;}
+    .chart_cont .chart_top_bx .minute_lst_bx .minute_slide .input_minute_bx .sub_slide_bx .btn_select:before{position:absolute;right:9px;top:50%;margin:-3px 0 0 0;width:10px;height:6px;content:"";background:url("static/images/chart_arrow_down.png") no-repeat center;}
+    .chart_cont .chart_top_bx .minute_lst_bx .minute_slide .input_minute_bx .sub_slide_bx .sub_bx{display:none;position:absolute;left:0;bottom:-1px;width:100%;background:#fff;border:1px solid #edeaed;z-index:10;}
+    .chart_cont .chart_top_bx .minute_lst_bx .minute_slide .input_minute_bx .sub_slide_bx .sub_bx .sub_select_lst li > a{display:block;width:100%;height:30px;line-height:29px;font-size:12px;color:#707070;text-indent:10px;}
+    .chart_cont .chart_top_bx .minute_lst_bx .minute_slide .input_minute_bx .sub_slide_bx .sub_bx .sub_select_lst li > a:hover,
+    .chart_cont .chart_top_bx .minute_lst_bx .minute_slide .input_minute_bx .sub_slide_bx .sub_bx .sub_select_lst li > a:active{background:#f1f2f7;color:#707070;}
+    .chart_cont .chart_top_bx .minute_lst_bx .minute_slide .input_minute_bx .rgt_btn_bx{display:block;float:left;padding:4px;height:29px;width:41px;border-left:1px solid #edeaed;}
+    .chart_cont .chart_top_bx .minute_lst_bx .minute_slide .input_minute_bx .rgt_btn_bx a{display:block;width:32px;height:21px;background:#e5e8f1;border-radius:2px;line-height:20px;font-size:12px;color:#707070;text-align:center;}
+    .chart_cont .chart_top_bx .minute_lst_bx .minute_slide .input_minute_bx .txt{display:block;float:left;width:30px;height:30px;}
+    .chart_cont .chart_top_bx .signal_rgt{display:inline-block;float:right;height:20px;}
+    .chart_cont .chart_top_bx .signal_rgt:before{display:inline-block;height:20px;clear:both;content:"";}
+    .chart_cont .chart_top_bx .signal_rgt > li{padding:0 0 0 10px;float:left;}
+    .chart_cont .chart_top_bx .signal_rgt > li:first-child{padding:0;}
+    .chart_cont .chart_top_bx .signal_rgt > li > a{display:block;width:20px;height:20px;line-height:13px;text-align:center;color:#000;border-radius:2px;}
+    .chart_cont .chart_top_bx .signal_rgt > li > a.btn_alerm{background:url("static/images/chart_rgt01.png") no-repeat center;}
+    .chart_cont .chart_top_bx .signal_rgt > li > a.btn_alerm:hover,
+    .chart_cont .chart_top_bx .signal_rgt > li > a.btn_alerm:active{background:#e4e7f0 url("static/images/chart_rgt01.png") no-repeat center;}
+    .chart_cont .chart_top_bx .signal_rgt > li > a.btn_alerm.active{background:#194aa5 url("static/images/chart_rgt01_on.png") no-repeat center;}
+    .chart_cont .chart_top_bx .signal_rgt > li > a.btn_chart{background:url("static/images/chart_rgt02.png") no-repeat center;}
+    .chart_cont .chart_top_bx .signal_rgt > li > a.btn_chart:hover,
+    .chart_cont .chart_top_bx .signal_rgt > li > a.btn_chart:active{background:#e4e7f0 url("static/images/chart_rgt02.png") no-repeat center;}
+    .chart_cont .chart_top_bx .signal_rgt > li > a.btn_chart.active{background:#194aa5 url("static/images/chart_rgt02_on.png") no-repeat center;}
+    .chart_cont .chart_top_bx .signal_rgt > li > a.btn_setting{background:url("static/images/chart_rgt03.png") no-repeat center;}
+    .chart_cont .chart_top_bx .signal_rgt > li > a.btn_setting:hover,
+    .chart_cont .chart_top_bx .signal_rgt > li > a.btn_setting:active{background:#e4e7f0 url("static/images/chart_rgt03.png") no-repeat center;}
+    .chart_cont .chart_top_bx .signal_rgt > li > a.btn_setting.active{background:#194aa5 url("static/images/chart_rgt03_on.png") no-repeat center;}
+    .chart_cont .chart_top_bx .signal_rgt > li > a.btn_reset{background:url("static/images/chart_rgt04.png") no-repeat center;}
+    .chart_cont .chart_top_bx .signal_rgt > li > a.btn_reset:hover,
+    .chart_cont .chart_top_bx .signal_rgt > li > a.btn_reset:active{background:#e4e7f0 url("static/images/chart_rgt04.png") no-repeat center;}
+    .chart_cont .chart_top_bx .signal_rgt > li > a.btn_reset.active{background:#194aa5 url("static/images/chart_rgt04_on.png") no-repeat center;}
+    .chart_cont .chart_top_bx .signal_rgt > li > a.btn_expend{background:url("static/images/chart_rgt05.png") no-repeat center;}
+    .chart_cont .chart_top_bx .signal_rgt > li > a.btn_expend:hover,
+    .chart_cont .chart_top_bx .signal_rgt > li > a.btn_expend:active{background:#e4e7f0 url("static/images/chart_rgt05.png") no-repeat center;}
+    .chart_cont .chart_top_bx .signal_rgt > li > a.btn_expend.active{background:#194aa5 url("static/images/chart_rgt05_on.png") no-repeat center;}
+    .chart_cont .chart_top_bx .signal_rgt > li > a.btn_analyze{background:url("static/images/chart_rgt06.png") no-repeat center;}
+    .chart_cont .chart_top_bx .signal_rgt > li > a.btn_analyze:hover,
+    .chart_cont .chart_top_bx .signal_rgt > li > a.btn_analyze:active{background:#e4e7f0 url("static/images/chart_rgt06.png") no-repeat center;}
+    .chart_cont .chart_top_bx .signal_rgt > li > a.btn_analyze.active{background:#194aa5 url("static/images/chart_rgt06_on.png") no-repeat center;}
+    .chart_cont .chart_top_bx .signal_rgt .chart_btm_sign{display:none;position:absolute;left:0;top:28px;padding:10px 0;z-index:10;width:130px;border:1px solid #e1dfe1;background:#fff;}	
+    .chart_cont .chart_top_bx .signal_rgt .chart_btm_sign .chart_sign_lst .btn_lnk{display:block;width:100%;font-size:12px;height:31px;line-height:30px;color:#707070;text-indent:35px;background:#fff;}
+    .chart_cont .chart_top_bx .signal_rgt .chart_btm_sign .chart_sign_lst .btn_lnk:hover,
+    .chart_cont .chart_top_bx .signal_rgt .chart_btm_sign .chart_sign_lst .btn_lnk:active,
+    .chart_cont .chart_top_bx .signal_rgt .chart_btm_sign .chart_sign_lst .btn_lnk.active{background:#f2f3f7 url("static/images/chart_ico_check.png") no-repeat 14px center;}   
+
+    /** 분석도구 툴 **/
+    .chart_cont .chart_bx{position:relative;overflow:hidden;width:100%;height:calc(100% - 40px)}
+    .chart_cont .chart_bx .sidebar_bx{position:absolute;right:-120px;top:0;width:57px;height:100%;z-index:50;text-align:right;}
+	.chart_cont .chart_bx .sidebar_bx .sidebar_menu_bx{position:absolute;right:0;top:0;overflow-y:auto;height:100%;width:57px;}
+	.chart_cont .chart_bx .sidebar_menu_bx > .sidebar_menu{position:absolute;right:0;top:0;height:100%;background:#fff;border-left:1px solid #e1dfe1;width:40px;box-shadow: 0px 1px 5px 0 rgba(0, 0, 0, 0.1);}
+	.chart_cont .chart_bx .sidebar_menu_bx > .sidebar_menu > li{position:relative;}
+	.chart_cont .chart_bx .sidebar_menu_bx > .sidebar_menu > li > a{display:block;position:relative;width:100%;height:40px;}
+	.chart_cont .chart_bx .sidebar_menu_bx > .sidebar_menu > li > a:before{position:absolute;left:-1px;top:0;width:1px;height:100%;background-color:#e1dfe1;content:"";}
+	.chart_cont .chart_bx .sidebar_menu_bx > .sidebar_menu > li.menu01 > a{background:#fff url("static/images/chart_side01.png") no-repeat center;}
+	.chart_cont .chart_bx .sidebar_menu_bx > .sidebar_menu > li.menu02 > a{background:#fff url("static/images/chart_side02.png") no-repeat center;}
+	.chart_cont .chart_bx .sidebar_menu_bx > .sidebar_menu > li.menu03 > a{background:#fff url("static/images/chart_side03.png") no-repeat center;}
+	.chart_cont .chart_bx .sidebar_menu_bx > .sidebar_menu > li.menu04 > a{background:#fff url("static/images/chart_side04.png") no-repeat center;}
+	.chart_cont .chart_bx .sidebar_menu_bx > .sidebar_menu > li.menu05 > a{background:#fff url("static/images/chart_side05.png") no-repeat center;}
+	.chart_cont .chart_bx .sidebar_menu_bx > .sidebar_menu > li.menu06 > a{background:#fff url("static/images/chart_side06.png") no-repeat center;}
+	.chart_cont .chart_bx .sidebar_menu_bx > .sidebar_menu > li.menu07 > a{background:#fff url("static/images/chart_side07.png") no-repeat center;}
+	.chart_cont .chart_bx .sidebar_menu_bx > .sidebar_menu > li.menu08 > a{background:#fff url("static/images/chart_side08.png") no-repeat center;}
+	.chart_cont .chart_bx .sidebar_menu_bx > .sidebar_menu > li.menu09 > a{background:#fff url("static/images/chart_side09.png") no-repeat center;}		
+	.chart_cont .chart_bx .sidebar_menu_bx > .sidebar_menu > li.menu01 > a:hover{background:#fff url("static/images/chart_side01_hover.png") no-repeat center;}
+	.chart_cont .chart_bx .sidebar_menu_bx > .sidebar_menu > li.menu02 > a:hover{background:#fff url("static/images/chart_side02_hover.png") no-repeat center;}
+	.chart_cont .chart_bx .sidebar_menu_bx > .sidebar_menu > li.menu03 > a:hover{background:#fff url("static/images/chart_side03_hover.png") no-repeat center;}
+	.chart_cont .chart_bx .sidebar_menu_bx > .sidebar_menu > li.menu04 > a:hover{background:#fff url("static/images/chart_side04_hover.png") no-repeat center;}
+	.chart_cont .chart_bx .sidebar_menu_bx > .sidebar_menu > li.menu05 > a:hover{background:#fff url("static/images/chart_side05_hover.png") no-repeat center;}
+	.chart_cont .chart_bx .sidebar_menu_bx > .sidebar_menu > li.menu06 > a:hover{background:#fff url("static/images/chart_side06_hover.png") no-repeat center;}
+	.chart_cont .chart_bx .sidebar_menu_bx > .sidebar_menu > li.menu07 > a:hover{background:#fff url("static/images/chart_side07_hover.png") no-repeat center;}
+	.chart_cont .chart_bx .sidebar_menu_bx > .sidebar_menu > li.menu08 > a:hover{background:#fff url("static/images/chart_side08_hover.png") no-repeat center;}
+	.chart_cont .chart_bx .sidebar_menu_bx > .sidebar_menu > li.menu09 > a:hover{background:#fff url("static/images/chart_side09_hover.png") no-repeat center;}	
+	.chart_cont .chart_bx .sidebar_menu_bx > .sidebar_menu > li.menu01.active > a{background:#fff url("static/images/chart_side01_on.png") no-repeat center;}
+	.chart_cont .chart_bx .sidebar_menu_bx > .sidebar_menu > li.menu02.active > a{background:#fff url("static/images/chart_side02_on.png") no-repeat center;}
+	.chart_cont .chart_bx .sidebar_menu_bx > .sidebar_menu > li.menu03.active > a{background:#fff url("static/images/chart_side03_on.png") no-repeat center;}
+	.chart_cont .chart_bx .sidebar_menu_bx > .sidebar_menu > li.menu04.active > a{background:#fff url("static/images/chart_side04_on.png") no-repeat center;}
+	.chart_cont .chart_bx .sidebar_menu_bx > .sidebar_menu > li.menu05.active > a{background:#fff url("static/images/chart_side05_on.png") no-repeat center;}
+	.chart_cont .chart_bx .sidebar_menu_bx > .sidebar_menu > li.menu06.active > a{background:#fff url("static/images/chart_side06_on.png") no-repeat center;}
+	.chart_cont .chart_bx .sidebar_menu_bx > .sidebar_menu > li.menu07.active > a{background:#fff url("static/images/chart_side07_on.png") no-repeat center;}
+	.chart_cont .chart_bx .sidebar_menu_bx > .sidebar_menu > li.menu08.active > a{background:#fff url("static/images/chart_side08_on.png") no-repeat center;}
+	.chart_cont .chart_bx .sidebar_menu_bx > .sidebar_menu > li.menu09.active > a{background:#fff url("static/images/chart_side09_on.png") no-repeat center;}	
+	.chart_cont .chart_bx .sidebar_menu_bx > .sidebar_menu .depth02{display:none;position:absolute;left:-80px;top:0;overflow:hidden;}
+	.chart_cont .chart_bx .sidebar_menu_bx > .sidebar_menu .depth02 > li > a{display:block;width:80px;text-align:center;color:#000;}	
+	.chart_cont .chart_bx .sidebar_menu_bx > .sidebar_menu > li.depth02_li > a:before{position:absolute;left:2px;top:24px;content:"";width:4px;height:4px;background:#fff url("static/images/chart_side_arrow.png") no-repeat center;}
+	.chart_cont .chart_bx .sidebar_bx .depth02_lst{display:none;position:absolute;right:39px;top:0;padding:5px 0;box-shadow: 0px 3px 5px 0 rgba(153, 204, 255, 0.05);border:1px solid #e1dfe1;background:#fff;}
+	.chart_cont .chart_bx .sidebar_bx .depth02_lst > li > a{display:block;padding:0 10px;font-size:11px;color:#616161;height:30px;text-align:left;line-height:32px;}
+	.chart_cont .chart_bx .sidebar_bx .depth02_lst > li > a:hover{background:#f1f2f7;}
+	.chart_cont .chart_bx .sidebar_bx .depth02_lst.side_depth04{width:52px;top:130px;}
+	.chart_cont .chart_bx .sidebar_bx .depth02_lst.side_depth05{width:62px;top:170px;}
+	.chart_cont .chart_bx .sidebar_bx .depth02_lst.side_depth06{width:52px;top:210px;}
+	.chart_cont .chart_bx .sidebar_bx .depth02_lst.side_depth07{width:92px;top:250px;}
+	.chart_cont .chart_bx .sidebar_bx .depth02_lst.side_depth08{width:108px;top:290px;}	
+	.chart_cont .chart_bx .sidebar_bx .toltip{position:absolute;right:50px;padding:0 10px;height:20px;width:100px;font-size:11px;color:#fff;text-align:center;background:#404040;border-radius:3px;line-height:22px;}
+	.chart_cont .chart_bx .sidebar_bx .toltip:before{position:absolute;right:-4px;top:50%;margin:-5px 0 0;width:4px;height:10px;background:#fff url("static/images/chart_tooltip_arrow.png") no-repeat center;content:"";}
+	.chart_cont .chart_bx .sidebar_bx .toltip.side_depth01{top:10px;width:73px;}
+	.chart_cont .chart_bx .sidebar_bx .toltip.side_depth02{top:50px;width:89px;}
+	.chart_cont .chart_bx .sidebar_bx .toltip.side_depth03{top:90px;width:83px;}
+	.chart_cont .chart_bx .sidebar_bx .toltip.side_depth04{top:130px;width:35px;text-align:right;}
+	.chart_cont .chart_bx .sidebar_bx .toltip.side_depth05{top:170px;width:36px;}
+	.chart_cont .chart_bx .sidebar_bx .toltip.side_depth06{top:210px;width:40px;}
+	.chart_cont .chart_bx .sidebar_bx .toltip.side_depth07{top:250px;width:60px;}
+	.chart_cont .chart_bx .sidebar_bx .toltip.side_depth08{top:290px;width:109px;}
+	.chart_cont .chart_bx .sidebar_bx .toltip.side_depth09{top:330px;width:93px;}
+    .chart_cont .chart_bx .chart_area{position:relative;width:auto;height:100%;}
+    .chart_cont .chart_bx .chart_area01{display:none;width:auto;height:500px;}
+
+    /** bottom **/
+    .chart_cont .chart_btm_area{display:none;position:absolute;left:0;bottom:0;padding:0 10px 0 30px;width:100%;height:39px;background:#fff;border-top:1px solid #ece9ec;z-index:11;}
+    .chart_cont .chart_btm_area:before{display:inline-block;height:50px;clear:both;content:"";}
+    .chart_cont .chart_btm_area .time_lst{float:left;}
+    .chart_cont .chart_btm_area .time_lst:before{display:inline-block;height:29px;clear:both;content:"";}
+    .chart_cont .chart_btm_area .time_lst > li{float:left;padding:0 0 0 22px;}
+    .chart_cont .chart_btm_area .time_lst > li:first-child{padding:0;}
+    .chart_cont .chart_btm_area .time_lst > li > a{display:inline-block;height:39px;line-height:38px;font-size:12px;color:#707070;}
+    .chart_cont .chart_btm_area .btn_before_period{float:left;margin:0 0 0 22px;display:inline-block;height:39px;line-height:38px;font-size:12px;color:#707070;}
+    .chart_cont .chart_btm_area .btn_rgt{float:right;}
+    .chart_cont .chart_btm_area .btn_rgt:before{display:inline-block;height:39px;clear:both;content:"";}
+    .chart_cont .chart_btm_area .btn_rgt > li{float:left;position:relative;padding:0 0 0 23px;}
+    .chart_cont .chart_btm_area .btn_rgt > li:first-child{padding:0;}
+    .chart_cont .chart_btm_area .btn_rgt > li.setting_lst{padding:10px 0 0 11px;}
+    .chart_cont .chart_btm_area .btn_rgt > li.setting_lst > a{display:block;width:40px;height:20px;line-height:18px;text-align:center;color:#fff;background:#1f4ba4;}
+    .chart_cont .chart_btm_area .btn_rgt > li > a{display:inline-block;height:39px;line-height:38px;color:#707070;font-size:12px;}
+    .chart_cont .chart_btm_area .btn_rgt .chart_btm_setting{display:none;padding:10px 0;position:absolute;right:-10px;bottom:30px;width:136px;background:#fff;border:1px solid #e1dfe1;z-index:51;}
+    .chart_cont .chart_btm_area .btn_rgt .chart_btm_setting .btn_lnk{display:block;width:100%;font-size:12px;height:31px;line-height:30px;color:#707070;text-indent:35px;}
+    .chart_cont .chart_btm_area .btn_rgt .chart_btm_setting .btn_lnk:hover,
+    .chart_cont .chart_btm_area .btn_rgt .chart_btm_setting .btn_lnk:active,
+    .chart_cont .chart_btm_area .btn_rgt .chart_btm_setting .btn_lnk.active{background:#f2f3f7 url("static/images/chart_ico_check.png") no-repeat 14px center;}
+
+    /** rdo_check **/
+    .chart_cont .rdo_check{overflow:hidden;display:inline-block;padding:3px;width:80px;height:30px;border:1px solid #e1dfe1;border-radius:15px;}
+    .chart_cont .rdo_check label{display:block;position:relative;float:left;width:36px;height:22px;border-radius:15px;}
+    .chart_cont .rdo_check label .txt{position:absolute;left:0;top:0;width:36px;height:22px;line-height:20px;text-align:center;font-size:12px;color:#c5c5c5;}
+    .chart_cont .rdo_check label .check_rdo{-webkit-appearance:none;border-radius:0;padding:0;margin:0;border:none;background:none;overflow:hidden;visibility:hidden;position:absolute;width:0;height:0;font-size:0;line-height:0;}
+    .chart_cont .rdo_check label.active{background:#1f4ba4;transition: all 0.4s;}
+    .chart_cont .rdo_check label.active .txt{color:#fff;transition: all 0.4s;}
+
+    /** 알림 **/
+    .popup_wrapper_pc .alerm_modal {position:relative;background:#fff;box-shadow: 0px 5px 10px 0 rgba(0, 0, 0, 0.1);}
+    .popup_wrapper_pc .alerm_modal .src_tit{display:block;padding:24px 30px 14px;width:100%;font-size:20px;color:#252525;line-height:30px;font-weight:300;clear:both;border-bottom:1px solid #e0e0e0;}	
+	.popup_wrapper_pc .alerm_modal .pop_cont{padding:0 0 30px;}
+	.popup_wrapper_pc .alerm_modal .modal_form_lst{padding:20px 30px 0;}
+	.popup_wrapper_pc .alerm_modal .modal_form_lst > li{overflow:hidden;width:auto;margin:15px 0 0;}
+	.popup_wrapper_pc .alerm_modal .modal_form_lst > li:first-child{margin:0;}
+	.popup_wrapper_pc .alerm_modal .modal_form_lst .tit{display:block;margin:0 20px 0 0;float:left;height:30px;line-height:29px;font-weight:normal;font-size:14px;color:#4b4b4b;}
+	.popup_wrapper_pc .alerm_modal .modal_form_lst .rdo_check{float:right;}
+	.popup_wrapper_pc .alerm_modal .modal_form_lst > li.depth02_lst > .tit{float:none;display:block;margin:-7px 0 0;width:100%;}
+    .popup_wrapper_pc .alerm_modal .modal_form_lst > li.depth02_lst .modal_form_lst{padding:6px 0 0 36px;width:auto;}
+
+    /** 과거시점 이동 **/
+    .popup_wrapper_pc .setting_modal_bx .calender_modal{position:relative;padding:32px 40px 38px;background:#fff;box-shadow: 0px 5px 10px 0 rgba(0, 0, 0, 0.1);}
+    .popup_wrapper_pc .setting_modal_bx .calender_modal .src_tit{display:block;width:100%;font-size:20px;color:#252525;line-height:30px;font-weight:300;clear:both;}	
+	.popup_wrapper_pc .setting_modal_bx .calender_modal .dadepicker_bx{padding:16px 0 0;height:48px;}	
+	.popup_wrapper_pc .setting_modal_bx .calender_modal .dadepicker_bx:before{content:"";clear:both;height:30px;display:inline-block;}
+	.popup_wrapper_pc .setting_modal_bx .calender_modal .dadepicker_bx .btn_datepicker{float:left;display:block;margin:0 0 0 10px;width:50px;height:30px;line-height:29px;font-size:13px;color:#fff;text-align:center;background:#1f4ba4;}	
+	.popup_wrapper_pc .setting_modal_bx .calender_modal .dadepicker_bx .dadepicker_form{float:left;width:150px;height:30px;border:1px solid #e2e0e2}	
+	.popup_wrapper_pc .setting_modal_bx .calender_modal .dadepicker_bx .dadepicker_form .datepicker{display:block;width:110px;height:28px;float:left;}
+	.popup_wrapper_pc .setting_modal_bx .calender_modal .dadepicker_bx .dadepicker_form .input_calender{display:block;float:left;text-indent:10px;width:110px;height:28px;line-height:28px;font-size:13px;color:#4b4b4b;}
+	.popup_wrapper_pc .setting_modal_bx .calender_modal .dadepicker_bx .dadepicker_form .btn_calender{display:block;float:left;width:38px;height:28px;background:url("static/images/chart_btn_calender.png") no-repeat center;}
+
+    /** 세계시간 **/
+    .popup_wrapper_pc .chart_universal_time{padding:10px 0;background:#fff;z-index:100;width:225px;border:1px solid #e1dfe1; position:absolute; overflow-y: auto;}
+    .popup_wrapper_pc .chart_universal_time > li{position:relative;}
+    .popup_wrapper_pc .chart_universal_time > li > a{position:relative;background:#fff;display:block;height:34px;line-height:30px;font-size:15px;color:#707070;width:auto;text-indent:33px;}
+    .popup_wrapper_pc .chart_universal_time > li.active > a, .popup_wrapper_pc .chart_universal_time > li.checked > a{background:#e4e7f0;}
+    .popup_wrapper_pc .chart_universal_time > li.active > a:before, .popup_wrapper_pc .chart_universal_time > li.checked > a:before{position:absolute;left:14px;top:50%;margin:-3px 0 0;width:10px;height:7px;background:url("static/images/chart_ico_check.png") no-repeat left top;content:"";}
+    </style>
+</head>
+
+<body>
+<section class="chart_cont">
+    <article class="chart_top_bx">
+        <div class="cicle_lft">
+            <ul class="cicle_lft_lst">
+                <li class="cycle_select"><a href="#1">1m</a></li>
+                <li class="cycle_select"><a href="#3">3m</a></li>
+                <li class="cycle_select"><a href="#10">10m</a></li>
+                <li class="cycle_select"><a href="#30">30m</a></li>
+                <li class="cycle_select"><a href="#60">60m</a></li>
+            </ul><!-- cicle_lft_lst -->
+            <div class="minute_lst_bx">
+                <a href="javascript:;" class="btn_minute">분</a>
+                <div class="minute_slide">
+                    <ul class="minute_slide_lst">
+                        <li class="cycle_unit_select"><a href="#1">1 일</a></li>
+                        <li class="cycle_unit_select"><a href="#2">1 주</a></li>
+                        <li class="last cycle_unit_select"><a href="#3">1 개월</a></li>
+                        <li class="fst cycle_select"><a href="#1">1 분</a></li>
+                        <li class="cycle_select"><a href="#3">3 분</a></li>
+                        <li class="cycle_select"><a href="#5">5 분</a></li>
+                        <li class="cycle_select"><a href="#10">10 분</a></li>
+                        <li class="cycle_select"><a href="#15">15 분</a></li>
+                        <li class="cycle_select"><a href="#30">30 분</a></li>
+                        <li class="cycle_select"><a href="#60">60 분</a></li>
+                    </ul><!-- minute_slide_lst -->
+                    <div class="input_minute_bx">
+                        <input id="" value="" type="text" />
+                        <div class="sub_slide_bx">
+                            <a href="#" class="btn_select">분</a>
+                            <div class="sub_bx">
+                                <ul class="sub_select_lst">
+                                    <li><a href="#">분1</a></li>
+                                    <li><a href="#">분2</a></li>
+                                    <li><a href="#">분3</a></li>
+                                    <li><a href="#">분4</a></li>
+                                    <li><a href="#">분5</a></li>
+                                </ul><!-- sub_select_lst -->
+                            </div><!-- sub_select_lst -->
+                        </div><!-- sub_slide_bx -->
+                        <span class="rgt_btn_bx">
+                            <a href="#">넣기</a>
+                        </span><!-- rgt_btn_bx -->
+                    </div><!-- input_minute_bx -->
+                </div><!-- minute_slide -->
+            </div><!-- minute_lst_bx -->
+        </div><!-- cicle_lft -->
+        <a href="javascript:;" class="chart_type01_lft">차트로 돌아가기</a>
+        <ul class="signal_rgt">
+            <li>
+                <a href="javascript:;" class="btn_alerm"><span class="blind">알림</span></a>
+            </li>
+            <li>
+                <a href="chart_type01.html" class="btn_chart"><span class="blind">차트전환</span></a><!-- 차트 전환시 .btn_change_chart  -->
+            </li>
+            <li>
+                <a href="#ModalSetting" class="btn_setting"><span class="blind">설정</span></a><!-- 모달 딤팝업 노출시 class명 .btn_setting_modal -->
+            </li>
+            <li>
+                <a href="javascript:;" class="btn_expend"><span class="blind">최대화</span></a>
+            </li>
+            <li>
+                <a href="javascript:;" class="btn_analyze"><span class="blind">분석</span></a>
+            </li>
+        </ul><!-- signal_rgt -->
+    </article><!-- chart_top_bx -->
+    <article class="chart_bx" style="background:#fffed7;">
+        <aside class="sidebar_bx">
+            <div class="sidebar_menu_bx">
+                <ul class="sidebar_menu">
+                    <li class="menu01" rel="side_depth01">
+                        <a href="#" title="차트 초기화"><span class="blind">차트 초기화</span></a>
+                    </li>
+                    <li class="menu02" rel="side_depth02">
+                        <a href="#" title="지우개 (-1단계)"><span class="blind">지우개 (-1단계)</span></a>
+                    </li>
+                    <li class="menu03" rel="side_depth03">
+                        <a href="#" title="분석툴 초기화"><span class="blind">분석툴 초기화</span></a>
+                    </li>
+                    <li class="menu04 depth02_li" rel="side_depth04">
+                        <a href="#" title="선"><span class="blind">선</span></a>
+                    </li>
+                    <li class="menu05 depth02_li" rel="side_depth05">
+                        <a href="#" title="선2"><span class="blind">선2</span></a>
+                    </li>
+                    <li class="menu06 depth02_li" rel="side_depth06">
+                        <a href="#" title="도형"><span class="blind">도형</span></a>
+                    </li>
+                    <li class="menu07 depth02_li" rel="side_depth07">
+                        <a href="#" title="피보나치"><span class="blind">피보나치</span></a>
+                    </li>
+                    <li class="menu08" rel="side_depth08">
+                        <a href="#" title="분석 툴 연속 그리기"><span class="blind">분석 툴 연속 그리기</span></a>
+                    </li>
+                    <li class="menu09" rel="side_depth09">
+                        <a href="#" title="십자선 수치조회"><span class="blind">십자선 수치조회</span></a>
+                    </li>
+
+                </ul><!-- sidebar_menu -->
+            </div>
+            <div class="sidebar_depth02">
+                <!-- 선 2뎁스 메뉴 -->
+                <ul class="depth02_lst side_depth04">
+                    <li><a href="#LINE_TOOL">추세선</a></li>
+                    <li><a href="#CROSS_LINE_TOOL">십자선</a></li>
+                    <li><a href="#HOZR_LINE_TOOL">수평선</a></li>
+                    <li><a href="#VERT_LINE_TOOL">수직선</a></li>
+                </ul>
+                <!-- //선 2뎁스 메뉴 -->
+                <!-- 선2 2뎁스 메뉴 -->
+                <ul class="depth02_lst side_depth05">
+                    <li><a href="#8">삼등분선</a></li>
+                    <li><a href="#9">사등분선</a></li>
+                </ul>
+                <!-- //선2 2뎁스 메뉴 -->
+                <!-- 도형 2뎁스 메뉴 -->
+                <ul class="depth02_lst side_depth06">
+                    <li><a href="#CIRCLE_TOOL">원</a></li>
+                    <li><a href="#TRIANGLE_TOOL">삼각형</a></li>
+                    <li><a href="#RECT_TOOL">사각형</a></li>
+                </ul>
+                <!-- //도형 2뎁스 메뉴 -->
+                <!-- 피보나치 2뎁스 메뉴 -->
+                <ul class="depth02_lst side_depth07">
+                    <li><a href="#10">피보나치 아크</a></li>
+                    <li><a href="#11">피보나치 팬</a></li>
+                    <li><a href="#12">피보나치 조정대</a></li>
+                    <li><a href="#13">피보나치 시간대</a></li>
+                </ul>
+                <!-- //피보나치 2뎁스 메뉴 -->
+            </div>
+        </aside>
+        <div class="chart_area">
+            <div id="ChartDIV"></div>
+        </div><!-- chart_area -->
+    </article><!-- chart_bx -->
+    <article class="chart_btm_area" id="">
+        <ul class="time_lst">
+            <li><a href="javascript:;">1시간</a></li>
+            <li><a href="javascript:;">3시간</a></li>
+            <li><a href="javascript:;">6시간</a></li>
+            <li><a href="javascript:;">1일</a></li>
+            <li><a href="javascript:;">5일</a></li>
+            <li><a href="javascript:;">1개월</a></li>
+            <li><a href="javascript:;">3개월</a></li>
+            <li><a href="javascript:;">6개월</a></li>
+            <li><a href="javascript:;">전체</a></li>
+        </ul><!-- time_lst -->
+        <a href="#PastView" class="btn_before_period">과거 시점</a>
+        <ul class="btn_rgt">
+            <li><a href="#+9" class="btn_universal_time" id="utc">00:00:00 (UTC+9)</a></li>
+            <li><a href="javascript:;">로그 뒤집기</a></li>
+            <li class="setting_lst">
+                <a href="javascript:;" class="btn_btm_setting">설정</a>
+                <div class="chart_btm_setting">
+                    <ul class="chart_btm_lst">
+                        <li>
+                            <a href="javascript:;" class="btn_lnk">빠른 주기</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="btn_lnk">과거 시점 이동</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="btn_lnk btn_universal_time">세계시간</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="btn_lnk">빠른 Y축 눈금 설정</a>
+                        </li>
+                    </ul><!-- chart_btm_lst -->
+                </div><!-- chart_btm_setting -->
+            </li>
+        </ul><!-- btn_rgt -->
+    </article><!-- chart_btm_area -->
+</section><!-- chart_cont -->
+
+<div class="popup_wrapper_pc">
+    <div id="chart-popup-wrapper"></div>
+</div>
+
+<script type="text/javascript" src="./static/jquery-2.1.3.js"></script>
+<script type="text/javascript" src="Html5Chart.js"></script>
+
+<script>
+//화면에서 사용되는 변수들
+var preSymbol = '';
+var mainConvas, mainContext, imageChart, colorHTML, BcolorHTML, sLineType, R_start, R_stop, TopViewType = 'N';
+var ChartDIV = null, TopPreData = null, ChartMainThis;
+var vUnit, FXc;
+var strKey_MA,
+strKey_Env,
+strKey_BB,
+strKey_VOLUME,
+strKey_VMA,
+strKey_MACD,
+strKey_MACDS,
+strKey_ADX,
+strKey_ADXR,
+strKey_CCI,
+strKey_TRIX,
+strKey_MOM,
+strKey_RSI,
+strKey_StoF,
+strKey_StoS,
+strKey_WILL,
+strKey_Disparity,
+strKey_OBV,
+strKey_VR,
+strKey_PIVOT,
+strKey_LRS,
+strKey_ROC,
+strKey_SONAR,
+strKey_PSYCO;
+
+var gGraphKeyObj = {};
+var fRealProcess, getMainContainer;
+var osType = "mobile";
+
+var Chart = null;
+var gSelectRQ = "";
+var gChartEventScrollFunction = null;
+var gbRequest = false;
+var gChartSizeMode = "";
+var gMarginX = 0;
+var gMarginY = 0;
+var Real_ID = null;
+
+$(document).ready(function () {
+
+    //window.dispatchEvent(new Event('resize'));
+
+    var ChartDIV = "ChartDIV";
+    var FullWidth = $(window).width();
+    var FullHeight = $(window).height();
+    //차트 하단 스크롤 영역 margin
+    var scrollMargin = 40;
+
+    var m_ChartCanvas = document.createElement("canvas");
+    m_ChartCanvas.id = ChartDIV + "_Canvas";
+    m_ChartCanvas.width =  FullWidth;
+    m_ChartCanvas.height = FullHeight - scrollMargin;
+
+    var m_ChartWrapper = document.getElementById(ChartDIV);
+    m_ChartWrapper.width = FullWidth;
+    m_ChartWrapper.height = FullHeight;
+    m_ChartWrapper.appendChild(m_ChartCanvas);
+
+    Chart = new CWebChart(ChartDIV, ChartDIV + "_Canvas");
+    Chart.InitCtrl();
+    Chart.SetBlockType(VERT_BLOCK_TYPE);
+    Chart.LoadLang();
+
+    //resize event 등록
+    window.addEventListener('resize', this.resize);
+
+    // 저장된 설정값 엔진으로 전달
+    Chart.options = {
+        "preSymbol": "",
+        "symbol": "KR001BTC__KRW__",
+        "ijwb": '1', // 주기(1:day, 2:week, 3:mon, 4:year, 5:min, 6:sec)
+        "ijwbGroup": '1', // 양
+        "icnt": '200',
+        "blockType": 0, // 0:vert, 1:horz
+        'inds': ['_MA_', '_VOLUME_', '_VMA_'],
+        "locale": "ko_KR" //en_US
+    };
+
+    KfitsChart(Chart.options.symbol, null, Chart.options.ijwb, Chart.options.icnt, Chart.options.ijwbGroup);
+});
+
+function RQInfos() {
+    this.Info = new RQInfo();
+    this.m_strContents = "";
+}
+
+function KfitsChart(symbol, ijwbID, ijwb, icnt, ijwbGroup) {
+
+    //console.log("Multiply(0.0001234, 0.0002345)" + Multiply(0.0001234, 0.0002345));
+
+    var Tsymbol = [],
+        Tdiff = [],
+        Tcurprc = [],
+        Tupdnrate = [],
+        Thighprc = [],
+        Tlowprc = [],
+        Tcumdealqty = [],
+        Tcumdealcost = [];
+
+    var chartData = "";
+    var dataArr,
+        kovex_ijwb = 0;
+
+    switch (ijwb) {
+        case '1':
+            kovex_ijwb = 2;
+            ijwbGroup = 1;
+            break;
+        case '2':
+            kovex_ijwb = 3;
+            ijwbGroup = 1;
+            break;
+        case '3':
+            kovex_ijwb = 4;
+            ijwbGroup = 1;
+            break;
+        case '4':
+            kovex_ijwb = 5;
+            ijwbGroup = 1;
+            break;
+        case '5':
+            kovex_ijwb = 1;
+            break;
+        case '6':
+            kovex_ijwb = 6;
+            break;
+    }
+
+    var Cdate = [],
+        Ctime = [],
+        Copenprc = [],
+        Chighprc = [],
+        Clowprc = [],
+        Ccloseprc = [],
+        Cealqty = [],
+        Ccumdealqty = [];
+    var B1symbol = [],
+        B1diff = [],
+        B1yesterdayprice = [],
+        B1updnrate = [],
+        B1precumdealqty = [],
+        B1out_cnt = [];
+
+    symbol = "000660";
+
+    if (symbol.length == 3)
+        var korvexSymbol = "KR001" + symbol + "_KRW__";
+    else
+        var korvexSymbol = "KR001" + symbol + "__KRW__";
+
+    //20181218 이문수 >>
+    //$.getJSON("http://211.240.103.90/kovex/chartdata.inc?symbol="+symbol+"&num=1000&ijwb="+ijwb, function (dataArr) {  /**** 메모리조회 (최대 2800개) */
+    //$.getJSON("http://211.240.103.90/kovex/chartdata_db.inc?symbol=000660&num=4000", function (dataArr) { /**** DB 조회 (5000 개이상) */
+    //$.getJSON("http://211.240.103.90/kovex/data.inc", '', function (dataArr) { /**** 만들어진 파일 데이터 조회 (5000개 조회 - 추가 조회시 다시 파일 갱신요청) */
+
+    //$.getJSON("http://211.240.103.90/kovex/chartdata.inc?symbol=" + symbol + "&num=5&ijwb=" + ijwb + "&ijwbGroup=" + ijwbGroup, function (dataArr)
+    {
+
+        //////////////////////////////////////////////////////////////////
+        //var dataLength = dataArr.data.length;
+        var dOpenprc,
+            dHighprc,
+            dLowprc,
+            dCloseprc,
+            dCumdealqty,
+            dDate;
+        var sData;
+        var miniOrder;
+
+        /*
+        for (var i = 0; i < dataLength; i++) {
+
+            if (ijwb != 5 && ijwb != 6)
+                dDate = dataArr.data[i].date;
+            else
+                dDate = dataArr.data[i].date + dataArr.data[i].time;
+
+            dOpenprc = sprintf(10, dataArr.data[i].openprc);
+            dHighprc = sprintf(10, dataArr.data[i].highprc);
+            dLowprc = sprintf(10, dataArr.data[i].lowprc);
+            dCloseprc = sprintf(10, dataArr.data[i].closeprc);
+            dCumdealqty = sprintf(19, dataArr.data[i].cumdealqty);
+
+            sData = (dDate + "" + dOpenprc + "" + dHighprc + "" + dLowprc + "" + dCloseprc + "" + dCumdealqty);
+            chartData += sData;
+        }
+        chartData = dataLength + "!" + chartData;
+        */
+        ///////////////////////
+
+        var RQInfoArray = [];
+
+        //////////////////////////////////////////////////////////////////
+        //20180115 이문수 test 주석처리 >>
+        /*
+        var RQInfos4 = new RQInfos();
+
+        RQInfos4.Info.m_strContents = chartData;
+        RQInfos4.Info.m_strItemCode = (symbol.substring(5, 13)).replace("__", "/");
+        RQInfos4.Info.m_strItemName = (symbol.substring(5, 8)).replace("_", "");
+        RQInfos4.Info.m_nCycle = eval(ijwb);
+
+        RQInfos4.Info.m_nInterval = 1;
+        RQInfos4.Info.m_strMarketStartTime = "090000";
+        RQInfos4.Info.m_strMarketEndTime = "230000";
+
+        ///////////////////////////////////////////////////		
+        //if (FXc == "KRW")
+        //    miniOrder = "0";
+        //else
+        //    miniOrder = "0.00000001";
+        miniOrder = "1";
+
+        //가격 표현 단위("0", "0.01", "0.00000001" 등 셋팅)
+        RQInfos4.Info.m_strPriceDigit = miniOrder;
+
+        //최소주문수량단위( ex: "0.0001" 입력 ) => 거래량 자리수 표현에 사용
+        RQInfos4.Info.m_strOrderUnitQty = "\"" + vUnit + "\"";
+
+        ///////////////////////////////////////////////////////
+        //현재가, 전일종가, 대비, 등락율, 누적등락율 셋팅 예제
+
+        //현재가
+        RQInfos4.Info.m_CurPrice = parseFloat(Ccloseprc[0]);
+
+        //전일종가
+        RQInfos4.Info.m_PrevPrice = parseFloat(B1yesterdayprice[0]);
+
+        //대비
+        RQInfos4.Info.m_PriceChange = parseFloat(B1diff[0]);
+
+        //등락율
+        RQInfos4.Info.m_ChangeRatio = parseFloat(B1updnrate[0]);
+
+        //누적등락율
+        RQInfos4.Info.m_CumulativeVolume = parseFloat(B1precumdealqty[0]);
+        ///////////////////////////////////////////////////////
+
+        RQInfoArray.push(RQInfos4);
+        */
+
+       
+        var RQInfos3 = new RQInfos();
+        RQInfos3.Info.m_strItemCode = "D001";
+        RQInfos3.Info.m_strItemName = "D";
+        RQInfos3.Info.m_nCycle = 5;//분주기
+        RQInfos3.Info.m_nInterval = 1;
+        RQInfos3.Info.m_strMarketStartTime = "090000";
+        RQInfos3.Info.m_strMarketEndTime = "230000";
+        RQInfos3.Info.m_strContents =
+            "20171011181000\t0000135.07\t0000135.07\t0000135.06\t0000135.06\t0001000000\r\n" +
+            "20171011180900\t0000135.05\t0000135.07\t0000135.04\t0000135.06\t0001100000\r\n" +
+            "20171011180800\t0000135.04\t0000135.04\t0000135.04\t0000135.04\t0001200000\r\n" +
+            "20171011180700\t0000135.03\t0000135.04\t0000135.03\t0000135.04\t0001100000\r\n" +
+            "20171011180600\t0000135.03\t0000135.04\t0000135.03\t0000135.03\t0001340000\r\n" +
+            "20171011180500\t0000135.04\t0000135.04\t0000135.03\t0000135.03\t0001500000\r\n" +
+            "20171011180400\t0000135.03\t0000135.04\t0000135.02\t0000135.04\t0001800000\r\n" +
+            "20171011180300\t0000135.02\t0000135.04\t0000135.02\t0000135.03\t0001900000\r\n" +
+            "20171011180200\t0000135.02\t0000135.02\t0000135.01\t0000135.01\t0001200000\r\n" +
+            "20171011180100\t0000135.05\t0000135.05\t0000135.03\t0000135.03\t0001600000\r\n" +
+            //"20171011180000\t0000135.05\t0000135.05\t0000135.04\t0000135.05\r\n" +
+            //"20171011175900\t0000135.06\t0000135.06\t0000135.05\t0000135.06\r\n" +
+            //"20171011175800\t0000135.07\t0000135.07\t0000135.05\t0000135.06\r\n" +
+            "20171011175700\t0000135.11\t0000135.12\t0000135.06\t0000135.07\t0001400000\r\n" +
+            "20171011175600\t0000135.10\t0000135.11\t0000135.10\t0000135.10\t0001600000\r\n" +
+            "20171011175500\t0000135.12\t0000135.13\t0000135.09\t0000135.09\t0001200000\r\n" +
+            //"20171011175400\t0000135.14\t0000135.14\t0000135.12\t0000135.12\t0001100000\r\n" +
+            //"20171011175300\t0000135.12\t0000135.14\t0000135.11\t0000135.14\t0001300000\r\n" +
+            //"20171011175200\t0000135.11\t0000135.12\t0000135.11\t0000135.11\t0001300000\r\n" +
+            //"20171011175100\t0000135.11\t0000135.12\t0000135.10\t0000135.11\t0001900000\r\n" +
+            "20171011175000\t0000135.12\t0000135.12\t0000135.08\t0000135.10\t0001200000\r\n" + 
+            "20171003180600\t0000135.03\t0000135.04\t0000135.03\t0000135.03\t0001340000\r\n" +
+            "20171003180500\t0000135.04\t0000135.04\t0000135.03\t0000135.03\t0001500000\r\n" +
+            "20171003180400\t0000135.03\t0000135.04\t0000135.02\t0000135.04\t0001800000\r\n" +
+            "20171003180300\t0000135.02\t0000135.04\t0000135.02\t0000135.03\t0001900000\r\n" +
+            "20171003180200\t0000135.02\t0000135.02\t0000135.01\t0000135.01\t0001200000\r\n" +
+            "20171003180100\t0000135.05\t0000135.05\t0000135.03\t0000135.03\t0001600000\r\n";
+        RQInfoArray.push(RQInfos3);
+
+        /*
+        var RQInfos5 = new RQInfos();
+        RQInfos5.Info.m_strItemCode = "C001";
+        RQInfos5.Info.m_strItemName = "C";
+        RQInfos5.Info.m_nCycle = 6;//초주기
+        RQInfos5.Info.m_nInterval = 10;
+        RQInfos5.Info.m_strMarketStartTime = "090000";
+        RQInfos5.Info.m_strMarketEndTime = "230000";
+        RQInfos5.Info.m_strContents =
+            "20171011181020\t0000135.03\t0000135.04\t0000135.03\t0000135.03\t0001200000\r\n" +
+            "20171011181010\t0000135.03\t0000135.04\t0000135.03\t0000135.03\t0001200000\r\n" +
+            "20171011181000\t0000135.03\t0000135.04\t0000135.03\t0000135.03\t0001200000\r\n" +
+            "20171011180950\t0000135.03\t0000135.04\t0000135.03\t0000135.03\t0001200000\r\n" +
+            "20171011180850\t0000135.03\t0000135.04\t0000135.03\t0000135.03\t0001200000\r\n" +
+            "20171011180840\t0000135.03\t0000135.04\t0000135.03\t0000135.03\t0001200000\r\n" +
+            //"20171011180740\t0000135.03\t0000135.04\t0000135.03\t0000135.03\t0001200000\r\n" +
+            //"20171011180710\t0000135.03\t0000135.04\t0000135.03\t0000135.03\t0001200000\r\n" +
+            //"20171011180350\t0000135.03\t0000135.04\t0000135.03\t0000135.03\t0001200000\r\n" +
+            "20171011180330\t0000135.03\t0000135.03\t0000135.03\t0000135.03\t0001400000\r\n" +
+            "20171011180320\t0000135.03\t0000135.04\t0000135.03\t0000135.04\t0001600000\r\n" +
+            "20171011180310\t0000135.03\t0000135.03\t0000135.02\t0000135.03\t0001200000\r\n" +
+            "20171011180300\t0000135.03\t0000135.03\t0000135.03\t0000135.03\t0001100000\r\n" +
+            "20171011180230\t0000135.04\t0000135.04\t0000135.04\t0000135.04\t0001300000\r\n" +
+            "20171011180220\t0000135.03\t0000135.03\t0000135.03\t0000135.03\t0001300000\r\n" +
+            "20171011180210\t0000135.02\t0000135.03\t0000135.02\t0000135.02\t0001900000\r\n" +
+            "20171011180200\t0000135.01\t0000135.01\t0000135.01\t0000135.01\t0001200000\r\n" +
+            "20171011180150\t0000135.02\t0000135.02\t0000135.02\t0000135.02\t0001400000\r\n" +
+            "20171011180140\t0000135.02\t0000135.02\t0000135.02\t0000135.02\t0001600000\r\n" +
+            "20171011180130\t0000135.01\t0000135.02\t0000135.01\t0000135.02\t0001200000\r\n" +
+            "20171011180120\t0000135.01\t0000135.01\t0000135.01\t0000135.01\t0001100000\r\n" +
+            "20171011180110\t0000135.02\t0000135.02\t0000135.02\t0000135.02\t0001300000\r\n" +
+            "20171011180040\t0000135.03\t0000135.03\t0000135.03\t0000135.03\t0001300000\r\n" +
+            "20171011180030\t0000135.03\t0000135.03\t0000135.03\t0000135.03\t0001900000\r\n" +
+            "20171011180020\t0000135.05\t0000135.05\t0000135.03\t0000135.03\t0001200000\r\n" +
+            "20171011180010\t0000135.05\t0000135.05\t0000135.05\t0000135.05\t0001400000\r\n" +
+            "20171011180000\t0000135.05\t0000135.05\t0000135.05\t0000135.05\t0001600000\r\n" +
+            //"20171011175950\t0000135.04\t0000135.04\t0000135.04\t0000135.04\t0001200000\r\n" +
+            //"20171011175930\t0000135.05\t0000135.05\t0000135.05\t0000135.05\t0001100000\r\n" +
+            "20171011175910\t0000135.05\t0000135.05\t0000135.05\t0000135.05\t0001300000\r\n" +
+            "20171011175900\t0000135.06\t0000135.06\t0000135.06\t0000135.06\t0001300000\r\n" +
+            "20171011175850\t0000135.06\t0000135.06\t0000135.06\t0000135.06\t0001900000\r\n" +
+            //"20171011175840\t0000135.05\t0000135.06\t0000135.05\t0000135.06\t0001200000\r\n" +
+            //"20171011175820\t0000135.06\t0000135.06\t0000135.06\t0000135.06\t0001300000\r\n" +
+            "20171011175800\t0000135.06\t0000135.06\t0000135.06\t0000135.06\t0001300000\r\n" +
+            "20171011175750\t0000135.06\t0000135.06\t0000135.05\t0000135.06\t0001900000\r\n" +
+            "20171011175740\t0000135.06\t0000135.06\t0000135.05\t0000135.06\t0001200000\r\n";
+        RQInfoArray.push(RQInfos5);        
+        */
+
+        /*
+        var RQInfos6 = new RQInfos();
+        RQInfos6.Info.m_strItemCode = "E001";
+        RQInfos6.Info.m_strItemName = "E";
+        RQInfos6.Info.m_nCycle = 1;//일주기
+        RQInfos6.Info.m_nInterval = 1;
+        RQInfos6.Info.m_strMarketStartTime = "090000";
+        RQInfos6.Info.m_strMarketEndTime = "230000";
+        RQInfos6.Info.m_strContents =
+            "20171012\t0000135.03\t0000135.04\t0000135.03\t0000135.03\t0001200000\r\n" +
+            "20171011\t0000135.03\t0000135.04\t0000135.03\t0000135.03\t0001200000\r\n" +
+            "20171010\t0000135.03\t0000135.04\t0000135.03\t0000135.03\t0001200000\r\n" +
+            "20171009\t0000135.03\t0000135.04\t0000135.03\t0000135.03\t0001200000\r\n" +
+            "20171007\t0000135.03\t0000135.04\t0000135.03\t0000135.03\t0001200000\r\n" +
+            "20171005\t0000135.03\t0000135.04\t0000135.03\t0000135.03\t0001200000\r\n" +
+            "20171004\t0000135.03\t0000135.04\t0000135.03\t0000135.03\t0001200000\r\n" +
+            "20171003\t0000135.03\t0000135.05\t0000135.03\t0000135.04\t0001400000\r\n" +
+            "20171002\t0000135.03\t0000135.04\t0000135.03\t0000135.04\t0001600000\r\n" +
+            "20170930\t0000135.03\t0000135.03\t0000135.02\t0000135.03\t0001200000\r\n" +
+            "20170929\t0000135.03\t0000135.03\t0000135.03\t0000135.03\t0001100000\r\n";
+        RQInfoArray.push(RQInfos6);
+        */
+        
+        
+        //return;
+
+        var i;
+        var nRQ = 100;
+        var strSelectRQ = null;
+        var strSelectGraphKey = null;
+        console.log("ChartDIV:" + ChartDIV);
+
+        if (Chart == null) {
+            //1번 매개변수:canvas 부모 div id, 2번 매개변수:canvas id
+            Chart = new CWebChart(ChartDIV, ChartDIV + "_Canvas");
+            Chart.InitCtrl();
+            Chart.SetBlockType(0);
+        }
+
+        for (i = 0; i < RQInfoArray.length; i++) {
+
+            var rRQInfos = RQInfoArray[i];
+
+            //////////////////////////////////////////////////////
+            //20181218 이문수 >>
+            var nCnt = 0;
+            var strPacketData, strData;
+            var nStartPos = 0, nFindPos = -1;
+            var strLineDevider = "\r\n";
+            var strChartData = "";
+
+            while ((nFindPos = rRQInfos.Info.m_strContents.indexOf(strLineDevider, nStartPos)) >= 0) {
+                var strLine = rRQInfos.Info.m_strContents.substring(nStartPos, nFindPos);
+                nStartPos = nFindPos + strLineDevider.length;
+
+                var nSPos = 0, nFPos = -1;
+                var strDevider = "\t";
+                var nFieldIndex = 0;
+                while ((nFPos = strLine.indexOf(strDevider, nSPos)) >= 0) {
+                    strData = strLine.substring(nSPos, nFPos);
+
+                    strChartData += strData;
+
+                    nSPos = nFPos + strDevider.length;
+
+                    nFieldIndex++;
+                }
+
+                if (nSPos > 0) {
+                    strData = strLine.substring(nSPos);
+                    strChartData += strData;
+                    nCnt++;
+                }
+            }
+
+            var strTotalData = nCnt + "!" + strChartData;
+            ///////////////////////////////////////////////////////
+
+            var sRQ = "" + nRQ;
+            miniOrder = "0.01";
+
+            rRQInfos.Info.m_strPriceDigit = miniOrder;
+            //최소주문수량단위( ex: "0.0001" 입력 ) => 거래량 자리수 표현에 사용
+            rRQInfos.Info.m_strOrderUnitQty = "1";
+
+            //차트컨트롤에 rq등록
+            Chart.AddRQ(sRQ);
+            Chart.SetRQInfo(sRQ, rRQInfos.Info);
+
+            //차트컨트롤에 데이터 패킷정보 셋팅
+            if (rRQInfos.Info.m_nCycle == 5 || rRQInfos.Info.m_nCycle == 6) {//분,초주기
+                Chart.AddDateTimePacketInfo(sRQ, "_DATETIME_", "YYYYMMDDHHMMSS", 14);
+            } else {//일,주,월,년주기
+                Chart.AddDateTimePacketInfo(sRQ, "_DATETIME_", "YYYYMMDD", 8);
+            }            
+
+            //if (FXc == "KRW")
+            //    miniOrder = "0";
+            //else
+            //    miniOrder = "0.00000001";            
+
+            ///////////////////////////////////////////////////////////////////////
+            //20181218 이문수 주석처리>>
+            /*
+            //Chart.AddInputNumPacketInfo(sRQ, "_OPEN_", 10, 10, 100, miniOrder);
+            //Chart.AddInputNumPacketInfo(sRQ, "_HIGH_", 10, 10, 100, miniOrder);
+            //Chart.AddInputNumPacketInfo(sRQ, "_LOW_", 10, 10, 100, miniOrder);
+            //Chart.AddInputNumPacketInfo(sRQ, "_CLOSE_", 10, 10, 100, miniOrder);
+            //Chart.AddInputNumPacketInfo(sRQ, "_VOLUME_", 19, 10, null, "1");
+
+            ///////////////////////////////////////////////////////////////////////
+            //계산용 패킷을 추가
+            var strInputPacketNameArray = ["_HIGH_", "_LOW_"];
+            Chart.AddPacketCalculator(sRQ, "_HL2_", strInputPacketNameArray, 10, 100, miniOrder);
+
+            strInputPacketNameArray[2] = "_CLOSE_";
+            Chart.AddPacketCalculator(sRQ, "_HLC3_", strInputPacketNameArray, 10, 100, miniOrder);
+            ///////////////////////////////////////////////////////////////////////
+            */
+
+            Chart.AddInputNumPacketInfo(sRQ, "_OPEN_", 10, 10, 0.01, miniOrder);
+            Chart.AddInputNumPacketInfo(sRQ, "_HIGH_", 10, 10, 0.01, miniOrder);
+            Chart.AddInputNumPacketInfo(sRQ, "_LOW_", 10, 10, 0.01, miniOrder);
+            Chart.AddInputNumPacketInfo(sRQ, "_CLOSE_", 10, 10, 0.01, miniOrder);
+            Chart.AddInputNumPacketInfo(sRQ, "_VOLUME_", 10, 10, 1, "1");
+
+            ///////////////////////////////////////////////////////////////////////
+            //계산용 패킷을 추가
+            var strInputPacketNameArray = ["_HIGH_", "_LOW_"];
+            Chart.AddPacketCalculator(sRQ, "_HL2_", strInputPacketNameArray, 10, 0.01, miniOrder);
+
+            strInputPacketNameArray[2] = "_CLOSE_";
+            Chart.AddPacketCalculator(sRQ, "_HLC3_", strInputPacketNameArray, 10, 0.01, miniOrder);
+
+            //////////////////////////////////////////////////////////////////////////////////////////////////////
+            //지표등록
+            var defaultInd = "_PRICE_";
+            
+            if (!Chart.IsExistGraphNameInRQ(sRQ, defaultInd)) {
+                gGraphKeyObj[defaultInd] = Chart.AddIndicator(sRQ, defaultInd, -1, -1, -1, 2);
+
+                for (var ind of Chart.options.inds) {
+                    gGraphKeyObj[ind] = Chart.AddIndicator(
+                        sRQ,
+                        ind,
+                        Indicators[ind].nBlockColIndex,
+                        Indicators[ind].nBlockRowIndex,
+                        Indicators[ind].nVertScaleIndex,
+                        Indicators[ind].heightRatioInVertType
+                    );
+                }
+            }
+
+            //디폴트로 첫 rq와 가격차트를 선택된 것으로 할당
+            if (i == 0) {
+                strSelectRQ = sRQ;
+                strSelectGraphKey = gGraphKeyObj[defaultInd];
+            }
+
+            var bAppendRQ = (i > 0 ? true : false);
+            Chart.RegXScaleMng(sRQ, bAppendRQ);
+            //Chart.SetPacketData(sRQ, rRQInfos.m_strContents, rRQInfos.m_strContents.length, false, false, true);
+            Chart.SetPacketData(sRQ, strTotalData, strTotalData.length, false, false, true);
+            nRQ++;
+        }
+
+        if (strSelectRQ && strSelectGraphKey)
+            Chart.SelectGraphByKey(strSelectRQ, strSelectGraphKey);
+        else {
+            strSelectRQ = Chart.GetSelectedRQ();
+            strSelectGraphKey = Chart.GetSelectedGraphKey();
+        }
+        Chart.ArrangeXScaleMng();
+
+        //Chart.InitialViewInfo(300);
+        Chart.InitialViewInfo(40);
+
+        if (Chart.GetBlockType() == VERT_BLOCK_TYPE)
+            Chart.ResetVBlockHeight();
+
+        Chart.ExtractYScaleMinMax(true);
+        Chart.Draw(DRAW_CASE_TR | DRAW_CASE_RESIZE | DRAW_CASE_ADD_CHARTBLOCK);
+        Chart.LogXScaleMng();
+
+        /********** 실시간 체결가 생성 -  장동천   ***************/
+        //Real(symbol, getMainContainer);
+        /********** 실시간 체결가 생성 -  장동천   ***************/
+
+        /********** 실시간 체결가 생성 -  장동천   ***************/
+        var ri = 0;
+        fRealProcess = function RealTick() {
+
+            return;//테스트
+
+            var RDate = Real(ri);
+            var RealDataArray = [];
+
+            var t = new Date();
+            var second = t.getSeconds();
+
+            //RealDataArray[0] = "" + RDate.rd.exectime + (second < 10 ? ("0" + second) : second);
+            RealDataArray[0] = RDate.rd.exectime;
+            RealDataArray[1] = null;
+            RealDataArray[2] = null;
+            RealDataArray[3] = null;
+            RealDataArray[4] = RDate.rd.execprice;
+            RealDataArray[5] = RDate.rd.execvalue;
+
+            //console.log("R__"+RealDataArray[0]+"_____________"+ RealDataArray[4]+"_____________"+RealDataArray[5]);
+
+            Chart.SetRealData(strSelectRQ, PRICE_REAL_TYPE, 0, RealDataArray);
+            if (TopViewType == "Y") {
+                topPrc(RDate.rd.execprice, RDate.rd.highprc, RDate.rd.lowprc, RDate.rd.diff, RDate.rd.updnrate, RDate.rd.cumdealqty, RDate.rd.cumdealcost);
+                TopPreData = true;
+            }
+            ri++;
+            //if (ri >= 10) {
+            //    clearInterval(Real_ID);
+            //}
+        };
+
+        if (Real_ID) {
+            clearInterval(Real_ID);
+            ri = 0;
+        }
+        Real_ID = setInterval(fRealProcess, 100);//20180116 이문수 test
+        /********** 실시간 체결가 생성 -  장동천   ***************/
+    }
+    //});//20181218 이문수 >>
+
+    window.addEventListener('resize', function (e) {
+        /**/         
+        var nCanvasWidth = $(window).width() - gMarginX;
+        var nCanvasHeight = $(window).height() - gMarginY;
+        /**/        
+
+        var rTestCanvas = document.getElementById("ChartDIV_Canvas");
+        rTestCanvas.width = nCanvasWidth;
+        rTestCanvas.height = nCanvasHeight;
+
+        Chart.Resize(nCanvasWidth, nCanvasHeight);
+        // console.log("window resize : nCanvasWidth=" + nCanvasWidth + ", nCanvasHeight=" + nCanvasHeight+",ChartDIV:"+ChartDIV);
+    });
+
+    /***설정창 호출 *********/
+    document.addEventListener('Event_SelectGraph', function (e) {
+        var m_InfoData = e.m_InfoData;
+        console.log("그래프 선택 : " + m_InfoData.m_strName);
+        $('.btn_setting').trigger('click', m_InfoData.m_strKey);
+    });
+
+    // 하단메뉴 확장
+    document.addEventListener('Event_ExtendBottomArea', function (e) {
+        if (e.m_GlobalProperty.IsVisibleBottomArea()) {
+            console.log("111")
+            $(".chart_btm_area").stop().slideDown(100);
+            $(".chart_bx").css("height", "calc(100% - 77px)");
+        } else {
+            console.log("222")
+            $(".chart_btm_area").stop().slideUp(100);
+            $(".chart_bx").css("height", "calc(100% - 39px)");
+        }
+    });
+
+    //가로스크롤 위치가 좌측 끝 부분 위치한 상태에서 좌측 하단 스크롤 버튼을 클릭하면 발생하는 이벤트에 이벤트 함수 연결
+    if (!gChartEventScrollFunction) {
+        gChartEventScrollFunction = function (e) {
+            var rqInfoForScroll = e.m_mapRqInfo;
+            for (var strRq in rqInfoForScroll) {
+                var rqInfo = rqInfoForScroll[strRq];
+                addData(strRq, rqInfo.m_strItemCode, "" + rqInfo.m_nCycle, rqInfo.m_strNextKey);
+            }
+        };
+
+        document.addEventListener('Event_Scroll', gChartEventScrollFunction);
+    }
+}
+
+function addData(strRQ, symbol, ijwb, sDay) {
+    if (!gbRequest) {
+        gbRequest = true;
+        $.getJSON("http://211.240.103.90/kovex/chartdata.inc?symbol=" + symbol + "&num=5&ijwb=" + ijwb + "&sDay=" + sDay, function (addDataArr) {
+
+            ////console.log(dataArr.ref.D1에러여부);
+            //////////////////////////////////////////////////////////////////
+            var addDataLength = addDataArr.data.length;
+            var addOpenprc,
+                addHighprc,
+                addLowprc,
+                addCloseprc,
+                addCumdealqty,
+                addDate;
+            var addData;
+            var addChartData = "";
+
+            var highest = null;
+            var lowest = null;
+
+            for (var i = 0; i < addDataLength; i++) {
+
+                if (ijwb != 5 && ijwb != 6)
+                    addDate = addDataArr.data[i].date;
+                else
+                    addDate = addDataArr.data[i].date + addDataArr.data[i].time;
+
+                addOpenprc = sprintf(10, addDataArr.data[i].openprc);
+                addHighprc = sprintf(10, addDataArr.data[i].highprc);
+                addLowprc = sprintf(10, addDataArr.data[i].lowprc);
+                addCloseprc = sprintf(10, addDataArr.data[i].closeprc);
+                addCumdealqty = sprintf(19, addDataArr.data[i].cumdealqty);
+
+                addData = (addDate + "" + addOpenprc + "" + addHighprc + "" + addLowprc + "" + addCloseprc + "" + addCumdealqty);
+                addChartData += addData;
+
+                if (highest == null || highest < addHighprc)
+                    highest = addHighprc;
+                if (lowest == null || lowest > addLowprc)
+                    lowest = addLowprc;
+            }
+
+            console.log("highest:" + highest + ", lowest:" + lowest);
+
+            addChartData = addDataLength + "!" + addChartData;
+
+            var bAppend = true;
+            var bAscendingOrder = false;
+            var bMergeXScale = true;
+            Chart.SetPacketData(strRQ, addChartData, addChartData.length, bAppend, bAscendingOrder, bMergeXScale);
+
+            Chart.Draw(DRAW_CASE_TR | DRAW_CASE_SCROLL);
+
+            gbRequest = false;
+        });
+    }
+}
+
+// 주기설정
+$(".cycle_select").on("click", "a", function(e) {
+    e.preventDefault();
+    Chart.options.ijwb = "5";
+    Chart.options.ijwbGroup = $(this).attr("href").substr(1);
+    
+    sendPacket();
+});
+
+$(".cycle_unit_select").on("click", "a", function(e) {
+    e.preventDefault();
+    Chart.options.ijwb = $(this).attr("href").substr(1);
+    Chart.options.ijwbGroup = "1";
+
+    sendPacket();
+});
+
+// 상단 좌측버튼 on 
+$('.signal_rgt').on('click', 'li > a', function (e) {
+    //$(this).closest('li').siblings().find('a').removeClass('active');
+    //$(this).addClass('active');
+});
+
+// 알림
+$('.btn_alerm').on('click', function (e) {
+    e.preventDefault();        
+
+    var innerHtml = '';
+    innerHtml += '<div class="setting_modal_bx">';
+    innerHtml += '  <div class="bg">&nbsp;</div>';
+    innerHtml += '  <div class="setting_modal">';
+    innerHtml += '    <div class="alerm_modal">';
+    innerHtml += '      <div class="pop_cont">';
+    innerHtml += '        <strong class="src_tit">알림선 설정</strong>';
+    innerHtml += '        <ul class="modal_form_lst">';
+    innerHtml += '          <li>';
+    innerHtml += '            <strong class="tit">매매선 (미체결)</strong>';
+    innerHtml += '            <span class="rdo_check">';
+    innerHtml += '              <label class="active">';
+    innerHtml += '                <span class="txt">OFF</span><input id="" class="check_rdo" value="" name="rdo_check01" type="radio" checked/>';
+    innerHtml += '              </label>';
+    innerHtml += '              <label>';
+    innerHtml += '                <span class="txt">ON</span><input id="" class="check_rdo" value="" name="rdo_check01" type="radio" />';
+    innerHtml += '              </label>';
+    innerHtml += '            </span>';
+    innerHtml += '          </li>';
+    innerHtml += '          <li>';
+    innerHtml += '            <strong class="tit">알림 (지정가)</strong>';
+    innerHtml += '            <span class="rdo_check">';
+    innerHtml += '              <label class="active">';
+    innerHtml += '                <span class="txt">OFF</span><input id="" class="check_rdo" value="" name="rdo_check02" type="radio"/>';
+    innerHtml += '              </label>';
+    innerHtml += '              <label>';
+    innerHtml += '                <span class="txt">ON</span><input id="" class="check_rdo" value="" name="rdo_check02" type="radio" checked/>';
+    innerHtml += '              </label>';
+    innerHtml += '            </span>';
+    innerHtml += '          </li>';
+    innerHtml += '          <li>';
+    innerHtml += '            <strong class="tit">평균매수가</strong>';
+    innerHtml += '            <span class="rdo_check">';
+    innerHtml += '              <label class="active">';
+    innerHtml += '                <span class="txt">OFF</span><input id="" class="check_rdo" value="" name="rdo_check02" type="radio"/>';
+    innerHtml += '              </label>';
+    innerHtml += '              <label>';
+    innerHtml += '                <span class="txt">ON</span><input id="" class="check_rdo" value="" name="rdo_check02" type="radio" checked/>';
+    innerHtml += '              </label>';
+    innerHtml += '            </span>';
+    innerHtml += '          </li>';
+    innerHtml += '          <li class="depth02_lst">';
+    innerHtml += '            <strong class="tit">스마트 시그널</strong>';
+    innerHtml += '            <ul class="modal_form_lst">';
+    innerHtml += '              <li>';
+    innerHtml += '                <strong class="tit">매수가</strong>';
+    innerHtml += '                <span class="rdo_check">';
+    innerHtml += '                  <label class="active">';
+    innerHtml += '                    <span class="txt">OFF</span><input id="" class="check_rdo" value="" name="rdo_check02_01" type="radio" checked/>';
+    innerHtml += '                  </label>';
+    innerHtml += '                  <label>';
+    innerHtml += '                    <span class="txt">ON</span><input id="" class="check_rdo" value="" name="rdo_check02_01" type="radio" />';
+    innerHtml += '                  </label>';
+    innerHtml += '                </span>';
+    innerHtml += '              </li>';
+    innerHtml += '              <li>';
+    innerHtml += '                <strong class="tit">매도가</strong>';
+    innerHtml += '                <span class="rdo_check">';
+    innerHtml += '                  <label class="active">';
+    innerHtml += '                    <span class="txt">OFF</span><input id="" class="check_rdo" value="" name="rdo_check02_02" type="radio" checked/>';
+    innerHtml += '                  </label>';
+    innerHtml += '                  <label>';
+    innerHtml += '                    <span class="txt">ON</span><input id="" class="check_rdo" value="" name="rdo_check02_02" type="radio" />';
+    innerHtml += '                  </label>';
+    innerHtml += '                </span>';
+    innerHtml += '              </li>';
+    innerHtml += '              <li>';
+    innerHtml += '                <strong class="tit">목표가</strong>';
+    innerHtml += '                <span class="rdo_check">';
+    innerHtml += '                  <label class="active">';
+    innerHtml += '                    <span class="txt">OFF</span><input id="" class="check_rdo" value="" name="rdo_check02_03" type="radio" checked/>';
+    innerHtml += '                  </label>';
+    innerHtml += '                  <label>';
+    innerHtml += '                    <span class="txt">ON</span><input id="" class="check_rdo" value="" name="rdo_check02_04" type="radio" />';
+    innerHtml += '                  </label>';
+    innerHtml += '                </span>';
+    innerHtml += '              </li>';
+    innerHtml += '              <li>';
+    innerHtml += '                <strong class="tit">손절가</strong>';
+    innerHtml += '                  <span class="rdo_check">';
+    innerHtml += '                  <label class="active">';
+    innerHtml += '                    <span class="txt">OFF</span><input id="" class="check_rdo" value="" name="rdo_check02_05" type="radio" checked/>';
+    innerHtml += '                  </label>';
+    innerHtml += '                  <label>';
+    innerHtml += '                    <span class="txt">ON</span><input id="" class="check_rdo" value="" name="rdo_check02_05" type="radio" />';
+    innerHtml += '                  </label>';
+    innerHtml += '                </span>';
+    innerHtml += '              </li>';
+    innerHtml += '            </ul>';
+    innerHtml += '          </li>';
+    innerHtml += '        </ul>';
+    innerHtml += '      </div>';
+    innerHtml += '      <a href="web_chart.html" class="btn_setting_close"><span class="blind">팝업닫기</span></a>';
+    innerHtml += '    </div>';
+    innerHtml += '  </div>';
+    innerHtml += '</div>';
+
+    var chartWrap = Chart.AppendModal(innerHtml);
+
+    chartWrap
+    .on('click', '.rdo_check label', function() {
+        $(this).closest(".rdo_check").find("label").removeClass("active");
+        $(this).addClass("active");
+    })
+    // 닫기
+    .on("click", ".btn_setting_close", function(e) {
+        e.preventDefault();
+        $(".popup_wrapper_pc").empty();
+    });
+
+    hideAnalyzeArea();
+});
+
+// 환경설정
+$('.btn_setting').on('click', function (e, m_strKey) {
+    e.preventDefault();
+    Chart.ShowModalSetting(m_strKey);
+    hideAnalyzeArea();
+});
+
+// 과거 시점
+$('.btn_before_period').on('click', function (e) {
+    e.preventDefault();
+    console.log("과거 시점 이동");
+/*
+    if ($(".popup_wrapper_pc .setting_modal_bx").length > 0) {
+        $(".popup_wrapper_pc").remove();
+        return false;
+    }
+*/
+    hideAnalyzeArea();
+
+    var innerHtml = '';
+    innerHtml += '<div class="setting_modal_bx" id="modal_past_view">';
+    innerHtml += ' <div class="bg">&nbsp;</div>';
+    innerHtml += '   <div class="setting_modal">';
+    innerHtml += '     <div class="calender_modal">';
+    innerHtml += '       <strong class="src_tit">과거 시점 이동</strong>';
+    innerHtml += '       <div class="dadepicker_bx">';
+    innerHtml += '         <div class="dadepicker_form">';
+    innerHtml += '           <input type="text" class="input_calender">';
+    innerHtml += '           <a href="#calender" class="btn_calender"><span class="blind">캘린더보기</span></a>';
+    innerHtml += '         </div>';
+    innerHtml += '         <a href="#move" class="btn_datepicker">이동</a>';
+    innerHtml += '       </div>';
+    innerHtml += '       <a href="#close" class="btn_setting_close"><span class="blind">팝업닫기</span></a>';
+    innerHtml += '     </div>';
+    innerHtml += '   </div>';
+    innerHtml += '</div>';
+
+    let $innerHtml = $(innerHtml);   
+
+    // 과거 시점 닫기
+    $innerHtml.on("click", ".btn_setting_close", function(e) {
+        e.preventDefault();
+        $innerHtml.remove();
+        //Chart.EmptyWrapper();
+    });
+
+    Chart.AppendModal($innerHtml);
+});
+
+// 세계 시간
+var realClockVar;
+function realClock (utc) {
+    clearTimeout(realClockVar);
+
+    var d = new Date();
+    if (!utc) {
+        var diff1 = d.getHours() - d.getUTCHours();
+        utc = (diff1>0 ? "+" : "") + diff1;
+        var diff2 = d.getMinutes() - d.getUTCMinutes();
+        if(diff2 > 0) {
+            utc += ":" + addZero(diff2, 2);
+        }
+    }
+    
+    var dateString = "";
+    dateString += (d.getMonth()+1);
+    dateString += " " + d.getDate();
+    dateString += "," + d.getFullYear();
+    dateString += "," + d.getHours();
+    dateString += ":" + d.getMinutes();
+    dateString += ":" + d.getSeconds();      
+    dateString += " GMT" + (utc!="0" ? utc : "+"+utc);
+    
+    if (utc.indexOf(":") == -1) {
+        dateString += ":00";
+    }
+
+    var d2 = new Date(dateString);
+    var h = d2.getHours();
+    var m = d2.getMinutes();
+    var s = d2.getSeconds();
+
+    $('#utc')
+    .text(addZero(h, 2) + ":" + addZero(m, 2) + ":" + addZero(s, 2) + " (UTC" + (utc!="0" ? utc : "") + ")")
+    .attr("href", utc);
+
+    realClockVar = setTimeout("realClock('" + utc + "')", 1000); // 1초마다 printClock() 함수 호출
+}
+function addZero (str, max) {
+    str = str.toString();
+    return str.length < max ? addZero("0" + str, max) : str;
+}
+realClock();
+
+$('.btn_universal_time').on('click', function (e) {
+    e.preventDefault();
+
+    if ($(".chart_universal_time").length > 0) {
+        Chart.EmptyWrapper();
+        return false;
+    }
+
+    var innerHtml = '';
+    innerHtml += '<ul class="chart_universal_time">';
+    innerHtml += ' <li><a href="#">표준시</a></li>';
+    innerHtml += ' <li><a href="#">거래소</a></li>';
+    innerHtml += ' <li><a href="#-10">(UTC-10) 호노룰루</a></li>';
+    innerHtml += ' <li><a href="#-9">(UTC-9) 쥬노</a></li>';
+    innerHtml += ' <li><a href="#-8">(UTC-8) 로스엔젤레스</a></li>';
+    innerHtml += ' <li><a href="#-8">(UTC-8) 밴쿠버</a></li>';
+    innerHtml += ' <li><a href="#-7">(UTC-7) 피닉스</a></li>';
+    innerHtml += ' <li><a href="#-6">(UTC-6) 멕시코시티</a></li>';
+    innerHtml += ' <li><a href="#-6">(UTC-6) 산살바도르</a></li>';
+    innerHtml += ' <li><a href="#-6">(UTC-6) 시카고</a></li>';
+    innerHtml += ' <li><a href="#-5">(UTC-5) 뉴욕</a></li>';
+    innerHtml += ' <li><a href="#-5">(UTC-5) 리마</a></li>';
+    innerHtml += ' <li><a href="#-5">(UTC-5) 보고타</a></li>';
+    innerHtml += ' <li><a href="#-5">(UTC-5) 토론토</a></li>';
+    innerHtml += ' <li><a href="#-4">(UTC-4) 카라카스</a></li>';
+    innerHtml += ' <li><a href="#-3">(UTC-3) 부에노스아이레스</a></li>';
+    innerHtml += ' <li><a href="#-3">(UTC-3) 산티아고</a></li>';
+    innerHtml += ' <li><a href="#-2">(UTC-2) 상파울루</a></li>';
+    innerHtml += ' <li><a href="#0">(UTC) 런던</a></li>';
+    innerHtml += ' <li><a href="#0">(UTC) 레이캬비크</a></li>';
+    innerHtml += ' <li><a href="#+1">(UTC+1) 라고스</a></li>';
+    innerHtml += ' <li><a href="#+1">(UTC+1) 로마</a></li>';
+    innerHtml += ' <li><a href="#+1">(UTC+1) 룩셈부르크</a></li>';
+    innerHtml += ' <li><a href="#+1">(UTC+1) 마드리드</a></li>';
+    innerHtml += ' <li><a href="#+1">(UTC+1) 바르샤바</a></li>';
+    innerHtml += ' <li><a href="#+1">(UTC+1) 베를린</a></li>';
+    innerHtml += ' <li><a href="#+1">(UTC+1) 베오그라드</a></li>';
+    innerHtml += ' <li><a href="#+1">(UTC+1) 스톡홀름</a></li>';
+    innerHtml += ' <li><a href="#+1">(UTC+1) 취리히</a></li>';
+    innerHtml += ' <li><a href="#+1">(UTC+1) 코펜하겐</a></li>';
+    innerHtml += ' <li><a href="#+1">(UTC+1) 파리</a></li>';
+    innerHtml += ' <li><a href="#+2">(UTC+2) 리가</a></li>';
+    innerHtml += ' <li><a href="#+2">(UTC+2) 빌뉴스</a></li>';
+    innerHtml += ' <li><a href="#+2">(UTC+2) 아테네</a></li>';
+    innerHtml += ' <li><a href="#+2">(UTC+2) 예루살렘</a></li>';
+    innerHtml += ' <li><a href="#+2">(UTC+2) 요하네스버그</a></li>';
+    innerHtml += ' <li><a href="#+2">(UTC+2) 카이로</a></li>';
+    innerHtml += ' <li><a href="#+2">(UTC+2) 탈린</a></li>';
+    innerHtml += ' <li><a href="#+2">(UTC+2) 헬싱키</a></li>';
+    innerHtml += ' <li><a href="#+3">(UTC+3) 리야드</a></li>';
+    innerHtml += ' <li><a href="#+3">(UTC+3) 모스크바</a></li>';
+    innerHtml += ' <li><a href="#+3">(UTC+3) 바레인</a></li>';
+    innerHtml += ' <li><a href="#+3">(UTC+3) 이스탄불</a></li>';
+    innerHtml += ' <li><a href="#+3">(UTC+3) 카타르</a></li>';
+    innerHtml += ' <li><a href="#+3">(UTC+3) 쿠웨이트</a></li>';
+    innerHtml += ' <li><a href="#+3:30">(UTC+3:30) 테헤란</a></li>';
+    innerHtml += ' <li><a href="#+4">(UTC+4) 두바이</a></li>';
+    innerHtml += ' <li><a href="#+4">(UTC+4) 무스카트</a></li>';
+    innerHtml += ' <li><a href="#+5">(UTC+5) 아슈하바트</a></li>';
+    innerHtml += ' <li><a href="#+5:30">(UTC+5:30) 콜카타</a></li>';
+    innerHtml += ' <li><a href="#+6">(UTC+6) 알마티</a></li>';
+    innerHtml += ' <li><a href="#+7">(UTC+7) 방콕</a></li>';
+    innerHtml += ' <li><a href="#+7">(UTC+7) 자카르타</a></li>';
+    innerHtml += ' <li><a href="#+7">(UTC+7) 호치민</a></li>';
+    innerHtml += ' <li><a href="#+8">(UTC+8) 대만</a></li>';
+    innerHtml += ' <li><a href="#+8">(UTC+8) 상하이</a></li>';
+    innerHtml += ' <li><a href="#+8">(UTC+8) 싱가포르</a></li>';
+    innerHtml += ' <li><a href="#+8">(UTC+8) 충칭</a></li>';
+    innerHtml += ' <li><a href="#+8">(UTC+8) 홍콩</a></li>';
+    innerHtml += ' <li><a href="#+9">(UTC+9) 도쿄</a></li>';
+    innerHtml += ' <li><a href="#+9">(UTC+9) 서울</a></li>';
+    innerHtml += ' <li><a href="#+10">(UTC+10) 브리즈번</a></li>';
+    innerHtml += ' <li><a href="#+10:30">(UTC+10:30) 애들레이드</a></li>';
+    innerHtml += ' <li><a href="#+11">(UTC+11) 노포크아일랜드</a></li>';
+    innerHtml += ' <li><a href="#+11">(UTC+11) 시드니</a></li>';
+    innerHtml += ' <li><a href="#+13">(UTC+13) 토켈라우</a></li>';
+    innerHtml += ' <li><a href="#+13:45">(UTC+13:45) 채텀 제도</a></li>';
+    innerHtml += '</ul>';
+
+    var offset = $(".btn_universal_time").offset();
+    var chartContHeight = $(".chart_cont").height();
+    var maxHeight = chartContHeight - (chartContHeight * 0.1);        
+
+    var chartWrap = Chart.AppendModal(innerHtml);
+    var chartUniversalTime = chartWrap.find(".chart_universal_time");
+
+    chartUniversalTime.css({
+        left: offset.left + "px",
+        top: offset.top - maxHeight + "px",
+        "max-height": maxHeight + "px"
+    })
+    .on("mouseover", "li", function() {
+        $(this).addClass("active");
+    })
+    .on("mouseout", "li", function() {
+        $(this).removeClass("active");
+    })
+    .on("click", "a", function(e) {
+        e.preventDefault();
+
+        var parentLI = $(this).closest("li");
+        parentLI.siblings("li").removeClass("checked");
+
+        var utc = $(this).attr("href").replace("#", "");
+        if (utc && !parentLI.hasClass("checked")) {
+            parentLI.addClass("checked");
+            console.log("세계시간 변경 : " + utc);
+            
+            realClock(utc);
+        }
+    })
+    .find("a").each(function() {
+        var utc = $(this).attr("href").replace("#", "");
+        var local = $(".btn_universal_time").attr("href").replace("#", "");
+
+        if (utc === local) {
+            $(this).parent("li").addClass("checked");
+            return false;
+        }
+    });
+
+    hideAnalyzeArea();
+});    
+
+// 분석툴 영역 숨김
+function hideAnalyzeArea () {
+    if($('.btn_analyze').hasClass('active')){
+        $('.btn_analyze').removeClass("active");
+        $('.sidebar_bx').animate({
+            right: -200
+        }, 100, function() {
+            $(".chart_area").css('padding-right','0');
+        });
+    }
+}
+</script>
+
+<script>
+var chartWrap = $(".chart_cont");
+var signalLst = chartWrap.find(".signal_rgt"); 
+var signalLi = signalLst.find("li");//상단 메뉴 주기 right
+var chartLft = chartWrap.find(".cicle_lft"); 
+var chartMinute = chartLft.find(".cicle_lft_lst"); 
+var chartMinuteLnk = chartMinute.find("a"); 
+var chartMinuteSlide = chartWrap.find(".minute_lst_bx");
+var chartMinuteBtn = chartMinuteSlide.find(".btn_minute");
+var chartMinuteBx = chartMinuteSlide.find(".minute_slide");
+var chartMinuteLstLnk = chartMinuteBx.find(".minute_slide_lst a");//상단메뉴 주기 left
+var chartSidebar = chartWrap.find(".sidebar_bx"); 
+var chartSideLst = chartSidebar.find(".sidebar_menu"); 
+var chartSidebarLi = chartSideLst.find("> li");
+var chartSidebarMenu = chartSidebarLi.find(" > a");
+var chartArea = chartWrap.find(".chart_bx");
+var chartBx = chartWrap.find(".chart_area"); //차트 삽입영역
+var chartBx01 = chartWrap.find(".chart_area01"); //차트 삽입영역
+var chartSign = signalLst.find(".btn_alerm");
+var chartbtnAnalize = signalLi.find(".btn_analyze");
+var Depth02Cont = $(".sidebar_depth02");
+var Depth02Lst = Depth02Cont.find(".depth02_lst");
+var chartToolLst = Depth02Lst.find("> li > a");
+
+
+$(function(){
+    // 분석도구 툴 버튼        
+    chartbtnAnalize.click(function(){
+        if($(this).hasClass('active')){
+            $(this).removeClass("active");
+            chartSidebar.animate({
+                right: -200
+            }, 100, function() {
+                chartBx.css('padding-right','0');
+            });
+        }else{
+            $(this).addClass("active");
+            chartSidebar.animate({
+                right: 0
+            }, 100, function() {
+                chartBx.css('padding-right','40px');
+            });
+            chartSign.removeClass("active");                
+            chartMinuteBtn.removeClass("active");
+            chartMinuteBx.stop().slideUp(100);
+        }
+    });
+
+    chartSidebarMenu.click(function (e) {
+        e.preventDefault();
+        var menuDepth02Li = $(this).closest("li");
+        chartSidebarLi.removeClass("active");
+        menuDepth02Li.addClass("active");		
+        Depth02Lst.stop().slideUp("fast");
+        var activeTab = menuDepth02Li.attr("rel"); //원뎁스 rel값 불러옴
+        $("." + activeTab).stop().slideDown("fast"); //투뎁스 class명과 원뎁스 rel값 매칭에 따라서 slidedown
+        $(".toltip").css("display","none");//툴팁 none처리
+    }); //sidemenu 2뎁스 click
+
+    chartSidebar.mouseleave(function() {
+        $(this).find(".depth02_lst").stop().slideUp("fast");//2뎁스 슬라이드업
+        chartSidebarLi.removeClass("active");//목록 활성화 삭제
+    }); //sidemenu 2뎁스 mouseleave
+
+    chartToolLst.click(function(e) {
+        e.preventDefault();
+        let type = $(this).attr("href").substr(1);
+        Chart.AddTool(TOOL_TYPE[type]);
+    });
+    
+    $(function(){    
+        var sideMunuLnk = chartSideLst.find("a");
+        var title_;
+        var class_;
+        sideMunuLnk.hover(function(e) {    
+            var title_ = $(this).attr("title"); 
+            var Rel = $(this).parents("li").attr("rel"); 
+            //$(this).attr("title",""); 
+            $(".sidebar_bx").append("<div class='toltip'></div>");  
+            $(".toltip").text(title_);
+            $(".toltip").addClass(Rel);
+            
+        }, function() {                         
+            $(this).attr("title", title_);    
+            $(".toltip").remove();                
+        });
+    });//사이드메뉴 툴팁
+}); //상단메뉴 주기 right
+
+
+$(function(){
+    var subSelect = chartMinuteBx.find(".btn_select");
+    var subSelectBx = subSelect.siblings(".sub_bx");
+    var subSelectLnk = subSelectBx.find(".sub_select_lst > li > a");
+
+    chartMinuteLnk.click(function (){
+        chartMinute.find("a").removeClass("active");
+        $(this).addClass("active");
+        chartMinuteBtn.removeClass("active");
+        chartMinuteBx.stop().slideUp(100);
+    });
+    
+    chartMinuteBtn.click(function(){
+        if($(this).hasClass('active')){
+            $(this).removeClass("active");
+            chartMinuteBx.stop().slideUp(100);
+        }else{
+            $(this).addClass("active");
+            chartMinuteLnk.removeClass("active");
+            chartMinuteBx.stop().slideDown(100);
+            chartSign.removeClass("active");
+            chartbtnAnalize.removeClass("active");
+            chartSidebar.animate({ right : "-200" }, 100);
+        }
+    });
+
+    chartMinuteBx.mouseleave(function(){
+        $(this).stop().slideUp(100);
+        chartMinuteBtn.removeClass("active");
+        subSelectBx.css("display","none");
+    });
+
+    chartMinuteLstLnk.click(function(){
+        chartMinuteBtn.removeClass("active");
+        chartMinuteBx.stop().slideUp(100);
+        var select_name = $(this).text();
+        chartMinuteBtn.text(select_name);
+    });
+
+    subSelect.click(function(){
+        $(this).siblings(".sub_bx").stop().slideDown(100);
+    });
+
+    subSelectLnk.click(function(){
+        subSelectBx.stop().slideUp(100);
+        var select_name = $(this).text();
+        subSelect.text(select_name);
+    });
+
+    chartMinute.find("a").click(function(){
+        chartSign.removeClass("active");
+        chartbtnAnalize.removeClass("active");
+        chartSidebar.animate({ right : "-200" }, 100);
+    });
+}); //상단메뉴 주기 left
+
+$(function(){
+    var btmFixCont = $(".chart_btm_area");
+    var btmFixRgt = btmFixCont.find(".btn_rgt");
+    var btmFixMenu = btmFixRgt.find(".chart_btm_setting");
+    var btmSetting = btmFixRgt.find(".btn_btm_setting");
+    var btmSettingLst = btmFixRgt.find(".chart_btm_lst");
+    var btmSettingLnk = btmSettingLst.find("a");
+
+    btmSetting.click(function(){
+        if($(this).hasClass('active')){
+            $(this).removeClass("active");
+            btmFixMenu.stop().slideUp(100);
+        }else{
+            $(this).addClass("active");
+            btmFixMenu.stop().slideDown(100);
+            chartSign.removeClass("active");
+            chartbtnAnalize.removeClass("active");
+            chartSidebar.animate({ right : "-200" }, 100);
+        }
+    });
+
+    btmSettingLnk.click(function(){
+        $(this).closest(".chart_btm_setting").slideUp(100);
+        btmSetting.removeClass("active");
+    });
+
+    btmFixMenu.mouseleave(function(){
+        $(this).slideUp(100);
+        btmSetting.removeClass("active");
+
+    });
+
+}); //하단 고정 메뉴바
+
+
+$(function(){	
+    var rdoCheck = chartWrap.find(".rdo_check");
+    var rdoCheckLabel = rdoCheck.find("label");
+    rdoCheckLabel.click(function(){
+        $(this).closest(".rdo_check").find("label").removeClass("active");
+        $(this).addClass("active");
+    });
+
+}); //라디오버튼 디자인 활성화
+
+// 일반/풀스크린/전체화면 용 리사이즈
+var chartContHeight = $(".chart_cont").height();
+$(window).resize(function () {
+    var windowHeight = $(window).height() - 16;
+    $(".chart_cont").css({
+        "height": (windowHeight < chartContHeight ? windowHeight : chartContHeight) + "px"
+    });
+});    
+</script>
+
+<script>
+    function sprintf(d, num) { // sprintf 함수
+        var str = "";
+        for (var i = 0; i < d; i++) {
+            str += "0";
+        }
+        str += num;
+
+        return str.slice("-" + d);
+    }
+</script>
+
+</body>
+
+</html>

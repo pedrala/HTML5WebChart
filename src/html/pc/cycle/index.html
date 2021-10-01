@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<div class="setting_modal">
+  <div class="anal_setting_modal">
+    <strong class="src_tit" style="padding-top:35px;padding-left:40px;padding-right:40px;" data-i18n="cycle.settings">주기설정</strong>
+    <div class="pop_cont">
+      <div class="period-setting">
+        <div class="period-setting-tbl">
+          <table border="0" cellpadding="0" cellspacing="0">
+            <colgroup>
+              <col width="40">
+              <col width="100">
+              <col width="100">
+              <col width="100">
+            </colgroup>
+            <thead>
+            <tr>
+              <th></th>
+              <th data-i18n="cycle.settings">주기버튼</th>
+              <th data-i18n="cycle.period">기간</th>
+              <th data-i18n="cycle.index">주기</th>
+            </tr>
+            </thead>
+            <tbody id="list">
+            </tbody>
+          </table>
+        </div>
+        <div class="period-order">
+          <div class="period-order-title" data-i18n="cycle.sort">주기순서</div>
+          <div class="period-order-btns">
+            <a href="#" class="top"></a>
+            <a href="#" class="up"></a>
+            <a href="#" class="down"></a>
+            <a href="#" class="bottom"></a>
+          </div>
+        </div>
+      </div>
+    </div><!-- pop_cont -->
+    <div class="pop_btn_bx">
+      <a href="#" class="btn_gray btn_close" data-i18n="chart.cancelbtn">취소</a> &nbsp;&nbsp;
+      <a href="#" id="okBtn" class="btn_blue" data-i18n="chart.okbtn">확인</a>
+    </div><!-- pop_btn_bx -->
+    <a href="#" class="btn_setting_close btn_close"><span class="blind"></span></a>
+  </div><!-- anal_setting_modal -->
+</div><!-- setting_modal -->
+
+<div id="cycle-alert" class="setting_modal_bx" style="display:none;">
+  <div class="bg">&nbsp;</div>
+  <div class="setting_modal">
+    <div class="el-message-box">
+      <div class="el-message-box__header">
+      </div>
+      <div class="el-message-box__content">
+        <div class="el-message-box__message">
+          <!-- alert 문구 -->
+          <p data-i18n="cycle.duplicate"></p>
+        </div>
+      </div>
+      <div class="el-message-box__btns">
+        <button id="cycle-ok-btn" type="button" class="el-button el-button--default el-button--small el-button--primary ">
+          <span>확인</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

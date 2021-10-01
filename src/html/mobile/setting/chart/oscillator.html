@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<div class="modal_chart_type candel_chart">
+    <strong class="modal_pop_tit">#지표명#</strong>
+    <div class="modal_view_cont">
+        <!-- 변수 설정 -->
+        <ul class="candel_change_lst" id="variable_lst"></ul>
+
+        <div class="color_lst_bx" id="style_lst">
+            <strong class="color_setting_tit">색/굵기 설정</strong>
+            <ul class="candel_change_lst" >
+              <li style="display: none;">
+                <div class="lst_bx">
+                  <strong class="tit">종류</strong>
+                  <div class="check_rgt_bx">
+                    <div class="select_ui full_select" id="m_nSubGraphSubType">
+                    </div>
+                  </div><!-- info_rgt -->
+                </div>
+              </li>
+              <li class="bar">
+                <div class="lst_bx">
+                  <strong class="tit">비교대상</strong>
+                  <div class="check_rgt_bx">
+                    <div class="select_ui full_select" id="m_nCompareType">
+                    </div>
+                  </div><!-- info_rgt -->
+                </div>
+              </li>
+              <li class="bar">
+                <div class="lst_bx">
+                  <strong class="tit">상승</strong>
+                  <div class="check_rgt_bx color_select_bx">
+                    <input type="text" class="color_picker" name="m_clrUp">
+                  </div><!-- info_rgt -->
+                </div>
+              </li>
+              <li class="bar">
+                <div class="lst_bx">
+                  <strong class="tit">하락</strong>
+                  <div class="check_rgt_bx color_select_bx">
+                    <input type="text" class="color_picker" name="m_clrDown">
+                  </div><!-- info_rgt -->
+                </div>
+              </li>
+              <li class="line">
+
+              </li>
+            </ul>
+        </div><!-- color_lst_bx -->
+    </div>
+  <a href="#" id="popupChartReset" class="popup_modal_initial btn_detail" data-i18n="chart.reset"><!--초기화--></a>
+  <a href="#" id="popupChartDefaultSave" class="popup_modal_save btn_detail" data-i18n="mchart.valuesave"><!--기본값 저장--></a>
+  <a href="#" id="popupChartBack" class="popup_modal_close btn_detail"><span class="blind" data-i18n="chart.popupclose"><!--팝업닫기--></span></a>
+</div>

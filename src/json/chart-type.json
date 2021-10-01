@@ -1,0 +1,32 @@
+[
+  {
+    "id": "candle",
+    "label": "chart.pricetype.candle",
+    "type": 0,
+    "use": true
+  },
+  {
+    "id": "line",
+    "label": "chart.pricetype.line",
+    "type": 1,
+    "use": true
+  },
+  {
+    "id": "bar",
+    "label": "chart.pricetype.bar",
+    "type": 2,
+    "use": true
+  },
+  {
+    "id": "pnf",
+    "label": "chart.pricetype.pnf",
+    "type": 3,
+    "use": true
+  },
+  {
+    "id": "three",
+    "label": "chart.pricetype.three",
+    "type": 4,
+    "use": true
+  }
+]

@@ -1,0 +1,57 @@
+ <!DOCTYPE html>
+<div class="modal_chart_type candel_chart">
+    <strong class="modal_pop_tit" data-i18n="chart.volume">거래량</strong>
+    <!-- 수정 -->
+    <div class="modal_view_cont">
+        <ul class="candel_change_lst">
+            <li style="display: none;">
+                <div class="lst_bx">
+                    <strong class="tit" data-i18n="common.kinds">종류</strong>
+                    <div class="check_rgt_bx">
+                        <div class="select_ui full_select" id="m_nSubGraphSubType">
+                        </div>
+                    </div><!-- info_rgt -->
+                </div>
+            </li>
+            <li class="bar">
+                <div class="lst_bx">
+                    <strong class="tit" data-i18n="chart.settings.volume.mcompareType">비교대상</strong>
+                    <div class="check_rgt_bx">
+                        <div class="select_ui full_select" id="m_nCompareType">
+                        </div>
+                    </div><!-- info_rgt -->
+                </div>
+            </li>
+            <li class="bar">
+                <div class="lst_bx">
+                    <strong class="tit" data-i18n="chart.settings.volume.mup">상승</strong>
+                    <div class="check_rgt_bx color_select_bx">
+                        <input type="text" class="color_picker" name="m_clrUp">
+                    </div><!-- info_rgt -->
+                </div>
+            </li>
+            <li class="bar">
+                <div class="lst_bx">
+                    <strong class="tit" data-i18n="chart.settings.volume.mdown">하락</strong>
+                    <div class="check_rgt_bx color_select_bx">
+                        <input type="text" class="color_picker" name="m_clrDown">
+                    </div><!-- info_rgt -->
+                </div>
+            </li>
+            <li class="bar">
+                <div class="lst_bx">
+                    <strong class="tit" data-i18n="chart.settings.volume.msteadiness">보합</strong>
+                    <div class="check_rgt_bx color_select_bx">
+                        <input type="text" class="color_picker" name="m_clrBar">
+                    </div><!-- info_rgt -->
+                </div>
+            </li>
+            <li class="line">
+
+            </li>
+        </ul><!-- modal_chart_lst -->
+    </div>
+   <a href="#" id="popupChartReset" class="popup_modal_initial btn_detail" data-i18n="chart.reset"><!--초기화--></a>
+   <a href="#" id="popupChartDefaultSave" class="popup_modal_save btn_detail" data-i18n="mchart.valuesave"><!--기본값 저장--></a>
+   <a href="#" id="popupChartBack" class="popup_modal_close btn_detail"><span class="blind" data-i18n="chart.popupclose"><!--팝업닫기--></span></a>
+</div>

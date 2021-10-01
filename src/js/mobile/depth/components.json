@@ -1,0 +1,31 @@
+{
+  "title": "chart.depthchart",
+  "rows": [{
+      "cols": [{
+          "label": "chart.buying",
+          "color": "m_clrBuyLine"
+        },
+        {
+          "label": "chart.selling",
+          "color": "m_clrSellLine"
+        }
+      ]
+    },
+    {
+      "cols": [{
+        "checkbox": [{
+          "label": "chart.crossline",
+          "defaultValue": "true",
+          "type": "boolean",
+          "name": "m_bShowCrossLine"
+        }]
+      }, {
+        "type": "m_nCrossLineType",
+        "sub": "start"
+      }, {
+        "thickness": "m_nCrossLineThickness",
+        "sub": "end"
+      }]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+<div class="sub_tab_area">
+  <ul class="sub_tab_lst">
+    <li><a href="#sub_tab_cont1" data-i18n="chart.settings.tab.variable">변수 설정</a></li>
+    <li><a href="#sub_tab_cont2" data-i18n="chart.settings.tab.description">설명</a></li>
+  </ul>
+
+  <div class="sub_tab_cont" id="sub_tab_cont1">
+    <div class="acount_tab_bx" id="acount_tab_bx">
+      <ul class="acount_rdo_lst">
+      </ul><!-- acount_rdo_lst -->
+      <ul class="setting_lst_type01">
+        <li>
+          <strong class="type_tit" data-i18n="common.color">색상적용</strong>
+          <div class="type01_form">
+            <div class="check_lst_type">
+              <div class="form_input_bx">
+                <strong class="tit" data-i18n="chart.settings.volume.up">상승</strong>
+                <ul class="form_bx">
+                  <li>
+                    <input type="text" class="color_picker" name="m_clrUp">
+                  </li>
+                </ul><!-- form_bx -->
+              </div><!-- form_input_bx -->
+              <div class="form_input_bx">
+                <strong class="tit" data-i18n="chart.settings.volume.down">하락</strong>
+                <ul class="form_bx">
+                  <li>
+                    <input type="text" class="color_picker" name="m_clrDown">
+                  </li>
+                </ul><!-- form_bx -->
+              </div><!-- form_input_bx -->
+              <div class="form_input_bx">
+                <strong class="tit" data-i18n="chart.settings.volume.steadiness">보합</strong>
+                <ul class="form_bx">
+                  <li>
+                    <input type="text" class="color_picker" name="m_clrBar">
+                  </li>
+                </ul><!-- form_bx -->
+              </div><!-- form_input_bx -->
+            </div><!-- check_lst_type -->
+            <div class="input_rgt_type">
+              <div class="form_input_bx type01">
+                <strong class="tit" data-i18n="chart.settings.volume.compareType">비교대상</strong>
+                <div class="form_bx">
+                  <fieldset class="select_ui">
+                    <select name="m_nCompareType" id="compare_lst"></select>
+                  </fieldset>
+                </div><!-- form_bx -->
+              </div><!-- form_input_bx -->
+              <div class="btm_select_bx" id="fill_bx">
+                <label class="form_label">
+                  <input class="i_check" name="fill" value="true" type="checkbox">
+                  <i class="check"></i>
+                  <span class="txt" data-i18n="chart.settings.volume.fill">막대바 채우기</span>
+                </label>
+              </div><!-- btm_select_bx -->
+            </div><!-- input_rgt_type -->
+          </div>
+        </li>
+      </ul><!-- setting_lst_type01 -->
+    </div>
+  </div>
+  <div class="sub_tab_cont" id="sub_tab_cont2">
+    <ul class="info_src_lst" id="desc_lst"></ul>
+  </div>
+</div>

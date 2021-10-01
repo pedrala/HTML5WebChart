@@ -1,0 +1,494 @@
+{
+  "_RAINBOW_": [
+    {
+      "title": "explanation.header.mean",
+      "content": "explanation.rainbowchart.mean"
+    },
+    {
+      "title": "",
+      "content": ""
+    },
+    {
+      "title": "",
+      "content": ""
+    }
+  ],
+  "_BB_": [
+    {
+      "title": "explanation.header.mean",
+      "content": "explanation.bollingerbands.mean"
+    },
+    {
+      "title": "explanation.header.fomula",
+      "content": "explanation.bollingerbands.fomula"
+    },
+    {
+      "title": "explanation.header.adaptmethod",
+      "content": "explanation.bollingerbands.adaptmethod"
+    }
+  ],
+  "_Env_": [
+    {
+      "title": "explanation.header.mean",
+      "content": "explanation.envelope.mean"
+    },
+    {
+      "title": "explanation.header.fomula",
+      "content": "explanation.envelope.fomula"
+    },
+    {
+      "title": "explanation.header.adaptmethod",
+      "content": "explanation.envelope.adaptmethod"
+    }
+  ],
+  "_MAC_": [
+    {
+      "title": "explanation.header.mean",
+      "content": "explanation.mac.mean"
+    },
+    {
+      "title": "explanation.header.fomula",
+      "content": "explanation.mac.fomula"
+    },
+    {
+      "title": "explanation.header.adaptmethod",
+      "content": "explanation.mac.adaptmethod"
+    }
+  ],
+  "_PIVOT_": [
+    {
+      "title": "explanation.header.mean",
+      "content": "explanation.pivot.mean"
+    },
+    {
+      "title": "explanation.header.fomula",
+      "content": "explanation.pivot.fomula"
+    },
+    {
+      "title": "explanation.header.adaptmethod",
+      "content": "explanation.pivot.adaptmethod"
+    }
+  ],
+  "_MA_": [
+    {
+      "title": "explanation.header.mean",
+      "content": "explanation.ma.mean"
+    },
+    {
+      "title": "explanation.header.writemethod",
+      "content": "explanation.ma.writemethod"
+    },
+    {
+      "title": "explanation.header.interutil",
+      "content": "explanation.ma.interutil"
+    }
+  ],
+  "_VOLUME_": [
+    {
+      "title": "explanation.header.mean",
+      "content": "explanation.volume.mean"
+    },
+    {
+      "title": "explanation.header.interutil",
+      "content": "explanation.volume.interutil"
+    }
+  ],
+  "_VMA_": [
+    {
+      "title": "explanation.header.mean",
+      "content": "explanation.vma.mean"
+    },
+    {
+      "title": "explanation.header.adaptmethod",
+      "content": "explanation.vma.adaptmethod"
+    }
+  ],
+  "_PSYCO_": [
+    {
+      "title": "explanation.header.mean",
+      "content": "explanation.psyco.mean"
+    },
+    {
+      "title": "explanation.header.fomula",
+      "content": "explanation.psyco.fomula"
+    },
+    {
+      "title": "explanation.header.adaptmethod",
+      "content": "explanation.psyco.adaptmethod"
+    }
+  ],
+  "_Disparity_": [
+    {
+      "title": "explanation.header.mean",
+      "content": "explanation.disparity.mean"
+    },
+    {
+      "title": "explanation.header.fomula",
+      "content": "explanation.disparity.fomula"
+    },
+    {
+      "title": "explanation.header.adaptmethod",
+      "content": "explanation.disparity.adaptmethod"
+    }
+  ],
+  "_AB_": [
+    {
+      "title": "explanation.header.mean",
+      "content": "explanation.abratio.mean"
+    },
+    {
+      "title": "explanation.header.fomula",
+      "content": "explanation.abratio.fomula"
+    },
+    {
+      "title": "explanation.header.adaptmethod",
+      "content": "explanation.abratio.adaptmethod"
+    }
+  ],
+  "_AD_": [
+    {
+      "title": "explanation.header.mean",
+      "content": "explanation.adline.mean"
+    },
+    {
+      "title": "explanation.header.fomula",
+      "content": "explanation.adline.fomula"
+    },
+    {
+      "title": "explanation.header.adaptmethod",
+      "content": "explanation.adline.adaptmethod"
+    }
+  ],
+  "_ADX_": [
+    {
+      "title": "explanation.header.mean",
+      "content": "explanation.adx.mean"
+    },
+    {
+      "title": "explanation.header.fomula",
+      "content": "explanation.adx.fomula"
+    },
+    {
+      "title": "explanation.header.adaptmethod",
+      "content": "explanation.adx.adaptmethod"
+    }
+  ],
+  "_ATR_": [
+    {
+      "title": "explanation.header.mean",
+      "content": "explanation.atr.mean"
+    },
+    {
+      "title": "explanation.header.fomula",
+      "content": "explanation.atr.fomula"
+    },
+    {
+      "title": "explanation.header.adaptmethod",
+      "content": "explanation.atr.adaptmethod"
+    }
+  ],
+  "_CCI_": [
+    {
+      "title": "explanation.header.mean",
+      "content": "explanation.cci.mean"
+    },
+    {
+      "title": "explanation.header.fomula",
+      "content": "explanation.cci.fomula"
+    },
+    {
+      "title": "explanation.header.adaptmethod",
+      "content": "explanation.cci.adaptmethod"
+    }
+  ],
+  "_CO_": [
+    {
+      "title": "explanation.header.mean",
+      "content": "explanation.chaikinsosc.mean"
+    },
+    {
+      "title": "explanation.header.fomula",
+      "content": "explanation.chaikinsosc.fomula"
+    },
+    {
+      "title": "explanation.header.adaptmethod",
+      "content": "explanation.chaikinsosc.adaptmethod"
+    }
+  ],
+  "_CV_": [
+    {
+      "title": "explanation.header.mean",
+      "content": "explanation.chaikinsvol.mean"
+    },
+    {
+      "title": "explanation.header.fomula",
+      "content": "explanation.chaikinsvol.fomula"
+    },
+    {
+      "title": "explanation.header.adaptmethod",
+      "content": "explanation.chaikinsvol.adaptmethod"
+    }
+  ],
+  "_DMI_": [
+    {
+      "title": "explanation.header.mean",
+      "content": "explanation.dmi.mean"
+    },
+    {
+      "title": "explanation.header.fomula",
+      "content": "explanation.dmi.fomula"
+    },
+    {
+      "title": "explanation.header.adaptmethod",
+      "content": "explanation.dmi.adaptmethod"
+    }
+  ],
+  "_EOM_": [
+    {
+      "title": "explanation.header.mean",
+      "content": "explanation.eom.mean"
+    },
+    {
+      "title": "explanation.header.fomula",
+      "content": "explanation.eom.fomula"
+    },
+    {
+      "title": "explanation.header.adaptmethod",
+      "content": "explanation.eom.adaptmethod"
+    }
+  ],
+  "_LRL_": [
+    {
+      "title": "explanation.header.mean",
+      "content": "explanation.lrl.mean"
+    },
+    {
+      "title": "explanation.header.fomula",
+      "content": "explanation.lrl.fomula"
+    },
+    {
+      "title": "explanation.header.adaptmethod",
+      "content": "explanation.lrl.adaptmethod"
+    }
+  ],
+  "_MACD_": [
+    {
+      "title": "explanation.header.mean",
+      "content": "explanation.macd.mean"
+    },
+    {
+      "title": "explanation.header.fomula",
+      "content": "explanation.macd.fomula"
+    },
+    {
+      "title": "explanation.header.adaptmethod",
+      "content": "explanation.macd.adaptmethod"
+    }
+  ],
+  "_MACDOS_": [
+    {
+      "title": "explanation.header.mean",
+      "content": "explanation.macdosc.mean"
+    },
+    {
+      "title": "explanation.header.fomula",
+      "content": "explanation.macdosc.fomula"
+    },
+    {
+      "title": "explanation.header.adaptmethod",
+      "content": "explanation.macdosc.adaptmethod"
+    }
+  ],
+  "_MOM_": [
+    {
+      "title": "explanation.header.mean",
+      "content": "explanation.momentum.mean"
+    },
+    {
+      "title": "explanation.header.fomula",
+      "content": "explanation.momentum.fomula"
+    },
+    {
+      "title": "explanation.header.adaptmethod",
+      "content": "explanation.momentum.adaptmethod"
+    }
+  ],
+  "_OBV_": [
+    {
+      "title": "explanation.header.mean",
+      "content": "explanation.obv.mean"
+    },
+    {
+      "title": "explanation.header.fomula",
+      "content": "explanation.obv.fomula"
+    },
+    {
+      "title": "explanation.header.adaptmethod",
+      "content": "explanation.obv.adaptmethod"
+    }
+  ],
+  "_RCI_": [
+    {
+      "title": "explanation.header.mean",
+      "content": "explanation.rci.mean"
+    },
+    {
+      "title": "explanation.header.fomula",
+      "content": "explanation.rci.fomula"
+    },
+    {
+      "title": "explanation.header.adaptmethod",
+      "content": "explanation.rci.adaptmethod"
+    }
+  ],
+  "_ROC_": [
+    {
+      "title": "explanation.header.mean",
+      "content": "explanation.roc.mean"
+    },
+    {
+      "title": "explanation.header.fomula",
+      "content": "explanation.roc.fomula"
+    },
+    {
+      "title": "explanation.header.adaptmethod",
+      "content": "explanation.roc.adaptmethod"
+    }
+  ],
+  "_RSI_": [
+    {
+      "title": "explanation.header.mean",
+      "content": "explanation.rsi.mean"
+    },
+    {
+      "title": "explanation.header.fomula",
+      "content": "explanation.rsi.fomula"
+    },
+    {
+      "title": "explanation.header.adaptmethod",
+      "content": "explanation.rsi.adaptmethod"
+    }
+  ],
+  "_StoF_": [
+    {
+      "title": "explanation.header.mean",
+      "content": "explanation.stofast.mean"
+    },
+    {
+      "title": "explanation.header.fomula",
+      "content": "explanation.stofast.fomula"
+    },
+    {
+      "title": "explanation.header.adaptmethod",
+      "content": "explanation.stofast.adaptmethod"
+    }
+  ],
+  "_StoS_": [
+    {
+      "title": "explanation.header.mean",
+      "content": "explanation.stoslow.mean"
+    },
+    {
+      "title": "explanation.header.fomula",
+      "content": "explanation.stoslow.fomula"
+    },
+    {
+      "title": "explanation.header.adaptmethod",
+      "content": "explanation.stoslow.adaptmethod"
+    }
+  ],
+  "_OSCV_": [
+    {
+      "title": "explanation.header.mean",
+      "content": "explanation.volumeosc.mean"
+    },
+    {
+      "title": "explanation.header.fomula",
+      "content": "explanation.volumeosc.fomula"
+    },
+    {
+      "title": "explanation.header.adaptmethod",
+      "content": "explanation.volumeosc.adaptmethod"
+    }
+  ],
+  "_WILL_": [
+    {
+      "title": "explanation.header.mean",
+      "content": "explanation.williamr.mean"
+    },
+    {
+      "title": "explanation.header.fomula",
+      "content": "explanation.williamr.fomula"
+    },
+    {
+      "title": "explanation.header.adaptmethod",
+      "content": "explanation.williamr.adaptmethod"
+    }
+  ],
+  "_ADXR_": [
+    {
+      "title": "1. 의미",
+      "content": "ADXR= (당일 ADX + n일전 ADX)/2"
+    },
+    {
+      "title": "2. 계산식",
+      "content": "ADX 참고"
+    }
+  ],
+  "_TRIX_": [
+    {
+      "title": "1. 의미",
+      "content": "종가에 대하여 지수 이동평균을 세 번 구한 후 이 값의 전일대비 상승률을 이용한 지표입니다."
+    },
+    {
+      "title": "2. 계산식",
+      "content": "종가의 해당기간 (n)지수 이동 평균값을 구한다. 구한 이동평균 값을 다시 해당기간 (n)지수 이동평균 값을 구한다. 구한 이동평균 값을 다시 해당기간 (n)지수 이동평균 값을 구한다 이값의 당일의변동분.[(당일-전일)/전일]*100<br />시그널선 = TRIX의 n일 지수이동평균<br />기본설정값: 12일, 시그널선: 9일"
+    },
+    {
+      "title": "3. 적용방법",
+      "content": "(1) 지표값의 반전시점을 매매에 이용합니다. 상승 반전될 때를 매수시점, 하락 반전될 때를 매도시점으로 인식합니다.<br />(2) 지표값이 시그널선을 상향 돌파할때를 매수시점으로, 하향돌파할때를 매도시점으로 인식합니다.<br />(3) 주가와 지표값 사이의 Divergence를 이용한 분석이 가능합니다.<br />주가의 저점은 점점 낮아지는데, 지표값의 저점이 점점 높아지면 추세의 상승반전을 예상할수 있습니다.<br />반대로, 주가의 고점은 점점 높아지는데, 지표값의 고점은 점점 낮아지면 추세의 하락반전을 예상할수 있습니다."
+    }
+  ],
+  "_VR_": [
+    {
+      "title": "1. 의미",
+      "content": "일정 기간 동안(20일) 시장가격 상승일의 거래량과 시장가격 하락일의 거래량을 비교하여 백분율로 나타낸 지표로서 현재 시장이 과열인지 침체인지를 판단하게 해주는 시장특성 지표입니다."
+    },
+    {
+      "title": "2. 계산식",
+      "content": "{(주가상승일 거래량 합계+주가보합일 거래량 합계*0.5)/(주가하락일 거래량 합계+주가보합일 거래량 합계*0.5)} * 100<br /><br />기본 적용기간: 20일"
+    },
+    {
+      "title": "3. 적용방법",
+      "content": "(1) 지표값이 70%이하이면 침체국면, 150%~ 200%이면 보통, 450%이상이면 과열국면으로 판단합니다.<br />(2) 상승장에서는 과열심리로 인해 시장가격이 지속해서 올라가는 경우가 많기에, VR 지표는 침체기일 때 상대적으로 신뢰도가 큽니다."
+    }
+  ],
+  "_LRS_": [
+    {
+      "title": "1. 의미",
+      "content": "Linear Regression Indicator(회귀선지표)와 동일한 방법으로 과거 일정기간을 대상으로 매일 직선회귀선을 계산하고 각 일자의 직선회귀 기울기를 이어서 지표화한 것이 직선회귀기울기입니다.<br />직선회귀기울기는 단위기간변화에 따라 가격이 얼마나 변화할 것으로 기대되는지를 보여줍니다."
+    },
+    {
+      "title": "2. 계산식",
+      "content": "Y = A + BX<br />A = 1/N (∑Y - B*∑X)<br />B = (N*∑XY-∑X*∑Y) / (N*∑X²-(∑X)²)<br />X : 시간흐름<br />N : 기간 (기본값 14)<br />Y : LRL(Liner Regression Line)<br />B : LRS(Liner Regression Slope)"
+    },
+    {
+      "title": "3. 적용방법",
+      "content": "직선회귀기울기를 해석할 경우 R-squared를 동시에 분석하는 것이 좋습니다.<br />이는 직선회귀기울기가 추세의 대략적인 방향을 제시하는 반면 R-squared는 추세의 강도에 관련된 정보를 제공하기 때문입니다. R-squared값이 높다는 것은 직선회귀기울기가 가파른 상승 혹은 하락 기울기를 가짐을 의미합니다.<br />직선회귀기울기가 처음으로 의미있는 양의 값을 갖게되는 시점을 매수포지션 설정시점으로 활용할 수 있습니다. 반면 기울기가 의미있는 하락기울기로 변하게 되는 시점을 매수포지션을 청산하거나 매도포지션을 설정하는 시점으로 활용할 수 있습니다."
+    }
+  ],
+  "_SONAR_": [
+    {
+      "title": "1. 의미",
+      "content": "주가의 추세 전환 시점을 파악하기 위한 지표입니다. 이 지표는 가격 움직임에 선행하여 추세전환을 암시하여 줍니다."
+    },
+    {
+      "title": "2. 계산식",
+      "content": "Sonar = 100 * (당일의 n기간 이동평균- 전일의 n기간 이동평균)/전일 n기간 이동평균 <br />Signal = Sonar의 n기간 이동평균"
+    },
+    {
+      "title": "3. 적용방법",
+      "content": "(1) 지표값이 0선을 상향돌파 할 때를 매수시점으로, 0선을 하향돌파 할 때를 매도시점으로 인식합니다.<br />(2) 지표값이 SONAR의 시그널선을 상향돌파 할때를 매수시점으로, 시그널선을 하향돌파할때를 매도시점으로 인식합니다."
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<div class="modal_chart_type candel_chart">
+  <strong class="modal_pop_tit" data-i18n="chart.charttype"><!--캔들--></strong>
+  <!-- 수정 -->
+  <div class="modal_view_cont">
+    <!-- //수정 -->
+    <ul class="candel_change_lst">
+      <li>
+        <div class="lst_bx">
+          <strong class="tit" data-i18n="chart.riseposi"><!--양봉(상승)--></strong>
+          <span class="check_rgt_bx" id="UpturnPlus">
+            <div class="picker_disp" style="background-color:#eb1e1e;"></div>
+            <label class="rdo_type">
+              <input class="i_check" type="checkbox">
+              <span class="txt" data-i18n="chart.fill"><!--채우기--></span>
+            </label>
+          </span>
+        </div>
+      </li>
+      <li>
+        <div class="lst_bx">
+          <strong class="tit" data-i18n="chart.fallposi"><!--음봉(상승)--></strong>
+          <span class="check_rgt_bx" id="DropPlus">
+            <div class="picker_disp" style="background-color:#0e63ff;"></div>
+            <label class="rdo_type">
+              <input class="i_check" type="checkbox">
+              <span class="txt" data-i18n="chart.fill"><!--채우기--></span>
+            </label>
+          </span>
+        </div>
+      </li>
+      <li>
+        <div class="lst_bx">
+          <strong class="tit" data-i18n="chart.risenega"><!--양봉(하락)--></strong>
+          <span class="check_rgt_bx" id="UpturnMinus">
+            <div class="picker_disp" style="background-color:#eb1e1e;"></div>
+            <label class="rdo_type">
+              <input class="i_check" type="checkbox">
+              <span class="txt" data-i18n="chart.fill"><!--채우기--></span>
+            </label>
+          </span>
+        </div>
+      </li>
+      <li>
+        <div class="lst_bx">
+          <strong class="tit" data-i18n="chart.fallnega"><!--음봉(하락)--></strong>
+          <span class="check_rgt_bx" id="DropMinus">
+            <div class="picker_disp" style="background-color:#0e63ff;"></div>
+            <label class="rdo_type">
+              <input class="i_check" type="checkbox">
+              <span class="txt" data-i18n="chart.fill"><!--채우기--></span>
+            </label>
+          </span>
+        </div>
+      </li>
+      <li>
+        <ul class="candel_lst_type01">
+          <li>
+            <div class="lst_bx">
+              <strong class="tit" data-i18n="chart.nochange"><!--보합(시가=종가) 색상--></strong>
+              <div class="check_rgt_bx">
+                <div class="select_ui full_select" id="m_bSteadyClrFollowToUpDropClr">
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul><!-- candel_lst_type01 -->
+      </li>
+    </ul><!-- candel_change_lst -->
+  </div><!-- modal_view_cont -->
+  <a href="#" id="popupChartReset" class="popup_modal_initial btn_detail" data-i18n="chart.reset"><!--초기화--></a>
+  <a href="#" id="popupChartDefaultSave" class="popup_modal_save btn_detail" data-i18n="mchart.valuesave"><!--기본값 저장--></a>
+  <a href="#" id="popupChartBack" class="popup_modal_close btn_detail"><span class="blind" data-i18n="chart.popupclose"><!--팝업닫기--></span></a>
+</div><!-- modal_chart_type -->
+<!-- //캔들 차트 변경 팝업 -->

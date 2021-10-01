@@ -1,0 +1,166 @@
+[
+  {
+    "label": "line",
+    "use": true,
+    "depth": [{
+      "label": "trendline",
+      "type": "LINE_TOOL",
+      "mclazz": "lst04",
+      "use": true,
+      "prop": {
+        "start": ["date", "price"],
+        "end": ["date", "price"],
+        "extend": ["left", "right"],
+        "style": true,
+        "text": ["left", "right"]
+      }
+    }, {
+      "label": "crossline",
+      "type": "CROSS_LINE_TOOL",
+      "mclazz": "lst05",
+      "use": true,
+      "prop": {
+        "start": ["date", "price"],
+        "style": true,
+        "text": ["left", "right"]
+      }
+    }, {
+      "label": "horizontalline",
+      "type": "HOZR_LINE_TOOL",
+      "mclazz": "lst06",
+      "use": true,
+      "prop": {
+        "start": ["price"],
+        "style": true,
+        "text": ["left", "right"]
+      }
+    }, {
+      "label": "verticalline",
+      "type": "VERT_LINE_TOOL",
+      "mclazz": "lst07",
+      "use": true,
+      "prop": {
+        "start": ["date"],
+        "style": true,
+        "text": ["top", "bottom"]
+      }
+    }]
+  },
+  {
+    "label": "line2",
+    "use": true,
+    "depth": [{
+      "label": "tirone",
+      "type": "TRISECT_LINE_TOOL",
+      "mclazz": "lst11",
+      "use": true,
+      "prop": {
+        "start": ["date", "price"],
+        "end": ["date", "price"],
+        "extend": ["left", "right", "section"],
+        "style": true,
+        "text": ["left", "right"]
+      }
+    }, {
+      "label": "quadrant",
+      "type": "QUARTER_LINE_TOOL",
+      "mclazz": "lst12",
+      "use": true,
+      "prop": {
+        "start": ["date", "price"],
+        "end": ["date", "price"],
+        "extend": ["left", "right", "section"],
+        "style": true,
+        "text": ["left", "right"]
+      }
+    }]
+  },
+  {
+    "label": "shape",
+    "use": true,
+    "depth": [{
+      "label": "circle",
+      "type": "CIRCLE_TOOL",
+      "mclazz": "lst08",
+      "use": true,
+      "prop": {
+        "start": ["date", "price"],
+        "end": ["date", "price"],
+        "style": true
+      }
+    }, {
+      "label": "rect",
+      "type": "RECT_TOOL",
+      "mclazz": "lst09",
+      "use": true,
+      "prop": {
+        "start": ["date", "price"],
+        "end": ["date", "price"],
+        "style": true
+      }
+    }, {
+      "label": "triangle",
+      "type": "TRIANGLE_TOOL",
+      "mclazz": "lst10",
+      "use": true,
+      "prop": {
+        "start": ["date", "price"],
+        "end": ["date", "price"],
+        "style": true
+      }
+    }]
+  },
+  {
+    "label": "fibonacci",
+    "use": true,
+    "depth": [{
+      "label": "fiboarc",
+      "type": "FIBONACCI_ARC_TOOL",
+      "mclazz": "lst13",
+      "use": true,
+      "prop": {
+        "start": ["date", "price"],
+        "end": ["date", "price"],
+        "style": true,
+        "text": ["show"],
+        "coefficient": true
+      }
+    }, {
+      "label": "fibopan",
+      "type": "FIBONACCI_FAN_TOOL",
+      "mclazz": "lst14",
+      "use": true,
+      "prop": {
+        "start": ["date", "price"],
+        "end": ["date", "price"],
+        "style": true,
+        "text": ["show"],
+        "coefficient": true
+      }
+    }, {
+      "label": "fiboretra",
+      "type": "FIBONACCI_RETRACE_TOOL",
+      "mclazz": "lst15",
+      "use": true,
+      "prop": {
+        "start": ["date", "price"],
+        "end": ["date", "price"],
+        "style": true,
+        "text": ["show"],        
+        "coefficient": true
+      }
+    }, {
+      "label": "fibotime",
+      "type": "FIBONACCI_TIME_TOOL",
+      "mclazz": "lst16",
+      "use": true,
+      "prop": {
+        "start": ["date"],
+        "style": true,
+        "text": ["show"],
+        "sequence": [0, 1],
+        "coefficient": true
+      }
+    }]
+  }
+]

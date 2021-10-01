@@ -1,0 +1,84 @@
+<div class="sub_tab_area">
+  <ul class="sub_tab_lst">
+    <li><a href="#sub_tab_cont1" data-i18n="chart.settings.tab.variable">설정</a></li>
+    <li><a href="#sub_tab_cont2" data-i18n="chart.settings.tab.description">설명</a></li>
+  </ul>
+
+  <div class="sub_tab_cont" id="sub_tab_cont1">
+    <ul class="rdo_tab_lst">
+      <li class="form_list" id="UpturnPlus">
+        <strong class="rdo_tit" data-i18n="chart.riseposi">
+          <!--양봉(상승)--></strong>
+        <div class="color_picker_bx">
+          <div class="select_rgt_bx">
+            <input type="text" class="color_picker" name="m_clrUpturnPlus">
+            <label class="form_label">
+              <input class="i_check" type="checkbox" />
+              <i class="check"></i>
+              <span class="txt" data-i18n="chart.fill">
+                <!--채우기--></span>
+            </label>
+          </div>
+        </div>
+      </li>
+      <li class="form_list" id="DropPlus">
+        <strong class="rdo_tit" data-i18n="chart.fallposi">
+          <!--음봉(상승)--></strong>
+        <div class="color_picker_bx">
+          <div class="select_rgt_bx">
+            <input type="text" class="color_picker" name="m_clrDropPlus">
+            <label class="form_label">
+              <input class="i_check" type="checkbox" />
+              <i class="check"></i>
+              <span class="txt" data-i18n="chart.fill">
+                <!--채우기--></span>
+            </label>
+          </div>
+        </div>
+      </li>
+      <li class="form_list" id="UpturnMinus">
+        <strong class="rdo_tit" data-i18n="chart.risenega">
+          <!--양봉(하락)--></strong>
+        <div class="color_picker_bx">
+          <div class="select_rgt_bx">
+            <input type="text" class="color_picker" name="m_clrUpturnMinus">
+            <label class="form_label">
+              <input class="i_check" type="checkbox" />
+              <i class="check"></i>
+              <span class="txt" data-i18n="chart.fill">
+                <!--채우기--></span>
+            </label>
+          </div>
+        </div>
+      </li>      
+      <li class="form_list" id="DropMinus">
+        <strong class="rdo_tit" data-i18n="chart.fallnega">
+          <!--음봉(하락)--></strong>
+        <div class="color_picker_bx">
+          <div class="select_rgt_bx">
+            <input type="text" class="color_picker" name="m_clrDropMinus">
+            <label class="form_label">
+              <input class="i_check" type="checkbox" />
+              <i class="check"></i>
+              <span class="txt" data-i18n="chart.fill">
+                <!--채우기--></span>
+            </label>
+          </div>
+        </div>
+      </li>
+      <li class="form_list">
+        <strong class="rdo_tit" data-i18n="chart.nochange">
+          <!--보합(시가=종가) 색상--></strong>
+        <div class="select_rgt_bx">
+          <fieldset class="select_ui">
+            <select name="m_bSteadyClrFollowToUpDropClr" id="m_bSteadyClrFollowToUpDropClr"></select>
+          </fieldset>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="sub_tab_cont" id="sub_tab_cont2">
+    <ul class="info_src_lst" id="desc_lst"></ul>
+  </div>
+</div>

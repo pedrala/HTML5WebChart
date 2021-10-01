@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<style>
+		/** base **/
+	html,
+	body {
+		height: 100%;
+		margin: 0;
+	}
+
+	.chart_cont * {
+		-webkit-text-size-adjust: none;
+		outline: none;
+		box-sizing: border-box;
+		letter-spacing: -0.5px;
+		font-family: 'Noto Sans KR', sans-serif;
+		-webkit-tap-highlight-color: transparent;
+	}
+
+	.chart_cont div,
+	.chart_cont p,
+	.chart_cont span,
+	.chart_cont dl,
+	.chart_cont dt,
+	.chart_cont dd,
+	.chart_cont ul,
+	.chart_cont ol,
+	.chart_cont li,
+	.chart_cont input,
+	.chart_cont textarea,
+	.chart_cont button,
+	.chart_cont select,
+	.chart_cont section,
+	.chart_cont article {
+		margin: 0;
+		padding: 0;
+		word-break: break-all;
+	}
+
+	.chart_cont button,
+	.chart_cont a,
+	.chart_cont label,
+	.chart_cont input,
+	.chart_cont textarea,
+	.chart_cont button,
+	.chart_cont select {
+		text-decoration: none;
+		-webkit-tap-highlight-color: transparent;
+	}
+
+	.chart_cont a[href^="tel"] {
+		font-style: normal
+	}
+
+	.chart_cont ol,
+	.chart_cont ul,
+	.chart_cont dl,
+	.chart_cont li {
+		list-style: none
+	}
+
+	.chart_cont img {
+		border: 0;
+		margin: 0;
+		padding: 0;
+	}
+
+	.chart_cont img {
+		border: 0;
+		vertical-align: top
+	}
+
+	.chart_cont input {
+		vertical-align: middle
+	}
+
+	.chart_cont input[type="text"],
+	.chart_cont input[type="number"],
+	.chart_cont input[type="password"],
+	.chart_cont input[type="date"],
+	.chart_cont select,
+	.chart_cont textarea {
+		-webkit-appearance: none;
+		border-radius: 0;
+		padding: 0;
+		margin: 0;
+		border: none;
+		border: none;
+	}
+
+	.chart_cont select,
+	.chart_cont button {
+		-webkit-appearance: menulist-text;
+		border-radius: 0;
+		padding: 0;
+		margin: 0;
+		border: none;
+		appearance: none;
+		background: #fff;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		-webkit-appearance: listbox;
+		background-color: transparent;
+	}
+
+	.chart_fixed {
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	/** switch radio **/
+	.chart_cont {
+		width: auto;
+		overflow: hidden;
+		height: 100%;
+	}
+
+	.chart_cont .switch {
+		position: relative;
+		display: inline-block;
+		width: 42px;
+		height: 23px;
+	}
+
+	.chart_cont .switch input {
+		opacity: 0;
+		width: 0;
+		height: 0;
+	}
+
+	.chart_cont .slider {
+		position: absolute;
+		cursor: pointer;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: #ccc;
+		-webkit-transition: .4s;
+		transition: .4s;
+	}
+
+	.chart_cont .slider:before {
+		position: absolute;
+		content: "";
+		height: 17px;
+		width: 17px;
+		left: 4px;
+		bottom: 3px;
+		background-color: white;
+		-webkit-transition: .4s;
+		transition: .4s;
+	}
+
+	.chart_cont input:checked+.slider {
+		background-color: #113fa0;
+	}
+
+	.chart_cont input:focus+.slider {
+		box-shadow: 0 0 1px #113fa0;
+	}
+
+	.chart_cont input:checked+.slider:before {
+		-webkit-transform: translateX(17px);
+		-ms-transform: translateX(17px);
+		transform: translateX(17px);
+	}
+
+	.chart_cont .slider.round {
+		border-radius: 34px;
+	}
+
+	.chart_cont .slider.round:before {
+		border-radius: 50%;
+	}
+
+	/** form **/
+	.chart_cont .minute_lst_bx{float:left;width:45px;position:relative;}
+	.chart_cont .minute_lst_bx
+	.btn_minute{display:block;height:30px;width:100%;font-size:12px;color:#000;text-align:center;line-height:28px;border:1px solid #ddd;}
+	.chart_cont .minute_lst_bx .btn_minute.active{background:#7b818d;color:#fff;transition:all 0.4s;border:1px solid #7b818d;}
+	.chart_cont .minute_lst_bx .minute_slide{display:none;position:absolute;left:0;top:30px;z-index:10;width:46px;}
+	.chart_cont .minute_lst_bx .minute_slide_lst a{display:block;height:28px;line-height:26px;color:#ffffff;border-bottom: 1px solid #ddd;border-right: 1px solid #ddd;border-left: 1px solid #ddd;background:#fff;text-align:center;font-size:12px;color:#555;}
+	.chart_cont .minute_slide_lst a:active{background:#7b818d;color:#fff;transition:all 0.4s;}
+
+	/** chart **/
+	.chart_cont .blind {
+		overflow: hidden;
+		visibility: hidden;
+		position: absolute;
+		width: 0;
+		height: 0;
+		font-size: 0;
+		line-height: 0;
+	}
+
+	.chart_cont .chart_select {
+		display: inline-block;
+		background: #fff;
+		height: 50px;
+		border: 1px solid black;
+		width: 50px;
+	}
+
+	.chart_cont .chart_top_bx {
+		padding: 5px 7px 7px;
+		width: auto;
+		height: 42px;
+		background: #fff;
+	}
+
+	.chart_cont.landscape .chart_top_bx {
+		padding: 5px 7px 7px 0;
+	}
+
+	.chart_cont .chart_top_bx:before {
+		display: block;
+		content: "";
+		clear: both;
+	}
+
+	.chart_cont .chart_top_bx .chart_top_lft {
+		float: left;
+		position: relative;
+		height: 30px;
+	}
+
+	.chart_cont .chart_top_bx .chart_top_lft .select_ui {
+		float: left;
+		margin: 0 15px 0 0;
+		display: none;
+	}
+
+	.chart_cont.landscape .chart_top_bx .chart_top_lft .select_ui {
+		display: block;
+	}
+
+	.chart_cont .chart_top_bx .chart_top_lft:before {
+		content: "";
+		clear: both;
+		display: block;
+	}
+
+	.chart_cont .chart_top_bx .time_select {
+		float: left;
+	}
+
+	.chart_cont .chart_top_bx .time_select > li{float:left;}
+	.chart_cont .chart_top_bx .time_select > li .btn_minute{border-right:none;}
+	.chart_cont .chart_top_bx .time_select > li:last-child .btn_minute{border-right:1px solid #ddd;}
+	.chart_cont .chart_top_bx .time_select > li:last-child .minute_slide{width:45px;}
+	.chart_cont .chart_top_bx .time_select > li.lst_active .minute_lst_bx > a{border-left:1px solid #7b818d}
+	.chart_cont .chart_top_bx .time_select > li:last-child .minute_lst_bx > a.active{border-right:1px solid #7b818d}
+
+	.chart_cont .chart_top_bx .btn_rgt_select * {
+		vertical-align: top;
+	}
+
+	.chart_cont .chart_top_bx .btn_rgt_select {
+		float: right;
+		position: relative;
+	}
+
+	.chart_cont .chart_top_bx .btn_rgt_select:before {
+		display: block;
+		content: "";
+		clear: both;
+	}
+
+	.chart_cont .chart_top_bx .btn_rgt_select>li {
+		float: left;
+	}
+
+	.chart_cont .chart_top_bx .btn_rgt_select>li.next_active a {
+		border-left: 1px solid #fff;
+	}
+
+	.chart_cont .chart_top_bx .btn_rgt_select>li>a {
+		position: relative;
+		display: inline-block;
+		height: 30px;
+		text-align: center;
+		color: #000;
+		width: 37px;
+		border: 1px solid #ddd;
+		border-right: 1px solid #fff;
+	}
+
+	.chart_cont .chart_top_bx .btn_rgt_select>li>a:before {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		content: "";
+	}
+
+	.chart_cont .chart_top_bx .btn_rgt_select>li>a.btn_data:before {
+		margin: -8.5px 0 0 -8.5px;
+		width: 17px;
+		height: 17px;
+		background: url("static/images/m_chart_btn_data.png") no-repeat left top;
+		background-size: 17px;
+	}
+
+	.chart_cont .chart_top_bx .btn_rgt_select>li>a.btn_data.active:before {
+		background: url("static/images/m_chart_btn_data_on.png") no-repeat left top;
+		background-size: 17px;
+	}
+
+	.chart_cont .chart_top_bx .btn_rgt_select>li>a.btn_chat_type:before {
+		margin: -9px 0 0 -9px;
+		width: 18px;
+		height: 18px;
+		background: url("static/images/m_chart_btn_chattype.png") no-repeat left top;
+		background-size: 17px;
+	}
+
+	.chart_cont .chart_top_bx .btn_rgt_select>li>a.btn_top_setting:before {
+		margin: -9px 0 0 -9px;
+		width: 17px;
+		height: 18px;
+		background: url("static/images/m_chart_btn_setting.png") no-repeat left top;
+		background-size: 18px;
+	}
+
+	.chart_cont .chart_top_bx .btn_rgt_select>li>a.btn_assay_tool:before {
+		margin: -8.5px 0 0 -8.5px;
+		width: 18px;
+		height: 18px;
+		background: url("static/images/m_chart_btn_assay.png") no-repeat left top;
+		background-size: 17px;
+	}
+
+	.chart_cont .chart_top_bx .btn_rgt_select>li>a.active.btn_assay_tool:before {
+		background: url("static/images/m_chart_btn_assay_on.png") no-repeat left top;
+		background-size: 17px;
+	}
+
+	.chart_cont .chart_top_bx .btn_rgt_select>li:last-child a {
+		border-right: 1px solid #ddd;
+	}
+
+	.chart_cont .chart_top_bx .btn_rgt_select>li>a.active {
+		background: #fff;
+		color: #fff;
+		border: 1px solid #113fa0;
+	}
+
+	.chart_cont .chart_top_bx .btn_rgt_select>li>a.btn_alerm.active {
+		color: #000;
+	}
+
+	.chart_cont .chart_top_bx .btn_rgt_select .chart_data_slide {
+		display: none;
+		position: absolute;
+		left: -40px;
+		;
+		top: 42px;
+		width: 165px;
+		z-index: 50;
+	}
+
+	.chart_cont .chart_top_bx .btn_rgt_select .chart_data_slide .chart_data_lst>li .tit {
+		display: inline-block;
+		padding: 0 0 0 10px;
+		width: 100%;
+		line-height: 23px;
+		color: #fff;
+		height: 25px;
+		font-size: 13px;
+		background: #212121;
+		font-weight: normal;
+	}
+
+	.chart_cont .chart_top_bx .btn_rgt_select .chart_data_slide .data_lst {
+		padding: 3px 0 5px;
+		background: rgba(33, 33, 33, 0.85);
+	}
+
+	.chart_cont .chart_top_bx .btn_rgt_select .chart_data_slide .data_lst>li {
+		padding: 0 0 0 10px;
+		margin: 3px 0 0;
+		overflow: hidden;
+	}
+
+	.chart_cont .chart_top_bx .btn_rgt_select .chart_data_slide .data_lst>li:first-child {
+		margin: 0;
+	}
+
+	.chart_cont .chart_top_bx .btn_rgt_select .chart_data_slide .data_lst .lft_txt {
+		float: left;
+		display: inline-block;
+		font-size: 12px;
+		line-height: 14px;
+		color: #fff;
+	}
+
+	.chart_cont .chart_top_bx .btn_rgt_select .chart_data_slide .data_lst .rgt_txt {
+		float: right;
+		padding: 0 10px 0 0;
+		display: inline-block;
+		font-size: 12px;
+		line-height: 14px;
+		color: #fff;
+	}
+
+	.chart_cont .chart_top_bx .btn_rgt_select .chart_data_slide .data_lst .rgt_txt.minus {
+		color: #eb1e1e;
+	}
+
+	.chart_cont .chart_top_bx .btn_rgt_select .chart_data_slide .data_lst .rgt_txt.plus {
+		color: #267dff;
+	}
+
+	.chart_cont .chart_area {
+		width: auto;
+		position: relative;
+	}
+
+	.chart_cont .chart_area input {
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 50;
+		width: 40px;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		border: 1px solid #ddd;
+		font-size: 12px;
+		color: #777;
+	}
+
+	.chart_cont .sidebar_bx {
+		position: absolute;
+		right: -50px;
+		top: -7px;
+		width: 37px;
+		height: 100%;
+		z-index: 100;
+		background: #7b818d;
+		overflow-y: auto;
+	}
+
+	.chart_cont .sidebar_bx .sidebar_menu {
+		padding: 10px 0;
+	}
+
+	.chart_cont .sidebar_bx .sidebar_menu>li {
+		position: relative;
+		border-bottom: 1px solid #fff;
+	}
+
+	.chart_cont .sidebar_bx .sidebar_menu>li>a {
+		display: block;
+		width: 100%;
+		font-size: 12px;
+		color: #fff;
+		text-align: center;
+	}
+
+	.chart_cont .sidebar_bx .sidebar_menu .side_depth01 {
+		position: absolute;
+		right: 37px;
+		top: 0;
+		width: 37px;
+		width: 50px;
+		background: #cfcfcf;
+		z-index: 90;
+		transform: scaleX(0);
+		transform-origin: right;
+		transition: all 0.1S;
+	}
+
+	.chart_cont .sidebar_bx .sidebar_menu>li>a.active+.side_depth01 {
+		transform: scaleX(1);
+	}
+
+	.chart_cont .sidebar_bx .sidebar_menu .side_depth01>li {
+		border-bottom: 1px solid #000;
+	}
+
+	.chart_cont .sidebar_bx .sidebar_menu .side_depth01>li>a {
+		display: block;
+		width: 100%;
+		text-align: center;
+		font-size: 12px;
+		color: #000;
+	}
+
+	.chart_cont .chart_cont .bg_modal {
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 99;
+	}
+
+	.chart_cont .color-box {
+		width: 30px;
+		height: 30px;
+		margin: 5px;
+		border: 1px solid white;
+	}
+
+	.chart_cont .colpick {
+		z-index: 10;
+	}
+
+	.chart_cont .chart_area {
+		height: calc(100% - 42px);
+	}
+
+	.chart_cont .chart_area .chart_cont_bx {
+		height: 100%;
+	}
+
+	.chart_cont .alerm_cont_slide {
+		position: absolute;
+		right: -200px;
+		top: 30px;
+		overflow-y: auto;
+		padding: 15px;
+		width: 185px;
+		height: 500px;
+		border: 1px solid #ddd;
+		z-index: 100;
+		background: #fff;
+	}
+
+	.chart_cont .alerm_cont_slide .alerm_cont_lst>li {
+		overflow: hidden;
+		width: auto;
+		margin: 10px 0 0;
+	}
+
+	.chart_cont .alerm_cont_slide .alerm_cont_lst>li:first-child {
+		margin: 0;
+	}
+
+	.chart_cont .alerm_cont_slide .alerm_cont_lst>li .tit {
+		float: left;
+		height: 23px;
+		font-size: 15px;
+		color: #333;
+		line-height: 21px;
+		height: 23px;
+		font-weight: normal;
+	}
+
+	.chart_cont .alerm_cont_slide .alerm_cont_lst>li .switch {
+		float: right;
+	}
+
+	.chart_cont .alerm_cont_slide .alerm_cont_lst .tit01 {
+		padding: 0 0 14px;
+		display: block;
+		font-size: 15px;
+		color: #333;
+		line-height: 18px;
+		font-weight: normal;
+	}
+
+	.chart_cont .alerm_cont_slide .alerm_cont_lst .alerm_cont_lst {
+		padding: 0 0 0 27px;
+	}
+</style>
+
+	<title>CMobileWebChart</title>
+</head>
+
+<body>
+	<section class="chart_cont">
+		<article class="chart_top_bx">
+			<div class="chart_top_lft">
+				<!-- 가로모드일때만 노출 -->
+				<div class="select_ui">
+					<button class="select_tit">선택하기</button>
+					<ul class="select_lst">
+						<li><button class="data_button">리플 <span class="txt">XRP/KRW</span></button></li>
+						<li><button class="data_button">트론 <span class="txt">TRX/KRW</span></button></li>
+						<li><button class="data_button">비트코인에스브이 <span class="txt">XRP/KRW</span></button></li>
+						<li><button class="data_button">이더리움 <span class="txt">TRX/KRW</span></button></li>
+						<li><button class="data_button">비트코인 <span class="txt">XRP/KRW</span></button></li>
+						<li><button class="data_button">이오스 <span class="txt">TRX/KRW</span></button></li>
+						<li><button class="data_button">디마켓 <span class="txt">XRP/KRW</span></button></li>
+					</ul>
+				</div>
+				<!-- //가로모드일때만 노출 -->
+				<ul class="time_select">
+					<li>
+						<div class="minute_lst_bx">
+							<a href="javascript:;" class="btn_minute">1 분</a>
+							<div class="minute_slide">
+								<ul class="minute_slide_lst" id="cycle_select">
+									<li><a href="#1">1 분</a></li>
+									<li><a href="#3">3 분</a></li>
+									<li><a href="#5">5 분</a></li>
+								</ul><!-- minute_slide_lst -->
+							</div><!-- minute_slide -->
+						</div><!-- minute_lst_bx -->
+					</li>
+					<li>
+						<div class="minute_lst_bx">
+							<a href="javascript:;" class="btn_minute">1 일</a>
+							<div class="minute_slide">
+								<ul class="minute_slide_lst" id="cycle_unit_select">
+									<li><a href="#1">1 일</a></li>
+									<li><a href="#2">1 주</a></li>
+									<li><a href="#3">1 월</a></li>
+								</ul><!-- minute_slide_lst -->
+							</div><!-- minute_slide -->
+						</div><!-- minute_lst_bx -->
+					</li>
+				</ul><!-- time_select -->
+			</div><!-- chart_top_lft -->
+			<ul class="btn_rgt_select">
+				<li>
+					<a href="javascript:;" class="btn_data"><span class="blind">데이터표시</span></a>
+				</li>
+				<li>
+					<a href="#btn_chat_type" class="btn_chat_type btn_top_modal"><span class="blind">차트유형/지표설정</span></a>
+				</li>
+				<li>
+					<a href="#btn_top_setting" class="btn_top_setting btn_top_modal"><span class="blind">환경 설정</span></a>
+				</li>
+				<li>
+					<a href="javascript:;" class="btn_assay_tool"><span class="blind">분석 툴</span></a>
+				</li>
+			</ul><!-- btn_rgt_select -->
+		</article><!-- chart_top_bx -->
+		<article class="chart_area">
+			<input value="40" class="input_cont_chart" type="number" readonly/>
+			<aside class="sidebar_bx">
+				<ul class="sidebar_menu">
+					<li><a href="#" class="btn_side01">차트 초기화</a></li>
+					<li><a href="#" class="btn_side02">지우개(-1)</a></li>
+					<li><a href="#" class="btn_side03">분석 툴 초기화 </a></li>
+					<li><a href="#TrendLine" class="btn_side04">추세선</a></li>
+					<li><a href="#CrossLine" class="btn_side05">십자선</a></li>
+					<li><a href="#Horizon" class="btn_side06">수평선</a></li>
+					<li><a href="#Vertical" class="btn_side07">수직선</a></li>
+					<li><a href="#Circle" class="btn_side09">원형</a></li>
+					<li><a href="#Rectangle" class="btn_side10">사각형</a></li>
+					<li><a href="#Triangle" class="btn_side11">삼각형</a></li>
+					<li><a href="#ThreeWayLine" class="btn_side12">삼등분선</a></li>
+					<li><a href="#QuartersLine" class="btn_side13">사등분선</a></li>
+					<li><a href="#FibonacciArc" class="btn_side14">피보나치 아크</a></li>
+					<li><a href="#FibonacciPan" class="btn_side15">피보나치 팬</a></li>
+					<li><a href="#FibonacciHandle" class="btn_side16">피보나치 조정대</a></li>
+					<li><a href="#FibonacciTimeZone" class="btn_side17">피보나치 시간대</a></li>
+					<li><a href="#" class="btn_side18">분석툴 연속 그리기</a></li>
+				</ul><!-- sidebar_menu -->
+			</aside><!-- sidebar_bx -->
+			<div class="chart_cont_bx">
+				<!-- 차트영역 -->
+				<div id="ChartDIV"></div>
+				<!-- 차트영역 -->
+			</div><!-- chart_area -->
+		</article>
+		<div class="bg_side">&nbsp;</div>
+	</section><!-- .chart_cont -->
+
+	<script type="text/javascript" src="./static/jquery-2.1.3.js"></script>
+	<script type="text/javascript" src="Html5Chart.js"></script>
+
+	<script>
+		var Chart;
+
+		function sendPacket() {
+			// 통신
+			console.log(Chart.options);
+			$.getJSON("http://211.240.103.90/kovex/chartdata.inc", $.param(Chart.options), function (dataArr) {
+				Chart.SendPacket(dataArr); 
+			});
+		}
+		
+		$(document).ready(function () {
+
+			var ChartDIV = "ChartDIV";
+
+			var FullWidth = $("#".ChartDIV).width();
+			var FullHeight = $("#".ChartDIV).height();
+			var gMarginY = 78;
+
+			var m_SubChartWrapper = document.createElement("div");
+			m_SubChartWrapper.id = "canvasDP2";
+
+			var m_ChartCanvasDiv = document.createElement("div");
+			m_ChartCanvasDiv.id = ChartDIV+"_canvasDiv";
+			m_ChartCanvasDiv.style.width = FullWidth;
+			m_ChartCanvasDiv.style.height = FullHeight - gMarginY;
+			m_ChartCanvasDiv.style.margin = "0 auto"
+
+			var m_ChartCanvas = document.createElement("canvas");
+			m_ChartCanvas.id = ChartDIV + "_Canvas";
+			//m_ChartCanvas.style.width = FullWidth;
+			//m_ChartCanvas.style.height = FullHeight - gMarginY;
+			m_ChartCanvas.width = FullWidth * 2;
+			m_ChartCanvas.height = (FullHeight - gMarginY) * 2;
+
+			m_ChartCanvasDiv.appendChild(m_ChartCanvas);
+
+			var m_ChartCanvasDiv2 = document.createElement("div");
+			m_ChartCanvasDiv2.id = "canvasDiv2";
+			m_ChartCanvasDiv2.height = FullHeight - gMarginY;
+
+			m_SubChartWrapper.appendChild(m_ChartCanvasDiv);
+			m_SubChartWrapper.appendChild(m_ChartCanvasDiv2);
+
+			var m_ChartScroll = document.createElement("div");
+			m_ChartScroll.id = "IndicatorSetupDiv";
+
+			var m_ChartWrapper = document.getElementById(ChartDIV);
+			m_ChartWrapper.width = FullWidth;
+			m_ChartWrapper.height = FullHeight;
+			m_ChartWrapper.appendChild(m_SubChartWrapper);
+			m_ChartWrapper.appendChild(m_ChartScroll);
+
+			Chart = new CMobileWebChart(ChartDIV, ChartDIV + "_Canvas");
+
+			Chart.InitCtrl();
+			Chart.SetBlockType(VERT_BLOCK_TYPE);
+
+			document.addEventListener('Event_Scroll', function (e) {
+				var rqInfoForScroll = e.m_mapRqInfo;
+				for (var strRq in rqInfoForScroll) {
+					var rqInfo = rqInfoForScroll[strRq];
+					_this.addData(strRq, rqInfo);
+				}
+			});
+
+			var savedOptions = {
+				"preSymbol": "",
+				"symbol": "000660",
+				"ijwb": '1', // 주기(1:day, 2:week, 3:mon, 4:year, 5:min, 6:sec)
+				"ijwbGroup": '1', // 양
+				"icnt": '200',
+				"blockType": 0, // 0:vert, 1:horz
+				'inds': ['_MA_', '_VOLUME_', '_VMA_'],
+				"locale": "ko_KR" //en_US
+			}
+			Chart.options = savedOptions;
+
+			sendPacket();			
+
+			// 주기설정			
+			$("#cycle_select").on("click", "li > a", function(e) {
+				e.preventDefault();
+				Chart.options.ijwb = "5";
+				Chart.options.ijwbGroup = $(this).attr("href").substr(1);
+				
+				sendPacket();
+			});
+
+			$("#cycle_unit_select").on("click", "li > a", function(e) {
+				e.preventDefault();
+				Chart.options.ijwb = $(this).attr("href").substr(1);
+				Chart.options.ijwbGroup = "1";
+
+				sendPacket();
+			});
+
+			// 수치도구
+			$('.btn_data').on('click', function (e) {
+				e.preventDefault();
+
+				if ($(this).hasClass('active')) {
+					$(this).removeClass('active');
+				} else {
+					$(this).addClass('active');
+				}
+
+				var nShowDataListMode = Chart.m_GlobalProperty.GetShowDataListMode();
+				if (nShowDataListMode == 0) {
+					nShowDataListMode = 1;
+				} else {
+					nShowDataListMode = 0;
+				}
+
+				Chart.m_GlobalProperty.SetShowDataListMode(nShowDataListMode);
+
+				console.log("Chart.m_GlobalProperty.GetShowDataListMode() " + Chart.m_GlobalProperty.GetShowDataListMode());
+			});
+
+			// 차트유형/지표설정
+			$('.btn_chat_type').on('click', function (e) {
+				e.preventDefault();
+				Chart.ShowModalType($(this));
+				//$("body").addClass("chart_fixed");
+				$(".bg_side").on('scroll touchmove mousewheel', function (e) {
+					e.preventDefault();
+					e.stopPropagation();
+					return false;
+				});
+				$(".sidebar_bx").off('scroll touchmove mousewheel');
+			});
+
+			// 환경설정
+			$('.btn_top_setting').on('click', function (e) {
+				e.preventDefault();
+				Chart.ShowModalSetting($(this));
+				//$("body").addClass("chart_fixed");
+				$(".bg_side").on('scroll touchmove mousewheel', function (e) {
+					e.preventDefault();
+					e.stopPropagation();
+					return false;
+				});
+				$(".sidebar_bx").off('scroll touchmove mousewheel');
+			});
+
+			// 조회개수
+			$('.input_cont_chart').on('click', function (e) {
+				Chart.ShowModalCounter($(this));
+			});
+
+			// 그리기도구
+			$('.btn_assay_tool').on('click', function (e) {
+				e.preventDefault();
+
+				$(".sidebar_bx").css('height', $(".chart_area").height() + 7);
+				$(".chart_area").resize(function () {
+					$(".sidebar_bx").css('height', $(".chart_area").height() + 7);
+				});
+
+				if ($(this).hasClass('active')) {
+					$(this).removeClass('active');
+					$('.sidebar_bx').animate({
+						'right': '-40px'
+					}, 'fast');
+					$(".bg_side").css("display", "none");
+				} else {
+					$(this).addClass('active');
+					$('.sidebar_bx').animate({
+						'right': '7px'
+					}, 'fast');
+					$('.bg_side').on('scroll touchmove mousewheel', function (event) {
+						event.preventDefault();
+						event.stopPropagation();
+						return false;
+					});
+					$('.sidebar_bx').off('scroll touchmove mousewheel');
+					$(".bg_side").css("display", "block");
+				}
+
+				//$('.sidebar_bx').css('height', $('.chart_area').height() + 7);
+				$('.chart_area').resize(function () {
+					$('.sidebar_bx').css('height', $('.chart_area').height() + 7);
+				});
+
+			});
+
+			$(".bg_side").on("click", function () {
+				$(".sidebar_bx").animate({
+					right: '-40px'
+				}, "fast");
+				$('.btn_assay_tool').removeClass("active");
+				$(this).css("display", "none");
+				$(".bg_side").off('scroll touchmove mousewheel');
+				$(".sidebar_menu").find("li > a").removeClass("active");
+			});
+
+			// 분석툴 - 슬라이드 메뉴 팝업
+			$(".sidebar_menu").on("click", "li > a", function (e) {
+				e.preventDefault();
+				eval("Chart.Show" + $(this).attr("href").substr(1) + "()");
+			});
+
+
+		});
+
+$(function(){
+var chartWRap = $('.chart_cont');
+var ChartTimeSelect = chartWRap.find(".time_select");
+var ChartTimeLi = ChartTimeSelect.find("li");
+var ChartTimeLnk = ChartTimeSelect.find(".btn_minute");
+var ChartTimeSlide = ChartTimeSelect.find(".minute_slide");
+var ChartSubLnk = ChartTimeSlide.find("a");
+var rgtLnk = chartWRap.find(".btn_rgt_select > li > a");
+var alermSlide = chartWRap.find(".alerm_cont_slide");
+var dataSlide = chartWRap.find(".chart_data_slide");
+var assaySlide = chartWRap.find(".sidebar_bx");
+
+ChartTimeLnk.click(function(){
+var t = $(this);
+var Li = t.closest("li");
+var LiNest = Li.next("li");
+
+var TimeSlide = t.siblings(".minute_slide");
+if(t.hasClass('active')){
+t.removeClass("active");
+TimeSlide.stop().slideUp(100);
+LiNest.removeClass("lst_active");
+}else{
+ChartTimeLnk.removeClass("active");
+ChartTimeSlide.stop().slideUp(100);
+t.addClass("active");
+TimeSlide.stop().slideDown(100);
+LiNest.addClass("lst_active");
+rgtLnk.removeClass("active");
+alermSlide.animate({right : '-200px'}, "fast");
+assaySlide.animate({right : '-40px'}, "fast");
+dataSlide.stop().slideUp(100);
+}
+});
+
+ChartSubLnk.click(function(){
+var t = $(this);
+var subSlide = t.closest(".minute_slide");
+var ChartTimeLnk = subSlide.siblings(".btn_minute");
+subSlide.stop().slideUp(100);
+
+var selectName = t.text();
+ChartTimeLnk.text(selectName);
+ChartTimeLnk.removeClass("active");
+ChartTimeLi.removeClass("lst_active");
+});
+});
+	</script>
+
+</body>
+
+</html>

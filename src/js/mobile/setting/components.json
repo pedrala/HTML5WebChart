@@ -1,0 +1,275 @@
+{
+  "normal": [{
+      "title": "chart.scaletab",
+      "rows": [{
+          "toggle": {
+            "label": "chart.yscaleright",
+            "defaultValue": true,
+            "name": "m_bShowRightYAxis"
+          }
+        },
+        {
+          "toggle": {
+            "label": "chart.yscaleleft",
+            "defaultValue": true,
+            "name": "m_bShowLeftYAxis"
+          }
+        },
+        {
+          "toggle": {
+            "label": "chart.commathousand",
+            "defaultValue": true,
+            "name": "m_bShowThousandComma"
+          }
+        },
+        {
+          "input": {
+            "label": "chart.rightmargin",
+            "name": "m_nRightMargin",
+            "min": 0,
+            "max": 99
+          }
+        },
+        {
+          "input": {
+            "label": "chart.updownmargin",
+            "name": "m_nTopBottomMargin",
+            "min": 0,
+            "max": 50
+          }
+        },
+        {
+          "toggle": {
+            "label": "chart.pricechangesource",
+            "defaultValue": 2,
+            "name": "m_nShowLatestPriceType"
+          },
+          "sub": "start"
+        }, {
+          "radio": [{
+              "label": "chart.preclosesource",
+              "value": 2,
+              "type": "Number",
+              "name": "m_nPriceChangeRatioType",
+              "pName": "m_nShowLatestPriceType"
+            },
+            {
+              "label": "chart.precandlesource",
+              "value": 1,
+              "type": "Number",
+              "name": "m_nPriceChangeRatioType",
+              "pName": "m_nShowLatestPriceType"
+            }
+          ],
+          "sub": "end"
+        },
+        {
+          "toggle": {
+            "label": "chart.invertscale",
+            "defaultValue": true,
+            "name": "m_bInvertPriceYAxis"
+          }
+        },
+        {
+          "toggle": {
+            "label": "chart.logscale",
+            "defaultValue": true,
+            "name": "m_bLogPriceYAxis"
+          }
+        },
+        {
+          "checkbox": {
+            "label": "chart.showlastvolume",
+            "defaultValue": 1,
+            "type": "Number",
+            "name": "m_nShowLatestVolumeType"
+          },
+          "sub": "start"
+        }, {
+          "checkbox": {
+            "label": "chart.showchangeprevolume",
+            "defaultValue": 1,
+            "type": "Number",
+            "name": "m_nVolumeChangeRatioType",
+            "pName": "m_nShowLatestVolumeType"
+          },
+          "sub": "end"
+        }
+      ]
+    },
+    {
+      "title": "chart.bg",
+      "rows": [{
+          "label": "chart.bgclr",
+          "color": "m_clrBack"
+        },
+        {
+          "label": "chart.textcolor",
+          "color": "m_clrText"
+        },
+        {
+          "label": "chart.vertgrid",
+          "color": "m_clrVertLine",
+          "type": "m_nVertLineType",
+          "thickness": "m_nVertLineThickness"
+        },
+        {
+          "label": "chart.horzgrid",
+          "color": "m_clrHorzLine",
+          "type": "m_nHorzLineType",
+          "thickness": "m_nHorzLineThickness"
+        },
+        {
+          "label": "chart.crossline",
+          "color": "m_clrCrossLine",
+          "type": "m_nCrossLineType",
+          "thickness": "m_nCrossLineThickness"
+        },
+        {
+          "checkbox": {
+            "label": "chart.indicatortitle",
+            "defaultValue": true,
+            "type": "Boolean",
+            "name": "m_bShowIndicatorName"
+          },
+          "sub": "start"
+        }, {
+          "checkbox": {
+            "label": "chart.indicatorindex",
+            "defaultValue": true,
+            "type": "Boolean",
+            "name": "m_bShowIndicatorParameter",
+            "pName": "m_bShowIndicatorName"
+          },
+          "sub": "end"
+        },
+        {
+          "checkbox": {
+            "label": "chart.indicatorvalue",
+            "defaultValue": true,
+            "type": "Boolean",
+            "name": "m_bShowIndicatorValue"
+          }
+        },
+        {
+          "checkbox": {
+            "label": "chart.saveanalysistool",
+            "defaultValue": true,
+            "type": "Boolean",
+            "name": "m_bUseToolSave"
+          },
+          "sub": "start"
+        }, {
+          "desc": {
+            "label": "chart.saveanalysistooldesc"
+          },
+          "sub": "end"
+        }
+      ]
+    }
+  ],
+  "guideLine": [{
+      "title": "chart.todaybaseline",
+      "rows": [{
+          "label": "mchart.todayopen",
+          "packetName": "_OPEN_",
+          "index": 0
+        },
+        {
+          "label": "mchart.todayhigh",
+          "packetName": "_HIGH_",
+          "index": 1
+        },
+        {
+          "label": "mchart.todaylow",
+          "packetName": "_LOW_",
+          "index": 2
+        },
+        {
+          "label": "mchart.todayclose",
+          "packetName": "_CLOSE_",
+          "index": 3
+        },
+        {
+          "label": "mchart.div3openhighlow",
+          "packetName": "_OHL3_",
+          "index": 4
+        },
+        {
+          "label": "mchart.div2highlow",
+          "packetName": "_HL2_",
+          "index": 5
+        }
+      ]
+    },
+    {
+      "title": "chart.previousbaseline",
+      "rows": [{
+          "label": "mchart.previousopen",
+          "packetName": "_PREOPEN_",
+          "index": 6
+        },
+        {
+          "label": "mchart.previoushigh",
+          "packetName": "_PREHIGH_",
+          "index": 7
+        },
+        {
+          "label": "mchart.previouslow",
+          "packetName": "_PRELOW_",
+          "index": 8
+        },
+        {
+          "label": "mchart.previousclose",
+          "packetName": "_PRECLOSE_",
+          "index": 9
+        }
+      ]
+    }
+  ],
+  "alarm": [{
+    "title": "chart.tradingnpricealert",
+    "type": "trading",
+    "rows": [{
+        "label": "chart.noncontract",
+        "color": "m_clrNonContractLine",
+        "type": "m_nLineTypeNonContract",
+        "thickness": "m_nThicknessNonContract"
+      },
+      {
+        "label": "chart.pricealert",
+        "color": "m_clrAlarmLine",
+        "type": "m_nLineTypeAlarm",
+        "thickness": "m_nThicknessAlarm"
+      },
+      {
+        "label": "chart.avgbuyprice",
+        "color": "m_clrAvgBuyPriceLine",
+        "type": "m_nLineTypeAvgBuyPrice",
+        "thickness": "m_nThicknessAvgBuyPrice"
+      }
+    ]
+  }, {
+    "title": "chart.smartsignal",
+    "type": "smartsignal",
+    "rows": [{
+        "label": "chart.buyprice",
+        "color": "m_clrBuying",
+        "type": "m_nLineBuying",
+        "thickness": "m_nThicknessBuying"
+      },
+      {
+        "label": "chart.targetprice",
+        "color": "m_clrTargetPrice",
+        "type": "m_nLineTargetPrice",
+        "thickness": "m_nThicknessTargetPrice"
+      },
+      {
+        "label": "chart.stoplossprice",
+        "color": "m_clrStopLoss",
+        "type": "m_nLineStopLoss",
+        "thickness": "m_nThicknessStopLoss"
+      }
+    ]
+  }]
+}

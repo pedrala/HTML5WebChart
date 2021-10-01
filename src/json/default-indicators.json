@@ -1,0 +1,3915 @@
+{
+  "_PRICE_": {
+    "use": false,
+    "m_strKey": "9291",
+    "m_strGroup": "PRICE",
+    "m_strGroupTitle":"가격지표",
+    "m_strGroupTitleLangKey":"defaultindicator.priceindicator",
+    "m_strName": "_PRICE_",
+    "m_strTitle": "",
+    "m_nBasePriceTextAlign": 2,
+    "m_bShowBasePrice": true,
+    "m_nShowLatestDataType": 0,
+    "m_bShowLatestDataOfAllSubGraph": false,
+    "m_nDataChangeRatioType": 0,
+    "m_nAddType": 1,
+    "m_strOverlayGraphName": "_MA_",
+    "m_BaseLineArray": [],
+    "m_bSpecialIndicator": false,
+    "m_SubGraphPropertyInfoArray": [
+      {
+        "m_strSubGraphName": "_CLOSE_",
+        "m_strSubGraphTitle": "종가",
+        "m_strSubGraphTitleLangKey":"chart.close",
+        "m_nSubGraphType": 0,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_PriceCandleTypeInfo": {
+          "m_clrUpturnPlus": "",
+          "m_clrUpturnMinus": "",
+          "m_clrDropPlus": "",
+          "m_clrDropMinus": "",
+          "m_clrGapMinus": "",
+          "m_clrSteadyTone": "",
+          "m_clrTitle": "",
+          "m_strKeyOfClrUpturnPlus": "clrUpturnPlus",
+          "m_strKeyOfClrUpturnMinus": "clrUpturnMinus",
+          "m_strKeyOfClrDropPlus": "clrDropPlus",
+          "m_strKeyOfClrDropMinus": "clrDropMinus",
+          "m_strKeyOfClrGapMinus": "clrGapMinus",
+          "m_strKeyOfClrSteadyTone": "clrSteadyTone",
+          "m_strKeyOfClrTitle": "clrTitle",
+          "m_bFillUpturnPlus": true,
+          "m_bFillUpturnMinus": true,
+          "m_bFillDropPlus": true,
+          "m_bFillDropMinus": true,
+          "m_bFillGapMinus": true,
+          "m_bSteadyClrFollowToUpDropClr": true
+        },
+        "m_PriceBarTypeInfo": {
+          "m_clrUpturnPlus": "",
+          "m_clrUpturnMinus": "",
+          "m_clrDropPlus": "",
+          "m_clrDropMinus": "",
+          "m_clrGapMinus": "",
+          "m_clrSteadyTone": "",
+          "m_clrTitle": "",
+          "m_strKeyOfClrUpturnPlus": "clrUpturnPlus",
+          "m_strKeyOfClrUpturnMinus": "clrUpturnMinus",
+          "m_strKeyOfClrDropPlus": "clrDropPlus",
+          "m_strKeyOfClrDropMinus": "clrDropMinus",
+          "m_strKeyOfClrGapMinus": "clrGapMinus",
+          "m_strKeyOfClrSteadyTone": "clrSteadyTone",
+          "m_strKeyOfClrTitle": "clrTitle",
+          "m_bUseHLCType": false,
+          "m_bUseThinType": true,
+          "m_bSteadyClrFollowToUpDropClr": true
+        },
+        "m_PriceLineTypeInfo": {
+          "m_clrLine": "",
+          "m_clrTitle": "",
+          "m_strKeyOfClrLine": "clrPriceLine",
+          "m_strKeyOfClrTitle": "clrTitle",
+          "m_DType": 3,
+          "m_nThickness": 1,
+          "m_nLineType": 0
+        },
+        "m_PricePAndFTypeInfo": {
+          "m_clrPAndFUp": "",
+          "m_clrPAndFDrop": "",
+          "m_strKeyOfClrPAndFUp": "clrPAndFUp",
+          "m_strKeyOfClrPAndFDrop": "clrPAndFDrop",
+          "m_DType": 3,
+          "m_nBoxSize": 3
+        },
+        "m_PriceThreeLineBreakTypeInfo": {
+          "m_clrThreeLineBreakUp": "",
+          "m_clrThreeLineBreakDrop": "",
+          "m_strKeyOfClrThreeLineBreakUp": "clrThreeLineBreakUp",
+          "m_strKeyOfClrThreeLineBreakDrop": "clrThreeLineBreakDrop",
+          "m_DType": 3,
+          "m_nBoxSize": 3
+        }
+      }
+    ]
+  },  
+  "_MA_": {
+    "use": true,
+    "type": "sub",
+    "m_strKey": "",
+    "m_strGroup": "PRICE",
+    "m_strGroupTitle":"가격지표",
+    "m_strGroupTitleLangKey":"defaultindicator.priceindicator",
+    "m_strName": "_MA_",
+    "m_strTitle": "가격이평",
+    "m_strTitleLangKey": "defaultindicator.ma",
+    "m_nBasePriceTextAlign": 2,
+    "m_bShowBasePrice": true,
+    "m_nShowLatestDataType": 0,
+    "m_bShowLatestDataOfAllSubGraph": false,
+    "m_nDataChangeRatioType": 0,
+    "m_nAddType": 1,
+    "m_strOverlayGraphName": "_PRICE_",
+    "m_BaseLineArray": [],
+    "m_bSpecialIndicator": false,
+    "m_SubGraphPropertyInfoArray": [],
+    "m_MAPropertyInfoArray": [
+      {
+        "m_nIndex": 0,
+        "m_nMA": 7,
+        "m_nInputPacketDataType": 3,
+        "m_nMAType": 0,
+        "m_MASubGraphPropertyInfo": {
+          "m_strSubGraphName": "0",
+          "m_strSubGraphTitle": "7",
+          "m_nSubGraphType": 2,
+          "m_nSubGraphSubType": 0,
+          "m_bShow": true,
+          "m_LineTypeInfo": {
+            "m_strKeyOfClrLine": "clrMA0",
+            "m_clrLine": "",
+            "m_nThickness": 1,
+            "m_nLineType": 0
+          },
+          "m_BarTypeInfo": {
+            "m_nCompareType": 1,
+            "m_clrBar": "",
+            "m_clrUp": "",
+            "m_clrDown": "",
+            "m_strKeyOfClrBar": "clrBar",
+            "m_strKeyOfClrUp": "clrUp",
+            "m_strKeyOfCrDown": "clrDown",
+            "m_bFill": true
+          }
+        }
+      },
+      {
+        "m_nIndex": 1,
+        "m_nMA": 14,
+        "m_nInputPacketDataType": 3,
+        "m_nMAType": 0,
+        "m_MASubGraphPropertyInfo": {
+          "m_strSubGraphName": "1",
+          "m_strSubGraphTitle": "14",
+          "m_nSubGraphType": 2,
+          "m_nSubGraphSubType": 0,
+          "m_bShow": true,
+          "m_LineTypeInfo": {
+            "m_strKeyOfClrLine": "clrMA1",
+            "m_clrLine": "",
+            "m_nThickness": 1,
+            "m_nLineType": 0
+          },
+          "m_BarTypeInfo": {
+            "m_nCompareType": 1,
+            "m_clrBar": "",
+            "m_clrUp": "",
+            "m_clrDown": "",
+            "m_strKeyOfClrBar": "clrBar",
+            "m_strKeyOfClrUp": "clrUp",
+            "m_strKeyOfCrDown": "clrDown",
+            "m_bFill": true
+          }
+        }
+      },
+      {
+        "m_nIndex": 2,
+        "m_nMA": 28,
+        "m_nInputPacketDataType": 3,
+        "m_nMAType": 0,
+        "m_MASubGraphPropertyInfo": {
+          "m_strSubGraphName": "2",
+          "m_strSubGraphTitle": "28",
+          "m_nSubGraphType": 2,
+          "m_nSubGraphSubType": 0,
+          "m_bShow": true,
+          "m_LineTypeInfo": {
+            "m_strKeyOfClrLine": "clrMA2",
+            "m_clrLine": "",
+            "m_nThickness": 1,
+            "m_nLineType": 0
+          },
+          "m_BarTypeInfo": {
+            "m_nCompareType": 1,
+            "m_clrBar": "",
+            "m_clrUp": "",
+            "m_clrDown": "",
+            "m_strKeyOfClrBar": "clrBar",
+            "m_strKeyOfClrUp": "clrUp",
+            "m_strKeyOfCrDown": "clrDown",
+            "m_bFill": true
+          }
+        }
+      },
+      {
+        "m_nIndex": 3,
+        "m_nMA": 60,
+        "m_nInputPacketDataType": 3,
+        "m_nMAType": 0,
+        "m_MASubGraphPropertyInfo": {
+          "m_strSubGraphName": "3",
+          "m_strSubGraphTitle": "60",
+          "m_nSubGraphType": 2,
+          "m_nSubGraphSubType": 0,
+          "m_bShow": true,
+          "m_LineTypeInfo": {
+            "m_strKeyOfClrLine": "clrMA3",
+            "m_clrLine": "",
+            "m_nThickness": 1,
+            "m_nLineType": 0
+          },
+          "m_BarTypeInfo": {
+            "m_nCompareType": 1,
+            "m_clrBar": "",
+            "m_clrUp": "",
+            "m_clrDown": "",
+            "m_strKeyOfClrBar": "clrBar",
+            "m_strKeyOfClrUp": "clrUp",
+            "m_strKeyOfCrDown": "clrDown",
+            "m_bFill": true
+          }
+        }
+      },
+      {
+        "m_nIndex": 4,
+        "m_nMA": 120,
+        "m_nInputPacketDataType": 3,
+        "m_nMAType": 0,
+        "m_MASubGraphPropertyInfo": {
+          "m_strSubGraphName": "4",
+          "m_strSubGraphTitle": "120",
+          "m_nSubGraphType": 2,
+          "m_nSubGraphSubType": 0,
+          "m_bShow": true,
+          "m_LineTypeInfo": {
+            "m_strKeyOfClrLine": "clrMA4",
+            "m_clrLine": "",
+            "m_nThickness": 1,
+            "m_nLineType": 0
+          },
+          "m_BarTypeInfo": {
+            "m_nCompareType": 1,
+            "m_clrBar": "",
+            "m_clrUp": "",
+            "m_clrDown": "",
+            "m_strKeyOfClrBar": "clrBar",
+            "m_strKeyOfClrUp": "clrUp",
+            "m_strKeyOfCrDown": "clrDown",
+            "m_bFill": true
+          }
+        }
+      },
+      {
+        "m_nIndex": 5,
+        "m_nMA": 180,
+        "m_nInputPacketDataType": 3,
+        "m_nMAType": 0,
+        "m_MASubGraphPropertyInfo": {
+          "m_strSubGraphName": "5",
+          "m_strSubGraphTitle": "",
+          "m_nSubGraphType": 2,
+          "m_nSubGraphSubType": 0,
+          "m_bShow": false,
+          "m_LineTypeInfo": {
+            "m_strKeyOfClrLine": "clrMA5",
+            "m_clrLine": "",
+            "m_nThickness": 1,
+            "m_nLineType": 0
+          },
+          "m_BarTypeInfo": {
+            "m_nCompareType": 1,
+            "m_clrBar": "",
+            "m_clrUp": "",
+            "m_clrDown": "#1155CC",
+            "m_strKeyOfClrBar": "clrBar",
+            "m_strKeyOfClrUp": "clrUp",
+            "m_strKeyOfCrDown": "clrDown",
+            "m_bFill": true
+          }
+        }
+      },
+      {
+        "m_nIndex": 6,
+        "m_nMA": 240,
+        "m_nInputPacketDataType": 3,
+        "m_nMAType": 0,
+        "m_MASubGraphPropertyInfo": {
+          "m_strSubGraphName": "6",
+          "m_strSubGraphTitle": "",
+          "m_nSubGraphType": 2,
+          "m_nSubGraphSubType": 0,
+          "m_bShow": false,
+          "m_LineTypeInfo": {
+            "m_strKeyOfClrLine": "clrMA6",
+            "m_clrLine": "",
+            "m_nThickness": 1,
+            "m_nLineType": 0
+          },
+          "m_BarTypeInfo": {
+            "m_nCompareType": 1,
+            "m_clrBar": "",
+            "m_clrUp": "",
+            "m_clrDown": "",
+            "m_strKeyOfClrBar": "clrBar",
+            "m_strKeyOfClrUp": "clrUp",
+            "m_strKeyOfCrDown": "clrDown",
+            "m_bFill": true
+          }
+        }
+      },
+      {
+        "m_nIndex": 7,
+        "m_nMA": 300,
+        "m_nInputPacketDataType": 3,
+        "m_nMAType": 0,
+        "m_MASubGraphPropertyInfo": {
+          "m_strSubGraphName": "7",
+          "m_strSubGraphTitle": "",
+          "m_nSubGraphType": 2,
+          "m_nSubGraphSubType": 0,
+          "m_bShow": false,
+          "m_LineTypeInfo": {
+            "m_strKeyOfClrLine": "clrMA7",
+            "m_clrLine": "",
+            "m_nThickness": 1,
+            "m_nLineType": 0
+          },
+          "m_BarTypeInfo": {
+            "m_nCompareType": 1,
+            "m_clrBar": "",
+            "m_clrUp": "",
+            "m_clrDown": "",
+            "m_strKeyOfClrBar": "clrBar",
+            "m_strKeyOfClrUp": "clrUp",
+            "m_strKeyOfCrDown": "clrDown",
+            "m_bFill": true
+          }
+        }
+      },
+      {
+        "m_nIndex": 8,
+        "m_nMA": 360,
+        "m_nInputPacketDataType": 3,
+        "m_nMAType": 0,
+        "m_MASubGraphPropertyInfo": {
+          "m_strSubGraphName": "8",
+          "m_strSubGraphTitle": "",
+          "m_nSubGraphType": 2,
+          "m_nSubGraphSubType": 0,
+          "m_bShow": false,
+          "m_LineTypeInfo": {
+            "m_strKeyOfClrLine": "clrMA8",
+            "m_clrLine": "",
+            "m_nThickness": 1,
+            "m_nLineType": 0
+          },
+          "m_BarTypeInfo": {
+            "m_nCompareType": 1,
+            "m_clrBar": "",
+            "m_clrUp": "",
+            "m_clrDown": "",
+            "m_strKeyOfClrBar": "clrBar",
+            "m_strKeyOfClrUp": "clrUp",
+            "m_strKeyOfCrDown": "clrDown",
+            "m_bFill": true
+          }
+        }
+      },
+      {
+        "m_nIndex": 9,
+        "m_nMA": 420,
+        "m_nInputPacketDataType": 3,
+        "m_nMAType": 0,
+        "m_MASubGraphPropertyInfo": {
+          "m_strSubGraphName": "9",
+          "m_strSubGraphTitle": "",
+          "m_nSubGraphType": 2,
+          "m_nSubGraphSubType": 0,
+          "m_bShow": false,
+          "m_LineTypeInfo": {
+            "m_strKeyOfClrLine": "clrMA9",
+            "m_clrLine": "",
+            "m_nThickness": 1,
+            "m_nLineType": 0
+          },
+          "m_BarTypeInfo": {
+            "m_nCompareType": 1,
+            "m_clrBar": "",
+            "m_clrUp": "",
+            "m_clrDown": "",
+            "m_strKeyOfClrBar": "clrBar",
+            "m_strKeyOfClrUp": "clrUp",
+            "m_strKeyOfCrDown": "clrDown",
+            "m_bFill": true
+          }
+        }
+      }
+    ]
+  },
+  "_VOLUME_": {
+    "use": true,
+    "type": "sub",
+    "m_strKey": "9342",
+    "m_strGroup": "VOLUME",
+    "m_strGroupTitle":"거래량지표",
+    "m_strGroupTitleLangKey":"defaultindicator.volumeindicator",
+    "m_strName": "_VOLUME_",
+    "m_strTitle": "거래량",
+    "m_strTitleLangKey": "defaultindicator.volume",
+    "m_nBasePriceTextAlign": 2,
+    "m_bShowBasePrice": true,
+    "m_nShowLatestDataType": 0,
+    "m_bShowLatestDataOfAllSubGraph": false,
+    "m_nDataChangeRatioType": 0,
+    "m_nAddType": 1,
+    "m_strOverlayGraphName": "_VMA_",
+    "m_BaseLineArray": [],
+    "m_bSpecialIndicator": false,
+    "m_SubGraphPropertyInfoArray": [
+      {
+        "m_strSubGraphName": "_VOLUME_",
+        "m_strSubGraphTitle": "거래량",
+        "m_strSubGraphTitleLangKey": "defaultindicator.volume",
+        "m_nSubGraphType": 1,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_VolumeBarTypeInfo": {
+          "m_nCompareType": 6,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_clrTitle": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfClrDown": "clrDown",
+          "m_strKeyOfClrTitle": "clrTitle",
+          "m_bFill": true
+        },
+        "m_VolumeLineTypeInfo": {
+          "m_clrLine": null,
+          "m_strKeyOfClrLine": null
+        }
+      }
+    ]
+  },
+  "_VMA_": {
+    "use": true,
+    "type": "sub",
+    "m_strKey": "",
+    "m_strGroup": "VOLUME",
+    "m_strGroupTitle":"거래량지표",
+    "m_strGroupTitleLangKey":"defaultindicator.volumeindicator",
+    "m_strName": "_VMA_",
+    "m_strTitle": "거래량이평",
+    "m_strTitleLangKey": "defaultindicator.vma",
+    "m_nBasePriceTextAlign": 2,
+    "m_bShowBasePrice": true,
+    "m_nShowLatestDataType": 0,
+    "m_bShowLatestDataOfAllSubGraph": false,
+    "m_nDataChangeRatioType": 0,
+    "m_nAddType": 1,
+    "m_strOverlayGraphName": "_VOLUME_",
+    "m_BaseLineArray": [],
+    "m_bSpecialIndicator": false,
+    "m_SubGraphPropertyInfoArray": [],
+    "m_MAPropertyInfoArray": [
+      {
+        "m_nIndex": 0,
+        "m_nMA": 7,
+        "m_nInputPacketDataType": 3,
+        "m_nMAType": 0,
+        "m_MASubGraphPropertyInfo": {
+          "m_strSubGraphName": "0",
+          "m_strSubGraphTitle": "7",
+          "m_nSubGraphType": 2,
+          "m_nSubGraphSubType": 0,
+          "m_bShow": true,
+          "m_LineTypeInfo": {
+            "m_strKeyOfClrLine": "clrMA0",
+            "m_clrLine": "",
+            "m_nThickness": 1,
+            "m_nLineType": 0
+          },
+          "m_BarTypeInfo": {
+            "m_nCompareType": 1,
+            "m_clrBar": "",
+            "m_clrUp": "",
+            "m_clrDown": "",
+            "m_strKeyOfClrBar": "clrBar",
+            "m_strKeyOfClrUp": "clrUp",
+            "m_strKeyOfCrDown": "clrDown",
+            "m_bFill": true
+          }
+        }
+      },
+      {
+        "m_nIndex": 1,
+        "m_nMA": 14,
+        "m_nInputPacketDataType": 3,
+        "m_nMAType": 0,
+        "m_MASubGraphPropertyInfo": {
+          "m_strSubGraphName": "1",
+          "m_strSubGraphTitle": "14",
+          "m_nSubGraphType": 2,
+          "m_nSubGraphSubType": 0,
+          "m_bShow": true,
+          "m_LineTypeInfo": {
+            "m_strKeyOfClrLine": "clrMA1",
+            "m_clrLine": "",
+            "m_nThickness": 1,
+            "m_nLineType": 0
+          },
+          "m_BarTypeInfo": {
+            "m_nCompareType": 1,
+            "m_clrBar": "",
+            "m_clrUp": "",
+            "m_clrDown": "",
+            "m_strKeyOfClrBar": "clrBar",
+            "m_strKeyOfClrUp": "clrUp",
+            "m_strKeyOfCrDown": "clrDown",
+            "m_bFill": true
+          }
+        }
+      },
+      {
+        "m_nIndex": 2,
+        "m_nMA": 28,
+        "m_nInputPacketDataType": 3,
+        "m_nMAType": 0,
+        "m_MASubGraphPropertyInfo": {
+          "m_strSubGraphName": "2",
+          "m_strSubGraphTitle": "28",
+          "m_nSubGraphType": 2,
+          "m_nSubGraphSubType": 0,
+          "m_bShow": true,
+          "m_LineTypeInfo": {
+            "m_strKeyOfClrLine": "clrMA2",
+            "m_clrLine": "#627bf2",
+            "m_nThickness": 1,
+            "m_nLineType": 0
+          },
+          "m_BarTypeInfo": {
+            "m_nCompareType": 1,
+            "m_clrBar": "",
+            "m_clrUp": "",
+            "m_clrDown": "",
+            "m_strKeyOfClrBar": "clrBar",
+            "m_strKeyOfClrUp": "clrUp",
+            "m_strKeyOfCrDown": "clrDown",
+            "m_bFill": true
+          }
+        }
+      },
+      {
+        "m_nIndex": 3,
+        "m_nMA": 60,
+        "m_nInputPacketDataType": 3,
+        "m_nMAType": 0,
+        "m_MASubGraphPropertyInfo": {
+          "m_strSubGraphName": "3",
+          "m_strSubGraphTitle": "60",
+          "m_nSubGraphType": 2,
+          "m_nSubGraphSubType": 0,
+          "m_bShow": true,
+          "m_LineTypeInfo": {
+            "m_strKeyOfClrLine": "clrMA3",
+            "m_clrLine": "#79c7d0",
+            "m_nThickness": 1,
+            "m_nLineType": 0
+          },
+          "m_BarTypeInfo": {
+            "m_nCompareType": 1,
+            "m_clrBar": "",
+            "m_clrUp": "",
+            "m_clrDown": "",
+            "m_strKeyOfClrBar": "clrBar",
+            "m_strKeyOfClrUp": "clrUp",
+            "m_strKeyOfCrDown": "clrDown",
+            "m_bFill": true
+          }
+        }
+      },
+      {
+        "m_nIndex": 4,
+        "m_nMA": 120,
+        "m_nInputPacketDataType": 3,
+        "m_nMAType": 0,
+        "m_MASubGraphPropertyInfo": {
+          "m_strSubGraphName": "4",
+          "m_strSubGraphTitle": "120",
+          "m_nSubGraphType": 2,
+          "m_nSubGraphSubType": 0,
+          "m_bShow": true,
+          "m_LineTypeInfo": {
+            "m_strKeyOfClrLine": "clrMA4",
+            "m_clrLine": "",
+            "m_nThickness": 1,
+            "m_nLineType": 0
+          },
+          "m_BarTypeInfo": {
+            "m_nCompareType": 1,
+            "m_clrBar": "",
+            "m_clrUp": "",
+            "m_clrDown": "",
+            "m_strKeyOfClrBar": "clrBar",
+            "m_strKeyOfClrUp": "clrUp",
+            "m_strKeyOfCrDown": "clrDown",
+            "m_bFill": true
+          }
+        }
+      },
+      {
+        "m_nIndex": 5,
+        "m_nMA": 180,
+        "m_nInputPacketDataType": 3,
+        "m_nMAType": 0,
+        "m_MASubGraphPropertyInfo": {
+          "m_strSubGraphName": "5",
+          "m_strSubGraphTitle": "",
+          "m_nSubGraphType": 2,
+          "m_nSubGraphSubType": 0,
+          "m_bShow": false,
+          "m_LineTypeInfo": {
+            "m_strKeyOfClrLine": "clrMA5",
+            "m_clrLine": "",
+            "m_nThickness": 1,
+            "m_nLineType": 0
+          },
+          "m_BarTypeInfo": {
+            "m_nCompareType": 1,
+            "m_clrBar": "",
+            "m_clrUp": "",
+            "m_clrDown": "",
+            "m_strKeyOfClrBar": "clrBar",
+            "m_strKeyOfClrUp": "clrUp",
+            "m_strKeyOfCrDown": "clrDown",
+            "m_bFill": true
+          }
+        }
+      },
+      {
+        "m_nIndex": 6,
+        "m_nMA": 240,
+        "m_nInputPacketDataType": 3,
+        "m_nMAType": 0,
+        "m_MASubGraphPropertyInfo": {
+          "m_strSubGraphName": "6",
+          "m_strSubGraphTitle": "",
+          "m_nSubGraphType": 2,
+          "m_nSubGraphSubType": 0,
+          "m_bShow": false,
+          "m_LineTypeInfo": {
+            "m_strKeyOfClrLine": "clrMA6",
+            "m_clrLine": "",
+            "m_nThickness": 1,
+            "m_nLineType": 0
+          },
+          "m_BarTypeInfo": {
+            "m_nCompareType": 1,
+            "m_clrBar": "",
+            "m_clrUp": "",
+            "m_clrDown": "",
+            "m_strKeyOfClrBar": "clrBar",
+            "m_strKeyOfClrUp": "clrUp",
+            "m_strKeyOfCrDown": "clrDown",
+            "m_bFill": true
+          }
+        }
+      },
+      {
+        "m_nIndex": 7,
+        "m_nMA": 300,
+        "m_nInputPacketDataType": 3,
+        "m_nMAType": 0,
+        "m_MASubGraphPropertyInfo": {
+          "m_strSubGraphName": "7",
+          "m_strSubGraphTitle": "",
+          "m_nSubGraphType": 2,
+          "m_nSubGraphSubType": 0,
+          "m_bShow": false,
+          "m_LineTypeInfo": {
+            "m_strKeyOfClrLine": "clrMA7",
+            "m_clrLine": "",
+            "m_nThickness": 1,
+            "m_nLineType": 0
+          },
+          "m_BarTypeInfo": {
+            "m_nCompareType": 1,
+            "m_clrBar": "",
+            "m_clrUp": "",
+            "m_clrDown": "",
+            "m_strKeyOfClrBar": "clrBar",
+            "m_strKeyOfClrUp": "clrUp",
+            "m_strKeyOfCrDown": "clrDown",
+            "m_bFill": true
+          }
+        }
+      },
+      {
+        "m_nIndex": 8,
+        "m_nMA": 360,
+        "m_nInputPacketDataType": 3,
+        "m_nMAType": 0,
+        "m_MASubGraphPropertyInfo": {
+          "m_strSubGraphName": "8",
+          "m_strSubGraphTitle": "",
+          "m_nSubGraphType": 2,
+          "m_nSubGraphSubType": 0,
+          "m_bShow": false,
+          "m_LineTypeInfo": {
+            "m_strKeyOfClrLine": "clrMA8",
+            "m_clrLine": "",
+            "m_nThickness": 1,
+            "m_nLineType": 0
+          },
+          "m_BarTypeInfo": {
+            "m_nCompareType": 1,
+            "m_clrBar": "",
+            "m_clrUp": "",
+            "m_clrDown": "",
+            "m_strKeyOfClrBar": "clrBar",
+            "m_strKeyOfClrUp": "clrUp",
+            "m_strKeyOfCrDown": "clrDown",
+            "m_bFill": true
+          }
+        }
+      },
+      {
+        "m_nIndex": 9,
+        "m_nMA": 420,
+        "m_nInputPacketDataType": 3,
+        "m_nMAType": 0,
+        "m_MASubGraphPropertyInfo": {
+          "m_strSubGraphName": "9",
+          "m_strSubGraphTitle": "",
+          "m_nSubGraphType": 2,
+          "m_nSubGraphSubType": 0,
+          "m_bShow": false,
+          "m_LineTypeInfo": {
+            "m_strKeyOfClrLine": "clrMA9",
+            "m_clrLine": "",
+            "m_nThickness": 1,
+            "m_nLineType": 0
+          },
+          "m_BarTypeInfo": {
+            "m_nCompareType": 1,
+            "m_clrBar": "",
+            "m_clrUp": "",
+            "m_clrDown": "",
+            "m_strKeyOfClrBar": "clrBar",
+            "m_strKeyOfClrUp": "clrUp",
+            "m_strKeyOfCrDown": "clrDown",
+            "m_bFill": true
+          }
+        }
+      }
+    ]
+  },
+  "_Env_": {
+    "use": true,
+    "type": "overlay",
+    "m_strKey": "9739",
+    "m_strGroup": "PRICE",
+    "m_strGroupTitle":"가격지표",
+    "m_strGroupTitleLangKey":"defaultindicator.priceindicator",
+    "m_strName": "_Env_",
+    "m_strTitle": "Envelope ",
+    "m_strTitleLangKey": "defaultindicator.envelope",
+    "m_nBasePriceTextAlign": 2,
+    "m_bShowBasePrice": true,
+    "m_nShowLatestDataType": 0,
+    "m_bShowLatestDataOfAllSubGraph": false,
+    "m_nDataChangeRatioType": 0,
+    "m_nAddType": 1,
+    "m_strOverlayGraphName": "_PRICE_",
+    "m_BaseLineArray": [],
+    "m_bSpecialIndicator": false,
+    "m_SubGraphPropertyInfoArray": [
+      {
+        "m_strSubGraphName": "High",
+        "m_strSubGraphTitle": "상한선",
+        "m_strSubGraphTitleLangKey": "defaultindicator.upperline",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrEnvH",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      },
+      {
+        "m_strSubGraphName": "Center",
+        "m_strSubGraphTitle": "중심선",
+        "m_strSubGraphTitleLangKey": "defaultindicator.midline",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrEnvC",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      },
+      {
+        "m_strSubGraphName": "Low",
+        "m_strSubGraphTitle": "하한선",
+        "m_strSubGraphTitleLangKey": "defaultindicator.lowerline",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrEnvL",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      }
+    ],
+    "m_VariableArray": [
+      {
+        "m_strName": "MAPeriod",
+        "m_strTitle": "MAPeriod",
+        "m_nType": 1,
+        "m_strData": 20
+      },
+      {
+        "m_strName": "UpLimitRate",
+        "m_strTitle": "UpLimitRate",
+        "m_nType": 1,
+        "m_strData": 6
+      },
+      {
+        "m_strName": "DownLimitRate",
+        "m_strTitle": "DownLimitRate",
+        "m_nType": 1,
+        "m_strData": 6
+      },
+      {
+        "m_strName": "DType",
+        "m_strTitle": "chart.price",
+        "m_nType": 1,
+        "m_strData": 3
+      }
+    ]
+  },
+  "_BB_": {
+    "use": true,
+    "type": "overlay",
+    "m_strKey": "4266",
+    "m_strGroup": "PRICE",
+    "m_strGroupTitle":"가격지표",
+    "m_strGroupTitleLangKey":"defaultindicator.priceindicator",
+    "m_strName": "_BB_",
+    "m_strTitle": "Bollinger Bands ",
+    "m_strTitleLangKey": "defaultindicator.bollingerbands",
+    "m_nBasePriceTextAlign": 2,
+    "m_bShowBasePrice": true,
+    "m_nShowLatestDataType": 0,
+    "m_bShowLatestDataOfAllSubGraph": false,
+    "m_nDataChangeRatioType": 0,
+    "m_nAddType": 1,
+    "m_strOverlayGraphName": "_PRICE_",
+    "m_BaseLineArray": [],
+    "m_bSpecialIndicator": false,
+    "m_SubGraphPropertyInfoArray": [
+      {
+        "m_strSubGraphName": "UpperLine",
+        "m_strSubGraphTitle": "상한선",
+        "m_strSubGraphTitleLangKey": "defaultindicator.upperline",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrBBH",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      },
+      {
+        "m_strSubGraphName": "CenterLine",
+        "m_strSubGraphTitle": "중심선",
+        "m_strSubGraphTitleLangKey": "defaultindicator.midline",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrBBC",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      },
+      {
+        "m_strSubGraphName": "LowerLine",
+        "m_strSubGraphTitle": "하한선",
+        "m_strSubGraphTitleLangKey": "defaultindicator.lowerline",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrBBL",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      }
+    ],
+    "m_VariableArray": [
+      {
+        "m_strName": "MAPeriod",
+        "m_strTitle": "MAPeriod",
+        "m_nType": 1,
+        "m_strData": 20
+      },
+      {
+        "m_strName": "SDMNum",
+        "m_strTitle": "SDMNum",
+        "m_nType": 1,
+        "m_strData": 2
+      }
+    ]
+  },
+  "_PIVOT_": {
+    "use": true,
+    "type": "overlay",
+    "m_strKey": "1450",
+    "m_strGroup": "PRICE",
+    "m_strGroupTitle":"가격지표",
+    "m_strGroupTitleLangKey":"defaultindicator.priceindicator",
+    "m_strName": "_PIVOT_",
+    "m_strTitle": "PIVOT",
+    "m_strTitleLangKey": "defaultindicator.pivot",
+    "m_nBasePriceTextAlign": 2,
+    "m_bShowBasePrice": true,
+    "m_nShowLatestDataType": 0,
+    "m_bShowLatestDataOfAllSubGraph": false,
+    "m_nDataChangeRatioType": 0,
+    "m_nAddType": 1,
+    "m_strOverlayGraphName": "_PRICE_",
+    "m_BaseLineArray": [],
+    "m_bSpecialIndicator": false,
+    "m_SubGraphPropertyInfoArray": [
+      {
+        "m_strSubGraphName": "R3",
+        "m_strSubGraphTitle": "R3",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": false,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrPIVOTR3",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      },
+      {
+        "m_strSubGraphName": "R2",
+        "m_strSubGraphTitle": "R2",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrPIVOTR2",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      },
+      {
+        "m_strSubGraphName": "R1",
+        "m_strSubGraphTitle": "R1",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrPIVOTR1",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      },
+      {
+        "m_strSubGraphName": "PIVOT",
+        "m_strSubGraphTitle": "PIVOT",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrPIVOT0",
+          "m_clrLine": "#",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      },
+      {
+        "m_strSubGraphName": "S1",
+        "m_strSubGraphTitle": "S1",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrPIVOTS1",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      },
+      {
+        "m_strSubGraphName": "S2",
+        "m_strSubGraphTitle": "S2",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrPIVOTS2",
+          "m_clrLine": "#FF661F",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      },
+      {
+        "m_strSubGraphName": "S3",
+        "m_strSubGraphTitle": "S3",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": false,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrPIVOTS3",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      }
+    ],
+    "m_VariableArray": []
+  },
+  "_MAC_": {
+    "use": true,
+    "type": "overlay",
+    "m_strKey": "9941",
+    "m_strGroup": "PRICE",
+    "m_strGroupTitle":"가격지표",    
+    "m_strGroupTitleLangKey":"defaultindicator.priceindicator",
+    "m_strName": "_MAC_",
+    "m_strTitle": "MAC",
+    "m_strTitleLangKey": "defaultindicator.mac",
+    "m_nBasePriceTextAlign": 2,
+    "m_bShowBasePrice": true,
+    "m_nShowLatestDataType": 0,
+    "m_bShowLatestDataOfAllSubGraph": false,
+    "m_nDataChangeRatioType": 0,
+    "m_nAddType": 1,
+    "m_strOverlayGraphName": "_PRICE_",
+    "m_BaseLineArray": [],
+    "m_bSpecialIndicator": false,
+    "m_SubGraphPropertyInfoArray": [
+      {
+        "m_strSubGraphName": "HighMA",
+        "m_strSubGraphTitle": "HighMA",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrHighMA",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      },
+      {
+        "m_strSubGraphName": "LowMA",
+        "m_strSubGraphTitle": "LowMA",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrLowMA",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      }
+    ],
+    "m_VariableArray": [
+      {
+        "m_strName": "MACPeriod",
+        "m_strTitle": "MACPeriod",
+        "m_nType": 1,
+        "m_strData": 5
+      }
+    ]
+  },
+  "_RAINBOW_": {
+    "use": true,
+    "type": "overlay",
+    "m_strKey": "8601",
+    "m_strGroup": "PRICE",
+    "m_strGroupTitle":"가격지표",    
+    "m_strGroupTitleLangKey":"defaultindicator.priceindicator",
+    "m_strName": "_RAINBOW_",
+    "m_strTitle": "그물차트",
+    "m_strTitleLangKey": "defaultindicator.rainbowchart",
+    "m_nBasePriceTextAlign": 2,
+    "m_bShowBasePrice": true,
+    "m_nShowLatestDataType": 0,
+    "m_bShowLatestDataOfAllSubGraph": false,
+    "m_nDataChangeRatioType": 0,
+    "m_nAddType": 1,
+    "m_strOverlayGraphName": "_PRICE_",
+    "m_BaseLineArray": [],
+    "m_bSpecialIndicator": false,
+    "m_SubGraphPropertyInfoArray": [
+      {
+        "m_strSubGraphName": "0",
+        "m_strSubGraphTitle": "5",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrRAINBOW0",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0
+        },
+        "m_BarTypeInfo": null
+      },
+      {
+        "m_strSubGraphName": "1",
+        "m_strSubGraphTitle": "6",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrRAINBOW1",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0
+        },
+        "m_BarTypeInfo": null
+      },
+      {
+        "m_strSubGraphName": "2",
+        "m_strSubGraphTitle": "7",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrRAINBOW2",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0
+        },
+        "m_BarTypeInfo": null
+      },
+      {
+        "m_strSubGraphName": "3",
+        "m_strSubGraphTitle": "8",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrRAINBOW3",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0
+        },
+        "m_BarTypeInfo": null
+      },
+      {
+        "m_strSubGraphName": "4",
+        "m_strSubGraphTitle": "9",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrRAINBOW4",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0
+        },
+        "m_BarTypeInfo": null
+      },
+      {
+        "m_strSubGraphName": "5",
+        "m_strSubGraphTitle": "10",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrRAINBOW5",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0
+        },
+        "m_BarTypeInfo": null
+      },
+      {
+        "m_strSubGraphName": "6",
+        "m_strSubGraphTitle": "11",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrRAINBOW6",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0
+        },
+        "m_BarTypeInfo": null
+      },
+      {
+        "m_strSubGraphName": "7",
+        "m_strSubGraphTitle": "12",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrRAINBOW7",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0
+        },
+        "m_BarTypeInfo": null
+      },
+      {
+        "m_strSubGraphName": "8",
+        "m_strSubGraphTitle": "13",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrRAINBOW8",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0
+        },
+        "m_BarTypeInfo": null
+      },
+      {
+        "m_strSubGraphName": "9",
+        "m_strSubGraphTitle": "14",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrRAINBOW9",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0
+        },
+        "m_BarTypeInfo": null
+      },
+      {
+        "m_strSubGraphName": "10",
+        "m_strSubGraphTitle": "15",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrRAINBOW10",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0
+        },
+        "m_BarTypeInfo": null
+      },
+      {
+        "m_strSubGraphName": "11",
+        "m_strSubGraphTitle": "16",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrRAINBOW11",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0
+        },
+        "m_BarTypeInfo": null
+      },
+      {
+        "m_strSubGraphName": "12",
+        "m_strSubGraphTitle": "17",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrRAINBOW12",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0
+        },
+        "m_BarTypeInfo": null
+      },
+      {
+        "m_strSubGraphName": "13",
+        "m_strSubGraphTitle": "18",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrRAINBOW13",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0
+        },
+        "m_BarTypeInfo": null
+      },
+      {
+        "m_strSubGraphName": "14",
+        "m_strSubGraphTitle": "19",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrRAINBOW14",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0
+        },
+        "m_BarTypeInfo": null
+      }
+    ],
+    "m_VariableArray": [
+      {
+        "m_strName": "RAINBOWPeriod",
+        "m_strTitle": "RAINBOWPeriod",
+        "m_nType": 1,
+        "m_strData": 5
+      },
+      {
+        "m_strName": "RAINBOWGap",
+        "m_strTitle": "RAINBOWGap",
+        "m_nType": 1,
+        "m_strData": 1
+      },
+      {
+        "m_strName": "RAINBOWCount",
+        "m_strTitle": "RAINBOWCount",
+        "m_nType": 1,
+        "m_strData": 15
+      }
+    ]
+  },
+  "_MACD_": {
+    "use": true,
+    "type": "sub",
+    "m_strKey": "6130",
+    "m_strGroup": "TREND",
+    "m_strGroupTitle":"추세지표",    
+    "m_strGroupTitleLangKey":"defaultindicator.trendindicator",
+    "m_strName": "_MACD_",
+    "m_strTitle": "MACD",
+    "m_strTitleLangKey": "defaultindicator.macd",
+    "m_nBasePriceTextAlign": 2,
+    "m_bShowBasePrice": true,
+    "m_nShowLatestDataType": 0,
+    "m_bShowLatestDataOfAllSubGraph": false,
+    "m_nDataChangeRatioType": 0,
+    "m_BaseLineArray": [
+      {
+        "m_dBaseValue": 0,
+        "m_strKeyOfClrLine": "baseLine",
+        "m_clrLine": "",
+        "m_nLineType": 0,
+        "m_nThickness": 1
+      }
+    ],
+    "m_bSpecialIndicator": false,
+    "m_SubGraphPropertyInfoArray": [
+      {
+        "m_strSubGraphName": "MACD",
+        "m_strSubGraphTitle": "MACD",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrMACD",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      },
+      {
+        "m_strSubGraphName": "Signal",
+        "m_strSubGraphTitle": "Signal",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrMACDSig",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      }
+    ],
+    "m_VariableArray": [
+      {
+        "m_strName": "ShortMAPeriod",
+        "m_strTitle": "ShortMAPeriod",
+        "m_nType": 1,
+        "m_strData": 12
+      },
+      {
+        "m_strName": "LongMAPeriod",
+        "m_strTitle": "LongMAPeriod",
+        "m_nType": 1,
+        "m_strData": 26
+      },
+      {
+        "m_strName": "SignalPeriod",
+        "m_strTitle": "SignalPeriod",
+        "m_nType": 1,
+        "m_strData": 9
+      },
+      {
+        "m_strName": "DType",
+        "m_strTitle": "가격",
+        "m_strTitleLangKey": "chart.price",
+        "m_nType": 1,
+        "m_strData": 3
+      }
+    ]
+  },
+  "_MACDOS_": {
+    "use": true,
+    "type": "sub",
+    "m_strKey": "1358",
+    "m_strGroup": "TREND",
+    "m_strGroupTitle":"추세지표",    
+    "m_strGroupTitleLangKey":"defaultindicator.trendindicator",
+    "m_strName": "_MACDOS_",
+    "m_strTitle": "MACD Oscillator",
+    "m_strTitleLangKey": "defaultindicator.macdosc",
+    "m_nBasePriceTextAlign": 2,
+    "m_bShowBasePrice": true,
+    "m_nShowLatestDataType": 0,
+    "m_bShowLatestDataOfAllSubGraph": false,
+    "m_nDataChangeRatioType": 0,
+    "m_BaseLineArray": [],
+    "m_bSpecialIndicator": false,
+    "m_SubGraphPropertyInfoArray": [
+      {
+        "m_strSubGraphName": "Oscillator",
+        "m_strSubGraphTitle": "MACD Oscillator",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 1,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrMACDOS",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      }
+    ],
+    "m_VariableArray": [
+      {
+        "m_strName": "ShortMAPeriod",
+        "m_strTitle": "ShortMAPeriod",
+        "m_nType": 1,
+        "m_strData": 12
+      },
+      {
+        "m_strName": "LongMAPeriod",
+        "m_strTitle": "LongMAPeriod",
+        "m_nType": 1,
+        "m_strData": 26
+      },
+      {
+        "m_strName": "SignalPeriod",
+        "m_strTitle": "SignalPeriod",
+        "m_nType": 1,
+        "m_strData": 9
+      },
+      {
+        "m_strName": "DType",
+        "m_strTitle": "가격",
+        "m_strTitleLangKey": "chart.price",
+        "m_nType": 1,
+        "m_strData": 3
+      }
+    ]
+  },
+  "_ADX_": {
+    "use": true,
+    "type": "sub",
+    "m_strKey": "2496",
+    "m_strGroup": "TREND",
+    "m_strGroupTitle":"추세지표",        
+    "m_strGroupTitleLangKey":"defaultindicator.trendindicator",
+    "m_strName": "_ADX_",
+    "m_strTitle": "ADX",
+    "m_strTitleLangKey": "defaultindicator.adx",
+    "m_nBasePriceTextAlign": 2,
+    "m_bShowBasePrice": true,
+    "m_nShowLatestDataType": 0,
+    "m_bShowLatestDataOfAllSubGraph": false,
+    "m_nDataChangeRatioType": 0,
+    "m_BaseLineArray": [
+      {
+        "m_dBaseValue": 20,
+        "m_strKeyOfClrLine": "baseLine",
+        "m_clrLine": "",
+        "m_nLineType": 0,
+        "m_nThickness": 1
+      },
+      {
+        "m_dBaseValue": 80,
+        "m_strKeyOfClrLine": "baseLine",
+        "m_clrLine": "",
+        "m_nLineType": 0,
+        "m_nThickness": 1
+      }
+    ],
+    "m_bSpecialIndicator": false,
+    "m_SubGraphPropertyInfoArray": [
+      {
+        "m_strSubGraphName": "ADX",
+        "m_strSubGraphTitle": "ADX",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrADX",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      },
+      {
+        "m_strSubGraphName": "PDI",
+        "m_strSubGraphTitle": "PDI",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrADXPDI",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      },
+      {
+        "m_strSubGraphName": "MDI",
+        "m_strSubGraphTitle": "MDI",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrADXMDI",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      }
+    ],
+    "m_VariableArray": [
+      {
+        "m_strName": "Period",
+        "m_strTitle": "Period",
+        "m_nType": 1,
+        "m_strData": 14
+      }
+    ]
+  },
+  "_PSYCO_": {
+    "use": true,
+    "type": "sub",
+    "m_strKey": "5929",
+    "m_strGroup": "MARKET_BREADTH",
+    "m_strGroupTitle":"시장강도",
+    "m_strGroupTitleLangKey":"defaultindicator.marketbreadth",
+    "m_strName": "_PSYCO_",
+    "m_strTitle": "심리도",
+    "m_strTitleLangKey": "defaultindicator.psyco",
+    "m_nBasePriceTextAlign": 2,
+    "m_bShowBasePrice": true,
+    "m_nShowLatestDataType": 0,
+    "m_bShowLatestDataOfAllSubGraph": false,
+    "m_nDataChangeRatioType": 0,
+    "m_BaseLineArray": [
+      {
+        "m_dBaseValue": 25,
+        "m_strKeyOfClrLine": "baseLine",
+        "m_clrLine": "",
+        "m_nLineType": 0,
+        "m_nThickness": 1
+      },
+      {
+        "m_dBaseValue": 75,
+        "m_strKeyOfClrLine": "baseLine",
+        "m_clrLine": "",
+        "m_nLineType": 0,
+        "m_nThickness": 1
+      }
+    ],
+    "m_bSpecialIndicator": false,
+    "m_SubGraphPropertyInfoArray": [
+      {
+        "m_strSubGraphName": "PSYCO",
+        "m_strSubGraphTitle": "심리도",
+        "m_strSubGraphTitleLangKey": "defaultindicator.psyco",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrPSYCO",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      }
+    ],
+    "m_VariableArray": [
+      {
+        "m_strName": "Period",
+        "m_strTitle": "Period",
+        "m_nType": 1,
+        "m_strData": 10
+      }
+    ]
+  },
+  "_CCI_": {
+    "use": true,
+    "type": "sub",
+    "m_strKey": "2064",
+    "m_strGroup": "TREND",
+    "m_strGroupTitle":"추세지표",
+    "m_strGroupTitleLangKey":"defaultindicator.trendindicator",
+    "m_strName": "_CCI_",
+    "m_strTitle": "CCI",
+    "m_strTitleLangKey": "defaultindicator.cci",
+    "m_nBasePriceTextAlign": 2,
+    "m_bShowBasePrice": true,
+    "m_nShowLatestDataType": 0,
+    "m_bShowLatestDataOfAllSubGraph": false,
+    "m_nDataChangeRatioType": 0,
+    "m_BaseLineArray": [
+      {
+        "m_dBaseValue": 100,
+        "m_strKeyOfClrLine": "baseLine",
+        "m_clrLine": "",
+        "m_nLineType": 0,
+        "m_nThickness": 1
+      },
+      {
+        "m_dBaseValue": -100,
+        "m_strKeyOfClrLine": "baseLine",
+        "m_clrLine": "",
+        "m_nLineType": 0,
+        "m_nThickness": 1
+      }
+    ],
+    "m_bSpecialIndicator": false,
+    "m_SubGraphPropertyInfoArray": [
+      {
+        "m_strSubGraphName": "CCI",
+        "m_strSubGraphTitle": "CCI",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrCCI",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      },
+      {
+        "m_strSubGraphName": "CCI_Signal",
+        "m_strSubGraphTitle": "CCI Signal ",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrCCISig",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      }
+    ],
+    "m_VariableArray": [
+      {
+        "m_strName": "Period",
+        "m_strTitle": "Period",
+        "m_nType": 1,
+        "m_strData": 14
+      },
+      {
+        "m_strName": "SignalPeriod",
+        "m_strTitle": "SignalPeriod",
+        "m_nType": 1,
+        "m_strData": 9
+      },
+      {
+        "m_strName": "DType",
+        "m_strTitle": "chart.price",
+        "m_nType": 1,
+        "m_strData": 3
+      }
+    ]
+  },
+  "_Disparity_": {
+    "use": true,
+    "type": "sub",
+    "m_strKey": "5919",
+    "m_strGroup": "MOMENTUM",
+    "m_strGroupTitle":"모멘텀지표",
+    "m_strGroupTitleLangKey":"defaultindicator.momentumindicator",
+    "m_strName": "_Disparity_",
+    "m_strTitle": "이격도",
+    "m_strTitleLangKey": "defaultindicator.disparity",
+    "m_nBasePriceTextAlign": 2,
+    "m_bShowBasePrice": true,
+    "m_nShowLatestDataType": 0,
+    "m_bShowLatestDataOfAllSubGraph": false,
+    "m_nDataChangeRatioType": 0,
+    "m_BaseLineArray": [
+      {
+        "m_dBaseValue": 90,
+        "m_strKeyOfClrLine": "baseLine",
+        "m_clrLine": "",
+        "m_nLineType": 0,
+        "m_nThickness": 1
+      },
+      {
+        "m_dBaseValue": 100,
+        "m_strKeyOfClrLine": "baseLine",
+        "m_clrLine": "",
+        "m_nLineType": 0,
+        "m_nThickness": 1
+      }
+    ],
+    "m_bSpecialIndicator": false,
+    "m_SubGraphPropertyInfoArray": [
+      {
+        "m_strSubGraphName": "DisS",
+        "m_strSubGraphTitle": "DisS",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrDisS",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      },
+      {
+        "m_strSubGraphName": "DisL",
+        "m_strSubGraphTitle": "DisL",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrDisL",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      }
+    ],
+    "m_VariableArray": [
+      {
+        "m_strName": "ShortPeriod",
+        "m_strTitle": "ShortPeriod",
+        "m_nType": 1,
+        "m_strData": 10
+      },
+      {
+        "m_strName": "LongPeriod",
+        "m_strTitle": "LongPeriod",
+        "m_nType": 1,
+        "m_strData": 60
+      },
+      {
+        "m_strName": "DType",
+        "m_strTitle": "chart.price",
+        "m_nType": 1,
+        "m_strData": 3
+      },
+      {
+        "m_strName": "MAType",
+        "m_strTitle": "MAType",
+        "m_nType": 1,
+        "m_strData": 0
+      }
+    ]
+  },
+  "_MOM_": {
+    "use": true,
+    "type": "sub",
+    "m_strKey": "2748",
+    "m_strGroup": "MOMENTUM",
+    "m_strGroupTitle":"모멘텀지표",
+    "m_strGroupTitleLangKey":"defaultindicator.momentumindicator",
+    "m_strName": "_MOM_",
+    "m_strTitle": "Momentum",
+    "m_strTitleLangKey": "defaultindicator.momentum",
+    "m_nBasePriceTextAlign": 2,
+    "m_bShowBasePrice": true,
+    "m_nShowLatestDataType": 0,
+    "m_bShowLatestDataOfAllSubGraph": false,
+    "m_nDataChangeRatioType": 0,
+    "m_BaseLineArray": [
+      {
+        "m_dBaseValue": 100,
+        "m_strKeyOfClrLine": "baseLine",
+        "m_clrLine": "",
+        "m_nLineType": 0,
+        "m_nThickness": 1
+      }
+    ],
+    "m_bSpecialIndicator": false,
+    "m_SubGraphPropertyInfoArray": [
+      {
+        "m_strSubGraphName": "Momentum",
+        "m_strSubGraphTitle": "Momentum",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrMOM",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      },
+      {
+        "m_strSubGraphName": "Signal",
+        "m_strSubGraphTitle": "Signal",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrMOMSig",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      }
+    ],
+    "m_VariableArray": [
+      {
+        "m_strName": "Period",
+        "m_strTitle": "Period",
+        "m_nType": 1,
+        "m_strData": 14
+      },
+      {
+        "m_strName": "SignalPeriod",
+        "m_strTitle": "SignalPeriod",
+        "m_nType": 1,
+        "m_strData": 9
+      },
+      {
+        "m_strName": "DType",
+        "m_strTitle": "가격",
+        "m_strTitleLangKey": "chart.price",
+        "m_nType": 1,
+        "m_strData": 3
+      }
+    ]
+  },
+  "_OBV_": {
+    "use": true,
+    "type": "sub",
+    "m_strKey": "8743",
+    "m_strGroup": "VOLUME",
+    "m_strGroupTitle":"거래량지표",
+    "m_strGroupTitleLangKey":"defaultindicator.volumeindicator",
+    "m_strName": "_OBV_",
+    "m_strTitle": "OBV",
+    "m_strTitleLangKey": "defaultindicator.obv",
+    "m_nBasePriceTextAlign": 2,
+    "m_bShowBasePrice": true,
+    "m_nShowLatestDataType": 0,
+    "m_bShowLatestDataOfAllSubGraph": false,
+    "m_nDataChangeRatioType": 0,
+    "m_BaseLineArray": [
+      {
+        "m_dBaseValue": 0,
+        "m_strKeyOfClrLine": "baseLine",
+        "m_clrLine": "",
+        "m_nLineType": 0,
+        "m_nThickness": 1
+      }
+    ],
+    "m_bSpecialIndicator": false,
+    "m_SubGraphPropertyInfoArray": [
+      {
+        "m_strSubGraphName": "OBV",
+        "m_strSubGraphTitle": "OBV",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrOBV",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      },
+      {
+        "m_strSubGraphName": "Signal",
+        "m_strSubGraphTitle": "Signal",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrOBVSig",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      }
+    ],
+    "m_VariableArray": [
+      {
+        "m_strName": "SignalPeriod",
+        "m_strTitle": "SignalPeriod",
+        "m_nType": 1,
+        "m_strData": 9
+      }
+    ]
+  },
+  "_ROC_": {
+    "use": true,
+    "type": "sub",
+    "m_strKey": "2131",
+    "m_strGroup": "MOMENTUM",
+    "m_strGroupTitle":"모멘텀지표",
+    "m_strGroupTitleLangKey":"defaultindicator.momentumindicator",
+    "m_strName": "_ROC_",
+    "m_strTitle": "ROC",
+    "m_strTitleLangKey": "defaultindicator.roc",
+    "m_nBasePriceTextAlign": 2,
+    "m_bShowBasePrice": true,
+    "m_nShowLatestDataType": 0,
+    "m_bShowLatestDataOfAllSubGraph": false,
+    "m_nDataChangeRatioType": 0,
+    "m_BaseLineArray": [
+      {
+        "m_dBaseValue": 100,
+        "m_strKeyOfClrLine": "baseLine",
+        "m_clrLine": "",
+        "m_nLineType": 0,
+        "m_nThickness": 1
+      }
+    ],
+    "m_bSpecialIndicator": false,
+    "m_SubGraphPropertyInfoArray": [
+      {
+        "m_strSubGraphName": "ROC",
+        "m_strSubGraphTitle": "ROC",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrROC",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      }
+    ],
+    "m_VariableArray": [
+      {
+        "m_strName": "Period",
+        "m_strTitle": "Period",
+        "m_nType": 1,
+        "m_strData": 10
+      }
+    ]
+  },
+  "_RSI_": {
+    "use": true,
+    "type": "sub",
+    "m_strKey": "3951",
+    "m_strGroup": "MOMENTUM",
+    "m_strGroupTitle":"모멘텀지표",
+    "m_strGroupTitleLangKey":"defaultindicator.momentumindicator",
+    "m_strName": "_RSI_",
+    "m_strTitle": "RSI",
+    "m_strTitleLangKey": "defaultindicator.rsi",
+    "m_nBasePriceTextAlign": 2,
+    "m_bShowBasePrice": true,
+    "m_nShowLatestDataType": 0,
+    "m_bShowLatestDataOfAllSubGraph": false,
+    "m_nDataChangeRatioType": 0,
+    "m_BaseLineArray": [
+      {
+        "m_dBaseValue": 30,
+        "m_strKeyOfClrLine": "baseLine",
+        "m_clrLine": "",
+        "m_nLineType": 0,
+        "m_nThickness": 1
+      },
+      {
+        "m_dBaseValue": 70,
+        "m_strKeyOfClrLine": "baseLine",
+        "m_clrLine": "",
+        "m_nLineType": 0,
+        "m_nThickness": 1
+      }
+    ],
+    "m_bSpecialIndicator": false,
+    "m_SubGraphPropertyInfoArray": [
+      {
+        "m_strSubGraphName": "RSI",
+        "m_strSubGraphTitle": "RSI",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrRSI",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      },
+      {
+        "m_strSubGraphName": "Signal",
+        "m_strSubGraphTitle": "Signal",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrRSISig",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      }
+    ],
+    "m_VariableArray": [
+      {
+        "m_strName": "Period",
+        "m_strTitle": "Period",
+        "m_nType": 1,
+        "m_strData": 14
+      },
+      {
+        "m_strName": "SignalPeriod",
+        "m_strTitle": "SignalPeriod",
+        "m_nType": 1,
+        "m_strData": 9
+      },
+      {
+        "m_strName": "DType",
+        "m_strTitle": "가격",
+        "m_strTitleLangKey": "chart.price",
+        "m_nType": 1,
+        "m_strData": 3
+      }
+    ]
+  },
+  "_StoF_": {
+    "use": true,
+    "type": "sub",
+    "m_strKey": "9555",
+    "m_strGroup": "MOMENTUM",
+    "m_strGroupTitle":"모멘텀지표",
+    "m_strGroupTitleLangKey":"defaultindicator.momentumindicator",
+    "m_strName": "_StoF_",
+    "m_strTitle": "Stochastics Fast",
+    "m_strTitleLangKey": "defaultindicator.stofast",
+    "m_nBasePriceTextAlign": 2,
+    "m_bShowBasePrice": true,
+    "m_nShowLatestDataType": 0,
+    "m_bShowLatestDataOfAllSubGraph": false,
+    "m_nDataChangeRatioType": 0,
+    "m_BaseLineArray": [
+      {
+        "m_dBaseValue": 20,
+        "m_strKeyOfClrLine": "baseLine",
+        "m_clrLine": "",
+        "m_nLineType": 0,
+        "m_nThickness": 1
+      },
+      {
+        "m_dBaseValue": 80,
+        "m_strKeyOfClrLine": "baseLine",
+        "m_clrLine": "",
+        "m_nLineType": 0,
+        "m_nThickness": 1
+      }
+    ],
+    "m_bSpecialIndicator": false,
+    "m_SubGraphPropertyInfoArray": [
+      {
+        "m_strSubGraphName": "Sto_FastK",
+        "m_strSubGraphTitle": "Sto Fast%K",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrSTOFK",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      },
+      {
+        "m_strSubGraphName": "Sto_FastD",
+        "m_strSubGraphTitle": "Sto Fast%D",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrSTOFD",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      }
+    ],
+    "m_VariableArray": [
+      {
+        "m_strName": "FKPeriod",
+        "m_strTitle": "FKPeriod",
+        "m_nType": 1,
+        "m_strData": 5
+      },
+      {
+        "m_strName": "FDPeriod",
+        "m_strTitle": "FDPeriod",
+        "m_nType": 1,
+        "m_strData": 3
+      }
+    ]
+  },
+  "_StoS_": {
+    "use": true,
+    "type": "sub",
+    "m_strKey": "7129",
+    "m_strGroup": "MOMENTUM",
+    "m_strGroupTitle":"모멘텀지표",
+    "m_strGroupTitleLangKey":"defaultindicator.momentumindicator",
+    "m_strName": "_StoS_",
+    "m_strTitle": "Stochastics Slow",
+    "m_strTitleLangKey": "defaultindicator.stoslow",
+    "m_nBasePriceTextAlign": 2,
+    "m_bShowBasePrice": true,
+    "m_nShowLatestDataType": 0,
+    "m_bShowLatestDataOfAllSubGraph": false,
+    "m_nDataChangeRatioType": 0,
+    "m_BaseLineArray": [
+      {
+        "m_dBaseValue": 20,
+        "m_strKeyOfClrLine": "baseLine",
+        "m_clrLine": "",
+        "m_nLineType": 0,
+        "m_nThickness": 1
+      },
+      {
+        "m_dBaseValue": 80,
+        "m_strKeyOfClrLine": "baseLine",
+        "m_clrLine": "",
+        "m_nLineType": 0,
+        "m_nThickness": 1
+      }
+    ],
+    "m_bSpecialIndicator": false,
+    "m_SubGraphPropertyInfoArray": [
+      {
+        "m_strSubGraphName": "Sto_SlowK",
+        "m_strSubGraphTitle": "Sto Slow%K",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrSTOSK",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      },
+      {
+        "m_strSubGraphName": "Sto_SlowD",
+        "m_strSubGraphTitle": "Sto Slow%D",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrSTOSD",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      }
+    ],
+    "m_VariableArray": [
+      {
+        "m_strName": "KPeriod",
+        "m_strTitle": "KPeriod",
+        "m_nType": 1,
+        "m_strData": 5
+      },
+      {
+        "m_strName": "SKPeriod",
+        "m_strTitle": "SKPeriod",
+        "m_nType": 1,
+        "m_strData": 3
+      },
+      {
+        "m_strName": "SDPeriod",
+        "m_strTitle": "SDPeriod",
+        "m_nType": 1,
+        "m_strData": 3
+      }
+    ]
+  },
+  "_WILL_": {
+    "use": true,
+    "type": "sub",
+    "m_strKey": "6286",
+    "m_strGroup": "MOMENTUM",
+    "m_strGroupTitle":"모멘텀지표",
+    "m_strGroupTitleLangKey":"defaultindicator.momentumindicator",
+    "m_strName": "_WILL_",
+    "m_strTitle": "William's R",
+    "m_strTitleLangKey": "defaultindicator.williamr",
+    "m_nBasePriceTextAlign": 2,
+    "m_bShowBasePrice": true,
+    "m_nShowLatestDataType": 0,
+    "m_bShowLatestDataOfAllSubGraph": false,
+    "m_nDataChangeRatioType": 0,
+    "m_BaseLineArray": [
+      {
+        "m_dBaseValue": -20,
+        "m_strKeyOfClrLine": "baseLine",
+        "m_clrLine": "",
+        "m_nLineType": 0,
+        "m_nThickness": 1
+      },
+      {
+        "m_dBaseValue": -80,
+        "m_strKeyOfClrLine": "baseLine",
+        "m_clrLine": "",
+        "m_nLineType": 0,
+        "m_nThickness": 1
+      }
+    ],
+    "m_bSpecialIndicator": false,
+    "m_SubGraphPropertyInfoArray": [
+      {
+        "m_strSubGraphName": "Williams_R",
+        "m_strSubGraphTitle": "Williams R",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrWillR",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      },
+      {
+        "m_strSubGraphName": "R_Signal",
+        "m_strSubGraphTitle": "R Signal",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrWillRSig",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      }
+    ],
+    "m_VariableArray": [
+      {
+        "m_strName": "WRPeriod",
+        "m_strTitle": "WRPeriod",
+        "m_nType": 1,
+        "m_strData": 14
+      },
+      {
+        "m_strName": "WSPeriod",
+        "m_strTitle": "WSPeriod",
+        "m_nType": 1,
+        "m_strData": 3
+      }
+    ]
+  },
+  "_AB_": {
+    "use": true,
+    "type": "sub",
+    "m_strKey": "5372",
+    "m_strGroup": "MOMENTUM",
+    "m_strGroupTitle":"모멘텀지표",
+    "m_strGroupTitleLangKey":"defaultindicator.momentumindicator",
+    "m_strName": "_AB_",
+    "m_strTitle": "AB Ratio",
+    "m_strTitleLangKey": "defaultindicator.abratio",
+    "m_nBasePriceTextAlign": 2,
+    "m_bShowBasePrice": true,
+    "m_nShowLatestDataType": 0,
+    "m_bShowLatestDataOfAllSubGraph": false,
+    "m_nDataChangeRatioType": 0,
+    "m_BaseLineArray": [
+      {
+        "m_dBaseValue": 100,
+        "m_strKeyOfClrLine": "baseLine",
+        "m_clrLine": "",
+        "m_nLineType": 0,
+        "m_nThickness": 1
+      }
+    ],
+    "m_bSpecialIndicator": false,
+    "m_SubGraphPropertyInfoArray": [
+      {
+        "m_strSubGraphName": "AR",
+        "m_strSubGraphTitle": "AR",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrAR",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      },
+      {
+        "m_strSubGraphName": "BR",
+        "m_strSubGraphTitle": "BR",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrBR",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      }
+    ],
+    "m_VariableArray": [
+      {
+        "m_strName": "ARPeriod",
+        "m_strTitle": "ARPeriod",
+        "m_nType": 1,
+        "m_strData": 26
+      },
+      {
+        "m_strName": "BRPeriod",
+        "m_strTitle": "BRPeriod",
+        "m_nType": 1,
+        "m_strData": 26
+      }
+    ]
+  },
+  "_AD_": {
+    "use": true,
+    "type": "sub",
+    "m_strKey": "3428",
+    "m_strGroup": "TREND",
+    "m_strGroupTitle":"추세지표",
+    "m_strGroupTitleLangKey":"defaultindicator.trendindicator",
+    "m_strName": "_AD_",
+    "m_strTitle": "AD Line",
+    "m_strTitleLangKey": "defaultindicator.adline",
+    "m_nBasePriceTextAlign": 2,
+    "m_bShowBasePrice": true,
+    "m_nShowLatestDataType": 0,
+    "m_bShowLatestDataOfAllSubGraph": false,
+    "m_nDataChangeRatioType": 0,
+    "m_BaseLineArray": [],
+    "m_bSpecialIndicator": false,
+    "m_SubGraphPropertyInfoArray": [
+      {
+        "m_strSubGraphName": "ADLine",
+        "m_strSubGraphTitle": "AD Line",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrADLine",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      },
+      {
+        "m_strSubGraphName": "Signal",
+        "m_strSubGraphTitle": "Signal",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrADLineSig",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      }
+    ],
+    "m_VariableArray": [
+      {
+        "m_strName": "ADSPeriod",
+        "m_strTitle": "ADSPeriod",
+        "m_nType": 1,
+        "m_strData": 10
+      }
+    ]
+  },
+  "_ATR_": {
+    "use": true,
+    "type": "sub",
+    "m_strKey": "2146",
+    "m_strGroup": "MOMENTUM",
+    "m_strGroupTitle":"모멘텀지표",
+    "m_strGroupTitleLangKey":"defaultindicator.momentumindicator",
+    "m_strName": "_ATR_",
+    "m_strTitle": "ATR",
+    "m_strTitleLangKey": "defaultindicator.atr",
+    "m_nBasePriceTextAlign": 2,
+    "m_bShowBasePrice": true,
+    "m_nShowLatestDataType": 0,
+    "m_bShowLatestDataOfAllSubGraph": false,
+    "m_nDataChangeRatioType": 0,
+    "m_BaseLineArray": [],
+    "m_bSpecialIndicator": false,
+    "m_SubGraphPropertyInfoArray": [
+      {
+        "m_strSubGraphName": "ATR",
+        "m_strSubGraphTitle": "ATR",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrATR",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      }
+    ],
+    "m_VariableArray": [
+      {
+        "m_strName": "ATRPeriod",
+        "m_strTitle": "ATRPeriod",
+        "m_nType": 1,
+        "m_strData": 14
+      }
+    ]
+  },
+  "_CO_": {
+    "use": true,
+    "type": "sub",
+    "m_strKey": "5834",
+    "m_strGroup": "MOMENTUM",
+    "m_strGroupTitle":"모멘텀지표",
+    "m_strGroupTitleLangKey":"defaultindicator.momentumindicator",
+    "m_strName": "_CO_",
+    "m_strTitle": "Chaikins OSC",
+    "m_strTitleLangKey": "defaultindicator.chaikinsosc",
+    "m_nBasePriceTextAlign": 2,
+    "m_bShowBasePrice": true,
+    "m_nShowLatestDataType": 0,
+    "m_bShowLatestDataOfAllSubGraph": false,
+    "m_nDataChangeRatioType": 0,
+    "m_BaseLineArray": [
+      {
+        "m_dBaseValue": 0,
+        "m_strKeyOfClrLine": "baseLine",
+        "m_clrLine": "",
+        "m_nLineType": 0,
+        "m_nThickness": 1
+      }
+    ],
+    "m_bSpecialIndicator": false,
+    "m_SubGraphPropertyInfoArray": [
+      {
+        "m_strSubGraphName": "CO",
+        "m_strSubGraphTitle": "CO",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrCO",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      }
+    ],
+    "m_VariableArray": [
+      {
+        "m_strName": "COSPeriod",
+        "m_strTitle": "COSPeriod",
+        "m_nType": 1,
+        "m_strData": 3
+      },
+      {
+        "m_strName": "COLPeriod",
+        "m_strTitle": "COLPeriod",
+        "m_nType": 1,
+        "m_strData": 10
+      }
+    ]
+  },
+  "_CV_": {
+    "use": true,
+    "type": "sub",
+    "m_strKey": "8131",
+    "m_strGroup": "MOMENTUM",
+    "m_strGroupTitle":"모멘텀지표",
+    "m_strGroupTitleLangKey":"defaultindicator.momentumindicator",
+    "m_strName": "_CV_",
+    "m_strTitle": "Chaikins Volatility",
+    "m_strTitleLangKey": "defaultindicator.chaikinsvol",
+    "m_nBasePriceTextAlign": 2,
+    "m_bShowBasePrice": true,
+    "m_nShowLatestDataType": 0,
+    "m_bShowLatestDataOfAllSubGraph": false,
+    "m_nDataChangeRatioType": 0,
+    "m_BaseLineArray": [
+      {
+        "m_dBaseValue": 100,
+        "m_strKeyOfClrLine": "baseLine",
+        "m_clrLine": "",
+        "m_nLineType": 0,
+        "m_nThickness": 1
+      }
+    ],
+    "m_bSpecialIndicator": false,
+    "m_SubGraphPropertyInfoArray": [
+      {
+        "m_strSubGraphName": "CV",
+        "m_strSubGraphTitle": "CV",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrCV",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      },
+      {
+        "m_strSubGraphName": "Signal",
+        "m_strSubGraphTitle": "Signal",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrCVSig",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      }
+    ],
+    "m_VariableArray": [
+      {
+        "m_strName": "CVPeriod",
+        "m_strTitle": "CVPeriod",
+        "m_nType": 1,
+        "m_strData": 10
+      },
+      {
+        "m_strName": "CVSPeriod",
+        "m_strTitle": "CVSPeriod",
+        "m_nType": 1,
+        "m_strData": 9
+      }
+    ]
+  },
+  "_DMI_": {
+    "use": true,
+    "type": "sub",
+    "m_strKey": "2095",
+    "m_strGroup": "TREND",
+    "m_strGroupTitle":"추세지표",
+    "m_strGroupTitleLangKey":"defaultindicator.trendindicator",
+    "m_strName": "_DMI_",
+    "m_strTitle": "DMI",
+    "m_strTitleLangKey": "defaultindicator.dmi",
+    "m_nBasePriceTextAlign": 2,
+    "m_bShowBasePrice": true,
+    "m_nShowLatestDataType": 0,
+    "m_bShowLatestDataOfAllSubGraph": false,
+    "m_nDataChangeRatioType": 0,
+    "m_BaseLineArray": [
+      {
+        "m_dBaseValue": 10,
+        "m_strKeyOfClrLine": "baseLine",
+        "m_clrLine": "",
+        "m_nLineType": 0,
+        "m_nThickness": 1
+      },
+      {
+        "m_dBaseValue": 30,
+        "m_strKeyOfClrLine": "baseLine",
+        "m_clrLine": "",
+        "m_nLineType": 0,
+        "m_nThickness": 1
+      }
+    ],
+    "m_bSpecialIndicator": false,
+    "m_SubGraphPropertyInfoArray": [
+      {
+        "m_strSubGraphName": "UpDI",
+        "m_strSubGraphTitle": "UpDI",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrUpDI",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      },
+      {
+        "m_strSubGraphName": "DownDI",
+        "m_strSubGraphTitle": "DownDI",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrDownDI",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      }
+    ],
+    "m_VariableArray": [
+      {
+        "m_strName": "DMIPeriod",
+        "m_strTitle": "DMIPeriod",
+        "m_nType": 1,
+        "m_strData": 14
+      }
+    ]
+  },
+  "_EOM_": {
+    "use": true,
+    "type": "sub",
+    "m_strKey": "8801",
+    "m_strGroup": "MOMENTUM",
+    "m_strGroupTitle":"모멘텀지표",
+    "m_strGroupTitleLangKey":"defaultindicator.momentumindicator",
+    "m_strName": "_EOM_",
+    "m_strTitle": "EOM",
+    "m_strTitleLangKey": "defaultindicator.eom",
+    "m_nBasePriceTextAlign": 2,
+    "m_bShowBasePrice": true,
+    "m_nShowLatestDataType": 0,
+    "m_bShowLatestDataOfAllSubGraph": false,
+    "m_nDataChangeRatioType": 0,
+    "m_BaseLineArray": [
+      {
+        "m_dBaseValue": 0,
+        "m_strKeyOfClrLine": "baseLine",
+        "m_clrLine": "",
+        "m_nLineType": 0,
+        "m_nThickness": 1
+      }
+    ],
+    "m_bSpecialIndicator": false,
+    "m_SubGraphPropertyInfoArray": [
+      {
+        "m_strSubGraphName": "EOM",
+        "m_strSubGraphTitle": "EOM",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrEOM",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      },
+      {
+        "m_strSubGraphName": "Signal",
+        "m_strSubGraphTitle": "Signal",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrEOMSig",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      }
+    ],
+    "m_VariableArray": [
+      {
+        "m_strName": "EOMPeriod",
+        "m_strTitle": "EOMPeriod",
+        "m_nType": 1,
+        "m_strData": 14
+      },
+      {
+        "m_strName": "EOMSPeriod",
+        "m_strTitle": "EOMSPeriod",
+        "m_nType": 1,
+        "m_strData": 3
+      }
+    ]
+  },
+  "_LRL_": {
+    "use": true,
+    "type": "sub",
+    "m_strKey": "1608",
+    "m_strGroup": "TREND",
+    "m_strGroupTitle":"추세지표",
+    "m_strGroupTitleLangKey":"defaultindicator.trendindicator",
+    "m_strName": "_LRL_",
+    "m_strTitle": "LRL",
+    "m_strTitleLangKey": "defaultindicator.lrl",
+    "m_nBasePriceTextAlign": 2,
+    "m_bShowBasePrice": true,
+    "m_nShowLatestDataType": 0,
+    "m_bShowLatestDataOfAllSubGraph": false,
+    "m_nDataChangeRatioType": 0,
+    "m_BaseLineArray": [
+      {
+        "m_dBaseValue": 20,
+        "m_strKeyOfClrLine": "baseLine",
+        "m_clrLine": "",
+        "m_nLineType": 0,
+        "m_nThickness": 1
+      },
+      {
+        "m_dBaseValue": 80,
+        "m_strKeyOfClrLine": "baseLine",
+        "m_clrLine": "",
+        "m_nLineType": 0,
+        "m_nThickness": 1
+      }
+    ],
+    "m_bSpecialIndicator": false,
+    "m_SubGraphPropertyInfoArray": [
+      {
+        "m_strSubGraphName": "LRL",
+        "m_strSubGraphTitle": "LRL",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrLRL",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      }
+    ],
+    "m_VariableArray": [
+      {
+        "m_strName": "LRLPeriod",
+        "m_strTitle": "LRLPeriod",
+        "m_nType": 1,
+        "m_strData": 14
+      }
+    ]
+  },
+  "_RCI_": {
+    "use": true,
+    "type": "sub",
+    "m_strKey": "6649",
+    "m_strGroup": "TREND",
+    "m_strGroupTitle":"추세지표",
+    "m_strGroupTitleLangKey":"defaultindicator.trendindicator",
+    "m_strName": "_RCI_",
+    "m_strTitle": "RCI ",
+    "m_strTitleLangKey": "defaultindicator.rci",
+    "m_nBasePriceTextAlign": 2,
+    "m_bShowBasePrice": true,
+    "m_nShowLatestDataType": 0,
+    "m_bShowLatestDataOfAllSubGraph": false,
+    "m_nDataChangeRatioType": 0,
+    "m_BaseLineArray": [
+      {
+        "m_dBaseValue": 20,
+        "m_strKeyOfClrLine": "baseLine",
+        "m_clrLine": "",
+        "m_nLineType": 0,
+        "m_nThickness": 1
+      }
+    ],
+    "m_bSpecialIndicator": false,
+    "m_SubGraphPropertyInfoArray": [
+      {
+        "m_strSubGraphName": "0",
+        "m_strSubGraphTitle": "9",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrRCI0",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0
+        },
+        "m_BarTypeInfo": null
+      },
+      {
+        "m_strSubGraphName": "1",
+        "m_strSubGraphTitle": "13",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrRCI1",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0
+        },
+        "m_BarTypeInfo": null
+      },
+      {
+        "m_strSubGraphName": "2",
+        "m_strSubGraphTitle": "18",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrRCI2",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0
+        },
+        "m_BarTypeInfo": null
+      },
+      {
+        "m_strSubGraphName": "3",
+        "m_strSubGraphTitle": "26",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrRCI3",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0
+        },
+        "m_BarTypeInfo": null
+      }
+    ],
+    "m_VariableArray": []
+  },
+  "_OSCV_": {
+    "use": true,
+    "type": "sub",
+    "m_strKey": "4553",
+    "m_strGroup": "VOLUME",
+    "m_strGroupTitle":"거래량지표",
+    "m_strGroupTitleLangKey":"defaultindicator.volumeindicator",
+    "m_strName": "_OSCV_",
+    "m_strTitle": "Volume Oscillator",
+    "m_strTitleLangKey": "defaultindicator.volumeosc",
+    "m_nBasePriceTextAlign": 2,
+    "m_bShowBasePrice": true,
+    "m_nShowLatestDataType": 0,
+    "m_bShowLatestDataOfAllSubGraph": false,
+    "m_nDataChangeRatioType": 0,
+    "m_BaseLineArray": [],
+    "m_bSpecialIndicator": false,
+    "m_SubGraphPropertyInfoArray": [
+      {
+        "m_strSubGraphName": "OSCV",
+        "m_strSubGraphTitle": "OSCV",
+        "m_nSubGraphType": 2,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_LineTypeInfo": {
+          "m_strKeyOfClrLine": "clrOSCV",
+          "m_clrLine": "",
+          "m_nThickness": 1,
+          "m_nLineType": 0,
+          "m_strOverheat": "",
+          "m_strDoldrums": "",
+          "m_strKeyOfClrOverheat": null,
+          "m_clrOverheat": null,
+          "m_strKeyOfClrDoldrums": null,
+          "m_clrDoldrums": null
+        },
+        "m_BarTypeInfo": {
+          "m_nCompareType": 1,
+          "m_clrBar": "",
+          "m_clrUp": "",
+          "m_clrDown": "",
+          "m_strKeyOfClrBar": "clrBar",
+          "m_strKeyOfClrUp": "clrUp",
+          "m_strKeyOfCrDown": "clrDown",
+          "m_bFill": true
+        }
+      }
+    ],
+    "m_VariableArray": [
+      {
+        "m_strName": "OSCVPeriod1",
+        "m_strTitle": "OSCVPeriod1",
+        "m_nType": 1,
+        "m_strData": 20
+      },
+      {
+        "m_strName": "OSCVPeriod2",
+        "m_strTitle": "OSCVPeriod2",
+        "m_nType": 1,
+        "m_strData": 9
+      }
+    ]
+  },
+  "_THREELINE_":{
+    "m_strKey":"2497",
+    "m_strGroup": "PRICE",
+    "m_strGroupTitle":"가격지표",
+    "m_strGroupTitleLangKey":"defaultindicator.priceindicator",
+    "m_strName":"_THREELINE_",
+    "m_strTitle":"ThreeLine",
+    "m_strTitleLangKey":"defaultindicator.threeline",
+    "m_nBasePriceTextAlign":2,
+    "m_bShowBasePrice":true,
+    "m_nShowLatestDataType":0,
+    "m_bShowLatestDataOfAllSubGraph":false,
+    "m_nDataChangeRatioType":0,
+    "m_nAddType":0,
+    "m_BaseLineArray":[],
+    "m_bSpecialIndicator":true,
+    "m_SubGraphPropertyInfoArray":[
+      {
+        "m_strSubGraphName":"ThreeLine",
+        "m_strSubGraphTitle":"",
+        "m_strSubGraphTitleLangKey":"defaultindicator.threeline",
+        "m_nSubGraphType":4,
+        "m_nSubGraphSubType":4,
+        "m_bShow":true,
+        "m_PriceThreeLineBreakTypeInfo":{
+          "m_clrThreeLineBreakUp":"",
+          "m_clrThreeLineBreakDrop":"",
+          "m_clrTitle": "",
+          "m_strKeyOfClrThreeLineBreakUp":"clrThreeLineBreakUp",
+          "m_strKeyOfClrThreeLineBreakDrop":"clrThreeLineBreakDrop",
+          "m_strKeyOfClrTitle":"clrTitle"
+        }
+      }
+    ],
+    "m_VariableArray":[
+      {
+        "m_strName":"BoxSize",
+        "m_strTitle":"BoxSize",
+        "m_strTitleLangKey":"",
+        "m_nType":1,
+        "m_strData":3,
+        "m_bCalc":false
+      }
+    ]
+  },
+  "_PANDF_":{
+    "m_strKey":"8336",
+    "m_strGroup": "PRICE",
+    "m_strGroupTitle":"가격지표",
+    "m_strGroupTitleLangKey":"defaultindicator.priceindicator",
+    "m_strName":"_PANDF_",
+    "m_strTitle":"PAndF",
+    "m_strTitleLangKey":"defaultindicator.pandf",
+    "m_nBasePriceTextAlign":2,
+    "m_bShowBasePrice":true,
+    "m_nShowLatestDataType":0,
+    "m_bShowLatestDataOfAllSubGraph":false,
+    "m_nDataChangeRatioType":0,
+    "m_nAddType":0,
+    "m_BaseLineArray":[],
+    "m_bSpecialIndicator":true,
+    "m_SubGraphPropertyInfoArray":[
+      {
+        "m_strSubGraphName":"PAndF",
+        "m_strSubGraphTitle":"",
+        "m_strSubGraphTitleLangKey":"defaultindicator.pandf",
+        "m_nSubGraphType":5,
+        "m_nSubGraphSubType":3,
+        "m_bShow":true,
+        "m_PricePAndFTypeInfo":{
+          "m_clrPAndFUp":"",
+          "m_clrPAndFDrop":"",
+          "m_clrTitle": "",
+          "m_strKeyOfClrPAndFUp":"clrPAndFUp",
+          "m_strKeyOfClrPAndFDrop":"clrPAndFDrop",
+          "m_strKeyOfClrTitle":"clrTitle"
+        }
+      }
+    ],
+    "m_VariableArray":[
+      {
+        "m_strName":"BoxSize",
+        "m_strTitle":"BoxSize",
+        "m_strTitleLangKey":"",
+        "m_nType":1,
+        "m_strData":3,
+        "m_bCalc":false
+      },
+      {
+        "m_strName":"UnitSize",
+        "m_strTitle":"UnitSize",
+        "m_strTitleLangKey":"",
+        "m_nType":1,
+        "m_strData":10,
+        "m_bCalc":false
+      },
+      {
+        "m_strName":"bUserInput",
+        "m_strTitle":"bUserInput",
+        "m_strTitleLangKey":"",
+        "m_nType":1,
+        "m_strData":0,
+        "m_bCalc":false
+      },
+      {
+        "m_strName":"DType",
+        "m_strTitle":"DType",
+        "m_strTitleLangKey":"",
+        "m_nType":1,
+        "m_strData":3,
+        "m_bCalc":false
+      }
+    ]
+  },  
+  "_HOGADEPTH_": {
+    "use": false,
+    "m_strKey": "9291",    
+    "m_strGroup": "PRICE",
+    "m_strGroupTitle":"가격지표",
+    "m_strGroupTitleLangKey":"defaultindicator.priceindicator",
+    "m_strName": "_HOGADEPTH_",
+    "m_strTitle": "",
+    "m_nBasePriceTextAlign": 2,
+    "m_bShowBasePrice": false,
+    "m_nShowLatestDataType": 0,
+    "m_bShowLatestDataOfAllSubGraph": false,
+    "m_nDataChangeRatioType": 0,
+    "m_nAddType": 1,    
+    "m_BaseLineArray": [],
+    "m_bSpecialIndicator": false,
+    "m_SubGraphPropertyInfoArray": [
+      {
+        "m_strSubGraphName": "HogaDepth",
+        "m_strSubGraphTitle": "종가",
+        "m_strSubGraphTitleLangKey":"chart.qty",
+        "m_nSubGraphType": 3,
+        "m_nSubGraphSubType": 0,
+        "m_bShow": true,
+        "m_HogaDepthTypeInfo": {
+          "m_clrBuyRange": "#CC0000",
+          "m_clrSellRange": "#1155CC",
+          "m_clrBuyLine": "#CC0000",
+          "m_clrSellLine": "#1155CC",          
+          "m_strKeyOfClrBuyRange": "clrBuyRange",
+          "m_strKeyOfClrSellRange": "clrSellRange",
+          "m_strKeyOfClrBuyLine": "clrBuyLine",
+          "m_strKeyOfClrSellLine": "clrSellLine"          
+        }        
+      }
+    ]
+  }
+}

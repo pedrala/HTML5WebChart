@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<div class="setting_modal">
+  <a href="#close" class="btn_setting_close" id="btnClose"><span class="blind"
+      data-i18n="chart.popupclose">팝업닫기</span></a>
+  <div class="calender_modal">
+    <div class="pop_title">
+      <strong class="src_tit" data-i18n="chart.depthchart">깊이차트</strong>
+    </div>
+    <div class="pop_cont">
+      <ul class="modal_chart_lst">
+        <li>
+          <div class="tit">
+            <span class="txt" data-i18n="chart.buying">매수</span>
+            <input type="text" class="color_picker" name="m_clrBuyLine">
+          </div>
+          <div class="tit rgt">
+            <span class="txt" data-i18n="chart.selling">매도</span>
+            <input type="text" class="color_picker" name="m_clrSellLine">
+          </div>
+        </li>
+        <li>
+          <div class="tit">
+            <label class="form_label">
+              <input class="i_check" name="m_bShowCrossLine" type="checkbox">
+              <span class="txt" data-i18n="chart.crossline">십자선</span>
+            </label>
+          </div>
+          <div class="cont_lst">
+            <fieldset class="select_ui">
+              <select name="m_nCrossLineType" class="lineTypeSelect"></select>
+            </fieldset>
+
+            <fieldset class="select_ui">
+              <select name="m_nCrossLineThickness" class="lineThicknessSelect"></select>
+            </fieldset>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="pop_btn_bx depth">
+      <a href="#reset" class="btn_setting" id="btnReset" data-i18n="chart.reset">초기화</a>
+      <span class="rgt_btn">
+        <a href="#cancel" class="btn_gray" id="btnCancel" data-i18n="chart.cancelbtn">취소</a>
+        <a href="#confirm" class="btn_blue" id="btnConfirm" data-i18n="chart.okbtn">확인</a>
+      </span>
+    </div>
+  </div>
+</div>

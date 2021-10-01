@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<div class="modal_chart_type candel_chart">
+  <strong class="modal_pop_tit">바</strong>
+  <div class="modal_view_cont">
+    <ul class="candel_change_lst">
+      <li>
+        <div class="lst_bx">
+          <strong class="tit" data-i18n="chart.rise"><!--양봉--></strong>
+          <span class="check_rgt_bx">
+            <input type="text" class="color_picker" name="m_clrUpturnPlus">
+          </span>
+        </div>
+      </li>
+      <li>
+        <div class="lst_bx">
+          <strong class="tit" data-i18n="chart.fall"><!--음봉--></strong>
+          <span class="check_rgt_bx">
+            <input type="text" class="color_picker" name="m_clrDropMinus">
+          </span>
+        </div>
+      </li>
+      <li>
+        <div class="lst_bx" id="m_bUseHLCType">
+        </div>
+      </li>
+      <li>
+        <div class="lst_bx" id ="m_bUseThinType">
+        </div>
+      </li>
+      <li>
+        <div class="lst_bx">
+          <strong class="tit" data-i18n="chart.nochange"><!--보합(시가=종가) 색상--></strong>
+          <div class="check_rgt_bx">
+            <div class="select_ui full_select" id="m_bSteadyClrFollowToUpDropClr">
+
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <a href="#" id="popupChartReset" class="popup_modal_initial btn_detail" data-i18n="chart.reset"><!--초기화--></a>
+  <a href="#" id="popupChartDefaultSave" class="popup_modal_save btn_detail" data-i18n="mchart.valuesave"><!--기본값 저장--></a>
+  <a href="#" id="popupChartBack" class="popup_modal_close btn_detail"><span class="blind" data-i18n="chart.popupclose"><!--팝업닫기--></span></a>
+</div><!-- modal_chart_type -->
+<!-- //캔들 차트 변경 팝업 -->

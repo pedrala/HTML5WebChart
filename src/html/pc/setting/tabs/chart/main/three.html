@@ -1,0 +1,30 @@
+<div class="sub_tab_area">
+  <ul class="sub_tab_lst">
+    <li><a href="#sub_tab_cont1" data-i18n="chart.settings.tab.variable">변수 설정</a></li>
+    <li><a href="#sub_tab_cont2" data-i18n="chart.settings.tab.description">설명</a></li>
+  </ul>
+
+  <div class="sub_tab_cont" id="sub_tab_cont1">
+    <ul class="rdo_tab_lst">
+      <li>
+        <strong class="rdo_tit" data-i18n="chart.candleupdown">
+          <!--캔들 상승/하락--></strong>
+        <!-- color picker -->
+        <div class="select_rgt_bx">
+          <input type="text" class="color_picker" name="m_clrThreeLineBreakUp">
+          <input type="text" class="color_picker" name="m_clrThreeLineBreakDrop">
+        </div><!-- select_rgt_bx -->
+        <!-- //color picker -->
+      </li>
+      <!-- 칸 전환 추가 - 2019.03.22 -->
+      <li>
+        <strong class="rdo_tit" data-i18n="chart.block.transform">칸 전환</strong>
+        <div class="select_rgt_bx" id="three-transform">
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="sub_tab_cont" id="sub_tab_cont2">
+    <ul class="info_src_lst" id="desc_lst"></ul>
+  </div>
+</div>

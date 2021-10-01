@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<div class="chart_tab_bx">
+
+  <!-- 좌측 영역 -->
+  <div class="lft_bx">
+    <strong class="src_tit" data-i18n="chart.bgsetting">배경설정</strong>
+    <ul class="guide_sub_lst">
+      <li>
+        <ul>
+          <li>
+            <strong class="lst_tit" data-i18n="chart.bg">배경</strong>
+            <div class="rgt_line_bx">
+              <input type="text" class="color_picker" name="m_clrBack">
+            </div>
+          </li>
+          <li class="rgt_align">
+            <strong class="lst_tit txt_clr" data-i18n="chart.textcolor">글자색</strong>
+            <div class="rgt_line_bx">
+              <input type="text" class="color_picker" name="m_clrText">
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong class="lst_tit" data-i18n="chart.vertgrid">세로격자</strong>
+        <div class="rgt_line_bx">
+          <fieldset class="select_ui">
+            <input type="text" class="color_picker" name="m_clrVertLine">
+            <select class="lineTypeSelect" name="m_nVertLineType"></select>
+            <select class="lineThicknessSelect" name="m_nVertLineThickness"></select>
+          </fieldset>
+        </div>
+      </li>
+      <li><strong class="lst_tit" data-i18n="chart.horzgrid">가로격자</strong>
+        <div class="rgt_line_bx">
+          <fieldset class="select_ui">
+            <input type="text" class="color_picker" name="m_clrHorzLine">
+            <select class="lineTypeSelect" name="m_nHorzLineType"></select>
+            <select class="lineThicknessSelect" name="m_nHorzLineThickness"></select>
+          </fieldset>
+        </div>
+      </li>
+      <li><strong class="lst_tit" data-i18n="chart.crossline">십자선</strong>
+        <div class="rgt_line_bx">
+          <fieldset class="select_ui">
+            <input type="text" class="color_picker" name="m_clrCrossLine">
+            <select class="lineTypeSelect" name="m_nCrossLineType"></select>
+            <select class="lineThicknessSelect" name="m_nCrossLineThickness"></select>
+          </fieldset>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="rgt_bx">
+    <ul class="guide_sub_lst">
+      <li>
+        <ul class="btm_check_lst">
+          <li data-type="checkbox">
+            <label class="form_label">
+              <input class="i_check" name="m_bShowIndicatorName" children="m_bShowIndicatorParameter" type="checkbox"
+                value="true"
+                data-type="Boolean">
+              <i class="check"></i><span class="txt" data-i18n="chart.indicatortitle">지표 이름</span>
+            </label>
+          </li>
+          <li data-type="checkbox">
+            <label class="form_label">
+              <input class="i_check" name="m_bShowIndicatorParameter" parent="m_bShowIndicatorName" type="checkbox"
+                value="true" data-type="Boolean">
+              <i class="check"></i><span class="txt" data-i18n="chart.indicatorindex">지표인자 값</span>
+            </label>
+          </li>
+        </ul>
+      </li>
+      <li data-type="checkbox">
+        <label class="form_label">
+          <input class="i_check" name="m_bShowIndicatorValue" type="checkbox" value="true" data-type="Boolean">
+          <i class="check"></i><span class="txt" data-i18n="chart.indicatorvalue">지표 값</span>
+        </label>
+      </li>
+      <li>
+        <ul class="btm_check_lst">
+          <li data-type="checkbox">
+            <label class="form_label ">
+              <input class="i_check" name="m_bUseToolSave" type="checkbox" value="true" data-type="Boolean">
+              <i class="check"></i><span class="txt" data-i18n="chart.saveanalysistool">분석도구 저장</span>
+            </label>
+          </li>
+          <li>
+            <span class="txt" data-i18n="chart.saveanalysistooldesc">분석도구는 최대 500 개까지 저장됩니다.</span>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
